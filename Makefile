@@ -27,7 +27,6 @@ content:
 	$(PYTHON_INTERPRETER) build_hugo_data.py
 
 clean:
-	rm -rf $(BACKUP_DIR)/backup.sql
 	rm -rf $(HUGO_DIR)/data
 	rm -rf $(HUGO_DIR)/content/awarders
 	rm -rf $(HUGO_DIR)/content/challenges
@@ -44,9 +43,9 @@ sync:
 	git add --all
 	git commit -m 'Scraper code updating'
 	git push -u origin master
-	cd $(HUGO_DIR)/public
-	git add --all
-	git commit -m 'Website built with latest version'
+	cd $(HUGO_DIR)/public; \
+	git add --all; \
+	git commit -m 'Website built with latest version'; \
 	git push -u origin master
 
 all: scrape backup content website sync
