@@ -1,0 +1,18 @@
+<div class="column is-2">
+    <div class="card equal-height">
+        <div class="card-content">
+            <nav class="level">
+                <div class="level-item has-text-centered">
+                    <a href="./{{ .slug }}">
+                        <figure class="image is-3-by-2">
+                            <img src="{{ .thumb }}" alt="{{ .name }}" loading="lazy">
+                        </figure>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href='./{{ .slug }}'>{{ .name }}</a>
+        </footer>
+    </div>
+</div>

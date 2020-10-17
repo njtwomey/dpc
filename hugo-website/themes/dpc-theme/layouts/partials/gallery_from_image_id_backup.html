@@ -1,0 +1,31 @@
+{{ $images := .images }}
+<div class="columns is-multiline">
+    {{ range .image_ids }}
+        {{ $image := index $images (printf "%d" .) }}
+        <div class="column is-2">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image is-3by2">
+                    <a href="{{ $image.image_webpage }}" 
+                       class="fresco" 
+                       data-fresco-group="dpc"
+                       data-fresco-caption="{{ $image.image_thumb_url }}">
+                       <img src="{{ $image.image_thumb_url }}"  alt="{{ $image.name }}">
+                    </a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+<!-- 
+<a
+    href="images/frans_hals.jpg"
+    class="fresco"
+    data-fresco-group="example"
+    data-fresco-caption="Frans Hals, Banquet of the Officers of the St George Civic Guard, 1627"
+>
+    <img src="images/thumbnails/frans_hals.jpg" alt="" />
+</a>
+ -->

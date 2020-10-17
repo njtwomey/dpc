@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<!-- AWARDERS LIST -->
+
+{{ $awarders := .Site.Data.collections.awarders_meta }}
+
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title is-1">
+          Awarder list
+        </p>
+    </div>
+</div>
+
+{{ partial "card_list.html" $awarders }}
+
+{{ end }}

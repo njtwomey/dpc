@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+<!-- CHALLENGE LIST  -->
+
+{{ $challenge_list := .Site.Data.collections.challenge_list }}
+{{ $challenges := .Site.Data.collections.challenges }}
+{{ $all_awards := .Site.Data.collections.awards_meta }}
+
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title is-1">
+          {{ .Title }}
+        </p>
+    </div>
+</div>
+
+<div class="columns is-multiline">
+    <div class="column has-text-centered">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Awards</td>
+                    <td>Distinct awards</td>
+                    <td>Awards</td>
+                </tr>
+            </thead>
+            {{ range $challenge_list }}
+            {{ $challenge_id := printf "%d" . }}
+            {{ $challenge := index $challenges $challenge_id}}
+            <tr>
+                <td><a href="./{{ $challenge.challenge_slug }}">{{ $challenge.challenge_name }}</a></td>
+                <td>{{ $challenge.num_awards }}</td>
+                <td>{{ $challenge.num_distinct_awards }}</td>
+                <td>
+                    <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
+                        {{ range $slug, $count := $challenge.award_counts }}
+                        {{ $award := index $all_awards $slug }}
+                        <div class="control">
+                            <div class="tags has-addons">
+                                <span class="tag">{{ $award.name }}</span>
+                                <span class="tag is-dark">{{ $count }}</span>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </td>
+            </tr>
+            {{ end }}
+        </table>
+    </div>
+</div>
+
+{{ end }}

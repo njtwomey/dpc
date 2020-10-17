@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<!-- AWARDS SINGLE -->
+
+{{ $awarder_slug := printf "%s" .Page.Params.awarder_slug}}
+{{ $awarder := index .Site.Data.collections.awarders_meta $awarder_slug }}
+
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 has-text-centered">
+        <p class="title is-1">
+          {{ .Title }}
+        </p>
+        <p>
+            Check out {{ $awarder.name }}'s DPChallenge profile and gallery <a href="{{ $awarder.url }}">here</a>. 
+        </p>
+    </div>
+</div>
+
+{{ partial "card_list.html" $awarder.awards }}
+
+{{ end }}
