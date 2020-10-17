@@ -383,7 +383,7 @@ def build_challenge_content(hugo_root: Path):
 
 
 def main():
-    hugo_root = Path("/Users/niall/workspace/hugo-test")
+    hugo_root = Path("./hugo-website")
     data_root = hugo_root / "data"
 
     import_bling_to_db(data_root)
