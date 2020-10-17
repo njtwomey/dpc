@@ -1,0 +1,14 @@
+__pycache__
+.idea
+downloaded
+*.sql
+*.pyc
+login_details.json
+*.swp
+
+hugo-website/.vscode
+hugo-website/public
+hugo-website/data
+hugo-website/content/awarders
+hugo-website/content/challenges
+hugo-website/content/recipients
