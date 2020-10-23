@@ -133,6 +133,8 @@ def import_bling_to_db(data_root: Path):
             awards=dict(),
         )
 
+        num_awarded = 0
+
         for award_meta in awarder_meta["awards"]:
             kwargs = dict(
                 awarder=awarder,
@@ -158,6 +160,7 @@ def import_bling_to_db(data_root: Path):
                 urls=award.regex,
                 awarder_id=awarder.id,
                 awarder_slug=slugify(awarder.name),
+                num_awarded=(Awards.select().where(Awards.bling == award).count()),
                 num_distinct_recipients=(
                     Awards.select(Awards.user)
                     .where(Awards.bling == award)
@@ -172,10 +175,14 @@ def import_bling_to_db(data_root: Path):
                 ),
             )
 
+            num_awarded += award_dict["num_awarded"]
+
             hugo_meta["awards"][award_dict["slug"]] = award_dict
 
             with open(awards_root / f"{slugify(award.name)}.yaml", "w") as fil:
                 yaml.dump(award_dict, fil)
+
+        hugo_meta["num_awarded"] = num_awarded
 
         with open(awarders_root / f"{slugify(awarder.name)}.yaml", "w") as fil:
             yaml.dump(hugo_meta, fil)

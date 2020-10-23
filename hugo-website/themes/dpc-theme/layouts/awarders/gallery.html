@@ -14,6 +14,6 @@
 {{ $image_ids := index .Site.Data.collections.awards $award_slug }}
 {{ $images := $.Site.Data.collections.images }}
 
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images) }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "extra" "num_awarded") }}
 
 {{ end }}
