@@ -1,51 +1,13 @@
 {{ define "main" }}
 
-<!-- RECIPIENTS SINGLE -->
-
 {{ $recipient_id := printf "%d" .Page.Params.recipient_id}}
 {{ $recipient := index .Site.Data.collections.users $recipient_id }}
 {{ $all_awards := .Site.Data.collections.awards_meta }}
 {{ $award_counts := $recipient.award_counts }}
 
-<div class="columns is-multiline">
-    <div class="column is-8 is-offset-2">
-        <div class="card">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                            <img src="{{ $recipient.user_thumb }}" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">
-                            <a href="{{ $recipient.user_url }}">{{ $recipient.user_name }}</a>
-                        </p>
-                        <p class="subtitle is-6">{{ $recipient.num_awards }} awards in
-                            {{ $recipient.num_distinct_awards }} categories.
-                        </p>
-                    </div>
-                </div>
-                <div class="content">
-                    &nbsp;
-                    <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
-                        {{ range $slug, $count := $award_counts }}
-                        {{ $award := index $all_awards $slug }}
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <span class="tag">{{ $award.name }}</span>
-                                <span class="tag is-dark">{{ $count }}</span>
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{ $description := printf "%d awards from %d categories." $recipient.num_awards $recipient.num_distinct_awards }}
 
-<p>&nbsp;</p>
+{{ partial "gallery_header.html" (dict "thumb" $recipient.user_thumb "name" $recipient.user_name "description" (partial "recipient_tags.html" (dict "award_counts" $award_counts "all_awards" $all_awards)) "stats" $description) }}
 
 {{ $image_ids := $recipient.image_ids }}
 {{ $images := $.Site.Data.collections.images }}

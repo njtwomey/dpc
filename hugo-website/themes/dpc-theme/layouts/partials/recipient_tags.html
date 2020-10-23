@@ -1,0 +1,15 @@
+{{ $all_awards := .all_awards }}
+<div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
+    {{ range $slug, $count := .award_counts }}
+    {{ $award := index $all_awards $slug }}
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                {{ $tag_url := printf "awarders/%s/%s" $award.awarder_slug $award.slug}}
+                <a href="{{ $tag_url | absURL }}">{{ $award.name }}</a>
+            </span>
+            <span class="tag is-dark">{{ $count }}</span>
+        </div>
+    </div>
+    {{ end }}
+</div>

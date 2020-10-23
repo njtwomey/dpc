@@ -1,28 +1,8 @@
 {{ $users := .users }}
 
-<div class="columns is-multiline is-centered">
+<div class="columns is-flex is-multiline is-centered">
     {{ range .user_ids }}
-    {{ $user_id := printf "%d" . }}
-    {{ $user := index $users $user_id }}
-    <div class="column is-2">
-        <div class="card equal-height">
-            <header class="card-header">
-                <a class="card-header-title card-header-item" href='./{{ $user.user_slug }}'>
-                    {{ $user.user_name }}
-                </a>
-            </header>
-            <div class="card-content">
-                <nav class="level">
-                    <div class="level-item has-text-centered">
-                        <a href="./{{ $user.user_slug }}">
-                            <figure class="image is-3-by-2">
-                                <img src="{{ $user.user_thumb }}" alt="{{ $user.user_thumb }}" loading="lazy">
-                            </figure>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+    {{ $user := index $users (printf "%d" .) }}
+    {{ partial "user_card.html" (dict "thumb" $user.user_thumb "name" $user.user_name "slug" $user.user_slug "extra" (printf "(%d)" $user.num_awards)) }}
     {{ end }}
 </div>

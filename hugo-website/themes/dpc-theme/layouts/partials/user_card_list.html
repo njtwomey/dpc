@@ -1,0 +1,5 @@
+<div class="columns is-flex is-multiline is-centered">
+  {{ range . }}
+  {{ partial "user_card.html" (dict "thumb" .thumb "name" .name "slug" .slug) }}
+  {{ end }}
+</div>

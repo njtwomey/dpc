@@ -36,8 +36,8 @@ def award_index(award_title, awarder_slug):
         draft=False,
         awarder_slug=awarder_slug,
         award_slug=slugify(award_title),
-        type="collection",
-        layout="list",
+        type="awarders",
+        layout="gallery",
     )
 
 

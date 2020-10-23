@@ -195,12 +195,12 @@
       urls:
         - Copyrighted_Image_Reuse_Prohibited_1154421
         - 1154421
-    - name: brown icon
-      description: ''
-      image: https://images.dpchallenge.com/images_portfolio/60000-64999/61396/120/Copyrighted_Image_Reuse_Prohibited_1191530.jpg
-      urls:
-        - Copyrighted_Image_Reuse_Prohibited_1191530
-        - 1191530
+#    - name: brown icon
+#      description: ''
+#      image: https://images.dpchallenge.com/images_portfolio/60000-64999/61396/120/Copyrighted_Image_Reuse_Prohibited_1191530.jpg
+#      urls:
+#        - Copyrighted_Image_Reuse_Prohibited_1191530
+#        - 1191530
 
 - name: tate
   user_id: 38032

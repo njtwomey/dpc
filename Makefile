@@ -1,4 +1,4 @@
-.PHONY: data backup scrape website all clean server sync
+.PHONY: data backup scrape website all clean server sync most local
 
 PROJECT_NAME = dpc-bling
 
@@ -31,10 +31,24 @@ clean:
 	rm -rf $(HUGO_DIR)/content/awarders
 	rm -rf $(HUGO_DIR)/content/challenges
 	rm -rf $(HUGO_DIR)/content/recipients
-	rm -rf download
+
+	rm -rf $(HUGO_DIR)/public/awarders
+	rm -rf $(HUGO_DIR)/public/categories
+	rm -rf $(HUGO_DIR)/public/challenges
+	rm -rf $(HUGO_DIR)/public/css
+	rm -rf $(HUGO_DIR)/public/js
+	rm -rf $(HUGO_DIR)/public/recipients
+	rm -rf $(HUGO_DIR)/public/tags
+	rm -rf $(HUGO_DIR)/public/*.html
+	rm -rf $(HUGO_DIR)/public/*.xml
+
+	rm -rf downloaded
 
 website:
 	cd $(HUGO_DIR); hugo --buildDrafts --minify
+
+local:
+	cd $(HUGO_DIR); hugo --buildDrafts
 
 server:
 	cd $(HUGO_DIR); hugo server -D --disableFastRender --disableLiveReload
@@ -48,4 +62,6 @@ sync:
 	git commit -m 'Website built with latest version'; \
 	git push -u origin master
 
-all: scrape backup content website sync
+most: scrape backup content local website
+
+all: clean most sync

@@ -1,15 +1,13 @@
 {{ define "main" }}
 
-<!-- RECIPIENT LIST -->
-
 {{ $recipient_id := .Page.Params.recipient_id }}
 
 <div class="columns is-multiline">
-    <div class="column is-8 is-offset-2 has-text-centered">
-        <p class="title is-1">
-          {{ .Title }}
-        </p>
-    </div>
+  <div class="column is-8 is-offset-2 has-text-centered">
+    <p class="title is-1">
+      {{ .Title }}
+    </p>
+  </div>
 </div>
 
 {{ $user_ids := .Site.Data.collections.user_list }}
