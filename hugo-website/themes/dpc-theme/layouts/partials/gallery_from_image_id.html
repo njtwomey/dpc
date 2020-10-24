@@ -2,7 +2,7 @@
 {{ $images := .images }}
 
 <div class="columns is-multiline">
-    {{ range .image_ids }}
+    {{ range (uniq .image_ids) }}
     {{ $image := index $images (printf "%d" .) }}
     {{ partial "image_card.html" $image }}
     {{ end }}
