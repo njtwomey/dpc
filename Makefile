@@ -17,8 +17,8 @@ data:
 backup:
 	rm $(BACKUP_DIR)/backup.sql
 	pg_dump dpcdb > $(BACKUP_DIR)/backup.sql
-	rm $(BACKUP_DIR)/backup.sql.zip
-	zip $(BACKUP_DIR)/backup.sql.zip $(BACKUP_DIR)/backup.sql
+	#rm $(BACKUP_DIR)/backup.sql.zip
+	#zip $(BACKUP_DIR)/backup.sql.zip $(BACKUP_DIR)/backup.sql
 
 scrape:
 	$(PYTHON_INTERPRETER) build_data_from_dpc.py
