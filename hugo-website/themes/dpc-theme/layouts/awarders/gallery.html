@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ $all_awards := .Site.Data.collections.awards_meta }}
+
 {{ $awarder_slug := printf "%s" .Page.Params.awarder_slug}}
 {{ $award_slug := printf "%s" .Page.Params.award_slug}}
 
@@ -14,6 +16,6 @@
 {{ $image_ids := index .Site.Data.collections.awards $award_slug }}
 {{ $images := $.Site.Data.collections.images }}
 
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "extra" "num_awarded") }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "extra" "num_awarded" "all_awards" $all_awards) }}
 
 {{ end }}

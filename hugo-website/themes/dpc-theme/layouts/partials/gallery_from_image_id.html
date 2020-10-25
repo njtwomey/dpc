@@ -1,9 +1,9 @@
-{{ $all_awards := .Site.Data.collections.awards_meta }}
+{{ $all_awards := .all_awards }}
 {{ $images := .images }}
 
 <div class="columns is-multiline">
     {{ range (uniq .image_ids) }}
     {{ $image := index $images (printf "%d" .) }}
-    {{ partial "image_card.html" $image }}
+    {{ partial "image_card.html" (dict "image" $image "all_awards" $all_awards) }}
     {{ end }}
 </div>

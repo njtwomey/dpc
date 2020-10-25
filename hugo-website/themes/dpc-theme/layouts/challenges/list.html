@@ -21,8 +21,6 @@
                 <tr>
                     <td>Name</td>
                     <td>Awards</td>
-                    <td>Distinct awards</td>
-                    <td>Awards</td>
                 </tr>
             </thead>
             {{ range $challenge_list }}
@@ -30,8 +28,6 @@
             {{ $challenge := index $challenges $challenge_id}}
             <tr>
                 <td><a href="./{{ $challenge.challenge_slug }}">{{ $challenge.challenge_name }}</a></td>
-                <td>{{ $challenge.num_awards }}</td>
-                <td>{{ $challenge.num_distinct_awards }}</td>
                 <td>
                     <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
                         {{ range $slug, $count := $challenge.award_counts }}

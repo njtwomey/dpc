@@ -46,6 +46,6 @@
 {{ $image_ids := $challenge.image_ids }}
 {{ $images := $.Site.Data.collections.images }}
 
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images) }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "all_awards" $all_awards) }}
 
 {{ end }}

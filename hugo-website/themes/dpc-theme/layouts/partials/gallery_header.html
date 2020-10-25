@@ -16,7 +16,11 @@
                             {{ .stats }}
                         </p>
                         <p class="subtitle is-6">
-                            {{ .description }}
+                            {{ if len .description }}
+                                {{ .description }}
+                            {{ else }}
+                                &nbsp;
+                            {{ end}}
                         </p>
                     </div>
                 </div>
