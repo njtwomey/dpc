@@ -2,7 +2,7 @@
 
 {{ $awarder := index .Site.Data.collections.awarders_meta (printf "%s" .Page.Params.slug) }}
 
-{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "stats" .Page.Params.stats "description" .Page.Params.description) }}
+{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "stats" .Page.Params.stats "description" (.Page.Params.description|markdownify)) }}
 {{ partial "user_card_list.html" $awarder.awards }}
 
 {{ end }}
