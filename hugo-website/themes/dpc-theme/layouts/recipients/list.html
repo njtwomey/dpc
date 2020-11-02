@@ -1,7 +1,5 @@
 {{ define "main" }}
 
-{{ $recipient_id := .Page.Params.recipient_id }}
-
 <div class="columns is-multiline">
   <div class="column is-8 is-offset-2 has-text-centered">
     <p class="title is-1">
@@ -10,9 +8,10 @@
   </div>
 </div>
 
-{{ $user_ids := .Site.Data.collections.user_list }}
-{{ $users := .Site.Data.collections.users }}
-
-{{ partial "user_grid_from_user_id.html" (dict "user_ids" $user_ids "users" $users) }}
+<div class="columns is-flex is-multiline is-centered">
+  {{ range .Page.Params.users }}
+  {{ partial "user_card.html" (dict "name" .name "slug" .slug "thumb" .thumb "extra" .description) }}
+  {{ end }}
+</div>
 
 {{ end }}

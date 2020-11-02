@@ -155,7 +155,18 @@ def challenge_index(challenge):
 
 
 def recipients_index():
-    return yaml_header(title="Recipients list", type="recipients", layout="list",)
+    user_ids = [award.user_id for award in Awards.select(Awards.user_id).distinct()]
+    users = [
+        dict(
+            name=user.name,
+            slug=slugify(user.name),
+            thumb=user_thumb(user.id),
+            num_awards=user.awards.count(),
+            description=f"{user.awards.count()} awards received",
+        ) for user in map(lambda user_id: Member.get(user_id), tqdm(user_ids))
+    ]
+    users = sorted(users, key=lambda uu: uu['num_awards'], reverse=True)
+    return yaml_header(title="Recipients list", users=users, type="recipients", layout="list")
 
 
 def recipient_index(user):
