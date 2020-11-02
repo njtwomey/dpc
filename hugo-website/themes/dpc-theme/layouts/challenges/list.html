@@ -2,8 +2,8 @@
 
 <!-- CHALLENGE LIST  -->
 
-{{ $challenge_list := .Site.Data.collections.challenge_list }}
-{{ $challenges := .Site.Data.collections.challenges }}
+{{ $challenges := .Page.Params.challenges }}
+
 {{ $all_awards := .Site.Data.collections.awards_meta }}
 
 <div class="columns is-multiline">
@@ -23,22 +23,12 @@
                     <td>Awards</td>
                 </tr>
             </thead>
-            {{ range $challenge_list }}
-            {{ $challenge_id := printf "%d" . }}
-            {{ $challenge := index $challenges $challenge_id}}
+            {{ range $challenges }}
             <tr>
-                <td><a href="./{{ $challenge.challenge_slug }}">{{ $challenge.challenge_name }}</a></td>
+                <td><a href="./{{ .slug }}">{{ .name }}</a></td>
                 <td>
                     <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
-                        {{ range $slug, $count := $challenge.award_counts }}
-                        {{ $award := index $all_awards $slug }}
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <span class="tag">{{ $award.name }}</span>
-                                <span class="tag is-dark">{{ $count }}</span>
-                            </div>
-                        </div>
-                        {{ end }}
+                    {{ (partial "recipient_tags.html" (dict "award_counts" .award_counts "all_awards" $all_awards)) }}
                     </div>
                 </td>
             </tr>

@@ -10,66 +10,190 @@ from models import Member, Bling, Comment, Awards, Challenge, Image
 
 
 def yaml_header(**kwargs):
-    data_str = yaml.dump(dict(**kwargs)).strip()
-    return f"---\n{data_str}\n---"
+    data_str = yaml.dump(dict(draft=False, **kwargs)).strip()
+    return f"---\n{data_str}\n---\n\n"
 
 
 def awarders_index():
-    return yaml_header(
-        title=f"Awarders list", draft=False, tupe="awarder", layout="list"
+    return yaml_header(title=f"Awarders list", tupe="awarder", layout="list")
+
+
+def awarder_index(awarder: Member):
+    awarder_name = awarder.name
+    awarder_slug = slugify(awarder_name)
+    awarder_thumb = user_thumb(awarder.id)
+    user_url = user_webpage(awarder.id)
+    num_awards_given = (
+        Bling.select()
+        .join(Awards)
+        .where((Awards.bling_id == Bling.id) & (Bling.awarder == awarder))
+        .count()
     )
-
-
-def awarder_index(awarder_name):
+    description = f"Visit {awarder_name}'s [profile]({user_url}) or all of their awards [here](./all)"
+    stats = f"{awarder_name} has awarded {num_awards_given}"
     return yaml_header(
-        title=f"Awards from {awarder_name}",
-        draft=False,
-        awarder_slug=slugify(awarder_name),
+        title=f"Awards given by {awarder_name}",
+        name=awarder_name,
+        slug=awarder_slug,
+        thumb=awarder_thumb,
+        description=description,
+        stats=stats,
         type="awarder",
         layout="single",
     )
 
 
-def award_index(award_title, awarder_slug):
+def award_index(bling: Bling):
+    awarder = bling.awarder
+    award_name = bling.name.strip()
+    award_slug = slugify(award_name)
+
+    description = bling.description.strip()
+
+    title = f"Images awarded the {award_name} award by {awarder.name}"
+
+    unique_challenges = (
+        Awards.select(Awards.challenge).where(Awards.bling == bling).distinct().count()
+    )
+    unique_recipients = (
+        Awards.select(Awards.user).where(Awards.bling == bling).distinct().count()
+    )
+
+    image_ids = [
+        iid.image_id
+        for iid in (
+            Awards.select(Awards.image_id)
+            .join(Comment)
+            .where((Awards.comment_id == Comment.id) & (Awards.bling == bling))
+            .order_by(Comment.date)
+        )
+    ][::-1]
+
+    assert all(map(int, image_ids))
+
+    stats = (
+        f"The {award_name} award has been given {len(image_ids)} times to {unique_recipients} users "
+        f"in {unique_challenges} distinct challenges. "
+    ).strip()
+
     return yaml_header(
-        title=award_title,
-        draft=False,
-        awarder_slug=awarder_slug,
-        award_slug=slugify(award_title),
+        title=title,
+        name=award_name,
+        slug=award_slug,
+        thumb=bling.img_src,
+        description=description,
+        image_ids=image_ids,
+        stats=stats,
         type="awarders",
         layout="gallery",
     )
 
 
+def counts_to_list(counts):
+    return [dict(slug=slug, count=count) for slug, count in counts.most_common()]
+
+
 def challenges_index():
+    challenges = Challenge.select().order_by(Challenge.voting_end.desc())
+    title = "Challenge list"
+    challenge_meta = [
+        dict(
+            name=challenge.name,
+            slug=slugify(challenge.name),
+            award_counts=counts_to_list(
+                Counter(
+                    slugify(award.bling.name)
+                    for award in Awards.select().where(Awards.challenge == challenge)
+                )
+            ),
+        )
+        for challenge in tqdm(
+            challenges, total=len(challenges), desc="Building challenges"
+        )
+    ]
+
     return yaml_header(
-        title="Challenge list", draft=False, type="challenges", layout="list"
+        title=title, challenges=challenge_meta, type="challenges", layout="list"
     )
 
 
 def challenge_index(challenge):
+    name = challenge.name.strip()
+    award_counts = counts_to_list(
+        Counter(
+            slugify(award.bling.name)
+            for award in Awards.select().where(Awards.challenge == challenge)
+        )
+    )
+
+    image_ids = [
+        iid.image_id
+        for iid in (
+            Awards.select(Awards.image_id)
+            .join(Comment)
+            .where(Awards.challenge == challenge)
+            .order_by(Comment.date)
+        )
+    ][::-1]
+
+    num_awards = Awards.select().where(Awards.challenge == challenge).count()
+    stats = f"{num_awards} images received awards in this challenge."
+
     return yaml_header(
-        title=challenge.name.strip(),
-        draft=False,
-        challenge_slug=slugify(challenge.name),
+        title=name,
+        name=name,
+        slug=slugify(challenge.name),
         challenge_id=challenge.id,
+        award_counts=award_counts,
+        image_ids=image_ids,
+        thumb=None,
+        description="",
+        stats=stats,
         type="challenges",
         layout="single",
     )
 
 
 def recipients_index():
-    return yaml_header(
-        title="Recipients list", draft=False, type="recipients", layout="list",
-    )
+    return yaml_header(title="Recipients list", type="recipients", layout="list",)
 
 
 def recipient_index(user):
+    user_id = user.id
+    user_slug = slugify(user.name)
+    user_name = user.name
+
+    image_ids = [
+        iid.image_id
+        for iid in Awards.select().where(Awards.user == user).order_by(Awards.image_id)
+    ][::-1]
+
+    description = ""
+
+    num_awards = Awards.select().where(Awards.user == user).count()
+    num_blings = (
+        Awards.select(Awards.bling).where(Awards.user == user).distinct().count()
+    )
+    num_challenges = (
+        Awards.select(Awards.challenge).where(Awards.user == user).distinct().count()
+    )
+    award_counts = Counter(
+        slugify(award.bling.name)
+        for award in Awards.select().where(Awards.user == user)
+    )
+
+    stats = f"{num_awards} total awards ({num_blings} distinct) received over {num_challenges} challenges"
+
     return yaml_header(
-        title=user.name.strip(),
-        draft=False,
-        recipient_slug=slugify(user.name),
-        recipient_id=user.id,
+        title=f"{user_name}'s personal gallery",
+        user_id=user_id,
+        name=user_name,
+        slug=user_slug,
+        thumb=user_thumb(user_id),
+        description=description,
+        stats=stats,
+        image_ids=image_ids,
+        award_counts=counts_to_list(award_counts),
         type="recipients",
         layout="single",
     )
@@ -240,122 +364,23 @@ def build_image_list(data_root: Path):
             yaml.dump(image_data, fil)
 
 
-def build_challenge_list(data_root: Path):
-    data_root = data_root / "collections" / "challenges"
-    data_root.mkdir(parents=True, exist_ok=True)
-
-    for challenge in tqdm(
-        Awards.select(Awards.challenge_id).distinct(), desc="Building challenges list"
-    ):
-        challenge = Challenge.get(challenge.challenge_id)
-        award_list = [slugify(award.bling.name) for award in challenge.awards]
-
-        challenge_data = dict(
-            challenge_id=challenge.id,
-            challenge_name=challenge.name,
-            challenge_slug=slugify(challenge.name),
-            challenge_end=challenge.voting_end,
-            challenge_url=challenge_url(challenge.id),
-            num_submissions=challenge.images.count(),
-            num_awards=len(award_list),
-            num_distinct_awards=len(set(award_list)),
-            distinct_awards=sorted(set(award_list)),
-            award_counts=dict(Counter(award_list)),
-            image_ids=[award.image_id for award in challenge.awards],
-        )
-
-        with open(data_root / f"{challenge.id}.yaml", "w") as fil:
-            yaml.dump(challenge_data, fil)
-
-
-def build_user_list(data_root: Path):
-    data_root = data_root / "collections" / "users"
-    data_root.mkdir(parents=True, exist_ok=True)
-
-    for user in tqdm(
-        Awards.select(Awards.user_id).distinct(), desc="Building user list"
-    ):
-        user = Member.get(user.user_id)
-
-        award_slugs = [slugify(award.bling.name) for award in user.awards]
-        awards = [award for award in user.awards]
-
-        user_data = dict(
-            user_id=user.id,
-            user_name=user.name,
-            user_slug=slugify(user.name),
-            user_thumb=user_thumb(user.id),
-            num_awards=len(award_slugs),
-            num_distinct_awards=len(set(award_slugs)),
-            distinct_awards=sorted(set(award_slugs)),
-            award_counts=dict(Counter(award_slugs)),
-            user_url=user_webpage(user.id),
-            num_challenges=Image.select().where(Image.photographer == user).count(),
-            image_ids=[
-                award.image_id
-                for award in sorted(
-                    awards, key=lambda award: award.comment.date, reverse=True
-                )
-            ],
-            description=f"{len(award_slugs)} awards won on {len(set(award_slugs))} distinct categories.",
-        )
-
-        with open(data_root / f"{user.id}.yaml", "w") as fil:
-            yaml.dump(user_data, fil)
-
-
-def build_awards_list(data_root: Path):
-    data_root = data_root / "collections" / "awards"
-    data_root.mkdir(exist_ok=True, parents=True)
-
-    for bling in tqdm(Bling.select(), desc="Building awards list"):
-        awards = sorted(
-            [award for award in bling.awards],
-            key=lambda award: award.challenge.voting_end,
-            reverse=True,
-        )
-
-        with open(data_root / f"{slugify(bling.name)}.yaml", "w") as fil:
-            yaml.dump([award.image_id for award in awards], fil)
-
-
-def build_sorted_lists(data_root):
-    data_root /= "collections"
-    data_root.mkdir(exist_ok=True, parents=True)
-
-    with open(data_root / "challenge_list.yaml", "w") as fil:
-        yaml.dump(
-            [
-                c.id
-                for c in Challenge.select().order_by(Challenge.voting_end.desc())
-                if len(c.awards)
-            ],
-            fil,
-        )
-
-    counts = Counter([a.user_id for a in Awards.select(Awards.user_id)])
-    with open(data_root / "user_list.yaml", "w") as fil:
-        yaml.dump([c[0] for c in counts.most_common()], fil)
-
-
 def build_awarder_content(hugo_root: Path):
     awarders_root = hugo_root / "content" / "awarders"
     awarders_root.mkdir(exist_ok=True, parents=True)
+
+    with open(awarders_root / "_index.html", "w") as fil:
+        fil.write(awarders_index())
 
     for bling in tqdm(Bling.select(), "Generating awarder content"):
         awarder_root = awarders_root / slugify(bling.awarder.name)
         awarder_root.mkdir(exist_ok=True, parents=True)
         with open(awarder_root / "_index.html", "w") as fil:
-            fil.write(awarder_index(awarder_name=bling.awarder.name))
+            fil.write(awarder_index(awarder=bling.awarder))
 
         award_root = awarder_root / slugify(bling.name)
         award_root.mkdir(exist_ok=True, parents=True)
         with open(award_root / "_index.html", "w") as fil:
-            fil.write(
-                award_index(
-                    award_title=bling.name, awarder_slug=slugify(bling.awarder.name),
-                )
-            )
+            fil.write(award_index(bling))
 
 
 def build_recipient_content(hugo_root):
@@ -400,11 +425,6 @@ def main():
     find_awards()
 
     build_image_list(data_root)
-    build_challenge_list(data_root)
-    build_user_list(data_root)
-    build_awards_list(data_root)
-
-    build_sorted_lists(data_root)
 
     build_awarder_content(hugo_root)
     build_recipient_content(hugo_root)

@@ -13,7 +13,7 @@
                             {{ .name }}
                         </p>
                         <p class="subtitle is-6">
-                            {{ .stats }}
+                            {{ .stats | markdownify }}
                         </p>
                         <p class="subtitle is-6">
                             {{ if len .description }}

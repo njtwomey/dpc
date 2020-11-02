@@ -1,11 +1,8 @@
 {{ define "main" }}
 
-{{ $awarder_slug := printf "%s" .Page.Params.awarder_slug}}
-{{ $awarder := index .Site.Data.collections.awarders_meta $awarder_slug }}
+{{ $awarder := index .Site.Data.collections.awarders_meta (printf "%s" .Page.Params.slug) }}
 
-{{ $stats := printf "%s has given out %d ribbons over %d categories." $awarder.name $awarder.num_awarded (len $awarder.awards) }}
-
-{{ partial "gallery_header.html" (dict "thumb" $awarder.thumb "name" $awarder.name "stats" $stats "description" "") }}
+{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "stats" .Page.Params.stats "description" .Page.Params.description) }}
 {{ partial "user_card_list.html" $awarder.awards }}
 
 {{ end }}

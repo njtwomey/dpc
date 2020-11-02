@@ -1,21 +1,12 @@
 {{ define "main" }}
 
 {{ $all_awards := .Site.Data.collections.awards_meta }}
+{{ $all_images := .Site.Data.collections.images }}
 
-{{ $awarder_slug := printf "%s" .Page.Params.awarder_slug}}
-{{ $award_slug := printf "%s" .Page.Params.award_slug}}
-
-{{ $award := index .Site.Data.collections.awards_meta $award_slug }}
-
-{{ $stats := printf "%d users awarded this award over %d challenges." $award.num_distinct_recipients $award.num_distinct_challenges}}
-
-{{ partial "gallery_header.html" (dict "thumb" $award.thumb "name" $award.name "stats" $stats "description" ($award.description|markdownify)) }}
+{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "stats" .Page.Params.stats "description" .Page.Params.description) }}
 
 <p>&nbsp;</p>
 
-{{ $image_ids := index .Site.Data.collections.awards $award_slug }}
-{{ $images := $.Site.Data.collections.images }}
-
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "extra" "num_awarded" "all_awards" $all_awards) }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" .Page.Params.image_ids "all_images" $all_images "extra" "" "all_awards" $all_awards) }}
 
 {{ end }}

@@ -1,51 +1,12 @@
 {{ define "main" }}
 
-<!-- CHALLENGE SINGLE -->
-
-{{ $challenge_id := printf "%d" .Page.Params.challenge_id}}
-{{ $challenge := index .Site.Data.collections.challenges $challenge_id }}
 {{ $all_awards := .Site.Data.collections.awards_meta }}
-{{ $award_counts := $challenge.award_counts }}
+{{ $all_images := .Site.Data.collections.images }}
 
-<div class="columns is-multiline">
-    <div class="column is-8 is-offset-2">
-        <div class="card">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">
-                            {{ $challenge.challenge_name }}
-                        </p>
-                        <p class="subtitle is-6">{{ $challenge.num_awards }} awards in
-                            {{ $challenge.num_distinct_awards }} categories.</p>
-                    </div>
-                </div>
-                <div class="content">
-                    &nbsp;
-                    <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
-                        {{ range $slug, $count := $award_counts }}
-                        {{ $award := index $all_awards $slug }}
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <span class="tag">{{ $award.name }}</span>
-                                <span class="tag is-dark">{{ $count }}</span>
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "description" (partial "recipient_tags.html" (dict "award_counts" .Page.Params.award_counts "all_awards" $all_awards)) "stats" .Page.Params.stats) }}
 
 <p>&nbsp;</p>
 
-{{ $image_ids := $challenge.image_ids }}
-{{ $images := $.Site.Data.collections.images }}
-
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "all_awards" $all_awards) }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" .Page.Params.image_ids "all_images" $all_images "all_awards" $all_awards) }}
 
 {{ end }}

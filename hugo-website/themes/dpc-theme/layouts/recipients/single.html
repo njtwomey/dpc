@@ -1,17 +1,12 @@
 {{ define "main" }}
 
-{{ $recipient_id := printf "%d" .Page.Params.recipient_id}}
-{{ $recipient := index .Site.Data.collections.users $recipient_id }}
 {{ $all_awards := .Site.Data.collections.awards_meta }}
-{{ $award_counts := $recipient.award_counts }}
+{{ $all_images := .Site.Data.collections.images }}
 
-{{ $description := printf "%d awards from %d categories." $recipient.num_awards $recipient.num_distinct_awards }}
+{{ partial "gallery_header.html" (dict "thumb" .Page.Params.thumb "name" .Page.Params.name "description" (partial "recipient_tags.html" (dict "award_counts" .Page.Params.award_counts "all_awards" $all_awards)) "stats" .Page.Params.stats) }}
 
-{{ partial "gallery_header.html" (dict "thumb" $recipient.user_thumb "name" $recipient.user_name "description" (partial "recipient_tags.html" (dict "award_counts" $award_counts "all_awards" $all_awards)) "stats" $description) }}
+<p>&nbsp;</p>
 
-{{ $image_ids := $recipient.image_ids }}
-{{ $images := $.Site.Data.collections.images }}
-
-{{ partial "gallery_from_image_id.html" (dict "image_ids" $image_ids "images" $images "all_awards" $all_awards) }}
+{{ partial "gallery_from_image_id.html" (dict "image_ids" .Page.Params.image_ids "all_images" $all_images "extra" "" "all_awards" $all_awards) }}
 
 {{ end }}
