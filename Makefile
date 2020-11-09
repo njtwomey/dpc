@@ -54,7 +54,7 @@ server:
 	cd $(HUGO_DIR); hugo server -D --disableFastRender --disableLiveReload
 
 sync:
-	git add --all
+	ggit add --all
 	git commit -m 'Scraper code updating'
 	git push -u origin master
 	cd $(HUGO_DIR)/public; \
