@@ -54,7 +54,7 @@ server:
 	cd $(HUGO_DIR); hugo server -D --disableFastRender --disableLiveReload
 
 sync:
-	ggit add --all
+	git add --all
 	git commit -m 'Scraper code updating'
 	git push -u origin master
 	cd $(HUGO_DIR)/public; \
@@ -62,6 +62,6 @@ sync:
 	git commit -m 'Website built with latest version'; \
 	git push -u origin master
 
-most: scrape backup content local website
+most: scrape backup content website
 
 all: clean most sync
