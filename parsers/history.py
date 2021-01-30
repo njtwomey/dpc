@@ -37,5 +37,7 @@ def get_history(session, page_num=None):
     else:
         unknown_challenges = sorted(challenge_ids, reverse=True)
 
+    print(unknown_challenges)
+
     for challenge_id in sorted(unknown_challenges):
         get_challenge(session=session, challenge_id=challenge_id)
