@@ -7,7 +7,7 @@ PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BACKUP_DIR := $(PROJECT_DIR)/database-backup
 HUGO_DIR := $(PROJECT_DIR)/hugo-website
 
-PYTHON_INTERPRETER = pipenv run python
+PYTHON_INTERPRETER =  python
 
 MAKE = /usr/bin/make
 
