@@ -62,6 +62,6 @@ sync:
 	git commit -m 'Website built with latest version'; \
 	git push -u origin master
 
-most: scrape backup content website
+most: scrape content website
 
 all: clean most sync
