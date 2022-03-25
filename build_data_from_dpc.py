@@ -5,7 +5,7 @@ from parsers import get_history
 
 session = Session(join(".", "login_details.json"))
 
-get_history(session=session, page_num=1)
+get_history(session=session, page_num=2)
 
 # from models import Challenge
 # from scrapers import get_challenge

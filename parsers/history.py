@@ -40,4 +40,8 @@ def get_history(session, page_num=None):
     print(unknown_challenges)
 
     for challenge_id in sorted(unknown_challenges):
-        get_challenge(session=session, challenge_id=challenge_id)
+        try:
+            get_challenge(session=session, challenge_id=challenge_id)
+        except Exception as ex:
+            print(ex)
+            print(f"PROBLEM WITH {challenge_id=}\n\n\n\n\n")

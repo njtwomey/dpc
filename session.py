@@ -10,7 +10,8 @@ class Session(object):
         with open(params_file, 'r') as fil:
             login_params = json.load(fil)
         
-        self.post(login_url, login_params)
+        self.resp = self.post(login_url, login_params)
+        assert login_params["USERNAME"] in self.resp
     
     def post(self, post_url, post_params):
         req = self.s.post(post_url, data=post_params)
