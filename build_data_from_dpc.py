@@ -5,9 +5,9 @@ from parsers import get_history
 
 session = Session(join(".", "login_details.json"))
 
-get_history(session=session, page_num=2)
-
 # Failed with link=<a class="i" href="/image.php?IMAGE_ID=1267496">Portrait of a Titmouse</a>
+
+get_history(session=session, page_num=2)
 
 # from models import Challenge
 # from scrapers import get_challenge
