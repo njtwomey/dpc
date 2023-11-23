@@ -1,638 +1,1196 @@
-<!doctype html><html lang=en-uk><head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Art of 2015 | DPChallenge Award Gallery</title>
-<meta name=description content="An interface for the user-generated awards given at https://www.dpchallenge.com">
-<meta property="og:title" content="Art of 2015">
-<meta property="og:description" content>
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://nialltwomey.com/dpc/challenges/art-of-2015/"><meta property="article:section" content="challenges">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Art of 2015">
-<meta name=twitter:description content>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.7.2/css/all.css integrity=sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr crossorigin=anonymous>
-<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
-<script type=text/javascript src=https://nialltwomey.com/dpc/js/fresco.min.js></script>
-<link rel=stylesheet type=text/css href=https://nialltwomey.com/dpc/css/fresco.css>
+<!DOCTYPE html>
+<html lang="en-uk"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Art of 2015 | DPChallenge Award Gallery</title>
+    <meta name="description" content="An interface for the user-generated awards given at https://www.dpchallenge.com">
+    <meta property="og:title" content="Art of 2015" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.nialltwomey.com/dpc/challenges/art-of-2015/" /><meta property="article:section" content="challenges" />
+
+
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Art of 2015"/>
+<meta name="twitter:description" content=""/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://www.nialltwomey.com/dpc/js/fresco.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.nialltwomey.com/dpc/css/fresco.css" />
 </head><body><header>
-<nav class=navbar role=navigation>
-<div class=container>
-<div class=navbar-brand>
-<a href=https://nialltwomey.com/dpc/ title=home class=navbar-item>
-<span class=logo><h1>DPChallenge Award Gallery</h1></span>
-</a>
-<a href=https://twitter.com/twomeynj class="navbar-item is-hidden-desktop" title=Twitter><span class=icon><i class="fab fa-twitter"></i></span></a>
-<a role=button class=navbar-burger aria-label=menu aria-expanded=false>
-<span aria-hidden=true></span>
-<span aria-hidden=true></span>
-<span aria-hidden=true></span>
-</a>
-</div>
-<div class=navbar-menu>
-<div class=navbar-start>
-<a href=https://nialltwomey.com/dpc/awarders class=navbar-item>Awarders</a>
-<a href=https://nialltwomey.com/dpc/challenges class=navbar-item>Challenges</a>
-<a href=https://nialltwomey.com/dpc/recipients class=navbar-item>Recipients</a>
-</div>
-<div class=navbar-end>
-<a href=https://twitter.com/twomeynj class="navbar-item is-hidden-touch" title=Twitter><span class=icon><i class="fab fa-twitter"></i></span></a>
-</div>
-</div>
-</div>
-</nav>
-<script>$(document).ready(function(){$(".navbar-burger").click(function(){$(".navbar-burger").toggleClass("is-active"),$(".navbar-menu").toggleClass("is-active")})})</script>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="https://www.nialltwomey.com/dpc/" title="home" class="navbar-item">
+                    <span class="logo"><h1>DPChallenge Award Gallery</h1></span>
+                </a>
+                
+                <a href="https://twitter.com/twomeynj" class="navbar-item is-hidden-desktop" title="Twitter"><span
+                        class="icon"><i class='fab fa-twitter'></i></span></a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    
+                    <a href="https://www.nialltwomey.com/dpc/awarders" class="navbar-item">Awarders</a>
+                    
+                    <a href="https://www.nialltwomey.com/dpc/challenges" class="navbar-item">Challenges</a>
+                    
+                    <a href="https://www.nialltwomey.com/dpc/recipients" class="navbar-item">Recipients</a>
+                    
+                </div>
+                <div class="navbar-end">
+                    
+                    <a href="https://twitter.com/twomeynj" class="navbar-item is-hidden-touch" title="Twitter"><span
+                            class="icon"><i class='fab fa-twitter'></i></span></a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            })
+        })
+    </script>
 </header>
-<div id=content>
-<div class=container>
-<nav class=breadcrumb aria-label=breadcrumbs>
-<ul>
-<li>
-<a href=https://nialltwomey.com/dpc/>home</a>
-</li>
-<li>
-<a href=https://nialltwomey.com/dpc/challenges>challenges</a>
-</li>
-<li>
-<a href=https://nialltwomey.com/dpc/challenges/art-of-2015>art-of-2015</a>
-</li>
-</ul>
+<div id="content">
+        <div class="container">
+
+
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li>
+            <a href="https://www.nialltwomey.com/dpc/">home</a>
+        </li>
+        
+        
+        
+        <li>
+            <a href='https://www.nialltwomey.com/dpc/challenges'>challenges</a>
+        </li>
+        
+        
+        
+        
+        
+        <li>
+            <a href='https://www.nialltwomey.com/dpc/challenges/art-of-2015'>art-of-2015</a>
+        </li>
+        
+        
+        
+        
+        
+        
+    </ul>
 </nav></div>
-<div class=container>
-<div class=section>
-<div class=content>
+        <div class="container">
+            <div class="section">
+                <div class="content">
+
+
+
+
 <div class="columns is-multiline">
-<div class="column is-8 is-offset-2">
-<div class=card>
-<div class=card-content>
-<div class=media>
-<div class=media-left>
-<figure class="image is-64x64">
-<img src alt="Art of 2015">
-</figure>
-</div>
-<div class=media-content>
-<p class="title is-4">
-Art of 2015
-</p>
-<p class="subtitle is-6">
-34 images received awards in this challenge.
-</p>
-<p class="subtitle is-6">
+    <div class="column is-8 is-offset-2">
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="" alt="Art of 2015">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-4">
+                            Art of 2015
+                        </p>
+                        <p class="subtitle is-6">
+                            34 images received awards in this challenge.
+                        </p>
+                        <p class="subtitle is-6">
+                            
+                                
 <div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy>Posthumous Fantasy</a>
-</span>
-<span class="tag is-dark">14</span>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy">Posthumous Fantasy</a>
+            </span>
+            <span class="tag is-dark">14</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/undieyatch/undie-award">Undie Award</a>
+            </span>
+            <span class="tag is-dark">5</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/mitalapo/red-balloon">Red Balloon</a>
+            </span>
+            <span class="tag is-dark">2</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/mitalapo/blue-balloon">Blue Balloon</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/mitalapo/yellow-balloon">Yellow Balloon</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/paul/forward-movement">Forward Movement</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/georgesbogaert/dragonblue">DRAGONBlue</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/georgesbogaert/dragonred">DRAGONRed</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/georgesbogaert/dragonyellow">DRAGONYellow</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/bear-music/golden-bear">Golden Bear</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/jagar/be-there-blue">Be There Blue</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/jagar/be-there-red">Be There Red</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/jagar/be-there-yellow">Be There Yellow</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/niallotuama/asigmatic">Asigmatic</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/tate/babyface-blue">Babyface Blue</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
+    
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                
+                <a href="https://www.nialltwomey.com/dpc/awarders/tate/babyface-red">Babyface Red</a>
+            </span>
+            <span class="tag is-dark">1</span>
+        </div>
+    </div>
+    
 </div>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/undieyatch/undie-award>Undie Award</a>
-</span>
-<span class="tag is-dark">5</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/mitalapo/red-balloon>Red Balloon</a>
-</span>
-<span class="tag is-dark">2</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/tate/babyface-blue>Babyface Blue</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/tate/babyface-red>Babyface Red</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/niallotuama/asigmatic>Asigmatic</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/mitalapo/blue-balloon>Blue Balloon</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/mitalapo/yellow-balloon>Yellow Balloon</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/paul/forward-movement>Forward Movement</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonblue>DRAGONBlue</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonred>DRAGONRed</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonyellow>DRAGONYellow</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/bear-music/golden-bear>Golden Bear</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/jagar/be-there-blue>Be There Blue</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/jagar/be-there-red>Be There Red</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-<div class=control>
-<div class="tags has-addons">
-<span class=tag>
-<a href=https://nialltwomey.com/dpc/awarders/jagar/be-there-yellow>Be There Yellow</a>
-</span>
-<span class="tag is-dark">1</span>
-</div>
-</div>
-</div>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <p>&nbsp;</p>
+
+
 <p>&nbsp;</p>
+
+
+
+
 <div class="columns is-multiline">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173351.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173351'> stone cold <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=109363'> mefnj <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/tate/babyface-blue'>Babyface Blue</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonred'>DRAGONRed</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173351.jpg loading=lazy alt="Babyface Blue &#183; DRAGONRed">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=109363">mefnj&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173608.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173608'> Desert Rain <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=128323'> ecmguy <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonblue'>DRAGONBlue</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173608.jpg loading=lazy alt=DRAGONBlue>
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=128323">ecmguy&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173476.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173476'> treachery <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=20799'> tome <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173476.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=20799">tome&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173416.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173416'> i love you too <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=11769'> jmritz <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/mitalapo/blue-balloon'>Blue Balloon</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/jagar/be-there-yellow'>Be There Yellow</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173416.jpg loading=lazy alt="Posthumous Fantasy &#183; Blue Balloon &#183; Be There Yellow">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=11769">jmritz&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173620.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173620'> will or must <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=113591'> herfotoman <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173620.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=113591">herfotoman&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173468.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173468'> advance <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=117474'> NiallOTuama <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/niallotuama/asigmatic'>Asigmatic</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173468.jpg loading=lazy alt="Asigmatic &#183; Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=117474">NiallOTuama&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173153.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173153'> The Door Opener <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=180331'> josaa <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173153.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=180331">josaa&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173563.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173563'> Dragons <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=21714'> aznym <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173563.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=21714">aznym&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173079.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173079'> another story <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=38032'> tate <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173079.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=38032">tate&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173587.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173587'> Art of Joy <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=141826'> Wessam <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173587.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=141826">Wessam&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173663.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173663'> Fear <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=113411'> MeMex2 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/undieyatch/undie-award'>Undie Award</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173663.jpg loading=lazy alt="Posthumous Fantasy &#183; Undie Award">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=113411">MeMex2&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173332.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173332'> layers of <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=61396'> mitalapo <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/paul/forward-movement'>Forward Movement</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173332.jpg loading=lazy alt="Posthumous Fantasy &#183; Forward Movement">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=61396">mitalapo&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173690.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173690'> until the desert knows <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=114285'> Neat <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173690.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=114285">Neat&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173659.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173659'> The moment she realized <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=19825'> markwiley <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173659.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=19825">markwiley&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173603.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173603'> Air <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=105457'> sarampo <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173603.jpg loading=lazy alt="Posthumous Fantasy">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=105457">sarampo&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173208.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173208'> man, oh man <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=94815'> tvsometime <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/posthumous/posthumous-fantasy'>Posthumous Fantasy</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/mitalapo/red-balloon'>Red Balloon</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173208.jpg loading=lazy alt="Posthumous Fantasy &#183; Red Balloon">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=94815">tvsometime&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173584.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173584'> the bride <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=8759'> Tiberius <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/tate/babyface-red'>Babyface Red</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173584.jpg loading=lazy alt="Babyface Red">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=8759">Tiberius&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173654.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173654'> anamnesis <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=124815'> mariuca <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/mitalapo/yellow-balloon'>Yellow Balloon</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173654.jpg loading=lazy alt="Yellow Balloon">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=124815">mariuca&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173265.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173265'> Another kind of Christmas.... <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=86121'> aslezak <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/mitalapo/red-balloon'>Red Balloon</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173265.jpg loading=lazy alt="Red Balloon">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=86121">aslezak&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173250.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173250'> Head in the clouds <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=135744'> P-A-U-L <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/bear-music/golden-bear'>Golden Bear</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/undieyatch/undie-award'>Undie Award</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173250.jpg loading=lazy alt="Golden Bear &#183; Undie Award">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=135744">P-A-U-L&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173469.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173469'> The first thing I do in the morning is brush my teeth and sharpen my tongue. <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=100831'> PennyStreet <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/jagar/be-there-red'>Be There Red</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173469.jpg loading=lazy alt="Be There Red">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=100831">PennyStreet&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173185.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173185'> t u r b u l e n c e <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=30861'> Bear_Music <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/jagar/be-there-blue'>Be There Blue</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173185.jpg loading=lazy alt="Be There Blue">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=30861">Bear_Music&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173204.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173204'> Dimensions <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=14476'> sfalice <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/undieyatch/undie-award'>Undie Award</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173204.jpg loading=lazy alt="Undie Award">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=14476">sfalice&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173114.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173114'> Art Of Cycling <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=66616'> robst <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/georgesbogaert/dragonyellow'>DRAGONYellow</a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/undieyatch/undie-award'>Undie Award</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173114.jpg loading=lazy alt="DRAGONYellow &#183; Undie Award">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
-</div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=66616">robst&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="column is-2">
-<div class=card>
-<div class=card-content>
-<div class=content>
-<figure class="image is-3by2">
-<a href=https://images.dpchallenge.com/images_challenge/2000-2999/2216/1200/Copyrighted_Image_Reuse_Prohibited_1173362.jpg class=fresco data-fresco-group=dpc data-fresco-caption="<a href='https://www.dpchallenge.com/image.php?IMAGE_ID=1173362'> b  e  n  t <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/profile.php?USER_ID=98339'> Ja-9 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://www.dpchallenge.com/challenge_results.php?CHALLENGE_ID=2216'> Art of 2015 <i class='fa fa-external-link-alt' style='font-size:12px'></i> </i></a> &amp;middot; <a href='https://nialltwomey.com/dpc/awarders/undieyatch/undie-award'>Undie Award</a>">
-<img src=https://images.dpchallenge.com/images_challenge/2000-2999/2216/120/Copyrighted_Image_Reuse_Prohibited_1173362.jpg loading=lazy alt="Undie Award">
-</a>
-</figure>
+    <div class="card">
+        <div class="card-content">
+            <div class="content">
+                <figure class="image is-3by2">
+                    <a href="" class="fresco" data-fresco-group="dpc"
+                        data-fresco-caption="&lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; &lt;a href=&#39;%!s(&lt;nil&gt;)&#39;&gt;  &lt;i class=&#39;fa fa-external-link-alt&#39; style=&#39;font-size:12px&#39;&gt;&lt;/i&gt; &lt;/i&gt;&lt;/a&gt; &amp;middot; ">
+                        <img src="" loading="lazy" alt="">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a class="card-footer-item" href=''>&nbsp;<i
+                    class="fa fa-external-link-alt" style="font-size:12px"></i></a>
+        </footer>
+    </div>
 </div>
+    
 </div>
-<footer class=card-footer>
-<a class=card-footer-item href="https://www.dpchallenge.com/profile.php?USER_ID=98339">Ja-9&nbsp;<i class="fa fa-external-link-alt" style=font-size:12px></i></a>
-</footer>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div><footer class=footer>
-<div class="content has-text-centered">
-<p>
-Website &copy;2022 Niall Twomey
-</p>
-<p>
-All photographs in this website are owned by the photographer.
-Links to the photo page, and the photographer are provided in
-each gallery.
-</p>
-</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div><footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      Website &copy;2023 Niall Twomey
+    </p>
+    <p>
+      All photographs in this website are owned by the photographer.
+      Links to the photo page, and the photographer are provided in
+      each gallery.
+    </p>
+  </div>
 </footer></body>
+
 </html>
