@@ -1,12 +1,28 @@
+from dotenv import load_dotenv
+import os
 import sqlite3
 import psycopg2
 # import MySQLdb
 
+"""
+pg_dump -h localhost -p 5432 -U niall -d dpcdb | psql -h 0.0.0.0 -p 5555 -U niall -d dpcdb
+"""
 
 from playhouse.postgres_ext import *
 
-database = PostgresqlDatabase("dpcdb", autorollback=True)
+load_dotenv()
 
+database = PostgresqlDatabase(
+    database=os.getenv("POSTGRES_DATABASE"),
+    user=os.getenv("POSTGRES_USER"),
+    password=os.getenv("POSTGRES_PASSWORD"),
+    host=os.getenv("POSTGRES_HOST"),
+    port=int(os.getenv("POSTGRES_PORT")),
+    autorollback=True,
+)
+
+
+# database = SqliteDatabase("dpc.sqlite.db", autorollback=True)
 
 class BaseModel(Model):
     class Meta:

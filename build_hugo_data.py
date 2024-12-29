@@ -431,7 +431,7 @@ def main():
 
     import_bling_to_db(data_root)
 
-    backfill_asigmatic()
+    # backfill_asigmatic()
 
     find_awards()
 

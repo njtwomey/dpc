@@ -7,7 +7,7 @@ PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BACKUP_DIR := $(PROJECT_DIR)/database-backup
 HUGO_DIR := $(PROJECT_DIR)/hugo-website
 
-PYTHON_INTERPRETER =  python
+PYTHON_INTERPRETER = python
 
 MAKE = /usr/bin/make
 
@@ -64,4 +64,4 @@ sync:
 
 most: scrape content website
 
-all: clean most sync
+all: clean most c
