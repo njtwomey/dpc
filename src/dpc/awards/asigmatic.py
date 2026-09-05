@@ -7,15 +7,14 @@ satisfy a NOT NULL foreign key -- silently colliding with real comment ids.
 
 from __future__ import annotations
 
-import logging
+from loguru import logger
+
 from statistics import pstdev
 
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from dpc.db.models import Award, AwardGrant, Image
-
-log = logging.getLogger(__name__)
 
 ASIGMATIC_SLUG = "asigmatic"
 
@@ -53,7 +52,7 @@ def grant_asigmatics(session: Session) -> int:
     """Award Asigmatic once per challenge. Returns the number of new grants."""
     award = session.scalars(select(Award).where(Award.slug == ASIGMATIC_SLUG)).one_or_none()
     if award is None:
-        log.warning("no %r award in the catalogue; skipping", ASIGMATIC_SLUG)
+        logger.warning("no {!r} award in the catalogue; skipping", ASIGMATIC_SLUG)
         return 0
 
     already = set(

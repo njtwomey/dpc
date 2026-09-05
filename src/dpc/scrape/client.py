@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-import logging
+from loguru import logger
+
 import time
 from types import TracebackType
 
@@ -10,8 +11,6 @@ import httpx
 
 from dpc.config import Credentials, Settings
 from dpc.scrape.encoding import decode_html
-
-log = logging.getLogger(__name__)
 
 BASE_URL = "https://www.dpchallenge.com"
 LOGIN_PATH = "/login.php"
@@ -61,7 +60,7 @@ class DpcClient:
             msg = "no credentials configured; set DPC_USERNAME and DPC_PASSWORD"
             raise LoginError(msg)
 
-        log.info("logging in as %s", self._credentials.username)
+        logger.info("logging in as {}", self._credentials.username)
         response = self._request("POST", LOGIN_PATH, data=self._credentials.as_login_form())
         if self._credentials.username not in response:
             # Deliberately does not echo the response body -- it can contain the
@@ -83,8 +82,8 @@ class DpcClient:
             except (httpx.TransportError, httpx.HTTPStatusError) as error:
                 last_error = error
                 backoff = min(2.0**attempt, 30.0)
-                log.warning(
-                    "%s %s failed (attempt %d/%d): %s; retrying in %.1fs",
+                logger.warning(
+                    "{} {} failed (attempt {}/{}): {}; retrying in {:.1f}s",
                     method,
                     path,
                     attempt,

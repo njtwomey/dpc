@@ -2,7 +2,8 @@
 
 from __future__ import annotations
 
-import logging
+from loguru import logger
+
 from dataclasses import dataclass
 
 from sqlalchemy import select
@@ -11,8 +12,6 @@ from sqlalchemy.orm import Session
 from dpc.awards.catalog import AwardCatalog
 from dpc.awards.match import awards_in
 from dpc.db.models import Award, AwardGrant, Comment, Image, Member
-
-log = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True, slots=True)
@@ -54,7 +53,7 @@ def sync_catalog(session: Session, catalog: AwardCatalog) -> SyncReport:
         if changes:
             for key, value in changes.items():
                 setattr(award, key, value)
-            log.info("award %s: updated %s", definition.slug, ", ".join(sorted(changes)))
+            logger.info("award {}: updated {}", definition.slug, ", ".join(sorted(changes)))
             updated += 1
         else:
             unchanged += 1

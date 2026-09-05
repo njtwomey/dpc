@@ -1,0 +1,34 @@
+baseURL: https://www.nialltwomey.com/dpc/
+title: DPChallenge Award Gallery
+languageCode: en-uk
+
+# The site is generated entirely from data/dpc/*.json by the content adapters
+# in content/*/_content.gotmpl. There is no generated markdown on disk.
+
+params:
+  authorName: Niall Twomey
+  description: An interface for the user-generated awards given at https://www.dpchallenge.com
+
+menus:
+  main:
+    - name: Awarders
+      url: /awarders
+      weight: 10
+    - name: Recipients
+      url: /recipients
+      weight: 20
+    - name: Challenges
+      url: /challenges
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+build:
+  writeStats: false
+
+caches:
+  images:
+    maxAge: 24h
