@@ -30,7 +30,12 @@ function devSsr() {
               url,
               `<!doctype html><html lang="en-GB"><head><meta charset="utf-8">` +
                 `<meta name="viewport" content="width=device-width, initial-scale=1">` +
-                `<title>${route.title} | DPChallenge Award Gallery</title></head><body>` +
+                `<title>${route.title} | DPChallenge Award Gallery</title>` +
+                // A real stylesheet link, so dev blocks on CSS the way the
+                // build does. Without it the styles arrive inside the JS
+                // module and every page flashes unstyled first.
+                `<link rel="stylesheet" href="/src/index.css?direct">` +
+                `</head><body>` +
                 `<div id="root">${renderToStaticMarkup(route.element)}</div>` +
                 `<script type="module" src="/src/client.tsx"></script></body></html>`,
             )
