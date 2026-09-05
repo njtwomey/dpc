@@ -14,10 +14,14 @@ from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, CliApp, CliSubCommand, SettingsConfigDict
 from rich.console import Console
 from rich.table import Table
+from sqlalchemy import text
+from sqlalchemy.orm import Session
 
 from dpc.awards.catalog import AwardCatalog
 from dpc.awards.service import find_grants, sync_catalog
 from dpc.config import PROJECT_ROOT, Credentials, Settings, env_file_permission_warning
+from dpc.db.health import FABRICATED_DATE_THRESHOLD
+from dpc.db.health import check as check_health
 from dpc.db.migrate import upgrade
 from dpc.db.session import create_db_engine, create_session_factory, session_scope
 from dpc.export.build import build_site_data
@@ -65,13 +69,16 @@ class Scrape(_Command):
 
     challenge: list[int] = Field(default_factory=list, description="Specific challenge ids.")
     from_history: bool = Field(False, description="Discover ids from challenge_history.php.")
+    incomplete: bool = Field(
+        False, description="Refetch challenges holding only some of their images."
+    )
     refresh: bool = Field(False, description="Ignore the HTML cache and refetch.")
     images: bool = Field(True, description="Follow image pages. --no-images for metadata only.")
 
     def cli_cmd(self) -> None:
         settings = self.settings()
-        if not self.challenge and not self.from_history:
-            console.print("[yellow]pass --challenge or --from-history[/yellow]")
+        if not self.challenge and not self.from_history and not self.incomplete:
+            console.print("[yellow]pass --challenge, --from-history or --incomplete[/yellow]")
             raise SystemExit(2)
 
         engine = create_db_engine(settings.database_url)
@@ -82,12 +89,20 @@ class Scrape(_Command):
             client.login()
             with session_scope(factory) as session:
                 crawler = Crawler(client, session, cache, refresh=self.refresh)
-                candidates = (
-                    list(self.challenge)
-                    if self.challenge
-                    else list(crawler.challenge_ids_from_history())
+                if self.challenge:
+                    candidates = list(self.challenge)
+                elif self.incomplete:
+                    candidates = _incomplete_challenge_ids(session)
+                else:
+                    candidates = list(crawler.challenge_ids_from_history())
+
+                # Explicit ids and --incomplete both mean "do these", so the
+                # already-stored filter would defeat the point.
+                pending = (
+                    candidates
+                    if (self.challenge or self.incomplete)
+                    else crawler.pending_challenge_ids(candidates)
                 )
-                pending = crawler.pending_challenge_ids(candidates)
                 console.print(f"{len(pending)} of {len(candidates)} challenges to fetch")
                 stats = crawler.crawl_challenges(pending, with_images=self.images)
 
@@ -107,6 +122,18 @@ class Scrape(_Command):
         )
         if stats.failures:
             console.print(f"[red]failed:[/red] {stats.failures}")
+
+
+def _incomplete_challenge_ids(session: Session) -> list[int]:
+    """Challenges holding some but not all of their images."""
+    rows = session.execute(
+        text(
+            "SELECT c.id FROM challenges c WHERE c.num_submissions > 0 AND "
+            "(SELECT COUNT(*) FROM images i WHERE i.challenge_id = c.id) "
+            "NOT IN (0, c.num_submissions) ORDER BY c.id"
+        )
+    )
+    return [int(row[0]) for row in rows]
 
 
 class Awards(_Command):
@@ -172,6 +199,103 @@ class Export(_Command):
         console.print(f"wrote {len(written)} files")
 
 
+class Verify(_Command):
+    """Check the archive for inconsistencies."""
+
+    def cli_cmd(self) -> None:
+        settings = self.settings()
+        engine = create_db_engine(settings.database_url)
+        factory = create_session_factory(engine)
+
+        with session_scope(factory) as session:
+            health = check_health(session)
+        engine.dispose()
+
+        if health.incomplete:
+            table = Table("gap", "count", "meaning", title="missing data")
+            for finding in health.incomplete:
+                table.add_row(finding.name, f"{finding.count:,}", finding.detail)
+            console.print(table)
+
+        if health.integrity:
+            table = Table("problem", "count", "meaning", title="integrity")
+            for finding in health.integrity:
+                table.add_row(finding.name, f"{finding.count:,}", finding.detail)
+            console.print(table)
+        else:
+            console.print("[green]integrity: nothing contradicts itself[/green]")
+
+        if health.inherited:
+            table = Table("artefact", "count", "meaning", title="inherited from the old scraper")
+            for finding in health.inherited:
+                table.add_row(finding.name, f"{finding.count:,}", finding.detail)
+            console.print(table)
+
+        if not health.ok:
+            raise SystemExit(1)
+
+
+class RefreshMembers(_Command):
+    """Refetch member profiles the old scraper never read properly."""
+
+    ids: list[int] = Field(default_factory=list, description="Specific member ids.")
+    blank_names: bool = Field(True, description="Members stored with no name.")
+    fabricated_dates: bool = Field(
+        False, description="Members sharing a join date with many others (a scrape date)."
+    )
+    limit: int = Field(0, description="Stop after this many. 0 means no limit.")
+
+    def cli_cmd(self) -> None:
+        settings = self.settings()
+        engine = create_db_engine(settings.database_url)
+        factory = create_session_factory(engine)
+        cache = HtmlCache(settings.cache_dir)
+
+        with session_scope(factory) as session:
+            targets = self._targets(session)
+            if not targets:
+                console.print("nothing to refresh")
+                return
+
+            console.print(f"refreshing {len(targets):,} member profiles")
+            with DpcClient(settings, Credentials()) as client:
+                client.login()
+                crawler = Crawler(client, session, cache, refresh=True)
+                updated = crawler.refresh_members(targets)
+
+        engine.dispose()
+        console.print(
+            _table("refresh-members", [("requested", len(targets)), ("updated", updated)])
+        )
+
+    def _targets(self, session: Session) -> list[int]:
+        if self.ids:
+            return list(self.ids)
+
+        # Every fragment below is a literal; values are bound, never interpolated.
+        clauses: list[str] = []
+        params: dict[str, int] = {}
+
+        if self.blank_names:
+            clauses.append("(name = '' OR name IS NULL)")
+        if self.fabricated_dates:
+            clauses.append(
+                "(join_date IN (SELECT join_date FROM members WHERE join_date IS NOT NULL"
+                " GROUP BY join_date HAVING COUNT(*) >= :threshold))"
+            )
+            params["threshold"] = FABRICATED_DATE_THRESHOLD
+        if not clauses:
+            return []
+
+        # noqa below: every clause is a literal defined a few lines up, and the
+        # two values are bound parameters. Ruff cannot see that from here.
+        sql = "SELECT id FROM members WHERE " + " OR ".join(clauses) + " ORDER BY id"  # noqa: S608
+        if self.limit:
+            sql += " LIMIT :limit"
+            params["limit"] = self.limit
+        return [int(row[0]) for row in session.execute(text(sql), params)]
+
+
 class Check(_Command):
     """Validate the award catalogue without touching the database."""
 
@@ -203,6 +327,8 @@ class Cli(BaseSettings):
     scrape: CliSubCommand[Scrape]
     awards: CliSubCommand[Awards]
     export: CliSubCommand[Export]
+    verify: CliSubCommand[Verify]
+    refresh_members: CliSubCommand[RefreshMembers]
     check: CliSubCommand[Check]
 
     def cli_cmd(self) -> None:

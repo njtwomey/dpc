@@ -41,43 +41,6 @@ Credentials live only in `.env`, which is gitignored. The password is held as a
 > password, and scrub history with `git filter-repo --path .env --invert-paths`
 > if you would rather it were gone.
 
-## Backups
-
-The database holds other members' comments, so it is not ours to publish, and it
-stays out of git entirely — git keeps every version forever, which is the
-opposite of what a backup wants. `database-backup/` and `backups/` are ignored.
-
-```bash
-make backup          # one SQL file per table -> backups/sql
-make backup-awards   # only rows an award touches -> backups/sql-awards
-make restore         # rebuild a SQLite database from backups/sql
-```
-
-`backups/sql` is committed. The dumps are plain SQL, one file per table,
-deliberately not compressed: the point is for git to diff and delta-compress the
-actual values rather than store an opaque blob whole on every version. The
-largest file, `images.sql`, is about 49 MB — under GitHub's 50 MB warning and
-its 100 MB hard limit.
-
-`comments` is filtered to those that granted an award — around 7,000 rows rather
-than 3.6 million. The award scope goes further and keeps only rows an award
-touches; it is about 6.5 MB of text, and rebuilding from it produces a
-**byte-identical** `site/data/dpc` export to the one built from the full 1.2 GB
-database. The archive itself — the other 380,000 images and 3.6M comments — is
-not in either dump and lives only in `dpc.sqlite`.
-
-> `database-backup/backup.sql.zip` — a 2020 dump — was tracked in git LFS until
-> recently. It is untracked now, but the object is still in history and still in
-> the LFS store. Since it contains other members' comments, purge it properly
-> rather than leaving it:
->
-> ```bash
-> git filter-repo --path database-backup/backup.sql.zip --invert-paths
-> ```
->
-> then force-push and ask GitHub support to clear the orphaned LFS object; a
-> plain delete commit reclaims neither the history nor the quota.
-
 ## Migrating the old Postgres database
 
 The previous incarnation used Postgres. To bring it across:
@@ -95,20 +58,98 @@ Re-runnable; it recreates the target each time.
 
 ## Usage
 
+### Everyday: pull in new challenges
+
 ```bash
-dpc db-init                        # create or upgrade the schema (Alembic)
-dpc scrape --from-history          # discover and fetch new challenges
-dpc scrape --challenge '[3880,3881]'
-dpc awards                         # match comments against the catalogue
-dpc export                         # write site/data/dpc/*.json
-dpc check                          # validate awards.yaml, no database needed
+make parse
 ```
 
-Then commit `site/data/dpc/` and push. The deploy workflow does the rest.
+That is `dpc scrape --from-history`, then `dpc awards`, then `dpc export`. It
+only fetches challenges not already stored, so it is safe to re-run — and safe
+to interrupt, since each challenge commits as a unit and a failed one rolls back
+whole.
 
-The dataset's shape is documented in [docs/site-data.md](docs/site-data.md).
+Then commit `site/data/dpc/` and push; the deploy workflow does the rest.
 
-`make help` lists the developer tasks (tests, linting, the Hugo dev server). The pipeline itself lives in the CLI, not in the Makefile.
+### Scraping specific things
+
+```bash
+dpc scrape --challenge '[3729]'          # one challenge
+dpc scrape --challenge '[3729,3730]'     # several
+dpc scrape --from-history                # every challenge not yet stored
+dpc scrape --incomplete                  # challenges missing some of their images
+dpc scrape --from-history --no-images    # challenge metadata only, much faster
+dpc scrape --challenge '[3729]' --refresh  # ignore the HTML cache and refetch
+```
+
+Explicit `--challenge` ids and `--incomplete` both mean "do these", so they
+bypass the already-stored check. `--from-history` does not.
+
+### Checking the archive
+
+```bash
+dpc verify
+```
+
+Reports three things separately, and only the first is a failure:
+
+- **integrity** — the database contradicting itself. Should always be empty.
+- **missing data** — things to go and fetch, e.g. challenges holding only some
+  of their images. `dpc scrape --incomplete` repairs these.
+- **inherited** — artefacts the old scraper left behind, carried across
+  faithfully by the migration. `dpc refresh-members` repairs the member ones.
+
+```bash
+dpc refresh-members                  # members stored with no name
+dpc refresh-members --fabricated-dates   # + members sharing a scrape date
+dpc refresh-members --ids '[99687]'      # specific ids
+dpc refresh-members --limit 50           # stop after 50, to try it out first
+```
+
+### Awards and the site
+
+```bash
+dpc awards        # match comments against config/awards.yaml
+dpc export        # write site/data/dpc/*.json
+dpc check         # validate the catalogue, no database needed
+make serve        # Hugo dev server against the committed data
+```
+
+### Backup and restore
+
+```bash
+make backup          # one SQL file per table -> backups/sql (committed)
+make backup-awards   # only rows an award touches -> backups/sql-awards
+make restore         # rebuild a database from backups/sql
+make restore to=scratch.sqlite   # ...somewhere else
+```
+
+`backups/sql` is committed. Plain SQL rather than compressed, so git diffs and
+delta-compresses the actual values instead of storing an opaque blob whole on
+every version. `comments` is filtered to those that granted an award — 7,000-odd
+rows rather than 3.6 million — which is what keeps it to ~58 MB; the largest
+file, `images.sql`, is about 49 MB, under GitHub's 50 MB warning and 100 MB
+limit.
+
+The award scope goes further and keeps only rows an award touches. Rebuilding
+from it produces a **byte-identical** `site/data/dpc` export to one built from
+the full database — so it is enough to reconstruct the site, though it is not a
+backup of the archive. The database itself is gitignored and lives only on your
+machine.
+
+### Starting from nothing
+
+```bash
+uv sync
+cp .env.example .env && chmod 600 .env   # then fill in DPC_USERNAME/DPC_PASSWORD
+make restore to=dpc.sqlite               # rebuild from the committed SQL
+dpc verify                               # confirm it came back clean
+dpc export                               # regenerate site/data/dpc
+cd site && hugo                          # build the site
+```
+
+`make restore` gets you a working archive without scraping anything. From there
+`make parse` brings it up to date.
 
 ### Schema changes
 
@@ -116,12 +157,26 @@ The schema is versioned with Alembic, so changes have a history:
 
 ```bash
 # edit src/dpc/db/models.py, then
-make revision m="add whatever"
-make migrate
+make revision m="add whatever"   # autogenerate the migration
+dpc db-init                      # apply it
 ```
 
 `tests/db/test_migrations.py` runs `alembic check`, so a model change without a
 matching migration fails CI.
+
+### Development
+
+```bash
+make check     # lint, format, types, tests -- everything CI runs
+make test      # just the tests
+make fmt       # format and apply safe lint fixes
+make clean     # remove build output
+```
+
+Parser tests run against real captured pages in `tests/fixtures/html/`; see the
+README there for which fixtures are genuine captures and which are synthesised.
+`tests/test_site.py` runs a real Hugo build and checks that the Go template URL
+builders agree with the Python ones, since the export ships ids rather than URLs.
 
 ## Layout
 
@@ -159,20 +214,6 @@ Awards are only ever found in comments that actually gave them; nothing is
 derived after the fact. Matching ignores anything a comment *quotes*, because
 replying to an award copies its image into the reply and would otherwise award
 it twice — see <https://www.dpchallenge.com/image.php?IMAGE_ID=1160121>.
-
-## Development
-
-```bash
-uv run pytest             # 170+ tests, no database or network required
-uv run ruff check .
-uv run ruff format .
-uv run mypy
-```
-
-Parser tests run against real captured pages in `tests/fixtures/html/`; see the
-README there for which fixtures are genuine captures and which are synthesised.
-`tests/test_site.py` runs a real Hugo build and checks that the Go template URL
-builders agree with the Python ones, since the export ships ids rather than URLs.
 
 ## Deployment
 

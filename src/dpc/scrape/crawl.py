@@ -14,6 +14,7 @@ from datetime import UTC, datetime
 from loguru import logger
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 from dpc.db.models import Challenge, ChallengeProbe, Image, Member
 from dpc.parse import challenge as challenge_parser
@@ -102,7 +103,9 @@ class Crawler:
 
     def crawl_challenges(self, challenge_ids: list[int], *, with_images: bool = True) -> CrawlStats:
         stats = CrawlStats()
-        for challenge_id in challenge_ids:
+        bar = tqdm(challenge_ids, desc="challenges", unit="ch", disable=None)
+        for challenge_id in bar:
+            bar.set_postfix_str(f"#{challenge_id}")
             try:
                 self._crawl_challenge(challenge_id, stats, with_images=with_images)
             except ImageStatsUnavailableError:
@@ -121,6 +124,12 @@ class Crawler:
                 logger.exception("challenge {} failed", challenge_id)
                 stats.failures.append(challenge_id)
                 self._session.rollback()
+                # The rollback also undoes any member inserted while this
+                # challenge was being crawled, but _known_members would still
+                # claim they exist -- so a later challenge referencing one would
+                # skip fetching it and then violate the foreign key. It is only
+                # a cache; dropping it costs a few repeated lookups.
+                self._known_members.clear()
         return stats
 
     def _crawl_challenge(self, challenge_id: int, stats: CrawlStats, *, with_images: bool) -> None:
@@ -152,7 +161,14 @@ class Crawler:
         stats.challenges += 1
 
         if with_images:
-            for image_id in challenge_parser.parse_image_ids(html):
+            image_ids = challenge_parser.parse_image_ids(html)
+            for image_id in tqdm(
+                image_ids,
+                desc=f"  images of {challenge_id}",
+                unit="img",
+                leave=False,
+                disable=None,
+            ):
                 self._crawl_image(image_id, challenge_id, stats)
 
         self._session.commit()
@@ -176,6 +192,33 @@ class Crawler:
         for comment in comments:
             self._ensure_member(comment.commenter_id, comment.commenter_name)
         stats.comments += upsert_comments(self._session, comments)
+
+    def refresh_members(self, member_ids: list[int]) -> int:
+        """Refetch profiles and overwrite what is stored. Returns how many changed.
+
+        Used to repair members the old scraper recorded badly -- a blank name, or
+        the join date it invented for cancelled accounts.
+        """
+        updated = 0
+        for member_id in tqdm(member_ids, desc="members", unit="member", disable=None):
+            try:
+                html = self._page("member", member_id, MEMBER_PATH.format(id=member_id))
+                record = member_parser.parse_member(html, member_id)
+            except MemberProfileUnavailableError as error:
+                logger.warning("member {}: {}", member_id, error)
+                continue
+            except Exception:
+                logger.exception("member {} failed", member_id)
+                self._session.rollback()
+                continue
+
+            before = self._session.get(Member, member_id)
+            was = (before.name, before.join_date, before.cancelled) if before else None
+            member = upsert_member(self._session, record, trust_dates=True)
+            if was != (member.name, member.join_date, member.cancelled):
+                updated += 1
+            self._session.commit()
+        return updated
 
     def _ensure_member(self, member_id: int, fallback_name: str = "") -> None:
         if member_id in self._known_members:

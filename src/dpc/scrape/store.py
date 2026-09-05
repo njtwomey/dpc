@@ -8,7 +8,7 @@ from dpc.db.models import Challenge, ChallengeProbe, Comment, Image, Member
 from dpc.parse.types import ChallengeRecord, CommentRecord, ImageRecord, MemberRecord
 
 
-def upsert_member(session: Session, record: MemberRecord) -> Member:
+def upsert_member(session: Session, record: MemberRecord, *, trust_dates: bool = False) -> Member:
     member = session.get(Member, record.id)
     if member is None:
         # name is NOT NULL, and the guard below deliberately skips blank names.
@@ -20,7 +20,10 @@ def upsert_member(session: Session, record: MemberRecord) -> Member:
     # blank; and never overwrite a real join date with None.
     if record.name:
         member.name = record.name
-    if record.join_date is not None:
+    if record.join_date is not None or trust_dates:
+        # trust_dates is for a deliberate refetch, where None genuinely means
+        # "this account has no readable join date" and should replace whatever
+        # the old scraper invented.
         member.join_date = record.join_date
     member.cancelled = record.cancelled
     session.flush()
