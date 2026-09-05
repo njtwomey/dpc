@@ -5,11 +5,11 @@
 PY := uv run python
 DPC := uv run dpc
 
-.PHONY: help install check test fmt parse serve revision backup backup-awards restore clean
+.PHONY: help install check test fmt parse verify dev revision backup backup-awards restore clean
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
-	  | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+	  | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
 install:  ## Sync the virtualenv from uv.lock
 	uv sync --locked
@@ -27,12 +27,19 @@ fmt:  ## Format and apply safe lint fixes
 	$(PY) -m ruff format .
 	$(PY) -m ruff check --fix .
 
-parse:  ## Fetch new challenges, rematch awards, refresh site/data/dpc
+# verify runs before awards and export, so nothing is derived from a database
+# that contradicts itself. It only fails on integrity: missing data and
+# inherited artefacts are reported and the pipeline carries on.
+parse:  ## Fetch new challenges, verify, rematch awards, refresh site/data/dpc
 	$(DPC) scrape --from-history
+	$(DPC) verify
 	$(DPC) awards
 	$(DPC) export
 
-serve:  ## Hugo dev server against the committed data
+verify:  ## Check the archive for inconsistencies
+	$(DPC) verify
+
+dev:  ## Hugo dev server against the committed data
 	cd site && hugo server --disableFastRender
 
 revision:  ## Autogenerate a migration after changing models (make revision m="add x")

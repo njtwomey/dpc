@@ -94,10 +94,15 @@ _INTEGRITY: tuple[tuple[str, str, str], ...] = (
     ),
 )
 
+# A challenge is short only when it holds *fewer* images than it had
+# submissions. Holding more is normal: the results page also lists disqualified
+# entries, which num_submissions excludes -- so a challenge with two DQs stores
+# num_submissions + 2. Counting those as gaps flagged 194 healthy challenges.
+# Zero stored means it has not been crawled at all, which is not a gap either.
 INCOMPLETE_CHALLENGES = (
     "SELECT COUNT(*) FROM challenges c WHERE c.num_submissions > 0 AND "
     "(SELECT COUNT(*) FROM images i WHERE i.challenge_id = c.id) "
-    "NOT IN (0, c.num_submissions)"
+    "BETWEEN 1 AND c.num_submissions - 1"
 )
 
 

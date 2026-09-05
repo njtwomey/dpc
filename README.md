@@ -64,10 +64,14 @@ Re-runnable; it recreates the target each time.
 make parse
 ```
 
-That is `dpc scrape --from-history`, then `dpc awards`, then `dpc export`. It
-only fetches challenges not already stored, so it is safe to re-run — and safe
-to interrupt, since each challenge commits as a unit and a failed one rolls back
-whole.
+That is `dpc scrape --from-history`, then `dpc verify`, then `dpc awards`, then
+`dpc export`. It only fetches challenges not already stored, so it is safe to
+re-run — and safe to interrupt, since each challenge commits as a unit and a
+failed one rolls back whole.
+
+`verify` sits before `awards` so nothing is derived from a database that
+contradicts itself; it exits non-zero only on integrity problems, so missing
+data and inherited artefacts are reported without stopping the run.
 
 Then commit `site/data/dpc/` and push; the deploy workflow does the rest.
 
@@ -107,7 +111,7 @@ processes once fetching is quick — at which point it is the slower half.
 ### Checking the archive
 
 ```bash
-dpc verify
+make verify     # or: dpc verify
 ```
 
 Reports three things separately, and only the first is a failure:
@@ -131,7 +135,7 @@ dpc refresh-members --limit 50           # stop after 50, to try it out first
 dpc awards        # match comments against config/awards.yaml
 dpc export        # write site/data/dpc/*.json
 dpc check         # validate the catalogue, no database needed
-make serve        # Hugo dev server against the committed data
+make dev          # Hugo dev server against the committed data
 ```
 
 ### Backup and restore

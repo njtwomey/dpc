@@ -128,9 +128,12 @@ def _incomplete_challenge_ids(session: Session) -> list[int]:
     """Challenges holding some but not all of their images."""
     rows = session.execute(
         text(
+            # Short, not merely different: the results page also lists
+            # disqualified entries, so more images than num_submissions is
+            # normal. See dpc.db.health.INCOMPLETE_CHALLENGES.
             "SELECT c.id FROM challenges c WHERE c.num_submissions > 0 AND "
             "(SELECT COUNT(*) FROM images i WHERE i.challenge_id = c.id) "
-            "NOT IN (0, c.num_submissions) ORDER BY c.id"
+            "BETWEEN 1 AND c.num_submissions - 1 ORDER BY c.id"
         )
     )
     return [int(row[0]) for row in rows]

@@ -63,6 +63,18 @@ class TestIncompleteChallenges:
         session.commit()
         assert check(session).incomplete == []
 
+    def test_more_images_than_submissions_is_normal(self, session):
+        # The results page lists disqualified entries too, which
+        # num_submissions excludes. Counting that as a gap flagged 194 healthy
+        # challenges and would have refetched them forever.
+        session.add(Member(id=1, name="p", join_date=date(2004, 1, 1)))
+        _challenge(session, 100, submissions=2)
+        for image_id in (1, 2, 3):
+            session.add(Image(id=image_id, challenge_id=100, photographer_id=1, name="x", votes=[]))
+        session.commit()
+
+        assert check(session).incomplete == []
+
     def test_a_fully_scraped_challenge_is_silent(self, session):
         session.add(Member(id=1, name="p", join_date=date(2004, 1, 1)))
         _challenge(session, 100, submissions=2)
