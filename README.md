@@ -53,9 +53,11 @@ make backup-awards   # only rows an award touches -> backups/sql-awards
 make restore         # rebuild a SQLite database from backups/sql
 ```
 
-The dumps are plain SQL, one file per table, deliberately not compressed: the
-point is for git to diff and delta-compress the actual values rather than store
-an opaque blob whole on every version.
+`backups/sql` is committed. The dumps are plain SQL, one file per table,
+deliberately not compressed: the point is for git to diff and delta-compress the
+actual values rather than store an opaque blob whole on every version. The
+largest file, `images.sql`, is about 49 MB — under GitHub's 50 MB warning and
+its 100 MB hard limit.
 
 `comments` is filtered to those that granted an award — around 7,000 rows rather
 than 3.6 million. The award scope goes further and keeps only rows an award

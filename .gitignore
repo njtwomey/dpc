@@ -27,19 +27,21 @@ dist/
 htmlcov/
 
 # ------------------------------------------------------------- local data
-# The database, its snapshots and the scraped HTML cache stay local. They hold
-# other members' comments, so they are not ours to publish -- and git keeps
-# every version forever, which is the opposite of what a backup wants.
-# The JSON under site/data/dpc IS committed: it is the site's build input.
-database-backup/
-backups/
+# The database and the scraped HTML cache stay local. They hold other members'
+# comments in bulk, and git keeps every version forever.
 *.sqlite
 *.sqlite3
 *.sqlite-journal
 *.sqlite-wal
 *.sqlite-shm
-*.sql
 dpc_cache/
+database-backup/
+
+# backups/sql IS committed: plain SQL, one file per table, so git diffs and
+# delta-compresses the actual values. comments is filtered to those that granted
+# an award, which is what keeps it to ~58 MB rather than gigabytes.
+# The award-scoped variant is a local convenience, not a second copy in history.
+backups/sql-awards/
 
 # ------------------------------------------------------------------- hugo
 site/public/
