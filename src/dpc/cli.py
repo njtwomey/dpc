@@ -30,7 +30,7 @@ from dpc.scrape.crawl import Crawler
 
 console = Console()
 
-DEFAULT_CATALOG = PROJECT_ROOT / "awards.yaml"
+DEFAULT_CATALOG = PROJECT_ROOT / "config" / "awards.yaml"
 
 
 def _table(title: str, rows: list[tuple[str, object]]) -> Table:

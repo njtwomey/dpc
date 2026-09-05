@@ -8,6 +8,7 @@ from pydantic import ValidationError
 from dpc.awards.catalog import AwardCatalog, AwarderDefinition
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+CATALOG_PATH = REPO_ROOT / "config" / "awards.yaml"
 
 
 def _awarder(**overrides):
@@ -23,23 +24,23 @@ class TestRealCatalog:
     """The catalogue that actually ships must stay valid."""
 
     def test_awards_yaml_loads_and_validates(self):
-        catalog = AwardCatalog.load(REPO_ROOT / "awards.yaml")
+        catalog = AwardCatalog.load(CATALOG_PATH)
         assert len(catalog.awarders) == 18
         assert len(catalog.pairs()) == 38
 
     def test_every_award_has_a_unique_slug(self):
-        catalog = AwardCatalog.load(REPO_ROOT / "awards.yaml")
+        catalog = AwardCatalog.load(CATALOG_PATH)
         slugs = [award.slug for _, award in catalog.pairs()]
         assert len(slugs) == len(set(slugs))
 
     def test_lookup_by_slug(self):
-        catalog = AwardCatalog.load(REPO_ROOT / "awards.yaml")
+        catalog = AwardCatalog.load(CATALOG_PATH)
         awarder, award = catalog.by_slug("posthumous-blue")
         assert awarder.name == "posthumous"
         assert "blackyak.com/dpc/bluepost" in award.markers
 
     def test_unknown_slug_raises(self):
-        catalog = AwardCatalog.load(REPO_ROOT / "awards.yaml")
+        catalog = AwardCatalog.load(CATALOG_PATH)
         with pytest.raises(KeyError):
             catalog.by_slug("no-such-award")
 

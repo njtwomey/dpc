@@ -152,7 +152,7 @@ class Comment(Base):
 
 
 class Award(Base):
-    """The *definition* of an award, loaded from ``awards.yaml``."""
+    """The *definition* of an award, loaded from ``config/awards.yaml``."""
 
     __tablename__ = "awards"
 

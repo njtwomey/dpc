@@ -1,6 +1,6 @@
 """The award catalogue: who gives what, and how a comment is recognised.
 
-Loaded from ``awards.yaml``. The old ``meta.yaml`` was read with
+Loaded from ``config/awards.yaml``. The old ``meta.yaml`` was read with
 ``yaml.safe_load`` and used unchecked, so a typo surfaced much later as a
 missing award rather than as an error at load time.
 """

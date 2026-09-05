@@ -27,8 +27,7 @@ chmod 600 .env            # it will hold a plaintext password
 # then fill in DPC_USERNAME and DPC_PASSWORD
 ```
 
-Every `dpc` command warns if `.env` is readable beyond its owner; `make secure`
-fixes it.
+Every `dpc` command warns if `.env` is readable beyond its owner.
 
 Credentials live only in `.env`, which is gitignored. The password is held as a
 `SecretStr`, so it cannot reach a log line, a repr or a traceback —
@@ -98,7 +97,7 @@ Then commit `site/data/dpc/` and push. The deploy workflow does the rest.
 
 The dataset's shape is documented in [docs/site-data.md](docs/site-data.md).
 
-`make help` lists the same steps as targets.
+`make help` lists the developer tasks (tests, linting, the Hugo dev server). The pipeline itself lives in the CLI, not in the Makefile.
 
 ### Schema changes
 
@@ -116,6 +115,7 @@ matching migration fails CI.
 ## Layout
 
 ```
+config/awards.yaml  the hand-maintained award catalogue
 src/dpc/
   config.py     Settings (no secrets) and Credentials (secrets), kept apart so
                 export and site builds never need a login
@@ -137,7 +137,7 @@ tests/                        mirrors src/dpc/
 
 ## The award catalogue
 
-`awards.yaml` lists each awarder and the marker substrings that identify their
+`config/awards.yaml` lists each awarder and the marker substrings that identify their
 award inside a comment's HTML. It is validated on load: markers may not be
 blank, slugs must be unique across awarders, and no awarder may have two awards
 whose markers contain one another — that last rule exists because `vlado`'s

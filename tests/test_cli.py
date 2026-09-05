@@ -7,6 +7,7 @@ from pydantic_settings import CliApp
 from dpc.cli import Awards, Check, Cli, DbInit, Export, Scrape
 
 REPO_ROOT = __import__("pathlib").Path(__file__).resolve().parents[1]
+CATALOG_PATH = REPO_ROOT / "config" / "awards.yaml"
 
 
 def _parse(argv: list[str]) -> Cli:
@@ -60,7 +61,7 @@ class TestCommandsAreConstructibleDirectly:
         assert callable(command().cli_cmd)
 
     def test_check_validates_the_real_catalogue(self, capsys):
-        Check(catalog=REPO_ROOT / "awards.yaml").cli_cmd()
+        Check(catalog=CATALOG_PATH).cli_cmd()
         assert "18 awarders" in capsys.readouterr().out
 
     def test_scrape_without_a_source_exits_rather_than_hitting_the_network(self):
@@ -78,8 +79,8 @@ class TestPipelineOnAScratchDatabase:
 
     def test_db_init_then_awards_then_export(self, scratch, capsys):
         DbInit().cli_cmd()
-        Awards(catalog=REPO_ROOT / "awards.yaml").cli_cmd()
-        Export(catalog=REPO_ROOT / "awards.yaml").cli_cmd()
+        Awards(catalog=CATALOG_PATH).cli_cmd()
+        Export(catalog=CATALOG_PATH).cli_cmd()
 
         out = capsys.readouterr().out
         assert "38" in out  # the catalogue's 38 awards
@@ -87,7 +88,7 @@ class TestPipelineOnAScratchDatabase:
 
     def test_export_honours_an_explicit_destination(self, scratch):
         DbInit().cli_cmd()
-        Awards(catalog=REPO_ROOT / "awards.yaml").cli_cmd()
-        Export(catalog=REPO_ROOT / "awards.yaml", out=scratch / "elsewhere").cli_cmd()
+        Awards(catalog=CATALOG_PATH).cli_cmd()
+        Export(catalog=CATALOG_PATH, out=scratch / "elsewhere").cli_cmd()
 
         assert (scratch / "elsewhere" / "meta.json").is_file()
