@@ -1,0 +1,119 @@
+awards:
+  posthumous-almost-blue:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: Photos that deserved a ribbon but for some reason or other didn't
+      get one
+    name: Posthumous Almost Blue
+    num_awarded: 28
+    num_distinct_challenges: 19
+    num_distinct_recipients: 21
+    slug: posthumous-almost-blue
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077283.gif
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077283
+    - blackyak.com/dpc/almostblue
+    - '1077283'
+  posthumous-blue:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: Originally, this was simply my favorite shot in a challenge, but
+      eventually I realized that most challenges don't have one, that a Posthumous
+      Blue is actually an image that calls to me and demands to be blue.
+    name: Posthumous Blue
+    num_awarded: 561
+    num_distinct_challenges: 533
+    num_distinct_recipients: 241
+    slug: posthumous-blue
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077284
+    - blackyak.com/dpc/bluepost
+    - blackyak.com/bluepost
+    - bluepost
+    - '1077284'
+  posthumous-blur:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: Hot fuzz.
+    name: Posthumous Blur
+    num_awarded: 12
+    num_distinct_challenges: 1
+    num_distinct_recipients: 12
+    slug: posthumous-blur
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077281.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077281
+    - blackyak.com/dpc/blurpost
+    - '1077281'
+  posthumous-boo:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: So good it's scary
+    name: Posthumous Boo
+    num_awarded: 3
+    num_distinct_challenges: 1
+    num_distinct_recipients: 3
+    slug: posthumous-boo
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077280.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077280
+    - blackyak.com/dpc/boopost
+    - '1077280'
+  posthumous-fantasy:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: An image that I would put in an exhibition if I had a gallery, or
+      that I would print in a literary arts magazine
+    name: Posthumous Fantasy
+    num_awarded: 3107
+    num_distinct_challenges: 857
+    num_distinct_recipients: 582
+    slug: posthumous-fantasy
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077279
+    - blackyak.com/dpc/artpost
+    - artpost
+    - '1077279'
+  posthumous-red:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: Originally, this was simply my second favorite shot in a challenge,
+      but now indicates a fierce image that demands to be recognized above everything
+      but the blue.
+    name: Posthumous Red
+    num_awarded: 381
+    num_distinct_challenges: 356
+    num_distinct_recipients: 213
+    slug: posthumous-red
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077285
+    - blackyak.com/dpc/redpost
+    - blackyak.com/redpost
+    - redpost
+    - '1077285'
+  posthumous-yellow:
+    awarder_id: 50695
+    awarder_slug: posthumous
+    description: Originally, this was simply my third favorite shot in a challenge,
+      but now is an image that warrants individual recognition.
+    name: Posthumous Yellow
+    num_awarded: 289
+    num_distinct_challenges: 247
+    num_distinct_recipients: 207
+    slug: posthumous-yellow
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_1077286
+    - blackyak.com/yellowpost
+    - blackyak.com/dpc/yellowpost
+    - yellowpost
+    - '1077286'
+id: 50695
+name: posthumous
+num_awarded: 4381
+slug: posthumous
+thumb: https://images.dpchallenge.com/images_profile/50000-54999/120/50695.jpg
+url: https://www.dpchallenge.com/profile.php?USER_ID=50695

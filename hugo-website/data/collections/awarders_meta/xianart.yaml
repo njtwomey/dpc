@@ -1,0 +1,21 @@
+awards:
+  x-yellow:
+    awarder_id: 53572
+    awarder_slug: xianart
+    description: 'The x prize is back, ''cause I''m back. These are for the lowest
+      placers of my highest scores: those who wuz robbed...'
+    name: X Yellow
+    num_awarded: 53
+    num_distinct_challenges: 39
+    num_distinct_recipients: 46
+    slug: x-yellow
+    thumb: https://images.dpchallenge.com/images_portfolio/50000-54999/53572/120/Copyrighted_Image_Reuse_Prohibited_657243.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_657243
+    - '657243'
+id: 53572
+name: xianart
+num_awarded: 53
+slug: xianart
+thumb: https://images.dpchallenge.com/images_profile/50000-54999/120/53572.jpg
+url: https://www.dpchallenge.com/profile.php?USER_ID=53572

@@ -1,16 +1,32 @@
-__pycache__
-.idea
-.DS_Store/
-downloaded
-*.sql
-*.pyc
-login_details.json
-*.swp
+# --- secrets ---
 .env
+login_details.json
 
-hugo-website/.vscode
-hugo-website/public
-hugo-website/data
-hugo-website/content/awarders
-hugo-website/content/challenges
-hugo-website/content/recipients
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# --- local data (never committed; the JSON export in site/data/dpc is) ---
+downloaded/
+*.sqlite
+*.sqlite-journal
+*.sql
+
+# --- hugo ---
+site/public/
+site/resources/
+site/.hugo_build.lock
+
+# --- editors / os ---
+.idea/
+.vscode/
+.DS_Store
+*.swp
+nvim.log

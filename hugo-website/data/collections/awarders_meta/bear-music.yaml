@@ -1,0 +1,20 @@
+awards:
+  golden-bear:
+    awarder_id: 30861
+    awarder_slug: bear-music
+    description: ''
+    name: golden bear
+    num_awarded: 11
+    num_distinct_challenges: 8
+    num_distinct_recipients: 11
+    slug: golden-bear
+    thumb: https://images.dpchallenge.com/images_portfolio/30000-34999/30861/120/Copyrighted_Image_Reuse_Prohibited_762723.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_762723
+    - '762723'
+id: 30861
+name: Bear_Music
+num_awarded: 11
+slug: bear-music
+thumb: https://images.dpchallenge.com/images_profile/30000-34999/120/30861.jpg
+url: https://www.dpchallenge.com/profile.php?USER_ID=30861

@@ -1,0 +1,43 @@
+awards:
+  be-there-blue:
+    awarder_id: 113156
+    awarder_slug: jagar
+    description: ''
+    name: be there blue
+    num_awarded: 43
+    num_distinct_challenges: 43
+    num_distinct_recipients: 25
+    slug: be-there-blue
+    thumb: https://images.dpchallenge.com/images_portfolio/110000-114999/113156/120/Copyrighted_Image_Reuse_Prohibited_1153614.jpg
+    urls:
+    - '1153614'
+  be-there-red:
+    awarder_id: 113156
+    awarder_slug: jagar
+    description: ''
+    name: be there red
+    num_awarded: 42
+    num_distinct_challenges: 41
+    num_distinct_recipients: 30
+    slug: be-there-red
+    thumb: https:////images.dpchallenge.com/images_portfolio/110000-114999/113156/1200/Copyrighted_Image_Reuse_Prohibited_1153615.jpg
+    urls:
+    - '1153615'
+  be-there-yellow:
+    awarder_id: 113156
+    awarder_slug: jagar
+    description: ''
+    name: be there yellow
+    num_awarded: 51
+    num_distinct_challenges: 39
+    num_distinct_recipients: 35
+    slug: be-there-yellow
+    thumb: https://images.dpchallenge.com/images_portfolio/110000-114999/113156/120/Copyrighted_Image_Reuse_Prohibited_1153616.jpg
+    urls:
+    - '1153616'
+id: 113156
+name: jagar
+num_awarded: 136
+slug: jagar
+thumb: https://images.dpchallenge.com/images_profile/110000-114999/120/113156.jpg
+url: https://www.dpchallenge.com/profile.php?USER_ID=113156

@@ -1,0 +1,24 @@
+awards:
+  undie-award:
+    awarder_id: 3724
+    awarder_slug: undieyatch
+    description: An award created at the request of Posthumous "undie award" - achievement
+      recognition icon for Posthumous Ribbons thread or when ever I feel like giving
+      it.The award may be given during voting or after a challenge is completed to
+      insure that my highest votes coincide with challenge submissions whose over
+      all score is 5 and below, or under 50%.
+    name: undie award
+    num_awarded: 69
+    num_distinct_challenges: 39
+    num_distinct_recipients: 55
+    slug: undie-award
+    thumb: https://images.dpchallenge.com/images_portfolio/0-4999/3724/120/Copyrighted_Image_Reuse_Prohibited_753886.jpg
+    urls:
+    - Copyrighted_Image_Reuse_Prohibited_753886
+    - '753886'
+id: 3724
+name: undieyatch
+num_awarded: 69
+slug: undieyatch
+thumb: https://images.dpchallenge.com/images_profile/0-4999/120/3724.jpg
+url: https://www.dpchallenge.com/profile.php?USER_ID=3724
