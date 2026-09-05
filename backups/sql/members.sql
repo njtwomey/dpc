@@ -89,7 +89,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (209, 'KL1864', '2002-02-16', 0),
 (210, 'dequinix', '2002-02-17', 0),
 (212, 'chicky', '2002-02-17', 0),
-(213, '', '2020-10-10', 0),
+(213, '', NULL, 1),
 (215, 'joshuamli', '2002-02-17', 0),
 (216, 'scythide', '2002-02-17', 0),
 (218, 'magus1', '2002-02-17', 0),
@@ -140,7 +140,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (323, 'tstump', '2002-02-28', 0),
 (324, 'michaeldebruyn', '2002-02-28', 0),
 (325, 'mikeysbistro', '2002-02-28', 0),
-(326, '', '2020-10-10', 0),
+(326, '', NULL, 1),
 (327, 'justine', '2002-02-28', 0),
 (330, 'JJart', '2002-02-28', 0),
 (332, 'arnit', '2002-02-28', 0),
@@ -228,7 +228,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (489, 'rich', '2002-03-10', 0),
 (491, 'debcard', '2002-03-10', 0),
 (492, 'soldatbigras', '2002-03-10', 0),
-(494, '', '2020-10-10', 0),
+(494, '', NULL, 1),
 (495, 'kno', '2002-03-11', 0),
 (496, 'pbayley', '2002-03-11', 0),
 (498, 'gingibash', '2002-03-11', 0),
@@ -367,7 +367,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (812, 'tgtondini', '2002-04-06', 0),
 (813, 'Speigner', '2002-04-06', 0),
 (814, 'Nicholasp27', '2002-04-06', 0),
-(815, '', '2020-10-10', 0),
+(815, '', NULL, 1),
 (818, 'ar|a', '2002-04-07', 0),
 (819, 'del', '2002-04-07', 0),
 (820, 'Turner', '2002-04-07', 0),
@@ -785,7 +785,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (1819, 'imp_shakes', '2002-05-24', 0),
 (1820, 'Silly', '2002-05-24', 0),
 (1822, 'mjf999', '2020-10-10', 0),
-(1826, '', '2020-10-10', 0),
+(1826, '', NULL, 1),
 (1827, 'just-married', '2002-05-24', 0),
 (1829, 'aussie', '2002-05-25', 0),
 (1831, 'Dogman', '2002-05-25', 0),
@@ -825,7 +825,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (1901, 'timothypotter', '2002-05-29', 0),
 (1903, 'vincentpepperlip', '2002-05-29', 0),
 (1904, 'freetime', '2002-05-29', 0),
-(1905, '', '2020-10-10', 0),
+(1905, '', NULL, 1),
 (1906, 'a1leyez0nm3', '2002-05-30', 0),
 (1907, 'imperative', '2002-05-30', 0),
 (1908, 'jasonmccarthy', '2002-05-30', 0),
@@ -1045,7 +1045,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (2363, 'Dez', '2002-06-23', 0),
 (2366, 'Diamondgirl', '2002-06-23', 0),
 (2368, 'Phuong', '2002-06-23', 0),
-(2369, '', '2020-10-10', 0),
+(2369, '', NULL, 1),
 (2370, 'wenyao', '2002-06-23', 0),
 (2373, 'kevinswope', '2002-06-23', 0),
 (2376, 'shadowangel', '2002-06-24', 0),
@@ -1495,7 +1495,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (3320, 'lionelm', '2002-08-16', 0),
 (3321, 'tattyrob', '2002-08-16', 0),
 (3323, 'yousuck', '2020-10-10', 0),
-(3326, '', '2020-10-10', 0),
+(3326, '', NULL, 1),
 (3328, 'Delete_Me', '2002-08-16', 0),
 (3330, 'lmurray13', '2002-08-16', 0),
 (3336, 'CDR1986', '2002-08-17', 0),
@@ -1712,7 +1712,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (3818, 'Renee707', '2002-09-10', 0),
 (3821, 'visconti', '2002-09-10', 0),
 (3824, 'aust', '2002-09-11', 0),
-(3826, '', '2020-10-10', 0),
+(3826, '', NULL, 1),
 (3832, 'WJM', '2002-09-11', 0),
 (3837, 'Robert', '2002-09-11', 0),
 (3839, 'MisterWeenie', '2002-09-11', 0),
@@ -1915,7 +1915,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (4288, 'LindaE', '2002-09-29', 0),
 (4289, 'Ty', '2002-09-29', 0),
 (4290, 'stormflowers', '2002-09-29', 0),
-(4293, '', '2020-10-10', 0),
+(4293, '', NULL, 1),
 (4294, 'cgluch', '2002-09-29', 0),
 (4297, 'asaberi', '2020-10-10', 0),
 (4305, 'clayton999', '2020-10-10', 0),
@@ -1928,7 +1928,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (4316, '601200taylor', '2002-09-30', 0),
 (4318, 'beshareit', '2002-09-30', 0),
 (4321, 'carina', '2002-10-01', 0),
-(4325, '', '2020-10-10', 0),
+(4325, '', NULL, 1),
 (4327, 'kdp', '2002-10-01', 0),
 (4328, 'Brodie', '2002-10-01', 0),
 (4331, 'Flutter_97321', '2002-10-01', 0),
@@ -2069,7 +2069,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (4643, 'spillerphoto', '2002-10-15', 0),
 (4648, 'PTLParsons', '2002-10-15', 0),
 (4652, 'femhacker', '2002-10-16', 0),
-(4654, '', '2020-10-10', 0),
+(4654, '', NULL, 1),
 (4658, 'Holley56', '2002-10-16', 0),
 (4678, 'mapgem', '2002-10-17', 0),
 (4679, 'Raindrop', '2002-10-17', 0),
@@ -2407,7 +2407,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (5547, 'edhendricks', '2002-12-05', 0),
 (5548, 'Swami G', '2020-10-10', 0),
 (5552, 'ltvino', '2002-12-06', 0),
-(5554, '', '2020-10-10', 0),
+(5554, '', NULL, 1),
 (5561, 'terik65', '2002-12-06', 0),
 (5566, 'rmockmt', '2002-12-06', 0),
 (5570, 'Littledebbiekay', '2002-12-06', 0),
@@ -2432,7 +2432,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (5616, 'andres', '2002-12-09', 0),
 (5620, 'lwatson148', '2002-12-09', 0),
 (5622, 'one66stang', '2002-12-10', 0),
-(5623, '', '2020-10-10', 0),
+(5623, '', NULL, 1),
 (5624, 'ed728', '2002-12-10', 0),
 (5625, 'patridge', '2002-12-10', 0),
 (5627, 'brandond', '2002-12-10', 0),
@@ -4469,7 +4469,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (11139, 'Willike', '2003-08-12', 0),
 (11144, 'abernathy', '2003-08-12', 0),
 (11149, 'Darren', '2003-08-12', 0),
-(11153, '', '2020-10-10', 0),
+(11153, '', NULL, 1),
 (11154, 'Theo', '2003-08-12', 0),
 (11155, 'Ten13', '2003-08-12', 0),
 (11157, 'malignant', '2003-08-12', 0),
@@ -12787,7 +12787,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (37424, 'tSkye', '2005-05-05', 0),
 (37425, 'evenfl0w', '2005-05-06', 0),
 (37429, 'radharam', '2005-05-06', 0),
-(37430, '', '2020-10-10', 0),
+(37430, '', NULL, 1),
 (37439, 'crisalide', '2005-05-06', 0),
 (37440, 'petroglypher', '2005-05-06', 0),
 (37442, 'Fotofill', '2005-05-06', 0),
@@ -20915,6 +20915,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (64825, 'hazeiam', '2006-08-30', 0),
 (64826, 'AkumAPRIME', '2006-08-30', 0),
 (64828, 'ntiley', '2006-08-30', 0),
+(64833, 'Borts', '2006-08-30', 0),
 (64836, 'Ellabel', '2006-08-30', 0),
 (64837, 'everclear25', '2006-08-30', 0),
 (64841, 'pocahontas88', '2006-08-30', 0),
@@ -21104,9 +21105,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (65567, 'orongish', '2006-09-13', 0),
 (65568, 'TBradcrew', '2006-09-13', 0),
 (65570, 'MAB7777', '2006-09-13', 0),
-(65578, 'dsonnebo', '2006-09-14', 0),
-(65581, 'chiba', '2006-09-14', 0);
+(65578, 'dsonnebo', '2006-09-14', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(65581, 'chiba', '2006-09-14', 0),
 (65582, 'performant', '2006-09-14', 0),
 (65586, 'Jacques123', '2006-09-14', 0),
 (65589, 'tejka27', '2006-09-14', 0),
@@ -21305,9 +21306,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (66371, 'sarani', '2006-09-30', 0),
 (66374, 'thejas', '2006-09-30', 0),
 (66380, 'cmadgwick', '2020-10-11', 0),
-(66384, 'JuliBoc', '2006-09-30', 0),
-(66386, 'Wellylena', '2006-09-30', 0);
+(66384, 'JuliBoc', '2006-09-30', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(66386, 'Wellylena', '2006-09-30', 0),
 (66387, 'DTeam', '2006-09-30', 0),
 (66389, 'TallisMan', '2006-09-30', 0),
 (66397, 'KimmyB', '2006-09-30', 0),
@@ -21506,9 +21507,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (67111, 'InClearView', '2006-10-15', 0),
 (67115, 'RainBoxRed', '2006-10-15', 0),
 (67128, 'chrishatfield', '2006-10-15', 0),
-(67129, 'gayrin', '2006-10-15', 0),
-(67131, 'ktigerlilyk', '2006-10-15', 0);
+(67129, 'gayrin', '2006-10-15', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(67131, 'ktigerlilyk', '2006-10-15', 0),
 (67137, 'chriswithredhair', '2006-10-15', 0),
 (67139, 'dkoniecz', '2006-10-15', 0),
 (67145, 'roz', '2006-10-16', 0),
@@ -21707,9 +21708,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (67855, 'Aurel78', '2006-10-31', 0),
 (67856, 'maptan', '2006-10-31', 0),
 (67859, 'Distracted', '2006-10-31', 0),
-(67862, 'Manticorp', '2006-10-31', 0),
-(67864, 'Vic0710', '2006-10-31', 0);
+(67862, 'Manticorp', '2006-10-31', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(67864, 'Vic0710', '2006-10-31', 0),
 (67865, 'saramichel', '2006-10-31', 0),
 (67873, 'sebrock', '2006-10-31', 0),
 (67875, 'pingu', '2006-10-31', 0),
@@ -21908,9 +21909,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (68705, 'woody58', '2006-11-17', 0),
 (68706, 'origamist', '2006-11-17', 0),
 (68725, 'porcini', '2006-11-18', 0),
-(68732, 'XTuzer', '2006-11-18', 0),
-(68734, 'nate2006', '2006-11-18', 0);
+(68732, 'XTuzer', '2006-11-18', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(68734, 'nate2006', '2006-11-18', 0),
 (68736, 'uvinrg', '2006-11-18', 0),
 (68740, 'Shutter1', '2006-11-18', 0),
 (68742, 'mikigoodwin', '2006-11-18', 0),
@@ -22109,9 +22110,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (69572, 'Someamateur', '2006-12-06', 0),
 (69573, 'lexopposite', '2006-12-07', 0),
 (69576, 'nick1', '2020-10-10', 0),
-(69578, 'nick3', '2020-10-10', 0),
-(69581, 'k_alsaigh', '2006-12-07', 0);
+(69578, 'nick3', '2020-10-10', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(69581, 'k_alsaigh', '2006-12-07', 0),
 (69585, 'botticcelli', '2006-12-07', 0),
 (69588, 'zZvaYnaZz', '2006-12-07', 0),
 (69589, 'amycody', '2006-12-07', 0),
@@ -22310,9 +22311,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (70328, 'martincj', '2006-12-23', 0),
 (70332, 'sdjimh', '2006-12-23', 0),
 (70338, 'michiganhiker', '2006-12-23', 0),
-(70347, 'fusionhead', '2006-12-23', 0),
-(70359, 'jodeeanne', '2006-12-24', 0);
+(70347, 'fusionhead', '2006-12-23', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(70359, 'jodeeanne', '2006-12-24', 0),
 (70360, 'li_lu4u', '2006-12-24', 0),
 (70365, 'kiddieyemd', '2006-12-24', 0),
 (70369, 'kandykarml', '2020-10-10', 0),
@@ -22511,9 +22512,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (71177, 'DelicateHeart03', '2007-01-03', 0),
 (71179, 'photogirLinthecity', '2007-01-03', 0),
 (71188, 'puckin', '2007-01-03', 0),
-(71189, 'spyderracer393', '2007-01-03', 0),
-(71194, 'DieselJimmie', '2007-01-03', 0);
+(71189, 'spyderracer393', '2007-01-03', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(71194, 'DieselJimmie', '2007-01-03', 0),
 (71197, 'rinku', '2007-01-03', 0),
 (71199, 'tmelo1968', '2007-01-03', 0),
 (71201, 'vgrichanov', '2007-01-03', 0),
@@ -22712,9 +22713,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (72068, 'dd1989', '2007-01-14', 0),
 (72070, 'guako', '2007-01-14', 0),
 (72076, 'BethW', '2007-01-14', 0),
-(72090, 'Pablonauta', '2007-01-14', 0),
-(72094, 'kirtmaps2photos', '2007-01-14', 0);
+(72090, 'Pablonauta', '2007-01-14', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(72094, 'kirtmaps2photos', '2007-01-14', 0),
 (72096, 'rudyhilton', '2007-01-14', 0),
 (72102, 'charonshe', '2007-01-15', 0),
 (72103, 'dougi555', '2007-01-15', 0),
@@ -22913,9 +22914,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (73013, 'rhiann31', '2007-01-28', 0),
 (73014, 'schultzy', '2007-01-28', 0),
 (73019, 'rodadur', '2007-01-28', 0),
-(73022, 'bjh0705', '2007-01-28', 0),
-(73030, 'Esco', '2007-01-28', 0);
+(73022, 'bjh0705', '2007-01-28', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(73030, 'Esco', '2007-01-28', 0),
 (73031, 'velazquez', '2007-01-28', 0),
 (73032, 'jsc9306', '2007-01-28', 0),
 (73035, 'paulp', '2007-01-28', 0),
@@ -23114,9 +23115,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (73851, 'naturestars', '2007-02-09', 0),
 (73855, 'erickgrau', '2007-02-09', 0),
 (73861, 'pisimatza', '2007-02-09', 0),
-(73863, 'kijt', '2007-02-09', 0),
-(73865, '', '2020-10-11', 0);
+(73863, 'kijt', '2007-02-09', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(73865, '', '2020-10-11', 0),
 (73866, 'irisheyes', '2007-02-09', 0),
 (73873, 'VBester', '2007-02-09', 0),
 (73875, '', '2020-10-11', 0),
@@ -23315,9 +23316,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (74686, 'Grinch232', '2007-02-24', 0),
 (74691, 'Girstaquito', '2007-02-24', 0),
 (74696, 'keepitfaded', '2007-02-24', 0),
-(74703, 'mat987', '2007-02-24', 0),
-(74704, 'Benak', '2007-02-24', 0);
+(74703, 'mat987', '2007-02-24', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(74704, 'Benak', '2007-02-24', 0),
 (74705, 'heis', '2007-02-24', 0),
 (74713, 'doggyd112', '2007-02-25', 0),
 (74730, 'xml5000', '2007-02-25', 0),
@@ -23516,9 +23517,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (75524, 'polarbearjen', '2007-03-14', 0),
 (75526, 'musicgal383', '2007-03-14', 0),
 (75527, 'tmckinney', '2007-03-14', 0),
-(75532, 'Sugarpie', '2007-03-14', 0),
-(75542, 'sketch_tb', '2007-03-15', 0);
+(75532, 'Sugarpie', '2007-03-14', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(75542, 'sketch_tb', '2007-03-15', 0),
 (75552, '', '2020-10-11', 0),
 (75555, 'susanharner', '2007-03-15', 0),
 (75560, 'houstonp', '2007-03-15', 0),
@@ -23717,9 +23718,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (76434, 'pablon70', '2007-04-02', 0),
 (76438, 'Sexaybeastt', '2007-04-02', 0),
 (76440, 'iSuffer', '2007-04-02', 0),
-(76441, 'abigated', '2007-04-02', 0),
-(76446, 'ArtDivaArose', '2007-04-02', 0);
+(76441, 'abigated', '2007-04-02', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(76446, 'ArtDivaArose', '2007-04-02', 0),
 (76449, 'nimblecat', '2007-04-02', 0),
 (76454, 'weegi70', '2007-04-02', 0),
 (76460, 'josula', '2007-04-03', 0),
@@ -23918,9 +23919,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (77331, 'gyaldrong', '2007-04-19', 0),
 (77335, 'alteck', '2007-04-20', 0),
 (77336, 'kristofo', '2007-04-20', 0),
-(77337, 'Sophie_Louise', '2007-04-20', 0),
-(77339, 'Waiting', '2007-04-20', 0);
+(77337, 'Sophie_Louise', '2007-04-20', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(77339, 'Waiting', '2007-04-20', 0),
 (77340, 'katemuller', '2007-04-20', 0),
 (77343, 'happykelp', '2007-04-20', 0),
 (77348, 'dara', '2007-04-20', 0),
@@ -24119,9 +24120,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (78236, 'Tippy', '2007-05-09', 0),
 (78237, 'simontaylorphoto', '2007-05-09', 0),
 (78240, 'deniseb', '2007-05-09', 0),
-(78244, 'maurorn', '2007-05-09', 0),
-(78250, 'Topanga', '2007-05-09', 0);
+(78244, 'maurorn', '2007-05-09', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(78250, 'Topanga', '2007-05-09', 0),
 (78251, 'dstegmeir', '2007-05-09', 0),
 (78254, 'j-pol', '2007-05-09', 0),
 (78255, 'LaRee', '2007-05-09', 0),
@@ -24320,9 +24321,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (79141, 'Ter', '2007-05-29', 0),
 (79152, 'ACross', '2007-05-29', 0),
 (79153, 'aneyra', '2007-05-29', 0),
-(79154, 'ACMommy28', '2007-05-29', 0),
-(79155, 'vstray01', '2007-05-29', 0);
+(79154, 'ACMommy28', '2007-05-29', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(79155, 'vstray01', '2007-05-29', 0),
 (79164, 'jippie', '2007-05-29', 0),
 (79167, 'lilacbutterfly', '2007-05-29', 0),
 (79170, 'Thordurs', '2007-05-29', 0),
@@ -24521,9 +24522,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (80131, 'Wildingkids', '2007-06-18', 0),
 (80139, 'oksis', '2007-06-18', 0),
 (80148, 'friedjor', '2007-06-18', 0),
-(80151, 'mai', '2007-06-18', 0),
-(80154, 'ana789', '2007-06-18', 0);
+(80151, 'mai', '2007-06-18', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(80154, 'ana789', '2007-06-18', 0),
 (80158, 'tuesdaylizzards', '2007-06-18', 0),
 (80161, 'kboeving', '2007-06-18', 0),
 (80163, 'rajjai', '2007-06-18', 0),
@@ -24722,9 +24723,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (80984, 'SiDiQ', '2007-07-07', 0),
 (81003, 'bluedawn', '2007-07-07', 0),
 (81004, 'MerkinFerch', '2007-07-07', 0),
-(81005, 'troglodytegurl_14', '2007-07-07', 0),
-(81011, 'jjcmontana', '2007-07-08', 0);
+(81005, 'troglodytegurl_14', '2007-07-07', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(81011, 'jjcmontana', '2007-07-08', 0),
 (81015, 'AFV', '2007-07-08', 0),
 (81024, 'wolfjas', '2007-07-08', 0),
 (81030, 'skari', '2007-07-08', 0),
@@ -24923,9 +24924,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (81940, 'amitc', '2007-07-28', 0),
 (81944, 'JazzViet', '2007-07-28', 0),
 (81952, 'fahadus', '2007-07-28', 0),
-(81954, 'allizoe', '2007-07-28', 0),
-(81955, 'cc621', '2007-07-28', 0);
+(81954, 'allizoe', '2007-07-28', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(81955, 'cc621', '2007-07-28', 0),
 (81960, 'Tvetting', '2007-07-28', 0),
 (81963, 'Alfonso', '2007-07-29', 0),
 (81964, 'qvfd153', '2007-07-29', 0),
@@ -25124,9 +25125,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (82890, 'glencoppersmith', '2007-08-17', 0),
 (82897, 'markr', '2007-08-17', 0),
 (82900, 'eva', '2007-08-17', 0),
-(82903, 'Tom94', '2007-08-17', 0),
-(82906, 'CyberSmudger', '2007-08-17', 0);
+(82903, 'Tom94', '2007-08-17', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(82906, 'CyberSmudger', '2007-08-17', 0),
 (82907, 'blonda', '2007-08-17', 0),
 (82913, 'hammersam', '2007-08-17', 0),
 (82918, 'MonaLisa77', '2007-08-18', 0),
@@ -25325,9 +25326,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (83785, 'pffree', '2007-09-05', 0),
 (83786, 'pud5676', '2007-09-05', 0),
 (83790, 'Kae', '2007-09-05', 0),
-(83792, 'sealion75', '2007-09-05', 0),
-(83795, 'Focalone', '2007-09-05', 0);
+(83792, 'sealion75', '2007-09-05', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(83795, 'Focalone', '2007-09-05', 0),
 (83805, 'Cidpilot', '2007-09-05', 0),
 (83811, 'drezden', '2007-09-05', 0),
 (83817, 'Rosacalaca', '2007-09-05', 0),
@@ -25526,9 +25527,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (84765, 'thomasjessen', '2007-09-29', 0),
 (84779, 'Gelert', '2007-09-29', 0),
 (84782, 'turibe', '2007-09-29', 0),
-(84784, 'lordrachel', '2007-09-29', 0),
-(84785, 'am8585', '2007-09-29', 0);
+(84784, 'lordrachel', '2007-09-29', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(84785, 'am8585', '2007-09-29', 0),
 (84788, 'keystoner', '2007-09-29', 0),
 (84792, 'MONOSAIL', '2007-09-30', 0),
 (84805, 'Villi_Ingi', '2007-09-30', 0),
@@ -25727,9 +25728,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (85675, 'zerre', '2007-10-21', 0),
 (85679, 'atitedesco', '2007-10-21', 0),
 (85689, 'adsumus', '2007-10-21', 0),
-(85713, 'jennabee25', '2007-10-22', 0),
-(85718, 'loganwarren', '2007-10-22', 0);
+(85713, 'jennabee25', '2007-10-22', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(85718, 'loganwarren', '2007-10-22', 0),
 (85725, 'drnoelkelly', '2007-10-22', 0),
 (85728, 'katechase', '2007-10-22', 0),
 (85733, 'Jose-Miguel', '2007-10-22', 0),
@@ -25928,9 +25929,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (86619, 'EpirusCreations', '2007-11-13', 0),
 (86627, 'Russ545', '2007-11-14', 0),
 (86628, 'gys', '2007-11-14', 0),
-(86629, 'rjtheskater', '2007-11-14', 0),
-(86632, 'battistons1', '2007-11-14', 0);
+(86629, 'rjtheskater', '2007-11-14', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(86632, 'battistons1', '2007-11-14', 0),
 (86633, 'smo', '2007-11-14', 0),
 (86634, 'mafe', '2007-11-14', 0),
 (86651, 'Seband', '2007-11-14', 0),
@@ -26129,9 +26130,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (87515, 'tacshrp', '2007-12-07', 0),
 (87522, 'best4321', '2007-12-08', 0),
 (87528, 'jrobinson0', '2007-12-08', 0),
-(87531, 'zionfrost', '2007-12-08', 0),
-(87534, 'Ashatsea', '2007-12-08', 0);
+(87531, 'zionfrost', '2007-12-08', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(87534, 'Ashatsea', '2007-12-08', 0),
 (87536, 'minusone', '2007-12-08', 0),
 (87538, 'creek41256', '2007-12-08', 0),
 (87539, 'ktyocum', '2007-12-08', 0),
@@ -26330,9 +26331,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (88375, 'roeper', '2007-12-31', 0),
 (88379, 'bhmgdental', '2007-12-31', 0),
 (88385, 'AngryEwok', '2007-12-31', 0),
-(88397, 'luska75', '2007-12-31', 0),
-(88402, 'MarkMiranda', '2008-01-01', 0);
+(88397, 'luska75', '2007-12-31', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(88402, 'MarkMiranda', '2008-01-01', 0),
 (88407, 'snicker', '2008-01-01', 0),
 (88409, 'Basta', '2008-01-01', 0),
 (88411, 'LjMaxx', '2008-01-01', 0),
@@ -26531,9 +26532,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (89194, 'arbara32', '2008-01-19', 0),
 (89197, 'Atsumi', '2008-01-19', 0),
 (89209, 'hkirk10', '2008-01-19', 0),
-(89217, 'leviking', '2008-01-20', 0),
-(89219, 'total_novice', '2008-01-20', 0);
+(89217, 'leviking', '2008-01-20', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(89219, 'total_novice', '2008-01-20', 0),
 (89220, 'mqnaufal', '2008-01-20', 0),
 (89223, 'Joker1114', '2008-01-20', 0),
 (89228, 'MikeW', '2008-01-20', 0),
@@ -26732,9 +26733,9 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (90108, 'lucid-', '2008-02-09', 0),
 (90109, 'Mariathephan', '2020-10-11', 0),
 (90113, 'LizArtDesign', '2008-02-09', 0),
-(90115, 'richvanwart', '2008-02-09', 0),
-(90122, 'In-der-Welt-sein', '2008-02-10', 0);
+(90115, 'richvanwart', '2008-02-09', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(90122, 'In-der-Welt-sein', '2008-02-10', 0),
 (90132, 'rbml77', '2008-02-10', 0),
 (90145, 'simonp5836', '2008-02-10', 0),
 (90154, 'sugarbear', '2008-02-11', 0),
@@ -26844,6 +26845,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (90637, 'JT77', '2008-02-22', 0),
 (90648, 'mrs_shene', '2008-02-22', 0),
 (90651, 'benolsen', '2008-02-22', 0),
+(90653, 'Berilula', '2008-02-22', 0),
 (90655, 'crunka', '2008-02-22', 0),
 (90658, 'tootsweet', '2008-02-22', 0),
 (90659, 'brudneyflower', '2008-02-22', 0),
@@ -26932,10 +26934,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (91069, 'daniellejolene07', '2008-03-05', 0),
 (91070, 'bugais', '2008-03-05', 0),
 (91073, 'Zig', '2008-03-05', 0),
-(91076, 'stoneflunkey', '2008-03-05', 0),
-(91078, 'Lomichild', '2008-03-05', 0),
-(91080, 'Majestie', '2008-03-05', 0);
+(91076, 'stoneflunkey', '2008-03-05', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(91078, 'Lomichild', '2008-03-05', 0),
+(91080, 'Majestie', '2008-03-05', 0),
 (91082, 'aoates', '2008-03-05', 0),
 (91089, 'ssturges', '2008-03-05', 0),
 (91091, 'twitis', '2008-03-05', 0),
@@ -27133,10 +27135,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (91998, 'lucozadejack', '2008-03-29', 0),
 (91999, 'isetta300', '2008-03-29', 0),
 (92005, 'FredW', '2008-03-29', 0),
-(92010, 'johngrif', '2008-03-29', 0),
-(92011, 'ashesaleh', '2008-03-29', 0),
-(92013, 'murphy0000', '2008-03-29', 0);
+(92010, 'johngrif', '2008-03-29', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(92011, 'ashesaleh', '2008-03-29', 0),
+(92013, 'murphy0000', '2008-03-29', 0),
 (92024, 'Parsley', '2008-03-30', 0),
 (92027, 'skarpi_xxx', '2008-03-30', 0),
 (92031, 'andrealin', '2008-03-30', 0),
@@ -27334,10 +27336,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (92960, '', '2020-10-11', 0),
 (92963, 'vtrpina', '2008-04-26', 0),
 (92967, 'Majortoap', '2008-04-26', 0),
-(92971, 'luck43anyone', '2008-04-26', 0),
-(92974, 'mattsh', '2008-04-26', 0),
-(92988, 'chanta', '2008-04-26', 0);
+(92971, 'luck43anyone', '2008-04-26', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(92974, 'mattsh', '2008-04-26', 0),
+(92988, 'chanta', '2008-04-26', 0),
 (92993, 'ffennema', '2008-04-26', 0),
 (92994, 'icecold1980', '2008-04-26', 0),
 (92995, 'cheljohnl', '2008-04-27', 0),
@@ -27535,10 +27537,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (94064, 'tokengirl', '2008-05-28', 0),
 (94065, 'CayenneJess', '2008-05-28', 0),
 (94067, 'mamakuku', '2008-05-28', 0),
-(94070, 'susanb', '2008-05-28', 0),
-(94071, 'DavidKarenRichins', '2008-05-28', 0),
-(94073, 'egamble', '2008-05-28', 0);
+(94070, 'susanb', '2008-05-28', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(94071, 'DavidKarenRichins', '2008-05-28', 0),
+(94073, 'egamble', '2008-05-28', 0),
 (94076, 'fiona91221', '2008-05-28', 0),
 (94080, 'Pierre81385', '2008-05-28', 0),
 (94081, 'mrmac', '2008-05-28', 0),
@@ -27568,7 +27570,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (94235, 'bcenu', '2008-06-02', 0),
 (94236, 'DaisyRene', '2008-06-03', 0),
 (94239, 'heavenly', '2008-06-03', 0),
-(94241, '', '2020-10-11', 0),
+(94241, '', NULL, 1),
 (94265, 'Purple_Girl', '2008-06-03', 0),
 (94273, 'wrldtrvlr13', '2008-06-03', 0),
 (94278, 'Rgrat', '2008-06-03', 0),
@@ -27736,10 +27738,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (95412, 'GCoppola', '2008-07-04', 0),
 (95416, 'jaimie', '2008-07-04', 0),
 (95418, 'oscarburd', '2008-07-04', 0),
-(95442, 'tpk', '2008-07-04', 0),
-(95477, 'smstone', '2008-07-04', 0),
-(95482, 'happydad', '2008-07-04', 0);
+(95442, 'tpk', '2008-07-04', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(95477, 'smstone', '2008-07-04', 0),
+(95482, 'happydad', '2008-07-04', 0),
 (95551, 'wbtaunya', '2008-07-04', 0),
 (95559, 'ramin-rady', '2008-07-05', 0),
 (95565, 'Fighter1', '2008-07-05', 0),
@@ -27937,10 +27939,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (97010, 'finman76', '2008-08-01', 0),
 (97011, 'jenoue', '2008-08-01', 0),
 (97023, 'mrgoose', '2008-08-02', 0),
-(97027, 'alboyd', '2008-08-02', 0),
-(97028, 'Khatie', '2008-08-02', 0),
-(97032, 'Savages', '2008-08-02', 0);
+(97027, 'alboyd', '2008-08-02', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(97028, 'Khatie', '2008-08-02', 0),
+(97032, 'Savages', '2008-08-02', 0),
 (97039, 'mequetrefe', '2008-08-03', 0),
 (97046, 'cammigirl', '2008-08-03', 0),
 (97049, 'Carmella', '2008-08-03', 0),
@@ -28089,7 +28091,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (97796, 'MikeMan', '2008-08-25', 0),
 (97798, 'eliesha', '2008-08-25', 0),
 (97810, 'shudson', '2008-08-26', 0),
-(97811, '', '2020-10-11', 0),
+(97811, '', NULL, 1),
 (97812, 'lurdymatjas', '2008-08-26', 0),
 (97814, 'jomerner', '2008-08-26', 0),
 (97818, 'mrsjcjohnson', '2008-08-26', 0),
@@ -28138,10 +28140,10 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (98018, 'MYLC', '2008-09-01', 0),
 (98022, 'dswann', '2008-09-02', 0),
 (98023, 'Reiner', '2008-09-02', 0),
-(98026, 'Tortsman', '2008-09-02', 0),
-(98028, 'vbjenna7', '2008-09-02', 0),
-(98032, 'paulineheraly', '2008-09-02', 0);
+(98026, 'Tortsman', '2008-09-02', 0);
 INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(98028, 'vbjenna7', '2008-09-02', 0),
+(98032, 'paulineheraly', '2008-09-02', 0),
 (98034, 'benny38', '2008-09-02', 0),
 (98035, 'chocolate_cakes_and_sugar', '2008-09-02', 0),
 (98037, 'crimsontearseureka', '2008-09-02', 0),
@@ -28218,6 +28220,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (98368, 'unyielding_sense', '2008-09-10', 0),
 (98369, 'MsB', '2008-09-10', 0),
 (98376, 'T-no', '2008-09-10', 0),
+(98381, 'OscarBjarna', '2008-09-10', 0),
 (98384, 'r3tic', '2008-09-10', 0),
 (98389, 'muri32', '2008-09-10', 0),
 (98391, 'KevinO', '2008-09-10', 0),
@@ -28338,11 +28341,11 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (99063, 'Shaka', '2008-09-29', 0),
 (99074, 'Mylle', '2008-09-29', 0),
 (99075, 'The3rdEye', '2008-09-29', 0),
-(99080, 'wrangler3383', '2008-09-29', 0),
+(99080, 'wrangler3383', '2008-09-29', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (99086, 'pricej75', '2008-09-29', 0),
 (99088, 'leugim_seven', '2008-09-29', 0),
-(99095, 'mttamjan', '2008-09-29', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(99095, 'mttamjan', '2008-09-29', 0),
 (99107, 'piccaboo', '2008-09-30', 0),
 (99108, 'saj255', '2008-09-30', 0),
 (99109, 'bowchicawowow', '2008-09-30', 0),
@@ -28441,6 +28444,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (99661, 'juniper', '2008-10-19', 0),
 (99664, 'valdez', '2008-10-19', 0),
 (99685, 'kapsicum', '2008-10-20', 0),
+(99687, 'KristjanUnnar', '2008-10-20', 0),
 (99693, 'Marlon', '2008-10-20', 0),
 (99694, 'tangsoo', '2008-10-20', 0),
 (99695, 'pirsot', '2008-10-20', 0),
@@ -28538,12 +28542,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (100207, 'IareDoinK', '2008-11-05', 0),
 (100216, 'lmmbastos', '2008-11-05', 0),
 (100223, 'stephennz', '2008-11-05', 0),
-(100227, 'wb8723', '2008-11-06', 0),
+(100227, 'wb8723', '2008-11-06', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (100231, 'shaggyone', '2008-11-06', 0),
 (100234, 'mathieujv', '2008-11-06', 0),
 (100248, 'vintageair', '2008-11-06', 0),
-(100253, 'snikda1', '2008-11-06', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(100253, 'snikda1', '2008-11-06', 0),
 (100256, 'lookalive07', '2008-11-06', 0),
 (100266, 'drj013', '2008-11-07', 0),
 (100268, 'dagordman', '2008-11-07', 0),
@@ -28739,12 +28743,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (101492, 'teranb', '2008-12-10', 0),
 (101495, 'Can-on', '2008-12-11', 0),
 (101502, 'DALEHOLLOWSCUBAFRIENDS', '2008-12-11', 0),
-(101511, 'Naco', '2008-12-11', 0),
+(101511, 'Naco', '2008-12-11', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (101514, 'JohnStarkweather', '2008-12-11', 0),
 (101515, 'Merlz', '2008-12-11', 0),
 (101531, 'cup4tml', '2008-12-12', 0),
-(101533, 'snupacku', '2008-12-12', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(101533, 'snupacku', '2008-12-12', 0),
 (101534, 'wittaero', '2008-12-12', 0),
 (101536, 'anniek', '2008-12-12', 0),
 (101537, 'awurtele', '2008-12-12', 0),
@@ -28940,12 +28944,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (102570, 'barnstonekid', '2009-01-10', 0),
 (102571, 'Tealique', '2009-01-10', 0),
 (102573, 'photocraze', '2009-01-10', 0),
-(102574, 'canonnica', '2009-01-10', 0),
+(102574, 'canonnica', '2009-01-10', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (102581, 'photomill31', '2009-01-10', 0),
 (102588, 'rinkuwithsingh', '2009-01-11', 0),
 (102596, 'snaz', '2009-01-11', 0),
-(102604, 'Tighedigital', '2009-01-11', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(102604, 'Tighedigital', '2009-01-11', 0),
 (102611, 'nozl', '2009-01-11', 0),
 (102612, 'dirtythermos', '2009-01-11', 0),
 (102619, 'MJAngel', '2009-01-11', 0),
@@ -29141,12 +29145,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (103649, 'looksmart', '2009-02-09', 0),
 (103650, 'Dabow', '2009-02-09', 0),
 (103655, 'Kakoe', '2009-02-09', 0),
-(103659, 'bjprasad', '2009-02-09', 0),
+(103659, 'bjprasad', '2009-02-09', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (103662, 'jesskuby88', '2009-02-09', 0),
 (103668, 'csolomon1', '2009-02-09', 0),
 (103671, 'Danessa', '2009-02-09', 0),
-(103675, 'bsktball780', '2009-02-09', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(103675, 'bsktball780', '2009-02-09', 0),
 (103680, 'Redbessflint', '2009-02-09', 0),
 (103686, 'Zombilicious', '2009-02-10', 0),
 (103693, 'candiieventer', '2009-02-10', 0),
@@ -29342,12 +29346,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (104688, 'devidarshan', '2009-03-09', 0),
 (104689, 'Thumall', '2009-03-09', 0),
 (104691, 'krcnaples', '2009-03-09', 0),
-(104694, 'wallE', '2009-03-09', 0),
+(104694, 'wallE', '2009-03-09', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (104699, 'nbrookep', '2009-03-10', 0),
 (104706, 'wacksonjackson', '2009-03-10', 0),
 (104707, 'ketaki', '2009-03-10', 0),
-(104708, 'Lastlaststar', '2009-03-10', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(104708, 'Lastlaststar', '2009-03-10', 0),
 (104711, 'photoman78', '2009-03-10', 0),
 (104712, 'Cpt-Cook', '2009-03-10', 0),
 (104726, 'urabus', '2009-03-11', 0),
@@ -29543,12 +29547,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (105720, 'MaryGates', '2009-04-08', 0),
 (105724, 'Lorbie', '2009-04-08', 0),
 (105727, 'aliters', '2009-04-08', 0),
-(105738, 'wanderlust79', '2009-04-08', 0),
+(105738, 'wanderlust79', '2009-04-08', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (105741, '', '2020-10-11', 0),
 (105742, 'gramleth', '2009-04-08', 0),
 (105747, 'rlmichael', '2009-04-08', 0),
-(105749, 'cooooreeey', '2009-04-08', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(105749, 'cooooreeey', '2009-04-08', 0),
 (105757, 'fjscoobie', '2009-04-08', 0),
 (105760, 'wickedwarhol', '2009-04-08', 0),
 (105764, 'ejfroth', '2009-04-09', 0),
@@ -29744,12 +29748,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (106853, 'Jast', '2009-05-14', 0),
 (106859, 'Maraimp', '2009-05-15', 0),
 (106868, 'acotrell', '2009-05-15', 0),
-(106873, 'HeHateMe904', '2009-05-15', 0),
+(106873, 'HeHateMe904', '2009-05-15', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (106881, 'cth', '2009-05-15', 0),
 (106882, 'popayann', '2009-05-15', 0),
 (106888, 'dsnider', '2009-05-16', 0),
-(106898, 'LooWoo', '2009-05-16', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(106898, 'LooWoo', '2009-05-16', 0),
 (106902, 'super-dpchallenge', '2009-05-16', 0),
 (106904, 'hannah109', '2009-05-16', 0),
 (106905, 'Blink3265', '2009-05-16', 0),
@@ -29945,12 +29949,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (108069, 'bohemka', '2009-06-25', 0),
 (108110, 'Stringfellow', '2009-06-27', 0),
 (108117, 'surya_manohar', '2009-06-27', 0),
-(108122, 'damir388', '2020-10-11', 0),
+(108122, 'damir388', '2020-10-11', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (108128, 'kristoffon', '2009-06-28', 0),
 (108143, 'dhunckyn', '2009-06-29', 0),
 (108144, 'Raymondo', '2009-06-29', 0),
-(108157, 'houstonian2', '2020-10-11', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(108157, 'houstonian2', '2020-10-11', 0),
 (108160, 'jeremygrimm', '2009-06-29', 0),
 (108163, 'howards', '2009-06-29', 0),
 (108177, 'vikeed', '2009-06-30', 0),
@@ -30146,12 +30150,12 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (109274, 'xxalmostnangelxx', '2009-08-10', 0),
 (109275, 'SammyM', '2009-08-10', 0),
 (109276, 'srobinson', '2009-08-10', 0),
-(109277, 'brittulmer', '2009-08-10', 0),
+(109277, 'brittulmer', '2009-08-10', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (109278, 'kaifox15', '2009-08-10', 0),
 (109284, 'jencruz', '2009-08-11', 0),
 (109285, 'outofthisnature', '2009-08-11', 0),
-(109297, 'jawsh3539', '2009-08-11', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(109297, 'jawsh3539', '2009-08-11', 0),
 (109299, 'Breakable', '2009-08-11', 0),
 (109309, 'Digit3', '2009-08-11', 0),
 (109312, 'ginak', '2009-08-12', 0),
@@ -30216,6 +30220,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (109663, 'Mars', '2009-08-26', 0),
 (109668, 'sarahdane', '2009-08-26', 0),
 (109678, 'xasdrd', '2009-08-27', 0),
+(109681, 'cuttysark', '2009-08-27', 0),
 (109693, 'tyler_d', '2009-08-28', 0),
 (109708, 'Keeper', '2009-08-28', 0),
 (109724, 'AriasairA', '2009-08-29', 0),
@@ -30346,13 +30351,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (110423, 'Helmal', '2009-09-23', 0),
 (110428, 'CranstonReid', '2009-09-23', 0),
 (110436, 'mooma', '2009-09-23', 0),
-(110437, 'Runeber', '2009-09-23', 0),
+(110437, 'Runeber', '2009-09-23', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (110438, 'iliko', '2009-09-23', 0),
 (110441, 'cinta', '2009-09-23', 0),
 (110445, 'joyful', '2009-09-23', 0),
 (110447, 'johnlawhkg', '2009-09-23', 0),
-(110454, 'zeve77', '2009-09-24', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(110454, 'zeve77', '2009-09-24', 0),
 (110458, 'robstead', '2009-09-24', 0),
 (110462, 'mikhael', '2009-09-24', 0),
 (110463, 'FixitDave', '2009-09-24', 0),
@@ -30547,13 +30552,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (111633, 'pringleschick', '2009-11-06', 0),
 (111636, 'michimura', '2009-11-06', 0),
 (111639, 'behfor', '2009-11-06', 0),
-(111643, 'mojo0302', '2009-11-07', 0),
+(111643, 'mojo0302', '2009-11-07', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (111648, 'ganxter', '2009-11-07', 0),
 (111651, 'deborahmelian', '2009-11-07', 0),
 (111652, 'andreweyl', '2009-11-07', 0),
 (111653, 'degz447', '2009-11-07', 0),
-(111663, 'jsalise79', '2009-11-08', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(111663, 'jsalise79', '2009-11-08', 0),
 (111666, 'kevmeister', '2009-11-08', 0),
 (111673, 'Abeebephotography', '2009-11-08', 0),
 (111675, 'Camplehmann', '2009-11-08', 0),
@@ -30578,7 +30583,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (111953, 'ashleydanielle010', '2009-11-14', 0),
 (111955, 'kdkavanagh', '2009-11-14', 0),
 (111957, 'burfino', '2009-11-14', 0),
-(111963, '', '2020-10-11', 0),
+(111963, '', NULL, 1),
 (111965, 'AlexM', '2009-11-15', 0),
 (111997, 'scottbaste', '2009-11-16', 0),
 (111999, 'jskotte', '2009-11-16', 0),
@@ -30748,13 +30753,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (113151, 'frggygrl', '2009-12-27', 0),
 (113154, 'rfspencer', '2009-12-27', 0),
 (113156, 'jagar', '2009-12-27', 0),
-(113157, 'bewit', '2009-12-27', 0),
+(113157, 'bewit', '2009-12-27', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (113161, 'peter_co', '2009-12-27', 0),
 (113168, 'rtriplett', '2009-12-27', 0),
 (113184, 'Conch012', '2009-12-28', 0),
 (113187, 'Kstarr', '2009-12-28', 0),
-(113191, 'cwcook3', '2009-12-28', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(113191, 'cwcook3', '2009-12-28', 0),
 (113195, 'tworockets2608', '2009-12-28', 0),
 (113199, 'flintdog7', '2009-12-28', 0),
 (113202, 'kelseyrowe', '2009-12-29', 0),
@@ -30949,13 +30954,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (114336, 'Levitate', '2010-02-05', 0),
 (114337, 'harishrvt', '2010-02-05', 0),
 (114338, 'alexcaravetta', '2010-02-05', 0),
-(114339, 'blue_eyes_', '2010-02-05', 0),
+(114339, 'blue_eyes_', '2010-02-05', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (114343, 'xWildchildx', '2010-02-05', 0),
 (114345, 'eklojoe', '2010-02-05', 0),
 (114346, 'Emmarsi', '2010-02-05', 0),
 (114352, 'thecolorgreen', '2010-02-05', 0),
-(114355, 'memories-meng', '2010-02-05', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(114355, 'memories-meng', '2010-02-05', 0),
 (114356, 'MobileMedicRN', '2010-02-06', 0),
 (114362, 'elliara', '2010-02-06', 0),
 (114364, 'silvia228', '2010-02-06', 0),
@@ -31150,13 +31155,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (115535, 'pieinthesky', '2010-03-12', 0),
 (115538, 'TyTheIncredible', '2010-03-12', 0),
 (115546, 'supaphly42', '2010-03-12', 0),
-(115555, 'lucius13', '2010-03-13', 0),
+(115555, 'lucius13', '2010-03-13', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (115566, 'KoDaLoLe', '2010-03-13', 0),
 (115587, 'Photonic-Madness', '2010-03-14', 0),
 (115611, 'singarama88', '2010-03-14', 0),
 (115612, 'danielmcdonnell', '2010-03-14', 0),
-(115613, 'bobk', '2010-03-14', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(115613, 'bobk', '2010-03-14', 0),
 (115618, 'teul2', '2010-03-14', 0),
 (115623, 'Jehnavi', '2010-03-15', 0),
 (115625, 'kentbristow', '2010-03-15', 0),
@@ -31351,13 +31356,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (116946, 'tholmir', '2010-04-22', 0),
 (116950, 'irfanmalek', '2010-04-22', 0),
 (116957, 'jasey', '2010-04-22', 0),
-(116962, 'freysi', '2010-04-23', 0),
+(116962, 'freysi', '2010-04-23', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (116974, 'portiaS', '2010-04-23', 0),
 (116976, 'ColMustard', '2010-04-23', 0),
 (116984, 'haydenantal', '2010-04-23', 0),
 (116994, 'Stephenironman', '2010-04-24', 0),
-(117022, 'Moi', '2010-04-24', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(117022, 'Moi', '2010-04-24', 0),
 (117033, 'KimOhNo', '2010-04-25', 0),
 (117035, 'Xynarah', '2010-04-25', 0),
 (117036, 'LauraGhiggino', '2010-04-25', 0),
@@ -31552,13 +31557,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (118198, 'CynthiaStr', '2010-06-02', 0),
 (118243, 'justbill2020', '2010-06-03', 0),
 (118248, 'wchildress', '2010-06-03', 0),
-(118261, 'jvaughn94', '2010-06-03', 0),
+(118261, 'jvaughn94', '2010-06-03', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (118270, 'vavroom', '2010-06-03', 0),
 (118292, 'Frostyeel', '2010-06-04', 0),
 (118315, 'Quintus', '2010-06-05', 0),
 (118317, 'Vio', '2010-06-05', 0),
-(118329, 'greg_davies', '2010-06-06', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(118329, 'greg_davies', '2010-06-06', 0),
 (118332, 'akamc77', '2010-06-06', 0),
 (118340, 'TRath', '2010-06-06', 0),
 (118341, 'GT', '2010-06-06', 0),
@@ -31753,13 +31758,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (119807, 'brucedpc', '2010-07-26', 0),
 (119823, 'lisaglenn9', '2010-07-27', 0),
 (119829, 'tinab', '2010-07-27', 0),
-(119831, 'Samoza', '2010-07-27', 0),
+(119831, 'Samoza', '2010-07-27', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (119839, 'norinjasmin', '2010-07-27', 0),
 (119844, 'colemantim', '2010-07-28', 0),
 (119845, 'pichichib', '2010-07-28', 0),
 (119857, 'Karreilly966', '2010-07-28', 0),
-(119863, 'samrusoff', '2010-07-28', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(119863, 'samrusoff', '2010-07-28', 0),
 (119864, 'bud93', '2010-07-28', 0),
 (119885, 'pesa', '2010-07-29', 0),
 (119890, 'annaruko', '2010-07-29', 0),
@@ -31954,13 +31959,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (121643, 'nicobarauz', '2010-09-26', 0),
 (121644, 'photojunkie35', '2010-09-26', 0),
 (121649, 'giraffe-of-doom', '2010-09-26', 0),
-(121666, 'fabiok', '2010-09-27', 0),
+(121666, 'fabiok', '2010-09-27', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (121671, '_Rainbowgirl', '2010-09-27', 0),
 (121673, 'presley', '2010-09-27', 0),
 (121692, 'HighDesertCowgal', '2010-09-27', 0),
 (121701, 'eyeart', '2010-09-28', 0),
-(121736, 'Mikihans', '2010-09-29', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(121736, 'Mikihans', '2010-09-29', 0),
 (121739, 'alies', '2010-09-29', 0),
 (121766, 'tonechka', '2010-09-29', 0),
 (121784, 'Dunlavin', '2010-09-30', 0),
@@ -32155,13 +32160,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (123841, 'christykruse', '2010-11-21', 0),
 (123877, 'gsskiracer29', '2010-11-22', 0),
 (123882, 'mmmdist', '2010-11-22', 0),
-(123889, 'lexithomp', '2010-11-22', 0),
+(123889, 'lexithomp', '2010-11-22', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (123893, 'cep_tx', '2010-11-22', 0),
 (123896, 'andreduane', '2010-11-23', 0),
 (123907, 'genova24', '2010-11-23', 0),
 (123908, 'bcnu', '2010-11-23', 0),
-(123920, 'gman249', '2010-11-23', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(123920, 'gman249', '2010-11-23', 0),
 (123923, 'holders3rdeye', '2010-11-23', 0),
 (123933, 'decorama', '2010-11-23', 0),
 (123934, 'juslyktht', '2010-11-23', 0),
@@ -32356,13 +32361,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (126744, 'mbates', '2011-01-22', 0),
 (126757, 'spappa', '2011-01-22', 0),
 (126770, 'aldrich46', '2011-01-22', 0),
-(126781, 'Achilyse', '2011-01-22', 0),
+(126781, 'Achilyse', '2011-01-22', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (126784, 'scalf123', '2011-01-22', 0),
 (126791, 'hipsterdoofus52', '2011-01-23', 0),
 (126800, 'emilycake', '2011-01-23', 0),
 (126804, 'gunnarbr', '2011-01-23', 0),
-(126832, 'TennesseePhoto', '2011-01-23', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(126832, 'TennesseePhoto', '2011-01-23', 0),
 (126838, 'susielmt', '2011-01-23', 0),
 (126854, 'prasad', '2011-01-24', 0),
 (126865, 'dailydose10', '2020-10-11', 0),
@@ -32557,13 +32562,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (129405, 'larah-96', '2011-03-10', 0),
 (129427, 'mRpOeT93', '2011-03-10', 0),
 (129433, 'twytchy', '2011-03-10', 0),
-(129438, 'bolita32', '2011-03-10', 0),
+(129438, 'bolita32', '2011-03-10', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (129447, 'sampearl', '2011-03-10', 0),
 (129449, '', '2020-10-11', 0),
 (129476, 'jnjen79', '2011-03-10', 0),
 (129496, 'caoying83', '2011-03-11', 0),
-(129503, 'ashley19', '2011-03-11', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(129503, 'ashley19', '2011-03-11', 0),
 (129512, 'IAmEliKatz', '2011-03-11', 0),
 (129530, 'dtansnapper', '2011-03-11', 0),
 (129572, 'nyasar', '2011-03-12', 0),
@@ -32758,13 +32763,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (132120, 'beanom', '2011-05-02', 0),
 (132129, 'chum3777', '2011-05-02', 0),
 (132138, 'NathanRanta', '2011-05-03', 0),
-(132152, 'Megs', '2011-05-03', 0),
+(132152, 'Megs', '2011-05-03', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (132161, 'danielu', '2011-05-03', 0),
 (132165, 'Fayettec', '2011-05-03', 0),
 (132169, 'lindsaynorton', '2011-05-03', 0),
 (132175, 'lylyly', '2020-10-11', 0),
-(132177, 'danieletagliabue', '2011-05-03', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(132177, 'danieletagliabue', '2011-05-03', 0),
 (132251, 'sinistral_leo', '2011-05-05', 0),
 (132258, 'anujghimire', '2011-05-05', 0),
 (132263, 'WebbTogg', '2011-05-05', 0),
@@ -32959,13 +32964,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (135245, 'TimDevlin', '2011-07-06', 0),
 (135246, 'mgrainger1103', '2011-07-06', 0),
 (135267, 'Roan', '2011-07-07', 0),
-(135278, 'JRoberts1983', '2011-07-07', 0),
+(135278, 'JRoberts1983', '2011-07-07', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (135288, 'B4dementia', '2011-07-08', 0),
 (135295, 'MrFordy', '2011-07-08', 0),
 (135300, 'LunaMoon21', '2011-07-08', 0),
 (135301, 'anne1997', '2011-07-08', 0),
-(135326, 'ronno13', '2011-07-08', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(135326, 'ronno13', '2011-07-08', 0),
 (135328, 'chile', '2011-07-08', 0),
 (135330, 'karthikqa', '2011-07-08', 0),
 (135336, 'Gbass34', '2011-07-09', 0),
@@ -33160,13 +33165,13 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (138034, 'nunpuia', '2011-09-07', 0),
 (138036, 'Paddy4Amoment', '2011-09-07', 0),
 (138048, 'GMoore', '2011-09-07', 0),
-(138072, 'isalam', '2011-09-08', 0),
+(138072, 'isalam', '2011-09-08', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (138073, 'ASHBUTTS94', '2011-09-08', 0),
 (138076, 'Loveable1201', '2011-09-08', 0),
 (138078, 'jhaymara', '2011-09-08', 0),
 (138079, 'RubyMejia', '2011-09-08', 0),
-(138080, 'dumbass123', '2011-09-08', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(138080, 'dumbass123', '2011-09-08', 0),
 (138081, 'cathiee', '2011-09-08', 0),
 (138082, 'jailenereyes', '2011-09-08', 0),
 (138085, 'pricegotphoto', '2011-09-08', 0),
@@ -33348,6 +33353,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (140994, 'pett1812', '2011-11-23', 0),
 (141006, 'incautus', '2011-11-23', 0),
 (141039, 'u962109', '2011-11-24', 0),
+(141041, 'olafsson', '2011-11-24', 0),
 (141119, 'bcrawford92', '2011-11-26', 0),
 (141154, 'Photokatt', '2011-11-27', 0),
 (141193, 'bjolfur', '2011-11-28', 0),
@@ -33360,14 +33366,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (141324, 'JSR', '2011-12-01', 0),
 (141366, 'ildiko', '2011-12-02', 0),
 (141367, 'CaptUnderpants', '2011-12-03', 0),
-(141389, 'terryduck', '2011-12-03', 0),
+(141389, 'terryduck', '2011-12-03', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (141393, 'monkeyarm', '2011-12-03', 0),
 (141403, 'superann', '2011-12-04', 0),
 (141409, 'Wez', '2011-12-04', 0),
 (141413, 'alimoein', '2011-12-04', 0),
 (141420, 'Hackerimages', '2011-12-04', 0),
-(141429, 'nstevens85', '2011-12-04', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(141429, 'nstevens85', '2011-12-04', 0),
 (141507, 'Heliox', '2011-12-07', 0),
 (141522, 'wkruger', '2011-12-07', 0),
 (141542, 'SwordandScales', '2011-12-08', 0),
@@ -33410,7 +33416,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (142556, 'fotosgt', '2012-01-04', 0),
 (142562, 'Suzana57', '2012-01-04', 0),
 (142568, 'NITHS', '2012-01-05', 0),
-(142570, '', '2020-10-11', 0),
+(142570, '', NULL, 1),
 (142571, 'coraildefeu', '2012-01-05', 0),
 (142591, 'Philthy', '2012-01-05', 0),
 (142599, 'lola72', '2012-01-06', 0),
@@ -33561,14 +33567,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (145697, 'PGSadri', '2012-03-07', 0),
 (145733, 'professorchaos', '2012-03-08', 0),
 (145755, 'SmokyRocks', '2012-03-08', 0),
-(145776, 'schetul', '2012-03-08', 0),
+(145776, 'schetul', '2012-03-08', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (145829, 'sophiawood', '2012-03-09', 0),
 (145915, 'RobynK', '2012-03-11', 0),
 (146033, 'angela0104', '2012-03-13', 0),
 (146053, 'maxbtlw', '2012-03-13', 0),
 (146078, 'jennors', '2012-03-14', 0),
-(146080, 'bezerky', '2012-03-14', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(146080, 'bezerky', '2012-03-14', 0),
 (146115, 'Dimitri_X', '2012-03-14', 0),
 (146181, 'MoRiNann', '2012-03-15', 0),
 (146189, 'KP_82', '2012-03-16', 0),
@@ -33762,14 +33768,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (151548, 'zimple', '2012-08-12', 0),
 (151563, 'valfromparis', '2012-08-12', 0),
 (151565, 'naturegirl', '2012-08-12', 0),
-(151598, 'littlerockphoto', '2012-08-13', 0),
+(151598, 'littlerockphoto', '2012-08-13', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (151608, 'gustavocabral', '2012-08-14', 0),
 (151629, 'c0ur7n3y', '2012-08-14', 0),
 (151636, 'Saraxo8', '2012-08-15', 0),
 (151650, 'donnau', '2012-08-15', 0),
 (151659, 'woowoochick', '2012-08-15', 0),
-(151678, 'ranna', '2012-08-16', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(151678, 'ranna', '2012-08-16', 0),
 (151680, 'julioortega', '2012-08-16', 0),
 (151797, 'redswede', '2012-08-19', 0),
 (151814, 'oharart', '2012-08-20', 0),
@@ -33963,14 +33969,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (158789, 'Alexis_13', '2013-02-11', 0),
 (158793, 'bobbyka', '2013-02-11', 0),
 (158794, 'nickielbasa', '2013-02-11', 0),
-(158797, '', '2020-10-11', 0),
+(158797, '', '2020-10-11', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (158828, 'zjkhan', '2013-02-13', 0),
 (158843, 'ShaneP', '2013-02-13', 0),
 (158871, 'odette646', '2013-02-15', 0),
 (158917, 'gwenm6', '2013-02-17', 0),
 (158918, 'EstinaAcrobat', '2013-02-18', 0),
-(159047, 'elderberry', '2013-02-21', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(159047, 'elderberry', '2013-02-21', 0),
 (159052, 'DeveloperOfArts', '2013-02-21', 0),
 (159070, 'BusterVoodoo', '2013-02-22', 0),
 (159091, 'nickliljh', '2013-02-23', 0),
@@ -34164,14 +34170,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (169580, 'jdelin86', '2013-09-24', 0),
 (169861, 'ajolley', '2013-09-26', 0),
 (170004, 'Chandlerja', '2013-09-27', 0),
-(170007, 'bad_lemonade', '2013-09-27', 0),
+(170007, 'bad_lemonade', '2013-09-27', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (170018, 'lei_73', '2013-09-27', 0),
 (170265, 'photojones21', '2013-09-29', 0),
 (170269, 'FatherStorm', '2013-09-29', 0),
 (170281, 'hiltonmd', '2013-09-29', 0),
 (170459, 'DCPatterson', '2013-09-30', 0),
-(170486, 'ATundraWolf', '2013-10-01', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(170486, 'ATundraWolf', '2013-10-01', 0),
 (170561, 'yourinnerpinup', '2013-10-02', 0),
 (170569, 'sashiii17', '2013-10-02', 0),
 (170570, 'Mrpio3', '2013-10-02', 0),
@@ -34365,14 +34371,14 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (175621, 'markvcr', '2014-04-29', 0),
 (175675, 'DebC', '2014-05-04', 0),
 (175682, 'duxingzhe', '2014-05-04', 0),
-(175687, 'swallowstail', '2014-05-05', 0),
+(175687, 'swallowstail', '2014-05-05', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (175719, 'Maharet', '2014-05-07', 0),
 (175723, 'MaximusStatus', '2014-05-07', 0),
 (175727, 'sofo70', '2014-05-08', 0),
 (175732, 'steadyJaw', '2014-05-08', 0),
 (175760, 'richert95', '2014-05-10', 0),
-(175797, 'boocowski', '2014-05-13', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(175797, 'boocowski', '2014-05-13', 0),
 (175821, 'GrillTowel', '2014-05-15', 0),
 (175861, 'sylvain15250', '2014-05-19', 0),
 (175880, 'AshleyChen', '2014-05-20', 0),
@@ -34452,6 +34458,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (177826, 'meadow', '2014-09-26', 0),
 (177831, 'dandyguy', '2014-09-27', 0),
 (177838, 'leontp', '2014-09-29', 0),
+(177870, 'Arnar_Bergur', '2014-10-02', 0),
 (177871, 'Villa-G', '2014-10-02', 0),
 (177881, 'Helenmoore', '2014-10-04', 0),
 (177905, 'glennpalacio', '2014-10-08', 0),
@@ -34565,15 +34572,15 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (180737, 'alkaabi', '2015-06-17', 0),
 (180740, 'gulielmus', '2015-06-17', 0),
 (180750, 'drbender', '2015-06-18', 0),
-(180777, 'paulwestmoreland1', '2015-06-23', 0),
+(180777, 'paulwestmoreland1', '2015-06-23', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (180787, 'marvin521', '2015-06-25', 0),
 (180799, 'launie8', '2015-06-26', 0),
 (180804, 'kv968', '2015-06-27', 0),
 (180805, 'xlauren15', '2015-06-27', 0),
 (180806, 'mattmetrovich', '2015-06-27', 0),
 (180847, 'Moe0630', '2015-07-03', 0),
-(180875, 'Mere21', '2015-07-07', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(180875, 'Mere21', '2015-07-07', 0),
 (180932, 'maciej991', '2015-07-18', 0),
 (180936, 'zherman11', '2015-07-19', 0),
 (180939, 'athebae', '2015-07-20', 0),
@@ -34766,15 +34773,15 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (185049, 'ajonesy', '2016-12-19', 0),
 (185064, 'slice2', '2016-12-20', 0),
 (185073, 'jhvig17', '2016-12-20', 0),
-(185159, 'Diego21', '2016-12-24', 0),
+(185159, 'Diego21', '2016-12-24', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (185178, 'erinconcelman', '2016-12-25', 0),
 (185203, 'yiannis723inactive', '2020-10-12', 0),
 (185233, 'Eanoren', '2016-12-28', 0),
 (185302, 'beavyg', '2017-01-01', 0),
 (185328, 'James7964', '2017-01-02', 0),
 (185397, 'Poseidon3399', '2017-01-05', 0),
-(185462, 'mady32', '2017-01-07', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(185462, 'mady32', '2017-01-07', 0),
 (185555, 'K_Starr', '2017-01-11', 0),
 (185611, 'jalenator5', '2017-01-13', 0),
 (185697, 'premalpatel', '2017-01-17', 0),
@@ -34967,15 +34974,15 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (246793, 'ch', '2019-01-25', 0),
 (246849, 'RobertaV', '2019-01-27', 0),
 (247146, 'NobleEnsight', '2019-02-07', 0),
-(247864, 'ortiq9451', '2019-03-06', 0),
+(247864, 'ortiq9451', '2019-03-06', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (247981, 'Avishek97', '2019-03-11', 0),
 (248005, 'LezLee1943', '2019-03-12', 0),
 (248046, 'PrimeShot', '2019-03-14', 0),
 (248240, 'photosbyMcDon', '2019-03-21', 0),
 (248311, 'SolitudeBlue', '2019-03-24', 0),
 (249409, 'endlessmoor', '2019-05-02', 0),
-(249438, 'Cosmyn69', '2019-05-03', 0);
-INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(249438, 'Cosmyn69', '2019-05-03', 0),
 (249481, 'CelineGov', '2019-05-06', 0),
 (249549, 'Charlietheeye', '2019-05-09', 0),
 (249588, 'Rach71', '2019-05-10', 0),
@@ -35022,6 +35029,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (251769, 'jpamak', '2019-11-09', 0),
 (251965, 'ArtemV', '2019-12-03', 0),
 (252162, 'Strobi_wan_kanobi', '2019-12-23', 0),
+(252305, 'Clandestiny', '2020-01-05', 0),
 (252311, 'Guna', '2020-01-05', 0),
 (252322, 'Moonshine_', '2020-01-06', 0),
 (252497, 'Dewald42', '2020-01-19', 0),
@@ -35115,6 +35123,7 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (273401, 'Rideordie52112', '2022-03-24', 0),
 (273402, 'Brian_1018', '2022-03-26', 0),
 (273408, 'Nighty', '2022-04-02', 0),
+(273414, 'MReeve1874', '2022-04-08', 0),
 (273420, 'jorge06483', '2022-04-13', 0),
 (273434, 'SunsetDreams', '2022-04-20', 0),
 (273442, 'natmcdermott', '2022-04-26', 0),
@@ -35146,10 +35155,72 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (273905, 'unusual_suspect', '2023-07-31', 0),
 (273935, 'AlexK', '2023-09-06', 0),
 (273936, 'LucasHerrera', '2023-09-07', 0),
+(273959, 'gild1221', '2023-10-12', 0),
 (273978, 'scottjamesbutton', '2023-11-01', 0),
 (273998, 'Jotipps', '2023-11-27', 0),
 (274019, 'reecer6000', '2024-01-04', 0),
 (274026, 'SPSPhoto', '2024-01-11', 0),
 (274035, 'MvdM', '2024-01-21', 0),
-(274053, 'carolbalfourkiley', '2024-02-12', 0);
+(274053, 'carolbalfourkiley', '2024-02-12', 0),
+(274056, 'havi', '2024-02-14', 0),
+(274083, 'deborah621', '2024-03-28', 0),
+(274096, 'bgarcia', '2024-04-14', 0),
+(274153, 'drewhill', '2024-07-13', 0),
+(274155, 'visionary_vagabond', '2024-07-20', 0),
+(274171, 'kien', '2024-08-19', 0),
+(274178, 'steamyytea', '2024-09-02', 0),
+(274191, 'Kozem123', '2024-09-28', 0),
+(274193, 'Garv1127', '2024-09-30', 0),
+(274194, 'Pugster', '2024-10-01', 0),
+(274197, 'gonm0221', '2024-10-04', 0),
+(274200, 'sanv0512', '2024-10-07', 0),
+(274205, 'MichaelMeowers3', '2024-10-23', 0),
+(274222, 'FatBehrad', '2024-12-04', 0);
+INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
+(274234, 'terj0820', '2024-12-12', 0),
+(274269, 'thorgnyr', '2025-02-18', 0),
+(274271, 'lunima', '2025-02-20', 0),
+(274272, 'MotleyCrueBoy81', '2025-02-21', 0),
+(274274, 'MileyJean15', '2025-02-26', 0),
+(274327, 'ramimjoy', '2025-05-13', 0),
+(274336, 'Workab', '2025-05-30', 0),
+(274356, 'kiwifoxtrot', '2025-07-12', 0),
+(274360, 'Katrin_Schmidt', '2025-07-22', 0),
+(274365, 'JimbyGo', '2025-07-29', 0),
+(274366, 'gtg777g', '2025-07-30', 0),
+(274368, 'Basilika71', '2025-08-02', 0),
+(274369, 'BjarniDK', '2025-08-02', 0),
+(274370, 'Hrefnan', '2025-08-02', 0),
+(274371, 'arngrimurbl', '2025-08-02', 0),
+(274373, 'c0m', '2025-08-02', 0),
+(274374, 'Oligamli', '2025-08-03', 0),
+(274375, 'ThorolfurSig', '2025-08-03', 0),
+(274376, 'HalliT', '2025-08-03', 0),
+(274378, 'Dianajons', '2025-08-03', 0),
+(274389, 'networkbolt', '2025-08-08', 0),
+(274408, 'photosforjack', '2025-08-30', 0),
+(274409, 'EVE_Offgrid', '2025-09-04', 0),
+(274412, 'OzPhotoNut', '2025-09-11', 0),
+(274417, 'torr1201', '2025-09-16', 0),
+(274418, 'bluejasmine', '2025-09-17', 0),
+(274426, 'davidandgoliath', '2025-10-03', 0),
+(274428, 'Matty_Ice', '2025-10-09', 0),
+(274430, 'MasonB', '2025-10-10', 0),
+(274431, 'Casc0317', '2025-10-10', 0),
+(274432, 'alvg0101', '2025-10-10', 0),
+(274438, 'Avocet1', '2025-10-14', 0),
+(274464, 'Hind0615', '2025-12-12', 0),
+(274475, 'ExposureTherapy', '2026-01-21', 0),
+(274492, 'Meistarinn', '2026-02-24', 0),
+(274494, 'CanonA', '2026-02-25', 0),
+(274495, 'sveiattan', '2026-02-25', 0),
+(274497, 'smallorquin', '2026-02-26', 0),
+(274500, 'abjarna', '2026-03-03', 0),
+(274501, 'DianaCruickshank', '2026-03-04', 0),
+(274506, 'Mriegle', '2026-03-10', 0),
+(274533, 'catharticbird', '2026-04-21', 0),
+(274543, 'Merrick', '2026-05-17', 0),
+(274556, 'Jabez', '2026-06-11', 0),
+(274566, 'Teerai28', '2026-07-08', 0),
+(274580, 'RyBPhotos', '2026-08-04', 0);
 COMMIT;

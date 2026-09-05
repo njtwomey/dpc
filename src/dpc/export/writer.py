@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from pydantic import BaseModel
+from tqdm import tqdm
 
 from dpc.export.model import SiteData
 
@@ -39,7 +40,7 @@ def write_site_data(data: SiteData, destination: Path) -> list[Path]:
     }
 
     written: list[Path] = []
-    for name in FILENAMES:
+    for name in tqdm(FILENAMES, desc="writing", unit="file", leave=False, disable=None):
         path = destination / f"{name}.json"
         path.write_text(_dumps(payloads[name]), encoding="utf-8")
         written.append(path)

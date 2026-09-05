@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from loguru import logger
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 from dpc.awards.catalog import AwardCatalog, AwardDefinition, AwarderDefinition
 from dpc.awards.match import awards_in
@@ -32,7 +33,9 @@ def sync_catalog(session: Session, catalog: AwardCatalog) -> SyncReport:
     existing = {a.slug: a for a in session.scalars(select(Award))}
     created = updated = unchanged = 0
 
-    for awarder, definition in catalog.pairs():
+    for awarder, definition in tqdm(
+        catalog.pairs(), desc="catalogue", unit="award", leave=False, disable=None
+    ):
         _ensure_member(session, awarder.user_id, awarder.name)
 
         fields = {
@@ -75,7 +78,10 @@ def find_grants(session: Session, catalog: AwardCatalog) -> int:
     }
 
     created = 0
-    for awarder, _ in _grouped_by_awarder(catalog):
+    awarders = list(_grouped_by_awarder(catalog))
+    bar = tqdm(awarders, desc="matching", unit="awarder", disable=None)
+    for awarder, _ in bar:
+        bar.set_postfix_str(awarder.name)
         definitions = [d for a, d in catalog.pairs() if a.user_id == awarder.user_id]
         rows = session.execute(
             select(Comment, Image)

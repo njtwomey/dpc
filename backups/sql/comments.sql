@@ -7452,5 +7452,878 @@ INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment"
 (7764080, 1286720, 50695, '<td valign="top">goofy, deep, wonderful. Posthumous Red Ribbon <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'goofy, deep, wonderful. Posthumous Red Ribbon ', '2024-02-21 23:29:27.000000', NULL, 1),
 (7764081, 1286732, 50695, '<td valign="top">rubbed into being. <br/> <br/>I''m hanging this in my fantasy gallery<br/> <br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'rubbed into being.  I''m hanging this in my fantasy gallery ', '2024-02-21 23:29:53.000000', NULL, 1),
 (7764082, 1286714, 50695, '<td valign="top">roll this into a cigar<br/> <br/>I''m hanging this in my fantasy gallery<br/> <br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'roll this into a cigar I''m hanging this in my fantasy gallery ', '2024-02-21 23:30:00.000000', NULL, 1),
-(7764083, 1286829, 50695, '<td valign="top">deeply weird<br/> <br/>I''m hanging this in my fantasy gallery<br/> <br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'deeply weird I''m hanging this in my fantasy gallery ', '2024-02-21 23:30:05.000000', NULL, 1);
+(7764083, 1286829, 50695, '<td valign="top">deeply weird<br/> <br/>I''m hanging this in my fantasy gallery<br/> <br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'deeply weird I''m hanging this in my fantasy gallery ', '2024-02-21 23:30:05.000000', NULL, 1),
+(7764234, 1286891, 50695, '<td valign="top">
+fuzzy earphone girl somehow transforms this mess into art. I don''t know how it works, it just does. I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'fuzzy earphone girl somehow transforms this mess into art. I don''t know how it works, it just does. I''m hanging this in my fantasy gallery', '2024-02-25 19:52:39.000000', NULL, 1),
+(7764235, 1286884, 50695, '<td valign="top">
+sometimes water is a painter.
+<br/>
+<br/>I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'sometimes water is a painter.
+
+I''m hanging this in my fantasy gallery', '2024-02-25 19:52:58.000000', NULL, 1),
+(7764379, 1286722, 50695, '<td valign="top">
+gorgeous photo, the different areas of light and dark.
+<br/>
+<br/>I''m giving this a Posthumous Red Ribbon
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'gorgeous photo, the different areas of light and dark.
+
+I''m giving this a Posthumous Red Ribbon', '2024-02-29 23:00:28.000000', NULL, 1),
+(7764380, 1286931, 50695, '<td valign="top">
+a vehicle of great import. I''m hanging this in my fantasy gallery.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'a vehicle of great import. I''m hanging this in my fantasy gallery.', '2024-02-29 23:01:19.000000', NULL, 1),
+(7764677, 1287098, 50695, '<td valign="top">
+so strange, so unsentimental, so brutal, so profound
+<br/>
+<br/>I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'so strange, so unsentimental, so brutal, so profound
+
+I''m hanging this in my fantasy gallery', '2024-03-10 23:44:33.000000', NULL, 1),
+(7766744, 1288313, 50695, '<td valign="top">
+dusting off my ribbons for this insane shot from another decade.
+<br/>
+<br/>Posthumous Red <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'dusting off my ribbons for this insane shot from another decade.
+
+Posthumous Red', '2024-05-31 23:14:55.000000', NULL, 1),
+(7774220, 1291920, 50695, '<td valign="top">
+this looks so effortlessly beautiful. I''ll put it in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this looks so effortlessly beautiful. I''ll put it in my fantasy gallery', '2024-12-30 10:17:05.000000', NULL, 1),
+(7774221, 1291825, 50695, '<td valign="top">
+stunning use of low key.
+<br/>
+<br/>I''ll put it in my fantasy gallery.  <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'stunning use of low key.
+
+I''ll put it in my fantasy gallery.', '2024-12-30 10:17:45.000000', NULL, 1),
+(7775335, 1292346, 50695, '<td valign="top">
+gorgeous chunky cinema. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'gorgeous chunky cinema.', '2025-01-21 23:39:20.000000', NULL, 1),
+(7775336, 1292348, 50695, '<td valign="top">
+delights of chaos <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'delights of chaos', '2025-01-21 23:39:51.000000', NULL, 1),
+(7775338, 1291871, 50695, '<td valign="top">
+a surrealist masterwork <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'a surrealist masterwork', '2025-01-21 23:40:50.000000', NULL, 1),
+(7775339, 1292209, 50695, '<td valign="top">
+a real person glowing in an empty world <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'a real person glowing in an empty world', '2025-01-21 23:42:13.000000', NULL, 1),
+(7778559, 1293608, 50695, '<td valign="top">
+one of two photos in this challenge that feel real and alive.  hanging this in my fantasy gallery.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'one of two photos in this challenge that feel real and alive.  hanging this in my fantasy gallery.', '2025-03-23 22:11:54.000000', NULL, 1),
+(7779165, 1293851, 50695, '<td valign="top">
+this is the only photo in the challenge that struck me as a work of art. I''ll hang it in my gallery. the blur on that bird is delicious.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this is the only photo in the challenge that struck me as a work of art. I''ll hang it in my gallery. the blur on that bird is delicious.', '2025-04-05 23:23:06.000000', NULL, 1),
+(7779574, 1293988, 50695, '<td valign="top">
+thank you, I''m listening to this music as I write this. You are writing in something almost as ephemeral as the wind. this photo reminds me of the decorative arts and trompe l''oeil and putti and of course pan
+<br/>
+<br/>I''m hanging you in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'thank you, I''m listening to this music as I write this. You are writing in something almost as ephemeral as the wind. this photo reminds me of the decorative arts and trompe l''oeil and putti and of course pan
+
+I''m hanging you in my fantasy gallery', '2025-04-13 22:02:53.000000', NULL, 1),
+(7779575, 1293968, 50695, '<td valign="top">
+there is something quiet and small about this landscape
+<br/>
+<br/>
+<br/>I''m hanging you in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'there is something quiet and small about this landscape
+
+
+I''m hanging you in my fantasy gallery', '2025-04-13 22:03:50.000000', NULL, 1),
+(7779581, 1293972, 50695, '<td valign="top">
+remarkable effect created by the high shutter speed and ridiculous sharpness. It''s unusual and fascinating.
+<br/>
+<br/>
+<br/>I''m hanging you in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'remarkable effect created by the high shutter speed and ridiculous sharpness. It''s unusual and fascinating.
+
+
+I''m hanging you in my fantasy gallery', '2025-04-13 22:11:45.000000', NULL, 1),
+(7779813, 1294094, 50695, '<td valign="top">
+objects not in the mirror are closer than fear
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'objects not in the mirror are closer than fear', '2025-04-19 21:27:47.000000', NULL, 1),
+(7779861, 1294085, 50695, '<td valign="top">
+exciting entrance into abstraction
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'exciting entrance into abstraction
+
+I''m hanging this in my fantasy gallery', '2025-04-21 11:31:42.000000', NULL, 1),
+(7779862, 1294128, 50695, '<td valign="top">
+or for the mailman??? I love the suspense.
+<br/>
+<br/>I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'or for the mailman??? I love the suspense.
+
+I''m hanging this in my fantasy gallery', '2025-04-21 11:31:46.000000', NULL, 1),
+(7779863, 1294132, 50695, '<td valign="top">
+this hangs together in a beautiful abstract composition.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this hangs together in a beautiful abstract composition.
+
+I''m hanging this in my fantasy gallery', '2025-04-21 11:32:11.000000', NULL, 1),
+(7781003, 1294366, 50695, '<td valign="top">
+stunning. both immediate and eternal.
+<br/>
+<br/>worth digging up my ribbon.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'stunning. both immediate and eternal.
+
+worth digging up my ribbon.', '2025-05-13 23:33:44.000000', NULL, 1),
+(7781165, 1294429, 50695, '<td valign="top">
+weirding the iconic.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'weirding the iconic.', '2025-05-15 23:37:37.000000', NULL, 1),
+(7781166, 1294570, 50695, '<td valign="top">
+strange mix of solid and liquid, disturbing to the brink of enlightenment
+<br/>
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'strange mix of solid and liquid, disturbing to the brink of enlightenment', '2025-05-15 23:38:37.000000', NULL, 1),
+(7785026, 1295813, 50695, '<td valign="top">
+so much to love. the cubist who thinks he''s tough but looks dainty compared to the wall he''s on. the beautifully lit art lover who seems to be walking directly into the wall. 
+<br/>
+<br/>I love the idea of making a composite to create an image that looks real but also subtly wrong.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'so much to love. the cubist who thinks he''s tough but looks dainty compared to the wall he''s on. the beautifully lit art lover who seems to be walking directly into the wall. 
+
+I love the idea of making a composite to create an image that looks real but also subtly wrong.', '2025-07-21 22:43:34.000000', NULL, 1),
+(7785027, 1295812, 50695, '<td valign="top">
+beautiful brilliant puddles of capitalism
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'beautiful brilliant puddles of capitalism', '2025-07-21 22:44:10.000000', NULL, 1),
+(7788272, 1296746, 50695, '<td valign="top">
+The lattice through which humanity sifts. I''m hanging you in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'The lattice through which humanity sifts. I''m hanging you in my fantasy gallery', '2025-08-18 16:12:53.000000', NULL, 1),
+(7788274, 1296754, 50695, '<td valign="top">
+Photography is like zookeeping. Photography is like lepidoptery. I''m hanging you in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Photography is like zookeeping. Photography is like lepidoptery. I''m hanging you in my fantasy gallery', '2025-08-18 16:14:08.000000', NULL, 1),
+(7788857, 1297236, 50695, '<td valign="top">
+yes, you understand what a landscape is, and where it is, and how only a landscape can see a landscape. I''m hanging you in my fantasy landscape.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'yes, you understand what a landscape is, and where it is, and how only a landscape can see a landscape. I''m hanging you in my fantasy landscape.', '2025-08-19 23:33:35.000000', NULL, 1),
+(7795466, 1299699, 50695, '<td valign="top">
+I have to dig up my fantasy gallery for this image.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I have to dig up my fantasy gallery for this image.', '2025-09-23 10:27:59.000000', NULL, 1),
+(7795467, 1299512, 50695, '<td valign="top">
+parfait
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a>
+<br/>
+<br/>I need some sunlight in my fantasy gallery</td>', 'parfait
+
+
+
+I need some sunlight in my fantasy gallery', '2025-09-23 10:28:36.000000', NULL, 1),
+(7795537, 1299632, 50695, '<td valign="top">
+the Fellini Font, my favorite
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'the Fellini Font, my favorite', '2025-09-23 23:19:37.000000', NULL, 1),
+(7795538, 1299705, 50695, '<td valign="top">
+Cabaret Chocolate, 90% Dark
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Cabaret Chocolate, 90% Dark', '2025-09-23 23:19:59.000000', NULL, 1),
+(7795539, 1299685, 50695, '<td valign="top">
+I saw this movie. I think it''s called Coming to Siberia ? It''s a sequel to Coming to America but instead of Eddie Murphy it''s a meteorite?
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I saw this movie. I think it''s called Coming to Siberia ? It''s a sequel to Coming to America but instead of Eddie Murphy it''s a meteorite?', '2025-09-23 23:20:16.000000', NULL, 1),
+(7795542, 1299062, 50695, '<td valign="top">
+dynamic composition, making use of silhouette to blend foreground with background.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'dynamic composition, making use of silhouette to blend foreground with background.', '2025-09-23 23:21:40.000000', NULL, 1),
+(7795543, 1299364, 50695, '<td valign="top">
+that orange line pulls this almost completely into the realm of abstraction. fascinating
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'that orange line pulls this almost completely into the realm of abstraction. fascinating', '2025-09-23 23:21:56.000000', NULL, 1),
+(7795544, 1299688, 50695, '<td valign="top">
+she is so perfectly positioned in the chaos. it creates the opposite effect of a traditional Romantic landscape. the small person is not out of place or overwhelmed. she turns chaos into order.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'she is so perfectly positioned in the chaos. it creates the opposite effect of a traditional Romantic landscape. the small person is not out of place or overwhelmed. she turns chaos into order.', '2025-09-23 23:22:10.000000', NULL, 1),
+(7810067, 1304161, 50695, '<td valign="top">
+great title. in my opinion, this is the most purposeful, artful entry in the challenge. I''m hanging it in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'great title. in my opinion, this is the most purposeful, artful entry in the challenge. I''m hanging it in my fantasy gallery.', '2026-02-17 11:24:16.000000', NULL, 1),
+(7810331, 1304192, 50695, '<td valign="top">
+let''s go back to cave paintings. I''m hanging this in my fantasy gallery. 
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'let''s go back to cave paintings. I''m hanging this in my fantasy gallery.', '2026-02-20 18:29:44.000000', NULL, 1),
+(7810504, 1303983, 50695, '<td valign="top">
+characters in a play to which I am not privy. The dream is here.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'characters in a play to which I am not privy. The dream is here.
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:44:08.000000', NULL, 1),
+(7810505, 1304333, 50695, '<td valign="top">
+beautifully brutal and vice versa
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'beautifully brutal and vice versa
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:44:24.000000', NULL, 1),
+(7810506, 1304254, 50695, '<td valign="top">
+well seen and rendered. you are a poet.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'well seen and rendered. you are a poet.
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:44:32.000000', NULL, 1),
+(7810507, 1304212, 50695, '<td valign="top">
+ah yes the mystery being entered, protection being removed
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'ah yes the mystery being entered, protection being removed
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:44:39.000000', NULL, 1),
+(7810509, 1304317, 50695, '<td valign="top">
+instead of an inner self, I think of this more as the birth of a new self. I like how this internal struggle is represented by extremely fashionable and kinky avatars.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'instead of an inner self, I think of this more as the birth of a new self. I like how this internal struggle is represented by extremely fashionable and kinky avatars.
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:45:36.000000', NULL, 1),
+(7810511, 1303981, 50695, '<td valign="top">
+Very bold and gripping, like cold itself.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Very bold and gripping, like cold itself.
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:48:56.000000', NULL, 1),
+(7810512, 1304281, 50695, '<td valign="top">
+cheeky title but I do like the egregious inkiness of this smudgefest.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'cheeky title but I do like the egregious inkiness of this smudgefest.
+
+I''m hanging this in my fantasy gallery', '2026-02-22 10:49:02.000000', NULL, 1),
+(7810558, 1304202, 38032, '<td valign="top">
+Gorgeous! Perfect editing as well. Feels very real.
+<br/>I''m bringing the baby faces back out for you:
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1167384" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167384.png" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167384.png'', strrpos(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167384.png'', ''/'') + 1) . ''"/></a></td>', 'Gorgeous! Perfect editing as well. Feels very real.
+I''m bringing the baby faces back out for you:', '2026-02-22 22:43:38.000000', NULL, 1),
+(7810559, 1304329, 38032, '<td valign="top">
+Successfully creepy enough for a yellow <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1167386" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167386.png" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167386.png'', strrpos(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167386.png'', ''/'') + 1) . ''"/></a></td>', 'Successfully creepy enough for a yellow', '2026-02-22 22:44:42.000000', NULL, 1),
+(7810560, 1304029, 38032, '<td valign="top">
+Pretty awaeosme .. that''s right, awaeosme! ;) <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1174300" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1174300.png" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1174300.png'', strrpos(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1174300.png'', ''/'') + 1) . ''"/></a> 9</td>', 'Pretty awaeosme .. that''s right, awaeosme! ;)  9', '2026-02-22 22:45:21.000000', NULL, 1),
+(7810561, 1304281, 38032, '<td valign="top">
+It''s just pixels, but it''s doing all the right things.
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1167385" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167385.png" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167385.png'', strrpos(''https://images.dpchallenge.com/images_portfolio/35000-39999/38032/120/Copyrighted_Image_Reuse_Prohibited_1167385.png'', ''/'') + 1) . ''"/></a></td>', 'It''s just pixels, but it''s doing all the right things.', '2026-02-22 22:47:19.000000', NULL, 1),
+(7812366, 1304772, 50695, '<td valign="top">
+did you do a little perspective correction? I really like how disorientingly straight the floorboards are. it really completes the beautiful dramatic shape of the bird.
+<br/>
+<br/>I''m  hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'did you do a little perspective correction? I really like how disorientingly straight the floorboards are. it really completes the beautiful dramatic shape of the bird.
+
+I''m  hanging this in my fantasy gallery', '2026-03-16 10:18:09.000000', NULL, 1),
+(7812367, 1304827, 50695, '<td valign="top">
+I like how the birds kind of erase the scene, as if all of us, even the sun, are dust that can be blown and swept away. 
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I like how the birds kind of erase the scene, as if all of us, even the sun, are dust that can be blown and swept away. 
+
+I''m hanging this in my fantasy gallery', '2026-03-16 10:19:34.000000', NULL, 1),
+(7812690, 1305013, 50695, '<td valign="top">
+wow the ferris wheel has made 100 turns in 100th of a second. As Skarsgard Martese famously said, your photographs are amusement park rides. I want a season pass.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'wow the ferris wheel has made 100 turns in 100th of a second. As Skarsgard Martese famously said, your photographs are amusement park rides. I want a season pass.
+
+I''m hanging this in my fantasy gallery', '2026-03-20 13:50:42.000000', NULL, 1),
+(7812691, 1305015, 50695, '<td valign="top">
+this is just so elegant.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this is just so elegant.
+
+I''m hanging this in my fantasy gallery', '2026-03-20 13:50:47.000000', NULL, 1),
+(7812695, 1305027, 50695, '<td valign="top">
+as artists we are confronted with the overwhelming complexity of what it means to be someone. I like your approach to that problem. 
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'as artists we are confronted with the overwhelming complexity of what it means to be someone. I like your approach to that problem. 
+
+I''m hanging this in my fantasy gallery', '2026-03-20 13:52:00.000000', NULL, 1),
+(7813616, 1305364, 50695, '<td valign="top">
+one of the features/topics that come up in discussions of art and its value is "originality." "Original" was the first word that came to mind when I saw this image, because it is like no other I''ve seen. But what can I point to that is "original"? "Never been done!" Big bold silhouettes have been done. contre jour has been done. Maybe individual is a better word. There''s something very individual and personal about this capture. foreground, middle ground and background conveyed so boldly with so little visual information, like three worlds being presented. But also, as your title suggests, a sense of time is here, not simply by conveying "speed" but by contrasting it with what is not moving, and with what is slowly setting. The railings are the prisons of each world, easily transcended by an artist such as yourself. I''m only 3 images in and I already know this is one of my favorites.
+<br/>
+<br/>Blue <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077284" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', ''/'') + 1) . ''"/></a></td>', 'one of the features/topics that come up in discussions of art and its value is "originality." "Original" was the first word that came to mind when I saw this image, because it is like no other I''ve seen. But what can I point to that is "original"? "Never been done!" Big bold silhouettes have been done. contre jour has been done. Maybe individual is a better word. There''s something very individual and personal about this capture. foreground, middle ground and background conveyed so boldly with so little visual information, like three worlds being presented. But also, as your title suggests, a sense of time is here, not simply by conveying "speed" but by contrasting it with what is not moving, and with what is slowly setting. The railings are the prisons of each world, easily transcended by an artist such as yourself. I''m only 3 images in and I already know this is one of my favorites.
+
+Blue', '2026-03-31 11:49:13.000000', NULL, 1),
+(7813617, 1305389, 50695, '<td valign="top">
+there is an unsettling quality to this. Something is off about the colors. It''s darker than it should be, but the colors are still pretty saturated. Something wicked this way comes. the dog and I can smell it.
+<br/>
+<br/>Blue <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077284" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', ''/'') + 1) . ''"/></a></td>', 'there is an unsettling quality to this. Something is off about the colors. It''s darker than it should be, but the colors are still pretty saturated. Something wicked this way comes. the dog and I can smell it.
+
+Blue', '2026-03-31 11:49:28.000000', NULL, 1),
+(7813618, 1305349, 50695, '<td valign="top">
+oh wow, this is very me, a surprising and original image, a spiritual energy, a being from another plane perhaps.
+<br/>
+<br/>Red <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'oh wow, this is very me, a surprising and original image, a spiritual energy, a being from another plane perhaps.
+
+Red', '2026-03-31 11:50:34.000000', NULL, 1),
+(7813619, 1305381, 50695, '<td valign="top">
+i wish dpc let you make this bigger. It has the motion and texture of a Pollock painting. Rhythm, marvelous rhythm and color. A simple palette dominated by two highly contrasting colors. but also the high contrast of dark and light. All rhythmically entangled. Yeah, this is a visual delight.
+<br/>
+<br/>Yellow <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077286" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg'', ''/'') + 1) . ''"/></a></td>', 'i wish dpc let you make this bigger. It has the motion and texture of a Pollock painting. Rhythm, marvelous rhythm and color. A simple palette dominated by two highly contrasting colors. but also the high contrast of dark and light. All rhythmically entangled. Yeah, this is a visual delight.
+
+Yellow', '2026-03-31 11:51:13.000000', NULL, 1),
+(7813621, 1305111, 50695, '<td valign="top">
+I think the "split in two" composition is saved by the hints of shapes in the dark top half. The delirious scratchwork of the rain and wires on the bottom half is wonderful. Feels like an internal urban landscape.
+<br/>
+<br/>Yellow <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077286" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077286.jpg'', ''/'') + 1) . ''"/></a></td>', 'I think the "split in two" composition is saved by the hints of shapes in the dark top half. The delirious scratchwork of the rain and wires on the bottom half is wonderful. Feels like an internal urban landscape.
+
+Yellow', '2026-03-31 11:51:53.000000', NULL, 1),
+(7813622, 1305233, 50695, '<td valign="top">
+something appealing about this. the sharp diagonals, the red corner mirroring the glimpse of blue sky, like hell and heaven. The crumble of asphalt. something gorgeous about it all.
+<br/>
+<br/>Red <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'something appealing about this. the sharp diagonals, the red corner mirroring the glimpse of blue sky, like hell and heaven. The crumble of asphalt. something gorgeous about it all.
+
+Red', '2026-03-31 11:52:29.000000', NULL, 1),
+(7813623, 1305385, 50695, '<td valign="top">
+You''ve turned Paul McCartney''s lies into truth! He''s singing in the dead of night! Bright delirious beauty. Take me with you
+<br/>
+<br/>Red <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'You''ve turned Paul McCartney''s lies into truth! He''s singing in the dead of night! Bright delirious beauty. Take me with you
+
+Red', '2026-03-31 11:52:49.000000', NULL, 1),
+(7813624, 1305278, 50695, '<td valign="top">
+This is very stylized, a style that announces itself as art, which I don''t usually like, but there is much that commends this image to me. Because it is affecting primitive camera technology, and "objectifying" a woman''s face, it reminds me of Man Ray. The rose becomes most of the face, and there is a certain poignancy in its failure to become a face even though it''s trying very hard. The only thing remaining of the face is one eye. Now, someone grumpier than I might say that it''s pandering to include a beautiful glistening eye, but I like that the face is allowed to see, rather than be seen. There is something allegorically rich about it. The photo is a collage of cliches, but actually there is nothing wrong with that if they are clumped together in a confrontational or slightly disturbing way.
+<br/>
+<br/>I''m hanging this in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'This is very stylized, a style that announces itself as art, which I don''t usually like, but there is much that commends this image to me. Because it is affecting primitive camera technology, and "objectifying" a woman''s face, it reminds me of Man Ray. The rose becomes most of the face, and there is a certain poignancy in its failure to become a face even though it''s trying very hard. The only thing remaining of the face is one eye. Now, someone grumpier than I might say that it''s pandering to include a beautiful glistening eye, but I like that the face is allowed to see, rather than be seen. There is something allegorically rich about it. The photo is a collage of cliches, but actually there is nothing wrong with that if they are clumped together in a confrontational or slightly disturbing way.
+
+I''m hanging this in my fantasy gallery.', '2026-03-31 11:53:29.000000', NULL, 1),
+(7813625, 1305361, 50695, '<td valign="top">
+I could illustrate an essay on museums with this photo. Museums don''t just provide homes for art, they shape the art that is created. Your photo suggests to me that this artist knew he was painting for a museum, and is in fact painting a museum. Notice all the similarities between the painted world and the photographed world. He or she has painted something bare and sterile, in which life and passion stand around awkwardly.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I could illustrate an essay on museums with this photo. Museums don''t just provide homes for art, they shape the art that is created. Your photo suggests to me that this artist knew he was painting for a museum, and is in fact painting a museum. Notice all the similarities between the painted world and the photographed world. He or she has painted something bare and sterile, in which life and passion stand around awkwardly.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:01.000000', NULL, 1),
+(7813626, 1305022, 50695, '<td valign="top">
+I like the title. A headwind makes it harder to progress. The motion of the photo is even more destructive, like an earthquake. It feels like the myth of patriotism is revealing itself to be nothing but a ghost. The flags are burning, have burned, are smoke now. The citizens are turning into the stripes, and the stars are scattered on the grass.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I like the title. A headwind makes it harder to progress. The motion of the photo is even more destructive, like an earthquake. It feels like the myth of patriotism is revealing itself to be nothing but a ghost. The flags are burning, have burned, are smoke now. The citizens are turning into the stripes, and the stars are scattered on the grass.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:08.000000', NULL, 1),
+(7813627, 1305368, 50695, '<td valign="top">
+yes, meetings, there is much to discuss, there are agendas, one meeting interrupts another, through a glass wall or through a memory. no place is decided on. such decisions are tabled.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'yes, meetings, there is much to discuss, there are agendas, one meeting interrupts another, through a glass wall or through a memory. no place is decided on. such decisions are tabled.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:19.000000', NULL, 1),
+(7813628, 1305207, 50695, '<td valign="top">
+ah yes in the dance of winter a new song, whispered. this photo correctly exposes the season, or rather changes the season, as we all must do.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'ah yes in the dance of winter a new song, whispered. this photo correctly exposes the season, or rather changes the season, as we all must do.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:25.000000', NULL, 1),
+(7813629, 1305360, 50695, '<td valign="top">
+Well, I''m glad you appreciate my taste for the meta. in a sense every photograph is of a photograph. in a sense every photograph is of the photographer. I was skeptical at first but I like how it gets progressively brighter until the actual "subject" is barely visible.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Well, I''m glad you appreciate my taste for the meta. in a sense every photograph is of a photograph. in a sense every photograph is of the photographer. I was skeptical at first but I like how it gets progressively brighter until the actual "subject" is barely visible.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:35.000000', NULL, 1),
+(7813630, 1305230, 50695, '<td valign="top">
+kind of annoyed by the mirror but that is very "posthumous" so I can''t really blame you. kind of aggressively "bad" photo in several ways, which is also very "posthumous." Biggest transgression to me is that big swath of road. so much nothing. The title is pretending to be about the distance between the two people, but really it''s about that big old desert of a road between you and them, between me and them. The mirror emphasizes that distance. There''s a feeling to that, a weight you might say. As Wallace Stevens said, "The [pair] are not seen/as the observer wills."
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'kind of annoyed by the mirror but that is very "posthumous" so I can''t really blame you. kind of aggressively "bad" photo in several ways, which is also very "posthumous." Biggest transgression to me is that big swath of road. so much nothing. The title is pretending to be about the distance between the two people, but really it''s about that big old desert of a road between you and them, between me and them. The mirror emphasizes that distance. There''s a feeling to that, a weight you might say. As Wallace Stevens said, "The [pair] are not seen/as the observer wills."
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:54:42.000000', NULL, 1),
+(7813631, 1305280, 50695, '<td valign="top">
+this feels retro and smoky, a little dangerous and exciting. you''ve really captured a mood here.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this feels retro and smoky, a little dangerous and exciting. you''ve really captured a mood here.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 11:55:09.000000', NULL, 1),
+(7813655, 1305000, 50695, '<td valign="top">
+time washes us all away. compelling image. specific and universal coexisting.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'time washes us all away. compelling image. specific and universal coexisting.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 18:42:55.000000', NULL, 1),
+(7813656, 1305188, 50695, '<td valign="top">
+living in a world of smoke
+<br/>
+<br/>I''m hanging this in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'living in a world of smoke
+
+I''m hanging this in my fantasy gallery.', '2026-03-31 18:42:59.000000', NULL, 1),
+(7813657, 1305331, 50695, '<td valign="top">
+a splendid study of texture and tone.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'a splendid study of texture and tone.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 18:44:03.000000', NULL, 1),
+(7813659, 1305326, 50695, '<td valign="top">
+I''m captivated by how that table, which itself is capsized, has capsized the landscape.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I''m captivated by how that table, which itself is capsized, has capsized the landscape.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 18:45:45.000000', NULL, 1),
+(7813662, 1305330, 50695, '<td valign="top">
+I don''t think the title is fair. This is a funny but also beautiful and dramatic portrait. The door behind her is either opening or closing.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I don''t think the title is fair. This is a funny but also beautiful and dramatic portrait. The door behind her is either opening or closing.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 18:47:47.000000', NULL, 1),
+(7813666, 1305073, 50695, '<td valign="top">
+I like what comes out from the blacks. bold.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I like what comes out from the blacks. bold.
+
+I''m hanging this in my fantasy gallery', '2026-03-31 18:49:38.000000', NULL, 1),
+(7814067, 1305324, 50695, '<td valign="top">
+this has its own glow, and several canvases of quiet.
+<br/>
+<br/>I''m hanging this in my gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this has its own glow, and several canvases of quiet.
+
+I''m hanging this in my gallery.', '2026-04-05 22:01:38.000000', NULL, 1),
+(7815100, 1305783, 50695, '<td valign="top">
+you really captured/brought out a multitude of objects and feelings.
+<br/>
+<br/>Posthumous Blue Ribbon
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077284" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', ''/'') + 1) . ''"/></a></td>', 'you really captured/brought out a multitude of objects and feelings.
+
+Posthumous Blue Ribbon', '2026-04-17 11:47:15.000000', NULL, 1),
+(7815101, 1305569, 50695, '<td valign="top">
+the main character is somehow echoed by the shapes around her.
+<br/>
+<br/>Posthumous Red Ribbon
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'the main character is somehow echoed by the shapes around her.
+
+Posthumous Red Ribbon', '2026-04-17 11:47:33.000000', NULL, 1),
+(7815103, 1305603, 50695, '<td valign="top">
+art about art. art about becoming art. smaller and smaller rectangles as art becomes finer and finer. the art is looking at us, wondering if it should put us in its living room.
+<br/>
+<br/>I''m putting this in my gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'art about art. art about becoming art. smaller and smaller rectangles as art becomes finer and finer. the art is looking at us, wondering if it should put us in its living room.
+
+I''m putting this in my gallery', '2026-04-17 11:48:29.000000', NULL, 1),
+(7815110, 1305788, 50695, '<td valign="top">
+something is almost coming through, anticipation better than realization.
+<br/>
+<br/>I''m hanging this in my gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'something is almost coming through, anticipation better than realization.
+
+I''m hanging this in my gallery', '2026-04-17 11:51:14.000000', NULL, 1),
+(7815127, 1305804, 50695, '<td valign="top">
+ah yes i feel the sleep in this place.
+<br/>
+<br/>I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'ah yes i feel the sleep in this place.
+
+I''m hanging this in my fantasy gallery', '2026-04-17 11:56:02.000000', NULL, 1),
+(7815883, 1305911, 50695, '<td valign="top">
+this is spectacular. best in show. 
+<br/>
+<br/>Posthumous Blue Ribbon
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077284" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', ''/'') + 1) . ''"/></a></td>', 'this is spectacular. best in show. 
+
+Posthumous Blue Ribbon', '2026-04-23 22:43:38.000000', NULL, 1),
+(7815884, 1305692, 50695, '<td valign="top">
+humor and life
+<br/>
+<br/>I''m hanging this in my fantasy art gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'humor and life
+
+I''m hanging this in my fantasy art gallery', '2026-04-23 22:44:13.000000', NULL, 1),
+(7815889, 1305899, 50695, '<td valign="top">
+beautiful fragmentation of the canvas
+<br/>
+<br/>Posthumous Red Ribbon
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077285" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077285.jpg'', ''/'') + 1) . ''"/></a></td>', 'beautiful fragmentation of the canvas
+
+Posthumous Red Ribbon', '2026-04-23 22:47:01.000000', NULL, 1),
+(7816352, 1306057, 50695, '<td valign="top">
+brutal nonsense. I''m hanging this in my gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'brutal nonsense. I''m hanging this in my gallery', '2026-04-28 23:42:25.000000', NULL, 1),
+(7816353, 1306035, 50695, '<td valign="top">
+bold squeezy mess. I''m hanging this in my gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'bold squeezy mess. I''m hanging this in my gallery', '2026-04-28 23:43:03.000000', NULL, 1),
+(7816355, 1305844, 50695, '<td valign="top">
+this haunts me. I''m giving it a red ribbon. i should probably give it a blue, but I''m afraid. ok i''ll give it a blue anyway.
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077284" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077284.jpg'', ''/'') + 1) . ''"/></a></td>', 'this haunts me. I''m giving it a red ribbon. i should probably give it a blue, but I''m afraid. ok i''ll give it a blue anyway.', '2026-04-28 23:44:49.000000', NULL, 1),
+(7818554, 1306683, 50695, '<td valign="top">
+stunning vision. i''m hanging this in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'stunning vision. i''m hanging this in my gallery', '2026-05-24 23:19:25.000000', NULL, 1),
+(7819433, 1306732, 50695, '<td valign="top">
+I love how the photo is in two halves. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I love how the photo is in two halves. I''m hanging this in my fantasy gallery', '2026-05-31 12:39:25.000000', NULL, 1),
+(7826160, 1308869, 50695, '<td valign="top">
+square? this is the coolest crop ever. I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'square? this is the coolest crop ever. I''m hanging this in my fantasy gallery', '2026-07-12 21:49:19.000000', NULL, 1),
+(7826162, 1308921, 50695, '<td valign="top">
+still from a beautiful movie about birds. I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'still from a beautiful movie about birds. I''m hanging this in my fantasy gallery', '2026-07-12 21:50:10.000000', NULL, 1),
+(7826165, 1308934, 50695, '<td valign="top">
+ok, everybody, just calm down... I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'ok, everybody, just calm down... I''m hanging this in my fantasy gallery', '2026-07-12 21:52:31.000000', NULL, 1),
+(7826443, 1309099, 50695, '<td valign="top">
+I''m hanging you in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'I''m hanging you in my fantasy gallery', '2026-07-13 15:51:54.000000', NULL, 1),
+(7826800, 1308971, 32011, '<td valign="top">
+As promised.
+<br/>
+<br/><img border="0" src="https://images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''https://images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'As promised.', '2026-07-15 00:44:49.000000', NULL, 0),
+(7828389, 1309630, 50695, '<td valign="top">
+weirdly perfect. i''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'weirdly perfect. i''m hanging this in my fantasy gallery', '2026-07-21 23:29:56.000000', NULL, 1),
+(7828728, 1309580, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7828727" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)', '2026-07-23 09:51:36.000000', NULL, 0),
+(7828729, 1308752, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7828727" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)', '2026-07-23 09:52:00.000000', NULL, 0),
+(7828731, 1309809, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7828727" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)', '2026-07-23 09:52:19.000000', NULL, 0),
+(7828732, 1309811, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7828727" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)', '2026-07-23 09:52:40.000000', NULL, 0),
+(7828733, 1309630, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7828727" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/></td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)', '2026-07-23 09:52:56.000000', NULL, 0),
+(7829246, 1310044, 50695, '<td valign="top">
+fascinating disruption of image.
+<br/>
+<br/>I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'fascinating disruption of image.
+
+I''m hanging this in my fantasy gallery', '2026-07-26 10:12:19.000000', NULL, 1),
+(7829247, 1310085, 50695, '<td valign="top">
+mood, emotion, suggested stories. I''m hanging this in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'mood, emotion, suggested stories. I''m hanging this in my fantasy gallery.', '2026-07-26 10:13:09.000000', NULL, 1),
+(7829248, 1310029, 50695, '<td valign="top">
+the cow a cow imagines. I''m hanging this in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a><br/><br/><i>Message edited by author 2026-07-27 00:19:04.</i></td>', 'the cow a cow imagines. I''m hanging this in my fantasy gallery.', '2026-07-26 10:13:38.000000', '2026-07-27 00:19:04.000000', 1),
+(7829260, 1309782, 50695, '<td valign="top">
+wow, this feels like a photorealistic postmodern painting. I''ve got to hang this in my fantasy gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'wow, this feels like a photorealistic postmodern painting. I''ve got to hang this in my fantasy gallery.', '2026-07-26 10:21:34.000000', NULL, 1),
+(7829901, 1310249, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7829900" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>-- One of only two that I gave a 9.  I love the composition, the big picture symmetry but the asymmetry when you look closer.  I love the stories I tell myself when I look at the details, and the individuals in the image.  Outstanding image that I (IMHO) think deserved more love from the voters.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+-- One of only two that I gave a 9.  I love the composition, the big picture symmetry but the asymmetry when you look closer.  I love the stories I tell myself when I look at the details, and the individuals in the image.  Outstanding image that I (IMHO) think deserved more love from the voters.', '2026-07-29 03:13:22.000000', NULL, 0),
+(7829902, 1310289, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7829900" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>-- One of only two that I gave a 9 to in this challenge.  Fantastic composition, beautiful balance of symmetry and asymmetry.  I love the colour, and the birds, and the wonky reflections.  I''m surprised it wasn''t in the top 10, so IMHO think it qualifies as one of the most under appreciated for this challenge.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+-- One of only two that I gave a 9 to in this challenge.  Fantastic composition, beautiful balance of symmetry and asymmetry.  I love the colour, and the birds, and the wonky reflections.  I''m surprised it wasn''t in the top 10, so IMHO think it qualifies as one of the most under appreciated for this challenge.', '2026-07-29 03:17:05.000000', NULL, 0),
+(7829903, 1309588, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7829900" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>-- I really like this.  I like the symmetry, and the use of focus and out-of-focus, and the processing.  Most of the other images I liked in this challenge seemed to get some love from the voters, but this one deserved to get more... all I can offer in consolation is to show my appreciation with a MUAUMHO award.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+-- I really like this.  I like the symmetry, and the use of focus and out-of-focus, and the processing.  Most of the other images I liked in this challenge seemed to get some love from the voters, but this one deserved to get more... all I can offer in consolation is to show my appreciation with a MUAUMHO award.', '2026-07-29 03:21:15.000000', NULL, 0),
+(7829904, 1310085, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7829900" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>-- Great photo, that I feel deserves to have been in the top 10, or at least to get a MUAIMHO.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+-- Great photo, that I feel deserves to have been in the top 10, or at least to get a MUAIMHO.', '2026-07-29 03:23:21.000000', NULL, 0),
+(7830287, 1310479, 50695, '<td valign="top">
+best in show <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'best in show', '2026-07-31 13:41:23.000000', NULL, 1),
+(7830328, 1310424, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7830327" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Great photo.  Perfect composition, and this photo/subject and the artistic execution makes this entry most fitting of the theme IMHO i.e. perhaps the ugliest thing made to look lovely thanks to the eye and effort of the photographer, so bravo</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Great photo.  Perfect composition, and this photo/subject and the artistic execution makes this entry most fitting of the theme IMHO i.e. perhaps the ugliest thing made to look lovely thanks to the eye and effort of the photographer, so bravo', '2026-07-31 22:11:08.000000', NULL, 0),
+(7831732, 1310270, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>My one and only 10 given for this challenge, making it MUAIMHO even with its top 10 finish.  Amazing vision, perfectly processed.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+My one and only 10 given for this challenge, making it MUAIMHO even with its top 10 finish.  Amazing vision, perfectly processed.', '2026-08-08 03:01:58.000000', NULL, 0),
+(7831733, 1309902, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>While a top 10 with the voters, IMHO, it''s still one of the MUA.  Great composition and processing.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+While a top 10 with the voters, IMHO, it''s still one of the MUA.  Great composition and processing.', '2026-08-08 03:03:51.000000', NULL, 0),
+(7831734, 1309880, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>As I said during voting, this is a beautiful image.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+As I said during voting, this is a beautiful image.', '2026-08-08 03:04:52.000000', NULL, 0),
+(7831735, 1310283, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>One of quite a few in this challenge that deserved greater love from the voters, but gets LOTS of love from me.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+One of quite a few in this challenge that deserved greater love from the voters, but gets LOTS of love from me.', '2026-08-08 03:06:36.000000', NULL, 0),
+(7831736, 1310721, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>I''m surprised that this didn''t do better with voters.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+I''m surprised that this didn''t do better with voters.', '2026-08-08 03:07:33.000000', NULL, 0),
+(7831737, 1310409, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Great composition.  Love the story it tells.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Great composition.  Love the story it tells.', '2026-08-08 03:08:19.000000', NULL, 0),
+(7831738, 1310746, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Great photo that I''m very surprised that didn''t do better with the DPC voters</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Great photo that I''m very surprised that didn''t do better with the DPC voters', '2026-08-08 03:09:15.000000', NULL, 0),
+(7831739, 1310890, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Great photo, deserving better from the voters</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Great photo, deserving better from the voters', '2026-08-08 03:09:52.000000', NULL, 0),
+(7831740, 1310920, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>One of those 8s was from me - so, IMHO, it deserved better with the voters</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+One of those 8s was from me - so, IMHO, it deserved better with the voters', '2026-08-08 03:10:52.000000', NULL, 0),
+(7831741, 1310747, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Reckon this deserved more love from the voters - very surprised that it ended with a sub-6 score.</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Reckon this deserved more love from the voters - very surprised that it ended with a sub-6 score.', '2026-08-08 03:13:10.000000', NULL, 0),
+(7831742, 1311051, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO', '2026-08-08 03:14:48.000000', NULL, 0),
+(7831743, 1311033, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO', '2026-08-08 03:15:06.000000', NULL, 0),
+(7831744, 1310387, 32011, '<td valign="top">
+<b>Most Under Appreciated IMHO (aka MUAIMHO) Award</b>
+<br/>
+<br/>(see relevant <a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1214009&amp;page=117#7831731" rel="nofollow" target="_blank">Posthumous Ribbon</a> thread post)
+<br/>
+<br/><img border="0" src="//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', strrpos(''//images.dpchallenge.com/images_portfolio/30000-34999/32011/800/Copyrighted_Image_Reuse_Prohibited_858386.png'', ''/'') + 1) . ''"/>
+<br/>
+<br/>Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO</td>', 'Most Under Appreciated IMHO (aka MUAIMHO) Award
+
+(see relevant Posthumous Ribbon thread post)
+
+
+
+Missed out on voting on this, but looking at the results, this definitely deserved more love from the voters IMHO', '2026-08-08 03:15:20.000000', NULL, 0),
+(7831891, 1310970, 50695, '<td valign="top">
+Scylla! This is genius. hanging this in my gallery of course!
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Scylla! This is genius. hanging this in my gallery of course!', '2026-08-08 19:35:42.000000', NULL, 1),
+(7831893, 1311086, 50695, '<td valign="top">
+great art requires a second look. I''m hanging this in my fantasy gallery
+<br/>
+<br/><a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'great art requires a second look. I''m hanging this in my fantasy gallery', '2026-08-08 19:36:54.000000', NULL, 1),
+(7831895, 1311031, 50695, '<td valign="top">
+Portrait of a Pigeon. Old Copperneck looks back on his life. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'Portrait of a Pigeon. Old Copperneck looks back on his life. I''m hanging this in my fantasy gallery', '2026-08-08 19:38:06.000000', NULL, 1),
+(7831899, 1310669, 50695, '<td valign="top">
+utterly compelling inanity. hanging this in my gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'utterly compelling inanity. hanging this in my gallery.', '2026-08-08 19:41:28.000000', NULL, 1),
+(7832728, 1311418, 50695, '<td valign="top">
+turning the world into a poster. hanging this in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'turning the world into a poster. hanging this in my gallery', '2026-08-11 23:33:38.000000', NULL, 1),
+(7832731, 1311337, 50695, '<td valign="top">
+freaky motion distortion well captured. hanging this in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'freaky motion distortion well captured. hanging this in my gallery', '2026-08-11 23:34:25.000000', NULL, 1),
+(7832732, 1311437, 50695, '<td valign="top">
+miraculous and dark. hanging this in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'miraculous and dark. hanging this in my gallery', '2026-08-11 23:34:37.000000', NULL, 1),
+(7832740, 1311180, 50695, '<td valign="top">
+well caught and composed. hanging this in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'well caught and composed. hanging this in my gallery', '2026-08-11 23:36:25.000000', NULL, 1),
+(7833057, 1311019, 50695, '<td valign="top">
+stunning. fabulous. hanging in my gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'stunning. fabulous. hanging in my gallery', '2026-08-12 22:08:16.000000', NULL, 1),
+(7833060, 1311741, 50695, '<td valign="top">
+there''s a ghostliness to this. an emptiness infusing everything. I''m hanging it in my gallery. <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'there''s a ghostliness to this. an emptiness infusing everything. I''m hanging it in my gallery.', '2026-08-12 22:10:41.000000', NULL, 1),
+(7833712, 1311788, 50695, '<td valign="top">
+there''s a mysterious confidence to this photo. a weird perfection. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'there''s a mysterious confidence to this photo. a weird perfection. I''m hanging this in my fantasy gallery', '2026-08-18 10:53:17.000000', NULL, 1),
+(7833713, 1311944, 50695, '<td valign="top">
+this photo comes in and out of existence. I''m hanging it in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'this photo comes in and out of existence. I''m hanging it in my fantasy gallery', '2026-08-18 10:53:21.000000', NULL, 1),
+(7833714, 1312000, 50695, '<td valign="top">
+mystical sense of place. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'mystical sense of place. I''m hanging this in my fantasy gallery', '2026-08-18 10:54:04.000000', NULL, 1),
+(7834682, 1311911, 50695, '<td valign="top">
+i get a kick out of the brutal black/yellow/blue/orange combo and that unforgiving sky. I''m hanging this in my fantasy art gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'i get a kick out of the brutal black/yellow/blue/orange combo and that unforgiving sky. I''m hanging this in my fantasy art gallery', '2026-08-25 22:58:03.000000', NULL, 1),
+(7835251, 1312348, 50695, '<td valign="top">
+confident abstract. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'confident abstract. I''m hanging this in my fantasy gallery', '2026-08-30 23:04:30.000000', NULL, 1),
+(7835252, 1312382, 50695, '<td valign="top">
+phantasms. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'phantasms. I''m hanging this in my fantasy gallery', '2026-08-30 23:04:43.000000', NULL, 1),
+(7835253, 1312298, 50695, '<td valign="top">
+light and texture and story. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'light and texture and story. I''m hanging this in my fantasy gallery', '2026-08-30 23:04:50.000000', NULL, 1),
+(7835254, 1312249, 50695, '<td valign="top">
+strong sense of mood, like a painter on the brink of madness. I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'strong sense of mood, like a painter on the brink of madness. I''m hanging this in my fantasy gallery', '2026-08-30 23:05:04.000000', NULL, 1),
+(7835737, 1312138, 50695, '<td valign="top">
+exposure and composition are simply brilliant.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'exposure and composition are simply brilliant.
+
+I''m hanging this in my fantasy gallery', '2026-09-03 23:35:30.000000', NULL, 1),
+(7835738, 1312347, 50695, '<td valign="top">
+art is a happy accident.
+<br/>
+<br/>I''m hanging this in my fantasy gallery <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1077279" rel="nofollow" target="_blank"><img border="0" src="https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/50000-54999/50695/120/Copyrighted_Image_Reuse_Prohibited_1077279.jpg'', ''/'') + 1) . ''"/></a></td>', 'art is a happy accident.
+
+I''m hanging this in my fantasy gallery', '2026-09-03 23:36:09.000000', NULL, 1);
 COMMIT;

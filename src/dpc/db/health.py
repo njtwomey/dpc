@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 
 from sqlalchemy import text
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 # Below this, a shared join date is a coincidence. Above it, every member
 # "joined" on the day someone ran the scraper: the old code stamped cancelled
@@ -110,7 +111,9 @@ def check(session: Session) -> Health:
     """Run every check. Cheap enough to run after any scrape."""
     health = Health()
 
-    for name, sql, detail in _INTEGRITY:
+    bar = tqdm(_INTEGRITY, desc="checking", unit="check", leave=False, disable=None)
+    for name, sql, detail in bar:
+        bar.set_postfix_str(name)
         count = int(session.execute(text(sql)).scalar_one())
         if count:
             health.integrity.append(Finding(name, count, detail))

@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from slugify import slugify
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 from dpc.awards.catalog import AwardCatalog
 from dpc.db.models import Award, AwardGrant, Challenge, Comment, Image, Member
@@ -51,6 +52,8 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
     image_ids = {grant.image_id for grant in grants}
     images = {i.id: i for i in session.scalars(select(Image).where(Image.id.in_(image_ids)))}
 
+    stages = tqdm(total=5, desc="export", unit="stage", leave=False, disable=None)
+
     by_award: dict[int, list[AwardGrant]] = defaultdict(list)
     by_challenge: dict[int, list[AwardGrant]] = defaultdict(list)
     by_recipient: dict[int, list[AwardGrant]] = defaultdict(list)
@@ -81,6 +84,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
             seen.setdefault(grant.image_id, None)
         return list(seen)
 
+    stages.update(1)
     awards_out = [
         AwardOut(
             slug=award.slug,
@@ -98,6 +102,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
         for award in sorted(awards.values(), key=lambda a: a.slug)
     ]
 
+    stages.update(1)
     grants_by_awarder: dict[int, list[AwardGrant]] = defaultdict(list)
     for award in awards.values():
         grants_by_awarder[award.awarder_id].extend(by_award[award.id])
@@ -119,6 +124,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
         )
     ]
 
+    stages.update(1)
     challenges_out = [
         ChallengeOut(
             id=challenge_id,
@@ -135,6 +141,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
         )
     ]
 
+    stages.update(1)
     recipients_out = [
         RecipientOut(
             id=member_id,
@@ -156,6 +163,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
         if members[member_id].name.strip()
     ]
 
+    stages.update(1)
     images_out = {
         str(image_id): ImageOut(
             id=image_id,
@@ -172,6 +180,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
         if image_id in images
     }
 
+    stages.close()
     return SiteData(
         meta=Meta(
             num_awarders=len(awarders_out),
