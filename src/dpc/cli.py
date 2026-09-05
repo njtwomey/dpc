@@ -287,7 +287,6 @@ class RefreshMembers(_Command):
         if not clauses:
             return []
 
-        # noqa below: every clause is a literal defined a few lines up, and the
         # two values are bound parameters. Ruff cannot see that from here.
         sql = "SELECT id FROM members WHERE " + " OR ".join(clauses) + " ORDER BY id"  # noqa: S608
         if self.limit:

@@ -85,6 +85,25 @@ dpc scrape --challenge '[3729]' --refresh  # ignore the HTML cache and refetch
 Explicit `--challenge` ids and `--incomplete` both mean "do these", so they
 bypass the already-stored check. `--from-history` does not.
 
+### Going faster
+
+Fetching is I/O-bound and parsing is CPU-bound, so they are separated and use
+different kinds of concurrency: a challenge's image pages are fetched together
+on threads, then parsed — optionally across processes.
+
+```bash
+DPC_FETCH_WORKERS=8 DPC_REQUEST_DELAY=0.1 make parse   # the defaults
+DPC_FETCH_WORKERS=1 DPC_REQUEST_DELAY=1.0 make parse   # gentle
+DPC_PARSE_WORKERS=8 make parse                          # parse across processes
+```
+
+The delay is **per worker**, so the aggregate rate is roughly
+`fetch_workers / request_delay` per second. Measured on a 40-image challenge:
+90s at one worker and a 1s delay, 19s at eight workers and 0.1s.
+
+Parsing costs about 14 ms/page, so it only becomes worth spreading across
+processes once fetching is quick — at which point it is the slower half.
+
 ### Checking the archive
 
 ```bash

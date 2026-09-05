@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import threading
 import time
+from collections.abc import Iterable
+from concurrent.futures import ThreadPoolExecutor
 from types import TracebackType
 
 import httpx
@@ -37,7 +40,13 @@ class DpcClient:
             follow_redirects=True,
             headers={"User-Agent": "dpc-parser (+personal archive; authorised)"},
         )
-        self._last_request_at = 0.0
+        # Per worker, so each thread paces its own requests. httpx.Client is
+        # safe to share across threads.
+        self._pacing = threading.local()
+
+    @property
+    def settings(self) -> Settings:
+        return self._settings
 
     def __enter__(self) -> DpcClient:
         return self
@@ -70,6 +79,34 @@ class DpcClient:
     def get(self, path: str) -> str:
         return self._request("GET", path)
 
+    def get_many(self, paths: Iterable[str], *, workers: int | None = None) -> dict[str, str]:
+        """Fetch many pages concurrently. Returns ``{path: html}``.
+
+        A page that fails after its retries is simply absent from the result, so
+        one bad page does not sink the batch; the caller decides what that means.
+        """
+        paths = list(paths)
+        if not paths:
+            return {}
+
+        count = workers if workers is not None else self._settings.fetch_workers
+        if count <= 1:
+            return {path: self.get(path) for path in paths}
+
+        results: dict[str, str] = {}
+        with ThreadPoolExecutor(max_workers=count) as pool:
+            for path, html in zip(paths, pool.map(self._get_or_none, paths), strict=True):
+                if html is not None:
+                    results[path] = html
+        return results
+
+    def _get_or_none(self, path: str) -> str | None:
+        try:
+            return self.get(path)
+        except Exception:
+            logger.exception("failed to fetch {}", path)
+            return None
+
     def _request(self, method: str, path: str, **kwargs: object) -> str:
         last_error: Exception | None = None
 
@@ -99,8 +136,8 @@ class DpcClient:
         raise ConnectionError(msg) from last_error
 
     def _wait_turn(self) -> None:
-        elapsed = time.monotonic() - self._last_request_at
-        remaining = self._settings.request_delay - elapsed
+        last = getattr(self._pacing, "last_request_at", 0.0)
+        remaining = self._settings.request_delay - (time.monotonic() - last)
         if remaining > 0:
             time.sleep(remaining)
-        self._last_request_at = time.monotonic()
+        self._pacing.last_request_at = time.monotonic()

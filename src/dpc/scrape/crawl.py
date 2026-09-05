@@ -19,13 +19,13 @@ from tqdm import tqdm
 from dpc.db.models import Challenge, ChallengeProbe, Image, Member
 from dpc.parse import challenge as challenge_parser
 from dpc.parse import history as history_parser
-from dpc.parse import image as image_parser
 from dpc.parse import member as member_parser
 from dpc.parse.image import ImageStatsUnavailableError
 from dpc.parse.member import MemberProfileUnavailableError
 from dpc.parse.types import MemberRecord
 from dpc.scrape.cache import HtmlCache
 from dpc.scrape.client import DpcClient
+from dpc.scrape.parallel import FailedImage, parse_images
 from dpc.scrape.store import (
     record_probe,
     upsert_challenge,
@@ -64,6 +64,7 @@ class Crawler:
         self._session = session
         self._cache = cache
         self._refresh = refresh
+        self._settings = client.settings
         self._known_members: set[int] = set()
 
     # ---------------------------------------------------------------- fetch
@@ -161,15 +162,7 @@ class Crawler:
         stats.challenges += 1
 
         if with_images:
-            image_ids = challenge_parser.parse_image_ids(html)
-            for image_id in tqdm(
-                image_ids,
-                desc=f"  images of {challenge_id}",
-                unit="img",
-                leave=False,
-                disable=None,
-            ):
-                self._crawl_image(image_id, challenge_id, stats)
+            self._crawl_images(challenge_parser.parse_image_ids(html), challenge_id, stats)
 
         self._session.commit()
 
@@ -179,19 +172,60 @@ class Crawler:
             return cached
         return self._client.get(path)
 
-    def _crawl_image(self, image_id: int, challenge_id: int, stats: CrawlStats) -> None:
-        html = self._page("image", image_id, IMAGE_PATH.format(id=image_id))
+    def _crawl_images(
+        self, image_ids: tuple[int, ...], challenge_id: int, stats: CrawlStats
+    ) -> None:
+        """Fetch a challenge's image pages together, then parse and store them.
 
-        record = image_parser.parse_image(html, image_id, challenge_id)
-        self._ensure_member(record.photographer_id)
-        if self._session.get(Image, image_id) is None:
-            stats.images += 1
-        upsert_image(self._session, record)
+        Fetching concurrently is the whole speed story: it is the difference
+        between hours and minutes. Parsing and storing stay in order so the
+        database sees a deterministic sequence.
+        """
+        pages = self._pages("image", image_ids, IMAGE_PATH)
+        parsed = parse_images(
+            [(html, image_id, challenge_id) for image_id, html in pages],
+            workers=self._settings.parse_workers,
+        )
 
-        comments = image_parser.parse_comments(html, image_id)
-        for comment in comments:
-            self._ensure_member(comment.commenter_id, comment.commenter_name)
-        stats.comments += upsert_comments(self._session, comments)
+        for result in tqdm(
+            parsed, desc=f"  images of {challenge_id}", unit="img", leave=False, disable=None
+        ):
+            if isinstance(result, FailedImage):
+                if result.unavailable_stats:
+                    raise ImageStatsUnavailableError(result.error)
+                logger.warning("image {}: {}", result.image_id, result.error)
+                continue
+
+            self._ensure_member(result.image.photographer_id)
+            if self._session.get(Image, result.image.id) is None:
+                stats.images += 1
+            upsert_image(self._session, result.image)
+
+            for comment in result.comments:
+                self._ensure_member(comment.commenter_id, comment.commenter_name)
+            stats.comments += upsert_comments(self._session, result.comments)
+
+    def _pages(self, kind: str, ids: tuple[int, ...], path_template: str) -> list[tuple[int, str]]:
+        """Cached pages plus a concurrent fetch of whatever is missing."""
+        found: dict[int, str] = {}
+        missing: list[int] = []
+
+        for item_id in ids:
+            cached = None if self._refresh else self._cache.read(kind, item_id)
+            if cached is None:
+                missing.append(item_id)
+            else:
+                found[item_id] = cached
+
+        if missing:
+            paths = {path_template.format(id=i): i for i in missing}
+            fetched = self._client.get_many(paths)
+            for path, html in fetched.items():
+                item_id = paths[path]
+                self._cache.write(kind, item_id, html)
+                found[item_id] = html
+
+        return [(i, found[i]) for i in ids if i in found]
 
     def refresh_members(self, member_ids: list[int]) -> int:
         """Refetch profiles and overwrite what is stored. Returns how many changed.

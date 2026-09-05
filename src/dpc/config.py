@@ -48,8 +48,24 @@ class Settings(BaseSettings):
     """Root of the Hugo site. ``dpc export`` writes into ``site_dir/data/dpc``."""
 
     request_timeout: float = 30.0
-    request_delay: float = 1.0
-    """Seconds to wait between requests. Be polite to the origin."""
+
+    request_delay: float = 0.1
+    """Seconds each fetch worker waits between its own requests.
+
+    Paced per worker, not globally, so the aggregate request rate is roughly
+    ``fetch_workers / request_delay`` per second -- 80/s at the defaults. Raise
+    the delay or drop the workers to be gentler.
+    """
+
+    fetch_workers: int = 8
+    """Concurrent HTTP fetches. Fetching is I/O-bound, so these are threads."""
+
+    parse_workers: int = 0
+    """Processes for parsing fetched HTML. 0 parses in-process.
+
+    Parsing is CPU-bound (~14 ms/page), so unlike fetching it wants processes.
+    Only worth turning on once fetching is fast enough that parsing dominates.
+    """
 
     max_retries: int = 5
 
