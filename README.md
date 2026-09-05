@@ -138,7 +138,8 @@ GitHub Pages, published by `.github/workflows/deploy.yml` on any push to
 `master` that touches `site/`. Set **Settings → Pages → Source** to
 **GitHub Actions**.
 
-Previously the built HTML was committed to a second repository
-(`njtwomey/dpc`) and pushed by hand. That repo can be archived once the first
-Actions deploy succeeds; `hugo-website/public` is its working copy and is no
-longer referenced by anything here.
+Previously the built HTML was committed to a second repository,
+`njtwomey/dpc`, and pushed by hand. That repo still serves the live site, so
+archive it only once the first Actions deploy succeeds. Its local working copy
+(`hugo-website/`) has been deleted; `git clone git@github.com:njtwomey/dpc.git`
+brings it back if ever needed.

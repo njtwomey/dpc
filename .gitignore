@@ -42,11 +42,6 @@ site/public/
 site/resources/
 site/.hugo_build.lock
 
-# The previous deployment: a working copy of njtwomey/dpc, which still serves
-# the live site. Not part of this repository; delete once Pages is switched to
-# GitHub Actions.
-hugo-website/
-
 # ---------------------------------------------------------- editors and OS
 .idea/
 .vscode/
