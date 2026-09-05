@@ -8,6 +8,26 @@ from datetime import date, datetime
 from bs4 import BeautifulSoup, Tag
 
 _ORDINAL = re.compile(r"\b(\d{1,2})(?:st|nd|rd|th)\b", re.IGNORECASE)
+
+
+def _cp1252_c1_map() -> dict[int, str]:
+    """Map C1 control codepoints to the windows-1252 characters they stand for.
+
+    Bytes 0x80-0x9F are printable in windows-1252 (curly quotes, dashes, the
+    ellipsis) but control characters in latin-1. Text decoded with the wrong one
+    ends up holding the control character instead. A few of those bytes are
+    genuinely undefined in windows-1252; they are left alone rather than guessed.
+    """
+    table: dict[int, str] = {}
+    for code in range(0x80, 0xA0):
+        try:
+            table[code] = bytes([code]).decode("cp1252")
+        except UnicodeDecodeError:
+            continue
+    return table
+
+
+CP1252_C1 = _cp1252_c1_map()
 _WHITESPACE = re.compile(r"\s+")
 
 HTML_PARSER = "lxml"
@@ -69,3 +89,15 @@ def _parse_datetime(value: str, *fmt: str) -> datetime:
             continue
     msg = f"could not parse {cleaned!r} with any of {fmt}"
     raise ValueError(msg)
+
+
+def repair_cp1252_mojibake(text: str) -> str:
+    """Undo windows-1252 text that was decoded as latin-1.
+
+    ``Hidden Gem VI \x97 Mid-Term Quiz`` becomes ``Hidden Gem VI — Mid-Term Quiz``.
+
+    For rows scraped before the fetch layer decoded correctly. New scrapes come
+    through clean, so this is only ever applied to historical data. Text without
+    C1 characters is returned unchanged.
+    """
+    return text.translate(CP1252_C1)
