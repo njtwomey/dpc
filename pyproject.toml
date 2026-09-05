@@ -93,6 +93,9 @@ ignore = [
     "ARG",       # fixtures are requested for their side effects
 ]
 "scripts/**" = ["T20"]  # one-shot scripts may print
+# The whole point of this module is asserting that mojibake repairs into real
+# en dashes and curly quotes, so "ambiguous unicode" is the subject, not a slip.
+"tests/parse/test_repair.py" = ["RUF001"]
 
 [tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"

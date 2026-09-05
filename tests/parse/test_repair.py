@@ -13,9 +13,7 @@ FIXTURE = Path(__file__).resolve().parents[1] / "fixtures" / "encoding" / "mojib
 CASES = json.loads(FIXTURE.read_text(encoding="utf-8"))
 
 
-@pytest.mark.parametrize(
-    "case", CASES, ids=[f"{c['source']}-{i}" for i, c in enumerate(CASES)]
-)
+@pytest.mark.parametrize("case", CASES, ids=[f"{c['source']}-{i}" for i, c in enumerate(CASES)])
 def test_repairs_every_captured_case(case):
     assert repair_cp1252_mojibake(case["broken"]) == case["repaired"]
 
