@@ -1,0 +1,7 @@
+{{- range $challenge := hugo.Data.dpc.challenges }}
+    {{- $.AddPage (dict
+        "path" $challenge.slug
+        "title" $challenge.name
+        "layout" "single"
+        "params" (dict "challenge" $challenge)) }}
+{{- end }}

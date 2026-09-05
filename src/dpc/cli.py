@@ -18,7 +18,8 @@ from dpc.awards.asigmatic import grant_asigmatics
 from dpc.awards.catalog import AwardCatalog
 from dpc.awards.service import find_grants, sync_catalog
 from dpc.config import PROJECT_ROOT, Credentials, Settings
-from dpc.db.session import create_all, create_db_engine, create_session_factory, session_scope
+from dpc.db.migrate import upgrade
+from dpc.db.session import create_db_engine, create_session_factory, session_scope
 from dpc.export.build import build_site_data
 from dpc.export.writer import write_site_data
 from dpc.log import configure as configure_logging
@@ -39,23 +40,24 @@ def _table(title: str, rows: list[tuple[str, object]]) -> Table:
 
 
 class _Command(BaseModel):
-    """Shared plumbing for every subcommand."""
+    """Shared plumbing for every subcommand.
 
-    model_config = {"cli_implicit_flags": True}
+    Flag style (``--images`` / ``--no-images``) is configured once on ``Cli``.
+    """
 
     def settings(self) -> Settings:
         return Settings()
 
 
 class DbInit(_Command):
-    """Create the database schema."""
+    """Create or upgrade the database schema by running migrations."""
+
+    revision: str = Field("head", description="Alembic revision to upgrade to.")
 
     def cli_cmd(self) -> None:
         settings = self.settings()
-        engine = create_db_engine(settings.database_url)
-        create_all(engine)
-        engine.dispose()
-        console.print(f"schema ready at [bold]{settings.database_url}[/bold]")
+        upgrade(settings.database_url, self.revision)
+        console.print(f"schema at [bold]{self.revision}[/bold]: {settings.database_url}")
 
 
 class Scrape(_Command):
@@ -181,8 +183,7 @@ class Check(_Command):
     def cli_cmd(self) -> None:
         catalog = AwardCatalog.load(self.catalog)
         console.print(
-            f"[green]ok[/green] {len(catalog.awarders)} awarders, "
-            f"{len(catalog.pairs())} awards"
+            f"[green]ok[/green] {len(catalog.awarders)} awarders, {len(catalog.pairs())} awards"
         )
 
 

@@ -1,0 +1,27 @@
+{{- /* Builds a page per awarder and a gallery page per award, straight from
+       data/dpc. This replaces the ~2,800 front-matter stubs the old Python
+       builder wrote into content/ on every run. */ -}}
+{{- $awards := dict }}
+{{- range hugo.Data.dpc.awards }}
+    {{- $awards = merge $awards (dict .slug .) }}
+{{- end }}
+
+{{- range $awarder := hugo.Data.dpc.awarders }}
+    {{- $.AddPage (dict
+        "path" $awarder.slug
+        "title" (printf "Awards given by %s" $awarder.name)
+        "kind" "section"
+        "layout" "single"
+        "params" (dict "awarder" $awarder)) }}
+
+    {{- range $slug := $awarder.award_slugs }}
+        {{- with index $awards $slug }}
+            {{- $.AddPage (dict
+                "path" (printf "%s/%s" $awarder.slug .slug)
+                "title" (printf "The %s award" .name)
+                "description" .description
+                "layout" "gallery"
+                "params" (dict "award" .)) }}
+        {{- end }}
+    {{- end }}
+{{- end }}

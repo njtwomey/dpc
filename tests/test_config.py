@@ -52,7 +52,7 @@ class TestCredentials:
         # These sat next to the real password in login_details.json; they are
         # form fields, not secrets.
         form = credentials.as_login_form()
-        assert form["SAVE_PASSWORD"] == "1"
+        assert form["SAVE_PASSWORD"] == "1"  # noqa: S105 - a form flag, not a password
         assert form["REDIRECT"] == "/index.php"
 
 

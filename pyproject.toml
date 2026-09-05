@@ -80,8 +80,15 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S101", "ANN201", "PLR2004"]  # asserts and magic numbers are the point
-"scripts/**" = ["T20"]                       # one-shot scripts may print
+"tests/**" = [
+    "S101",      # asserts are the entire point
+    "ANN",       # annotating every pytest fixture argument is noise
+    "DTZ",       # fixture timestamps are deliberately naive, like the site's
+    "PLR2004",   # expected values are magic numbers by nature
+    "PLC0415",   # local imports keep heavy fixtures out of collection
+    "ARG",       # fixtures are requested for their side effects
+]
+"scripts/**" = ["T20"]  # one-shot scripts may print
 
 [tool.ruff.lint.flake8-tidy-imports]
 ban-relative-imports = "all"
@@ -91,6 +98,7 @@ known-first-party = ["dpc"]
 
 [tool.mypy]
 python_version = "3.12"
+plugins = ["pydantic.mypy"]
 files = ["src", "tests", "scripts"]
 strict = true
 warn_unreachable = true
@@ -103,6 +111,19 @@ enable_error_code = ["redundant-expr", "possibly-undefined", "truthy-bool", "ign
 [[tool.mypy.overrides]]
 module = ["bs4.*", "slugify.*"]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+# Test bodies are still fully checked; only the annotation ceremony is dropped,
+# since pytest fixture parameters carry no useful types.
+module = ["tests.*"]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = false
+check_untyped_defs = true
+
+[tool.pydantic-mypy]
+init_typed = true
+warn_required_dynamic_aliases = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

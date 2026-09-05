@@ -1,0 +1,15 @@
+{{- /* Walks the page tree rather than splitting the permalink string, so the
+       trail cannot desynchronise from the actual section hierarchy. */ -}}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li><a href="{{ "" | absURL }}">home</a></li>
+        {{- range .Ancestors.Reverse }}
+        {{- if not .IsHome }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{- end }}
+        {{- end }}
+        {{- if not .IsHome }}
+        <li class="is-active"><a href="{{ .RelPermalink }}" aria-current="page">{{ .Title }}</a></li>
+        {{- end }}
+    </ul>
+</nav>

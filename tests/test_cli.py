@@ -13,6 +13,12 @@ def _parse(argv: list[str]) -> Cli:
     return CliApp.run(Cli, cli_args=argv, cli_cmd_method_name="_noop")
 
 
+def _scrape(argv: list[str]) -> Scrape:
+    scrape = _parse(argv).scrape
+    assert scrape is not None
+    return scrape
+
+
 class TestArgumentParsing:
     """Subcommands are models, so parsing is checkable without running them."""
 
@@ -28,15 +34,17 @@ class TestArgumentParsing:
         assert _parse(["--verbose", "check"]).verbose is True
 
     def test_repeated_challenge_ids(self):
-        cli = _parse(["scrape", "--challenge", "[1,2,3]"])
-        assert cli.scrape.challenge == [1, 2, 3]
+        scrape = _scrape(["scrape", "--challenge", "[1,2,3]"])
+        assert scrape.challenge == [1, 2, 3]
 
     def test_images_defaults_on_and_can_be_negated(self):
-        assert _parse(["scrape"]).scrape.images is True
-        assert _parse(["scrape", "--no-images"]).scrape.images is False
+        assert _scrape(["scrape"]).images is True
+        assert _scrape(["scrape", "--no-images"]).images is False
 
     def test_out_defaults_to_none_meaning_the_settings_value(self):
-        assert _parse(["export"]).export.out is None
+        export = _parse(["export"]).export
+        assert export is not None
+        assert export.out is None
 
     def test_rejects_a_non_integer_challenge_id(self):
         # argparse accepts the token; pydantic is what refuses it.

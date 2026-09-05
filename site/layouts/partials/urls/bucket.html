@@ -1,0 +1,6 @@
+{{- /* dpchallenge stores assets in numbered buckets: (1303, 1000) -> 1000-1999.
+       Numbers arriving from JSON are float64, so cast before formatting. */ -}}
+{{- $n := int .number }}
+{{- $size := int .size }}
+{{- $lower := int (mul (math.Floor (div $n $size)) $size) }}
+{{- return (printf "%d-%d" $lower (add $lower (sub $size 1))) }}

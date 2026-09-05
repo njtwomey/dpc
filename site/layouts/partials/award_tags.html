@@ -1,0 +1,17 @@
+{{- /* Tag pills: award name plus how many times it appears in this context. */ -}}
+{{- $awards := partialCached "data/awards_by_slug.html" . }}
+<div class="field is-grouped is-grouped-multiline is-centered is-hcentred">
+    {{- range .award_counts }}
+    {{- $count := .count }}
+    {{- with index $awards .slug }}
+    <div class="control">
+        <div class="tags has-addons">
+            <span class="tag">
+                <a href="{{ (printf "awarders/%s/%s" .awarder_slug .slug) | absURL }}">{{ .name | title }}</a>
+            </span>
+            <span class="tag is-dark">{{ int $count }}</span>
+        </div>
+    </div>
+    {{- end }}
+    {{- end }}
+</div>

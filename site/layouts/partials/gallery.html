@@ -1,0 +1,10 @@
+{{- /* Render a list of image ids as cards. Ids come from JSON as float64. */ -}}
+{{- $awards := partialCached "data/awards_by_slug.html" . }}
+{{- $images := hugo.Data.dpc.images }}
+<div class="columns is-multiline">
+    {{- range .image_ids }}
+        {{- with index $images (printf "%d" (int .)) }}
+            {{- partial "image_card.html" (dict "image" . "awards" $awards) }}
+        {{- end }}
+    {{- end }}
+</div>

@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{- $challenge := .Params.challenge }}
+{{- partial "gallery_header.html" (dict
+    "thumb" "" "name" $challenge.name
+    "stats" (printf "%d images received awards in this challenge" (int $challenge.num_granted))
+    "description" "") }}
+{{- partial "award_tags.html" (dict "award_counts" $challenge.award_counts) }}
+<p>&nbsp;</p>
+{{- partial "gallery.html" (dict "image_ids" $challenge.image_ids) }}
+{{ end }}

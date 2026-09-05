@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 has-text-centered"><p class="title is-1">{{ .Title }}</p></div>
+</div>
+<div class="columns is-multiline">
+    <div class="column has-text-centered">
+        <table class="table">
+            <thead><tr><td>Challenge</td><td>Awards</td></tr></thead>
+            <tbody>
+            {{- range hugo.Data.dpc.challenges }}
+            <tr>
+                <td><a href="{{ (printf "challenges/%s" .slug) | absURL }}">{{ .name }}</a></td>
+                <td>{{ partial "award_tags.html" (dict "award_counts" .award_counts) }}</td>
+            </tr>
+            {{- end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+{{ end }}

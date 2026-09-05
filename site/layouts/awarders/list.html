@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2 has-text-centered"><p class="title is-1">{{ .Title }}</p></div>
+</div>
+<div class="columns is-flex is-multiline is-centered">
+    {{- range hugo.Data.dpc.awarders }}
+        {{- partial "user_card.html" (dict
+            "href" ((printf "awarders/%s" .slug) | absURL)
+            "thumb" .thumb "name" .name "extra" .num_granted) }}
+    {{- end }}
+</div>
+{{ end }}

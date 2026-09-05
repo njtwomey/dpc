@@ -7,16 +7,18 @@ satisfy a NOT NULL foreign key -- silently colliding with real comment ids.
 
 from __future__ import annotations
 
-from loguru import logger
-
 from statistics import pstdev
 
+from loguru import logger
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from dpc.db.models import Award, AwardGrant, Image
 
 ASIGMATIC_SLUG = "asigmatic"
+
+MIN_VOTES_FOR_SPREAD = 2
+"""A spread needs at least two votes to mean anything."""
 
 
 def vote_spread(votes: list[int]) -> float:
@@ -25,7 +27,7 @@ def vote_spread(votes: list[int]) -> float:
     ``votes[i]`` is how many voters gave a score of ``i + 1``.
     """
     expanded = [score for score, count in enumerate(votes, start=1) for _ in range(count)]
-    if len(expanded) < 2:
+    if len(expanded) < MIN_VOTES_FOR_SPREAD:
         return 0.0
     return pstdev(expanded)
 

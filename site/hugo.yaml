@@ -1,9 +1,19 @@
 baseURL: https://www.nialltwomey.com/dpc/
 title: DPChallenge Award Gallery
-languageCode: en-uk
+defaultContentLanguage: en
 
-# The site is generated entirely from data/dpc/*.json by the content adapters
-# in content/*/_content.gotmpl. There is no generated markdown on disk.
+languages:
+  en:
+    locale: en-uk
+
+# Every page below /awarders, /challenges and /recipients is generated from
+# data/dpc/*.json by the content adapters in content/*/_content.gotmpl.
+# Nothing under content/ is machine-written.
+
+# No tags or categories on this site; without this Hugo asks for taxonomy layouts.
+disableKinds:
+  - taxonomy
+  - term
 
 params:
   authorName: Niall Twomey
@@ -25,10 +35,3 @@ markup:
   goldmark:
     renderer:
       unsafe: true
-
-build:
-  writeStats: false
-
-caches:
-  images:
-    maxAge: 24h

@@ -23,9 +23,18 @@ class ImageOut(BaseModel):
     id: int
     title: str
     challenge_id: int
+    challenge_name: str
+    challenge_slug: str
     photographer_id: int
+    photographer_name: str
+    photographer_slug: str
     awards: list[str]
     """Award slugs granted to this image, in catalogue order."""
+
+    # The four denormalised name/slug fields cost about 400 KB across the whole
+    # export and save every gallery template a cross-collection lookup per card.
+    # URLs stay out: they are pure functions of the ids, and spelling them out
+    # is what made the previous export 38 MB.
 
 
 class AwardOut(BaseModel):

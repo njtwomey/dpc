@@ -1,0 +1,21 @@
+<div class="columns is-multiline">
+    <div class="column is-8 is-offset-2">
+        <div class="card">
+            <div class="card-content">
+                <div class="media">
+                    {{- with .thumb }}
+                    <div class="media-left">
+                        <figure class="image is-64x64"><img src="{{ . }}" alt="{{ $.name }}"></figure>
+                    </div>
+                    {{- end }}
+                    <div class="media-content">
+                        <p class="title is-4">{{ .name }}</p>
+                        {{- with .stats }}<p class="subtitle is-6">{{ . | markdownify }}</p>{{ end }}
+                        {{- with .description }}<div class="subtitle is-6">{{ . | markdownify }}</div>{{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>&nbsp;</p>

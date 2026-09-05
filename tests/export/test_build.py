@@ -16,12 +16,21 @@ CATALOG = AwardCatalog.model_validate(
     {
         "awarders": [
             {
-                "name": "posthumous", "user_id": 50695,
+                "name": "posthumous",
+                "user_id": 50695,
                 "awards": [
-                    {"name": "Posthumous Blue", "description": "blue one",
-                     "image": "blue.jpg", "markers": ["bluepost"]},
-                    {"name": "Posthumous Red", "description": "red one",
-                     "image": "red.jpg", "markers": ["redpost"]},
+                    {
+                        "name": "Posthumous Blue",
+                        "description": "blue one",
+                        "image": "blue.jpg",
+                        "markers": ["bluepost"],
+                    },
+                    {
+                        "name": "Posthumous Red",
+                        "description": "red one",
+                        "image": "red.jpg",
+                        "markers": ["redpost"],
+                    },
                 ],
             }
         ]
@@ -39,20 +48,35 @@ def populated(session):
     for challenge_id, end in ((100, date(2004, 1, 14)), (101, date(2005, 1, 14))):
         session.add(
             Challenge(
-                id=challenge_id, name=f"Challenge {challenge_id}", description="",
-                submission_start=date(2004, 1, 1), submission_end=date(2004, 1, 7),
-                voting_start=date(2004, 1, 8), voting_end=end,
-                num_submissions=2, num_disqualifications=0, num_votes=10,
-                num_comments=2, average_score=5.0, highest_score=8.0,
-                median_score=5.0, lowest_score=2.0,
+                id=challenge_id,
+                name=f"Challenge {challenge_id}",
+                description="",
+                submission_start=date(2004, 1, 1),
+                submission_end=date(2004, 1, 7),
+                voting_start=date(2004, 1, 8),
+                voting_end=end,
+                num_submissions=2,
+                num_disqualifications=0,
+                num_votes=10,
+                num_comments=2,
+                average_score=5.0,
+                highest_score=8.0,
+                median_score=5.0,
+                lowest_score=2.0,
             )
         )
 
     images = [(500, 100, 1), (501, 100, 2), (502, 101, 1), (503, 101, 3)]
     for image_id, challenge_id, photographer_id in images:
         session.add(
-            Image(id=image_id, challenge_id=challenge_id, photographer_id=photographer_id,
-                  name=f"Image {image_id}", votes=[1] * 10, disqualified=False)
+            Image(
+                id=image_id,
+                challenge_id=challenge_id,
+                photographer_id=photographer_id,
+                name=f"Image {image_id}",
+                votes=[1] * 10,
+                disqualified=False,
+            )
         )
     session.commit()
 
@@ -64,8 +88,14 @@ def populated(session):
     ]
     for comment_id, image_id, html, when in comments:
         session.add(
-            Comment(id=comment_id, image_id=image_id, commenter_id=50695,
-                    raw_comment=html, comment="x", date=when)
+            Comment(
+                id=comment_id,
+                image_id=image_id,
+                commenter_id=50695,
+                raw_comment=html,
+                comment="x",
+                date=when,
+            )
         )
     session.commit()
 
@@ -191,3 +221,40 @@ class TestWriter:
         raw = (tmp_path / "challenges.json").read_text(encoding="utf-8")
         assert "—" in raw
         assert "\\u2014" not in raw
+
+
+class TestDerivedGrantsAreNotLost:
+    """Asigmatic carries no comment; an inner join would drop it silently."""
+
+    def test_a_comment_less_grant_reaches_the_export(self, populated):
+        from dpc.awards.asigmatic import grant_asigmatics
+        from dpc.db.models import Award
+
+        populated.add(
+            Award(awarder_id=50695, name="Asigmatic", slug="asigmatic", markers=["nothing"])
+        )
+        populated.commit()
+
+        before = build_site_data(populated, CATALOG).meta.num_grants
+        derived = grant_asigmatics(populated)
+        populated.commit()
+
+        assert derived == 2  # one per challenge
+        after = build_site_data(populated, CATALOG)
+        assert after.meta.num_grants == before + derived
+
+    def test_the_derived_award_appears_in_its_own_collection(self, populated):
+        from dpc.awards.asigmatic import grant_asigmatics
+        from dpc.db.models import Award
+
+        populated.add(
+            Award(awarder_id=50695, name="Asigmatic", slug="asigmatic", markers=["nothing"])
+        )
+        populated.commit()
+        grant_asigmatics(populated)
+        populated.commit()
+
+        data = build_site_data(populated, CATALOG)
+        asigmatic = next(a for a in data.awards if a.slug == "asigmatic")
+        assert asigmatic.num_granted == 2
+        assert len(asigmatic.image_ids) == 2

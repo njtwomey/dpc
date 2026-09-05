@@ -21,6 +21,9 @@ downloaded/
 
 # --- hugo ---
 site/public/
+# The old deployment working copy: a checkout of njtwomey/dpc, still serving the
+# live site until the first Actions deploy. Not part of this repository.
+hugo-website/
 site/resources/
 site/.hugo_build.lock
 

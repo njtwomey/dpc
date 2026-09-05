@@ -95,8 +95,12 @@ class Image(Base):
     __tablename__ = "images"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=False)
-    challenge_id: Mapped[int] = mapped_column(ForeignKey("challenges.id", ondelete="CASCADE"), index=True)
-    photographer_id: Mapped[int] = mapped_column(ForeignKey("members.id", ondelete="CASCADE"), index=True)
+    challenge_id: Mapped[int] = mapped_column(
+        ForeignKey("challenges.id", ondelete="CASCADE"), index=True
+    )
+    photographer_id: Mapped[int] = mapped_column(
+        ForeignKey("members.id", ondelete="CASCADE"), index=True
+    )
 
     name: Mapped[str] = mapped_column(String(256))
 
@@ -127,7 +131,9 @@ class Comment(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=False)
     image_id: Mapped[int] = mapped_column(ForeignKey("images.id", ondelete="CASCADE"), index=True)
-    commenter_id: Mapped[int] = mapped_column(ForeignKey("members.id", ondelete="CASCADE"), index=True)
+    commenter_id: Mapped[int] = mapped_column(
+        ForeignKey("members.id", ondelete="CASCADE"), index=True
+    )
 
     raw_comment: Mapped[str] = mapped_column(Text)
     """Comment HTML. Award markers are URLs, so matching needs the markup."""
@@ -151,7 +157,9 @@ class Award(Base):
     __tablename__ = "awards"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    awarder_id: Mapped[int] = mapped_column(ForeignKey("members.id", ondelete="CASCADE"), index=True)
+    awarder_id: Mapped[int] = mapped_column(
+        ForeignKey("members.id", ondelete="CASCADE"), index=True
+    )
 
     name: Mapped[str] = mapped_column(String(128), index=True)
     slug: Mapped[str] = mapped_column(String(128), unique=True, index=True)
@@ -181,7 +189,9 @@ class AwardGrant(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     award_id: Mapped[int] = mapped_column(ForeignKey("awards.id", ondelete="CASCADE"), index=True)
-    recipient_id: Mapped[int] = mapped_column(ForeignKey("members.id", ondelete="CASCADE"), index=True)
+    recipient_id: Mapped[int] = mapped_column(
+        ForeignKey("members.id", ondelete="CASCADE"), index=True
+    )
     comment_id: Mapped[int | None] = mapped_column(
         ForeignKey("comments.id", ondelete="CASCADE"), index=True, default=None
     )
@@ -191,7 +201,9 @@ class AwardGrant(Base):
     The old code forced it into this column by minting a fake comment whose
     primary key was the *challenge* id, which collided with real comment ids."""
     image_id: Mapped[int] = mapped_column(ForeignKey("images.id", ondelete="CASCADE"), index=True)
-    challenge_id: Mapped[int] = mapped_column(ForeignKey("challenges.id", ondelete="CASCADE"), index=True)
+    challenge_id: Mapped[int] = mapped_column(
+        ForeignKey("challenges.id", ondelete="CASCADE"), index=True
+    )
 
     award: Mapped[Award] = relationship(back_populates="grants")
     recipient: Mapped[Member] = relationship()

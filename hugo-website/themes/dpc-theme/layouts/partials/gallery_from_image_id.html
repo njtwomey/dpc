@@ -1,9 +1,0 @@
-{{ $all_awards := .all_awards }}
-{{ $all_images := .all_images }}
-
-<div class="columns is-multiline">
-    {{ range (uniq .image_ids) }}
-        {{ $image := index $all_images (printf "%d" .) }}
-        {{ partial "image_card.html" (dict "image" $image "all_awards" $all_awards) }}
-    {{ end }}
-</div>

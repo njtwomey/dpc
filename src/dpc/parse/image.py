@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import re
+from datetime import datetime
+from typing import Any
 
 from bs4 import BeautifulSoup, Tag
 
@@ -17,7 +19,7 @@ _DURING_CHALLENGE_MARKER = "Comments Made During the Challenge"
 _EDITED_MARKER = "Message edited by author "
 
 _USER_ID = re.compile(r"USER_ID=(\d+)")
-_COMMENT_TABLE = {
+_COMMENT_TABLE: dict[str, Any] = {
     "width": "90%",
     "cellspacing": "1",
     "cellpadding": "2",
@@ -31,6 +33,12 @@ _EDITED_DATE_FORMATS = ("%Y-%m-%d %H:%M:%S",)
 # the first comma -- so "Views since voting: 1,234" was silently recorded as 1.
 _NUMBER = r"([\d,]+(?:\.\d+)?)"
 
+_PHOTOGRAPHER_LINK_INDEX = 1
+"""The second ``a.u`` on the page is the photographer; the first is the viewer."""
+
+_COMMENTER_LINK_INDEX = 2
+"""The third anchor in a comment header row links to the commenter."""
+
 
 def parse_image(html: str, image_id: int, challenge_id: int) -> ImageRecord:
     soup = soupify(html)
@@ -38,10 +46,10 @@ def parse_image(html: str, image_id: int, challenge_id: int) -> ImageRecord:
     title = clean_text(soup.find("div", {"class": "imagetitle"}))
 
     user_links = soup.find_all("a", {"class": "u"})
-    if len(user_links) < 2:
+    if len(user_links) <= _PHOTOGRAPHER_LINK_INDEX:
         msg = f"image {image_id}: could not find the photographer link"
         raise ValueError(msg)
-    match = _USER_ID.search(str(user_links[1].get("href", "")))
+    match = _USER_ID.search(str(user_links[_PHOTOGRAPHER_LINK_INDEX].get("href", "")))
     if match is None:
         msg = f"image {image_id}: photographer link carried no USER_ID"
         raise ValueError(msg)
@@ -64,13 +72,15 @@ def parse_image_stats(html: str, soup: BeautifulSoup | None = None) -> ImageStat
     soup = soup if soup is not None else soupify(html)
     section = _breakdown_section(html)
 
-    votes = tuple(int(clean_text(el)) for el in soup.find_all("div", {"class": "breakdown_vote_count"}))
+    votes = tuple(
+        int(clean_text(el)) for el in soup.find_all("div", {"class": "breakdown_vote_count"})
+    )
     if votes and len(votes) != VOTE_BUCKETS:
         msg = f"expected {VOTE_BUCKETS} vote buckets, found {len(votes)}"
         raise ValueError(msg)
 
     disqualified = _DISQUALIFIED_MARKER not in section
-    views = _number(section, "<b>Views since voting:</b> ", int)
+    views = _int(section, "<b>Views since voting:</b> ")
 
     if disqualified:
         return ImageStats(votes=votes, disqualified=True, num_views=views)
@@ -78,17 +88,19 @@ def parse_image_stats(html: str, soup: BeautifulSoup | None = None) -> ImageStat
     return ImageStats(
         votes=votes,
         disqualified=False,
-        position=_number(section, "<b>Place:</b> ", int),
-        average_all=_number(section, "<b>Avg (all users):</b> ", float),
-        average_commenters=_number(section, "<b>Avg (commenters):</b> ", float),
-        average_participants=_number(section, "<b>Avg (participants):</b> ", float),
-        average_non_participants=_number(section, "<b>Avg (non-participants):</b> ", float),
+        position=_int(section, "<b>Place:</b> "),
+        average_all=_float(section, "<b>Avg (all users):</b> "),
+        average_commenters=_float(section, "<b>Avg (commenters):</b> "),
+        average_participants=_float(section, "<b>Avg (participants):</b> "),
+        average_non_participants=_float(section, "<b>Avg (non-participants):</b> "),
         num_views=views,
-        num_votes=_number(section, "<b>Votes:</b> ", int),
+        num_votes=_int(section, "<b>Votes:</b> "),
     )
 
 
-def parse_comments(html: str, image_id: int, soup: BeautifulSoup | None = None) -> list[CommentRecord]:
+def parse_comments(
+    html: str, image_id: int, soup: BeautifulSoup | None = None
+) -> list[CommentRecord]:
     """Parse every comment on an image page, in document order.
 
     Comments are laid out as a flat run of ``<td>`` cells in groups of three
@@ -113,9 +125,9 @@ def parse_comments(html: str, image_id: int, soup: BeautifulSoup | None = None) 
             continue
 
         links = row.find_all("a")
-        if len(links) < 3:
+        if len(links) <= _COMMENTER_LINK_INDEX:
             continue
-        commenter_link = links[2]
+        commenter_link = links[_COMMENTER_LINK_INDEX]
         user_match = _USER_ID.search(str(commenter_link.get("href", "")))
         if user_match is None:
             continue
@@ -130,7 +142,7 @@ def parse_comments(html: str, image_id: int, soup: BeautifulSoup | None = None) 
 
         comments.append(
             CommentRecord(
-                id=int(anchor.attrs["name"]),
+                id=int(str(anchor.attrs["name"])),
                 image_id=image_id,
                 commenter_id=int(user_match.group(1)),
                 commenter_name=clean_text(commenter_link),
@@ -145,7 +157,7 @@ def parse_comments(html: str, image_id: int, soup: BeautifulSoup | None = None) 
     return comments
 
 
-def _split_edited(text: str) -> tuple[str, object]:
+def _split_edited(text: str) -> tuple[str, datetime | None]:
     """Separate a trailing 'Message edited by author <timestamp>.' marker."""
     head, marker, tail = text.rpartition(_EDITED_MARKER)
     if not marker:
@@ -171,11 +183,21 @@ def _breakdown_section(html: str) -> str:
     return section
 
 
-def _number(section: str, label: str, cast: type):  # type: ignore[no-untyped-def]
+def _raw_number(section: str, label: str) -> str | None:
     if label not in section:
         return None
     match = re.search(_NUMBER, section.split(label, 1)[1])
     if match is None:
         return None
-    raw = match.group(1).replace(",", "")
-    return cast(float(raw)) if cast is int else cast(raw)
+    return match.group(1).replace(",", "")
+
+
+def _int(section: str, label: str) -> int | None:
+    raw = _raw_number(section, label)
+    # Some counts render as "7.0"; int() will not take that directly.
+    return None if raw is None else int(float(raw))
+
+
+def _float(section: str, label: str) -> float | None:
+    raw = _raw_number(section, label)
+    return None if raw is None else float(raw)

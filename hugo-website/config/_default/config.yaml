@@ -1,9 +1,0 @@
-baseURL: https://www.nialltwomey.com/dpc/
-title: DPChallenge Award Gallery
-
-languageCode: en-uk
-theme: dpc-theme
-
-params:
-  AuthorName: Niall Twomey
-  description: An interface for the user-generated awards given at https://www.dpchallenge.com

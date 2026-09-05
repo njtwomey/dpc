@@ -1,8 +1,0 @@
-{{ $users := .users }}
-
-<div class="columns is-flex is-multiline is-centered">
-    {{ range .user_ids }}
-    {{ $user := index $users (printf "%d" .) }}
-    {{ partial "user_card.html" (dict "thumb" $user.user_thumb "name" $user.user_name "slug" $user.user_slug "extra" (printf "(%d)" $user.num_awards)) }}
-    {{ end }}
-</div>

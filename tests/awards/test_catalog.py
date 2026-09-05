@@ -54,15 +54,11 @@ class TestValidation:
 
     def test_an_award_needs_at_least_one_marker(self):
         with pytest.raises(ValidationError):
-            AwarderDefinition.model_validate(
-                _awarder(awards=[{"name": "Blue", "markers": []}])
-            )
+            AwarderDefinition.model_validate(_awarder(awards=[{"name": "Blue", "markers": []}]))
 
     def test_blank_markers_are_rejected(self):
         with pytest.raises(ValidationError, match="must not be blank"):
-            AwarderDefinition.model_validate(
-                _awarder(awards=[{"name": "Blue", "markers": ["  "]}])
-            )
+            AwarderDefinition.model_validate(_awarder(awards=[{"name": "Blue", "markers": ["  "]}]))
 
     def test_overlapping_markers_within_one_awarder_are_rejected(self):
         # vlado's MUAIMHO marker is the bare "Copyrighted_Image_Reuse_Prohibited_"

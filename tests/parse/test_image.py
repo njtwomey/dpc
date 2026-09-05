@@ -61,7 +61,7 @@ class TestParseImageStats:
         page = (
             '<td>Voting Breakdown <span style="font-weight: normal;">'
             '<div class="breakdown_vote_count">1</div>'
-            '<b>Avg (all users):</b> 5.0'
+            "<b>Avg (all users):</b> 5.0"
             '<td valign="top" width="450" class="textsm">'
         )
         with pytest.raises(ValueError, match="vote buckets"):

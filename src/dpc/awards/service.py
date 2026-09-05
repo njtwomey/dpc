@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 
-from loguru import logger
-
+from collections.abc import Iterator
 from dataclasses import dataclass
 
+from loguru import logger
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from dpc.awards.catalog import AwardCatalog
+from dpc.awards.catalog import AwardCatalog, AwardDefinition, AwarderDefinition
 from dpc.awards.match import awards_in
 from dpc.db.models import Award, AwardGrant, Comment, Image, Member
 
@@ -71,9 +71,7 @@ def find_grants(session: Session, catalog: AwardCatalog) -> int:
     awards_by_slug = {a.slug: a for a in session.scalars(select(Award))}
     granted = {
         (award_id, image_id)
-        for award_id, image_id in session.execute(
-            select(AwardGrant.award_id, AwardGrant.image_id)
-        )
+        for award_id, image_id in session.execute(select(AwardGrant.award_id, AwardGrant.image_id))
     }
 
     created = 0
@@ -108,7 +106,10 @@ def find_grants(session: Session, catalog: AwardCatalog) -> int:
     return created
 
 
-def _grouped_by_awarder(catalog: AwardCatalog):  # type: ignore[no-untyped-def]
+def _grouped_by_awarder(
+    catalog: AwardCatalog,
+) -> Iterator[tuple[AwarderDefinition, AwardDefinition]]:
+    """One entry per distinct awarder, so their comments are scanned once."""
     seen: set[int] = set()
     for awarder, award in catalog.pairs():
         if awarder.user_id not in seen:

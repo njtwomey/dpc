@@ -8,15 +8,14 @@ exercised without a live session and a live database.
 
 from __future__ import annotations
 
-from loguru import logger
-
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 
+from loguru import logger
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from dpc.db.models import Challenge, ChallengeProbe, Image
+from dpc.db.models import Challenge, ChallengeProbe, Image, Member
 from dpc.parse import challenge as challenge_parser
 from dpc.parse import history as history_parser
 from dpc.parse import image as image_parser
@@ -113,7 +112,9 @@ class Crawler:
         path = CHALLENGE_PATH.format(id=challenge_id)
 
         # An unfinished page must never be cached, or it is read back forever.
-        html = self._client.get(path) if self._refresh else self._cached_or_fetch(challenge_id, path)
+        html = (
+            self._client.get(path) if self._refresh else self._cached_or_fetch(challenge_id, path)
+        )
         kind = challenge_parser.classify(html)
 
         if kind is challenge_parser.ChallengePage.INVALID:
@@ -164,8 +165,6 @@ class Crawler:
     def _ensure_member(self, member_id: int, fallback_name: str = "") -> None:
         if member_id in self._known_members:
             return
-        from dpc.db.models import Member
-
         if self._session.get(Member, member_id) is not None:
             self._known_members.add(member_id)
             return

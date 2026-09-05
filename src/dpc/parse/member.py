@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
+from typing import Any
+
+from bs4 import Tag
+
 from dpc.parse.text import clean_text, parse_date, soupify, strip_ordinals
 from dpc.parse.types import MemberRecord
 
 _REGISTERED_LABEL = "Registered:"
 _USERNAME_LABEL = "Username:"
-_PROFILE_TABLE = {"cellspacing": "5", "cellpadding": "0", "width": "100%"}
+_PROFILE_TABLE: dict[str, Any] = {"cellspacing": "5", "cellpadding": "0", "width": "100%"}
 
 _JOIN_DATE_FORMATS = ("%b. %d %Y", "%b %d %Y", "%B %d %Y")
 
@@ -49,10 +54,10 @@ def parse_member(html: str, member_id: int, *, fallback_name: str = "") -> Membe
     )
 
 
-def _value_after(cells: list[object], label: str, member_id: int) -> str:
+def _value_after(cells: Sequence[Tag], label: str, member_id: int) -> str:
     """Return the text of the cell following the one containing ``label``."""
     for index, cell in enumerate(cells[:-1]):
-        if label in clean_text(cell):  # type: ignore[arg-type]
-            return clean_text(cells[index + 1])  # type: ignore[arg-type]
+        if label in clean_text(cell):
+            return clean_text(cells[index + 1])
     msg = f"member {member_id}: no cell labelled {label!r}"
     raise ValueError(msg)

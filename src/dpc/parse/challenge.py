@@ -9,7 +9,10 @@ crashed) and was then cached forever, never to be retried.
 from __future__ import annotations
 
 import re
+from datetime import date
 from enum import StrEnum
+
+from bs4 import BeautifulSoup
 
 from dpc.parse.text import (
     clean_text,
@@ -29,6 +32,8 @@ _DESCRIPTION_STYLE = "display:block; margin-left: 22px; margin-top: -16px;"
 _STATS_STYLE = "margin: 2px;"
 
 _DATE_FORMATS = ("%b %d %Y", "%b. %d %Y", "%B %d %Y")
+
+_DATE_RANGE_PARTS = 2
 
 # Match stats lines by a distinctive keyword in their label rather than by
 # position, so a reordered or reworded row fails loudly instead of silently
@@ -107,9 +112,7 @@ def parse_challenge(html: str, challenge_id: int) -> ChallengeRecord:
     voting_start, voting_end = _date_range(fields, _VOTING_DATES, challenge_id)
 
     def number(field: str) -> str:
-        keyword = _FIELD_KEYWORDS[field]
-        value = _lookup(fields, keyword, challenge_id, field)
-        return value
+        return _lookup(fields, _FIELD_KEYWORDS[field], challenge_id, field)
 
     return ChallengeRecord(
         id=challenge_id,
@@ -145,9 +148,9 @@ def parse_image_ids(html: str) -> tuple[int, ...]:
     return tuple(seen)
 
 
-def _stats_fields(soup: object, challenge_id: int) -> dict[str, str]:
+def _stats_fields(soup: BeautifulSoup, challenge_id: int) -> dict[str, str]:
     """Split the stats block into ``{lowercased label: value}``."""
-    node = soup.find("div", {"style": _STATS_STYLE})  # type: ignore[attr-defined]
+    node = soup.find("div", {"style": _STATS_STYLE})
     if node is None:
         msg = f"challenge {challenge_id}: no stats block (style={_STATS_STYLE!r})"
         raise ValueError(msg)
@@ -177,10 +180,10 @@ def _lookup(fields: dict[str, str], keyword: str, challenge_id: int, field: str)
     raise ValueError(msg)
 
 
-def _date_range(fields: dict[str, str], keyword: str, challenge_id: int):  # type: ignore[no-untyped-def]
+def _date_range(fields: dict[str, str], keyword: str, challenge_id: int) -> tuple[date, date]:
     raw = _lookup(fields, keyword, challenge_id, keyword)
     parts = [strip_ordinals(part).strip() for part in raw.split(" - ")]
-    if len(parts) != 2:
+    if len(parts) != _DATE_RANGE_PARTS:
         msg = f"challenge {challenge_id}: {keyword} is not a range: {raw!r}"
         raise ValueError(msg)
     return (

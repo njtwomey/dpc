@@ -1,5 +1,6 @@
 """Database models and session handling."""
 
+from dpc.db.migrate import current, upgrade
 from dpc.db.models import (
     Award,
     AwardGrant,
@@ -29,5 +30,7 @@ __all__ = [
     "create_all",
     "create_db_engine",
     "create_session_factory",
+    "current",
     "session_scope",
+    "upgrade",
 ]

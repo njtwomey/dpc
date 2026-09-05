@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-from loguru import logger
-
 import time
 from types import TracebackType
 
 import httpx
+from loguru import logger
 
 from dpc.config import Credentials, Settings
 from dpc.scrape.encoding import decode_html

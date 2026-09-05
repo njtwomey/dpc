@@ -34,12 +34,21 @@ def challenge(session):
     session.add(Member(id=117474, name="NiallOTuama", join_date=date(2004, 1, 1)))
     session.add(
         Challenge(
-            id=100, name="C", description="",
-            submission_start=date(2004, 1, 1), submission_end=date(2004, 1, 7),
-            voting_start=date(2004, 1, 8), voting_end=date(2004, 1, 14),
-            num_submissions=2, num_disqualifications=0, num_votes=10,
-            num_comments=0, average_score=5.0, highest_score=8.0,
-            median_score=5.0, lowest_score=2.0,
+            id=100,
+            name="C",
+            description="",
+            submission_start=date(2004, 1, 1),
+            submission_end=date(2004, 1, 7),
+            voting_start=date(2004, 1, 8),
+            voting_end=date(2004, 1, 14),
+            num_submissions=2,
+            num_disqualifications=0,
+            num_votes=10,
+            num_comments=0,
+            average_score=5.0,
+            highest_score=8.0,
+            median_score=5.0,
+            lowest_score=2.0,
         )
     )
     session.add(Award(id=1, awarder_id=117474, name="Asigmatic", slug="asigmatic", markers=["x"]))
@@ -49,8 +58,14 @@ def challenge(session):
 
 def _image(session, image_id, photographer_id, votes, *, disqualified=False):
     session.add(
-        Image(id=image_id, challenge_id=100, photographer_id=photographer_id,
-              name=f"img{image_id}", votes=votes, disqualified=disqualified)
+        Image(
+            id=image_id,
+            challenge_id=100,
+            photographer_id=photographer_id,
+            name=f"img{image_id}",
+            votes=votes,
+            disqualified=disqualified,
+        )
     )
     session.commit()
 
@@ -60,19 +75,25 @@ class TestMostDivisive:
         _image(challenge, 500, 1, [0, 0, 0, 0, 10, 0, 0, 0, 0, 0])
         _image(challenge, 501, 2, [5, 0, 0, 0, 0, 0, 0, 0, 0, 5])
 
-        assert most_divisive(challenge, 100).id == 501
+        winner = most_divisive(challenge, 100)
+        assert winner is not None
+        assert winner.id == 501
 
     def test_skips_disqualified_images(self, challenge):
         _image(challenge, 500, 1, [0, 0, 0, 0, 10, 0, 0, 0, 0, 0])
         _image(challenge, 501, 2, [5, 0, 0, 0, 0, 0, 0, 0, 0, 5], disqualified=True)
 
-        assert most_divisive(challenge, 100).id == 500
+        winner = most_divisive(challenge, 100)
+        assert winner is not None
+        assert winner.id == 500
 
     def test_skips_images_with_no_votes(self, challenge):
         _image(challenge, 500, 1, [0] * 10)
         _image(challenge, 501, 2, [0, 0, 0, 0, 10, 0, 0, 0, 0, 0])
 
-        assert most_divisive(challenge, 100).id == 501
+        winner = most_divisive(challenge, 100)
+        assert winner is not None
+        assert winner.id == 501
 
     def test_returns_none_when_nothing_is_eligible(self, challenge):
         _image(challenge, 500, 1, [0] * 10)
@@ -83,7 +104,9 @@ class TestMostDivisive:
         _image(challenge, 501, 1, same)
         _image(challenge, 500, 2, same)
 
-        assert most_divisive(challenge, 100).id == 500
+        winner = most_divisive(challenge, 100)
+        assert winner is not None
+        assert winner.id == 500
 
 
 class TestGrantAsigmatics:

@@ -10,7 +10,7 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 
 from slugify import slugify
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from dpc.awards.catalog import AwardCatalog
@@ -33,20 +33,23 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
     members = {m.id: m for m in session.scalars(select(Member))}
     challenges = {c.id: c for c in session.scalars(select(Challenge))}
 
+    # An OUTER join: derived awards (asigmatic) carry no comment, and an inner
+    # join drops them from the export entirely. They are dated by the challenge's
+    # voting_end, which is when the vote spread they are computed from was fixed.
     grants = list(
         session.scalars(
             select(AwardGrant)
-            .join(Comment, AwardGrant.comment_id == Comment.id)
-            # Most recently awarded first, and stable for equal timestamps.
-            .order_by(Comment.date.desc(), AwardGrant.id.desc())
+            .outerjoin(Comment, AwardGrant.comment_id == Comment.id)
+            .join(Challenge, AwardGrant.challenge_id == Challenge.id)
+            .order_by(
+                func.coalesce(Comment.date, Challenge.voting_end).desc(),
+                AwardGrant.id.desc(),
+            )
         )
     )
 
     image_ids = {grant.image_id for grant in grants}
-    images = {
-        i.id: i
-        for i in session.scalars(select(Image).where(Image.id.in_(image_ids)))
-    }
+    images = {i.id: i for i in session.scalars(select(Image).where(Image.id.in_(image_ids)))}
 
     by_award: dict[int, list[AwardGrant]] = defaultdict(list)
     by_challenge: dict[int, list[AwardGrant]] = defaultdict(list)
@@ -158,7 +161,11 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
             id=image_id,
             title=images[image_id].name,
             challenge_id=images[image_id].challenge_id,
+            challenge_name=challenges[images[image_id].challenge_id].name,
+            challenge_slug=slugify(challenges[images[image_id].challenge_id].name),
             photographer_id=images[image_id].photographer_id,
+            photographer_name=members[images[image_id].photographer_id].name,
+            photographer_slug=slugify(members[images[image_id].photographer_id].name),
             awards=sorted_slugs(by_image[image_id]),
         )
         for image_id in sorted(by_image)

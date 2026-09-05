@@ -1,67 +1,49 @@
-.PHONY: data backup scrape website all clean server sync most local
+.PHONY: help install migrate revision scrape awards export site serve build test lint fmt typecheck check clean
 
-PROJECT_NAME = dpc-bling
+help:  ## Show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+install:  ## Sync the virtualenv from uv.lock
+	uv sync --locked
 
-BACKUP_DIR := $(PROJECT_DIR)/database-backup
-HUGO_DIR := $(PROJECT_DIR)/hugo-website
+migrate:  ## Create or upgrade the database schema
+	uv run dpc db-init
 
-PYTHON_INTERPRETER = /Users/nialltwomey/miniconda3/envs/dpc-parser/bin/python
+revision:  ## Autogenerate a migration after changing the models (make revision m="add x")
+	uv run alembic revision --autogenerate -m "$(m)"
 
-MAKE = /usr/bin/make
+scrape:  ## Fetch new challenges from the site history
+	uv run dpc scrape --from-history
 
-data:
-	if [ ! -d $(DATA_DIR) ] ; then wget $(DATA_URL); unzip $(ZIP_FILE); rm $(ZIP_FILE); rm -rf __MACOSX; fi
+awards:  ## Match comments against the award catalogue
+	uv run dpc awards
 
-backup:
-	rm $(BACKUP_DIR)/backup.sql
-	pg_dump dpcdb > $(BACKUP_DIR)/backup.sql
-	#rm $(BACKUP_DIR)/backup.sql.zip
-	#zip $(BACKUP_DIR)/backup.sql.zip $(BACKUP_DIR)/backup.sql
+export:  ## Write site/data/dpc/*.json
+	uv run dpc export
 
-scrape:
-	$(PYTHON_INTERPRETER) build_data_from_dpc.py
+site: awards export  ## Refresh awards then re-export the site data
 
-content:
-	$(PYTHON_INTERPRETER) build_hugo_data.py
+serve:  ## Hugo dev server against the committed data
+	cd site && hugo server --disableFastRender
 
-clean:
-	rm -rf $(HUGO_DIR)/data
-	rm -rf $(HUGO_DIR)/content/awarders
-	rm -rf $(HUGO_DIR)/content/challenges
-	rm -rf $(HUGO_DIR)/content/recipients
+build:  ## Production Hugo build
+	cd site && hugo --minify
 
-	rm -rf $(HUGO_DIR)/public/awarders
-	rm -rf $(HUGO_DIR)/public/categories
-	rm -rf $(HUGO_DIR)/public/challenges
-	rm -rf $(HUGO_DIR)/public/css
-	rm -rf $(HUGO_DIR)/public/js
-	rm -rf $(HUGO_DIR)/public/recipients
-	rm -rf $(HUGO_DIR)/public/tags
-	rm -rf $(HUGO_DIR)/public/*.html
-	rm -rf $(HUGO_DIR)/public/*.xml
+test:  ## Run the test suite
+	uv run pytest -q
 
-	rm -rf downloaded
+lint:  ## Lint
+	uv run ruff check .
 
-website:
-	cd $(HUGO_DIR); hugo --buildDrafts --minify
+fmt:  ## Format
+	uv run ruff format .
 
-local:
-	cd $(HUGO_DIR); hugo --buildDrafts
+typecheck:  ## Type-check
+	uv run mypy
 
-server:
-	cd $(HUGO_DIR); hugo server -D --disableFastRender --disableLiveReload
+check: lint typecheck test  ## Everything CI runs
 
-sync:
-	git add --all \
-	git commit -m 'Scraper code updating' \
-	git push -u origin master \
-	cd $(HUGO_DIR)/public; \
-	git add --all; \
-	git commit -m 'Website built with latest version'; \
-	git push -u origin master
-
-most: scrape content website
-
-all: clean most c
+clean:  ## Remove build output and caches
+	rm -rf site/public site/resources site/.hugo_build.lock
+	rm -rf .pytest_cache .ruff_cache .mypy_cache
+	find . -name __pycache__ -type d -prune -exec rm -rf {} +

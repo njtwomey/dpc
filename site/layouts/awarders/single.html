@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{- $awards := partialCached "data/awards_by_slug.html" . }}
+{{- $awarder := .Params.awarder }}
+
+{{- partial "gallery_header.html" (dict
+    "thumb" $awarder.thumb "name" $awarder.name
+    "stats" (printf "%s has given %d awards" $awarder.name (int $awarder.num_granted))
+    "description" "") }}
+
+<div class="columns is-flex is-multiline is-centered">
+    {{- range $awarder.award_slugs }}
+        {{- with index $awards . }}
+            {{- partial "user_card.html" (dict
+                "href" ((printf "awarders/%s/%s" .awarder_slug .slug) | absURL)
+                "thumb" .thumb "name" .name "extra" .num_granted) }}
+        {{- end }}
+    {{- end }}
+</div>
+{{ end }}
