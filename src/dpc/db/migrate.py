@@ -32,5 +32,15 @@ def upgrade(database_url: str, revision: str = "head") -> None:
     command.upgrade(_config(database_url), revision)
 
 
+def stamp(database_url: str, revision: str = "head") -> None:
+    """Record a database as being at ``revision`` without running migrations.
+
+    Needed after a bulk load that built the schema with ``create_all``: the
+    tables exist but ``alembic_version`` is empty, so the next ``dpc db-init``
+    would try to create them all over again.
+    """
+    command.stamp(_config(database_url), revision)
+
+
 def current(database_url: str) -> None:
     command.current(_config(database_url), verbose=True)

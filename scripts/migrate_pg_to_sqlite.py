@@ -30,6 +30,7 @@ from loguru import logger
 from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.orm import Session
 
+from dpc.db.migrate import stamp
 from dpc.db.models import Award, AwardGrant, Challenge, Comment, Image, Member
 from dpc.db.session import create_all, create_db_engine
 from dpc.log import configure
@@ -182,6 +183,12 @@ def migrate(source_url: str, target_url: str) -> dict[str, int]:
 
     source.dispose()
     target.dispose()
+
+    # The schema came from create_all, so alembic has no record of it. Stamp it
+    # as current, or the next `dpc db-init` would try to build it again.
+    stamp(target_url)
+    logger.info("stamped {} at the current alembic revision", target_url)
+
     return counts
 
 

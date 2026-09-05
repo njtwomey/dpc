@@ -25,6 +25,10 @@ dependencies = [
 dpc = "dpc.cli:main"
 
 [dependency-groups]
+# Only needed to run scripts/migrate_pg_to_sqlite.py once. Install with
+#   uv sync --group migrate
+migrate = ["psycopg[binary]>=3.1"]
+
 dev = [
     "mypy>=1.10",
     "pytest>=8.2",
