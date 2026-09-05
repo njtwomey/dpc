@@ -61,7 +61,11 @@ def _profile_fields(soup: BeautifulSoup) -> dict[str, str]:
         value_cell = cell.find_next_sibling("td")
         if value_cell is None:
             continue
-        label = clean_text(cell).rstrip(":").strip().lower()
+        # A member who has renamed gets two labels in one cell:
+        # "Username:<br/>Formerly:<br/>", against a value cell holding both.
+        # Take the text before the first colon, which is the label that governs
+        # the first value -- and _cell_value already stops at the first <br>.
+        label = clean_text(cell).split(":")[0].strip().lower()
         if label and label not in fields:
             fields[label] = _cell_value(value_cell)
     return fields

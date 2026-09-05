@@ -89,3 +89,31 @@ class TestUnparseablePages:
     def test_an_empty_page_raises_rather_than_inventing_a_member(self):
         with pytest.raises(MemberProfileUnavailableError):
             parse_member("<html><body>nothing here</body></html>", member_id=1)
+
+
+class TestRenamedMembers:
+    """A member who has changed username gets two labels in one heading cell.
+
+    Real markup from USER_ID=99687:
+        <td class="profile-heading">Username:<br/>Formerly:<br/></td>
+        <td>KristjanUnnar<br/>kiddiuk (Nov. 19th, 2025)</td>
+
+    The label became "username:formerly" and matched nothing, so the member
+    parsed with no name at all.
+    """
+
+    def test_takes_the_current_username(self, html):
+        member = parse_member(html("member/renamed.html"), member_id=99687)
+        assert member.name == "KristjanUnnar"
+
+    def test_does_not_take_the_former_username(self, html):
+        assert parse_member(html("member/renamed.html"), member_id=99687).name != "kiddiuk"
+
+    def test_other_fields_still_resolve(self, html):
+        member = parse_member(html("member/renamed.html"), member_id=99687)
+        assert member.join_date == date(2005, 8, 3)
+        assert member.cancelled is False
+
+    def test_a_name_is_never_empty_for_a_readable_profile(self, html):
+        for fixture in ("member/renamed.html", "member/odriew.html"):
+            assert parse_member(html(fixture), member_id=1).name

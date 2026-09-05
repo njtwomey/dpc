@@ -11,7 +11,9 @@ from dpc.parse.types import ChallengeRecord, CommentRecord, ImageRecord, MemberR
 def upsert_member(session: Session, record: MemberRecord) -> Member:
     member = session.get(Member, record.id)
     if member is None:
-        member = Member(id=record.id)
+        # name is NOT NULL, and the guard below deliberately skips blank names.
+        # Without a default that combination leaves the column unset on insert.
+        member = Member(id=record.id, name="")
         session.add(member)
 
     # A cancelled profile hides the name, so never overwrite a known one with a

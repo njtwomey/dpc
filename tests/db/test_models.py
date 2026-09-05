@@ -103,3 +103,41 @@ def test_challenge_round_trips_dates(session):
     stored = session.get(Challenge, 42)
     assert stored is not None
     assert stored.voting_end == date(2004, 1, 14)
+
+
+class TestMemberNameIsNeverNull:
+    """members.name is NOT NULL, and blank names are deliberately not written."""
+
+    def test_a_member_with_no_known_name_still_inserts(self, session):
+        from dpc.parse.types import MemberRecord
+        from dpc.scrape.store import upsert_member
+
+        # The photographer of an image whose profile could not be parsed: the
+        # crawler knows the id and nothing else. This used to violate NOT NULL,
+        # because the "don't overwrite a name with a blank" guard also skipped
+        # setting it on insert.
+        member = upsert_member(session, MemberRecord(id=4242, name="", join_date=None))
+        session.commit()
+
+        assert member.name == ""
+        assert session.get(Member, 4242) is not None
+
+    def test_a_later_real_name_replaces_the_blank(self, session):
+        from dpc.parse.types import MemberRecord
+        from dpc.scrape.store import upsert_member
+
+        upsert_member(session, MemberRecord(id=4242, name="", join_date=None))
+        upsert_member(session, MemberRecord(id=4242, name="realname", join_date=None))
+        session.commit()
+
+        assert session.get(Member, 4242).name == "realname"
+
+    def test_a_blank_never_overwrites_a_known_name(self, session):
+        from dpc.parse.types import MemberRecord
+        from dpc.scrape.store import upsert_member
+
+        upsert_member(session, MemberRecord(id=4242, name="realname", join_date=None))
+        upsert_member(session, MemberRecord(id=4242, name="", join_date=None))
+        session.commit()
+
+        assert session.get(Member, 4242).name == "realname"
