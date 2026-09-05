@@ -29,6 +29,14 @@ Credentials live only in `.env`, which is gitignored. The password is held as a
 `SecretStr`, so it cannot reach a log line, a repr or a traceback —
 `tests/test_config.py` enforces that.
 
+> **One piece of cleanup left.** `.env` was committed in `edea4e7` and stayed
+> tracked, so the `.gitignore` entry never applied to it — gitignore does not
+> affect files already in the index. It is untracked now, but the old Postgres
+> credentials remain in that commit. The repo is private and Postgres is being
+> retired in favour of SQLite, so the practical risk is low; still, rotate that
+> password, and scrub history with `git filter-repo --path .env --invert-paths`
+> if you would rather it were gone.
+
 ## Migrating the old Postgres database
 
 The previous incarnation used Postgres. To bring it across:
