@@ -27,8 +27,12 @@ dist/
 htmlcov/
 
 # ------------------------------------------------------------- local data
-# The database, the scraped HTML cache and the Postgres dumps stay local.
+# The database, its snapshots and the scraped HTML cache stay local. They hold
+# other members' comments, so they are not ours to publish -- and git keeps
+# every version forever, which is the opposite of what a backup wants.
 # The JSON under site/data/dpc IS committed: it is the site's build input.
+database-backup/
+backups/
 *.sqlite
 *.sqlite3
 *.sqlite-journal

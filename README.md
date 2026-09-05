@@ -42,6 +42,32 @@ Credentials live only in `.env`, which is gitignored. The password is held as a
 > password, and scrub history with `git filter-repo --path .env --invert-paths`
 > if you would rather it were gone.
 
+## Backups
+
+The database holds other members' comments, so it is not ours to publish, and it
+stays out of git entirely — git keeps every version forever, which is the
+opposite of what a backup wants. `database-backup/` and `backups/` are ignored.
+
+```bash
+make backup     # VACUUM INTO a dated snapshot in backups/, then xz it
+```
+
+`VACUUM INTO` is consistent even with the database in use, and compacts as it
+goes. Keep the snapshots wherever you keep other personal backups; roughly 96%
+of the volume is comment text, which compresses about 6x.
+
+> `database-backup/backup.sql.zip` — a 2020 dump — was tracked in git LFS until
+> recently. It is untracked now, but the object is still in history and still in
+> the LFS store. Since it contains other members' comments, purge it properly
+> rather than leaving it:
+>
+> ```bash
+> git filter-repo --path database-backup/backup.sql.zip --invert-paths
+> ```
+>
+> then force-push and ask GitHub support to clear the orphaned LFS object; a
+> plain delete commit reclaims neither the history nor the quota.
+
 ## Migrating the old Postgres database
 
 The previous incarnation used Postgres. To bring it across:

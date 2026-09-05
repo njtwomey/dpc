@@ -1,4 +1,4 @@
-.PHONY: help install secure migrate revision scrape awards export site serve build test lint fmt typecheck check clean
+.PHONY: help install secure backup migrate revision scrape awards export site serve build test lint fmt typecheck check clean
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -8,6 +8,12 @@ install:  ## Sync the virtualenv from uv.lock
 
 secure:  ## Restrict .env to owner-only access
 	@chmod 600 .env 2>/dev/null && ls -l .env || echo "no .env yet"
+
+backup:  ## Snapshot the database to backups/ (local only, never committed)
+	@mkdir -p backups
+	@f=backups/dpc-$$(date +%F).sqlite; \
+	 rm -f $$f $$f.xz; \
+	 sqlite3 dpc.sqlite "VACUUM INTO '$$f'" && xz -6 $$f && ls -lh $$f.xz
 
 migrate:  ## Create or upgrade the database schema
 	uv run dpc db-init
