@@ -32,14 +32,22 @@ export function ImageViewer({
   useEffect(() => {
     if (index === null) return
     const onKey = (e: KeyboardEvent) => {
+      if (!["Escape", "ArrowRight", "ArrowLeft"].includes(e.key)) return
+
+      // Claim the key before the browser acts on it. In fullscreen, Escape is
+      // the browser's own exit shortcut, so without this it leaves fullscreen
+      // instead of closing the viewer. Capture phase for the same reason.
+      e.preventDefault()
+      e.stopPropagation()
+
       if (e.key === "Escape") onClose()
       if (e.key === "ArrowRight") step(1)
       if (e.key === "ArrowLeft") step(-1)
     }
-    window.addEventListener("keydown", onKey)
+    window.addEventListener("keydown", onKey, { capture: true })
     document.body.style.overflow = "hidden"
     return () => {
-      window.removeEventListener("keydown", onKey)
+      window.removeEventListener("keydown", onKey, { capture: true })
       document.body.style.overflow = ""
     }
   }, [index, onClose, step])

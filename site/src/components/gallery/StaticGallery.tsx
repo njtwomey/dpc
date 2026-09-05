@@ -34,7 +34,7 @@ export function StaticGallery({ imageIds }: { imageIds: number[] }) {
         data-gallery-payload=""
         dangerouslySetInnerHTML={{ __html: JSON.stringify({ images, awards }) }}
       />
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(190px,1fr))] gap-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(225px,1fr))] gap-4">
         {images.map((image, i) => <ImageCard key={image.id} image={image} index={i} />)}
       </div>
     </div>
