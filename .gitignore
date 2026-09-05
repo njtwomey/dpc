@@ -6,6 +6,7 @@ downloaded
 *.pyc
 login_details.json
 *.swp
+.env
 
 hugo-website/.vscode
 hugo-website/public

@@ -7,7 +7,7 @@ PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 BACKUP_DIR := $(PROJECT_DIR)/database-backup
 HUGO_DIR := $(PROJECT_DIR)/hugo-website
 
-PYTHON_INTERPRETER = python
+PYTHON_INTERPRETER = /Users/nialltwomey/miniconda3/envs/dpc-parser/bin/python
 
 MAKE = /usr/bin/make
 
