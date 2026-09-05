@@ -1,3 +1,0 @@
-{{- $member_id := int .member_id }}
-{{- $bucket := partial "urls/bucket.html" (dict "number" $member_id "size" 5000) }}
-{{- return (printf "https://images.dpchallenge.com/images_profile/%s/120/%d.jpg" $bucket $member_id) }}

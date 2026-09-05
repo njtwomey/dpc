@@ -1,7 +1,0 @@
-{{- /* Index the awards list by slug. Always call via partialCached: the map is
-       identical on every page. */ -}}
-{{- $index := dict }}
-{{- range hugo.Data.dpc.awards }}
-    {{- $index = merge $index (dict .slug .) }}
-{{- end }}
-{{- return $index }}

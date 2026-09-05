@@ -43,10 +43,11 @@ database-backup/
 # The award-scoped variant is a local convenience, not a second copy in history.
 backups/sql-awards/
 
-# ------------------------------------------------------------------- hugo
-site/public/
-site/resources/
-site/.hugo_build.lock
+# ------------------------------------------------------------------- site
+# The site is a React app prerendered to static HTML; dist/ is build output.
+site/dist/
+site/node_modules/
+site/.vite/
 
 # ---------------------------------------------------------- editors and OS
 .idea/

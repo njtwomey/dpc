@@ -1,6 +1,0 @@
-{{- /* Full-size or thumbnail image URL, derived from the ids alone. */ -}}
-{{- $challenge_id := int .challenge_id }}
-{{- $image_id := int .image_id }}
-{{- $width := int (default 1200 .width) }}
-{{- $bucket := partial "urls/bucket.html" (dict "number" $challenge_id "size" 1000) }}
-{{- return (printf "https://images.dpchallenge.com/images_challenge/%s/%d/%d/Copyrighted_Image_Reuse_Prohibited_%d.jpg" $bucket $challenge_id $width $image_id) }}

@@ -1,4 +1,0 @@
----
-title: Recipients
-layout: list
----

@@ -5,14 +5,15 @@
 PY := uv run python
 DPC := uv run dpc
 
-.PHONY: help install check test fmt parse verify dev revision backup backup-awards restore clean
+.PHONY: help install check test fmt parse verify dev site revision backup backup-awards restore clean
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
 	  | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
-install:  ## Sync the virtualenv from uv.lock
+install:  ## Sync the virtualenv and the site's node modules
 	uv sync --locked
+	cd site && npm ci
 
 check:  ## Everything CI runs: lint, format, types, tests
 	$(PY) -m ruff check .
@@ -39,8 +40,11 @@ parse:  ## Fetch new challenges, verify, rematch awards, refresh site/data/dpc
 verify:  ## Check the archive for inconsistencies
 	$(DPC) verify
 
-dev:  ## Hugo dev server against the committed data
-	cd site && hugo server --disableFastRender
+dev:  ## Site dev server; renders pages the same way the build does
+	cd site && npm run dev
+
+site:  ## Build the static site into site/dist
+	cd site && npm run build
 
 revision:  ## Autogenerate a migration after changing models (make revision m="add x")
 	$(PY) -m alembic revision --autogenerate -m "$(m)"
@@ -57,6 +61,6 @@ restore:  ## Rebuild a SQLite database from a dump (make restore to=rebuilt.sqli
 	$(PY) scripts/restore_sql.py --from backups/sql --to $(or $(to),rebuilt.sqlite)
 
 clean:  ## Remove build output. Leaves .mypy_cache: rebuilding it is slow and it is gitignored.
-	rm -rf site/public site/resources site/.hugo_build.lock
+	rm -rf site/dist
 	rm -rf .pytest_cache .ruff_cache
 	find . -name __pycache__ -type d -prune -not -path './.venv/*' -exec rm -rf {} +

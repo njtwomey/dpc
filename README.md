@@ -21,7 +21,7 @@ database, no credentials and no network access to dpchallenge.
 ## Setup
 
 ```bash
-uv sync
+make install              # uv sync, and npm ci for the site
 cp .env.example .env
 chmod 600 .env            # it will hold a plaintext password
 # then fill in DPC_USERNAME and DPC_PASSWORD
@@ -135,7 +135,7 @@ dpc refresh-members --limit 50           # stop after 50, to try it out first
 dpc awards        # match comments against config/awards.yaml
 dpc export        # write site/data/dpc/*.json
 dpc check         # validate the catalogue, no database needed
-make dev          # Hugo dev server against the committed data
+make dev          # site dev server against the committed data
 ```
 
 ### Backup and restore
@@ -168,7 +168,7 @@ cp .env.example .env && chmod 600 .env   # then fill in DPC_USERNAME/DPC_PASSWOR
 make restore to=dpc.sqlite               # rebuild from the committed SQL
 dpc verify                               # confirm it came back clean
 dpc export                               # regenerate site/data/dpc
-cd site && hugo                          # build the site
+make site                                # build the static site
 ```
 
 `make restore` gets you a working archive without scraping anything. From there
@@ -215,11 +215,15 @@ src/dpc/
   awards/       the award catalogue and comment matching
   export/       database to deterministic JSON
 site/
-  content/*/_content.gotmpl   content adapters: every award, challenge and
-                              recipient page is generated at build time from
-                              the JSON, so nothing under content/ is written by
-                              a machine
-  layouts/                    templates (no theme indirection)
+                              A React site prerendered to static HTML: one file
+                              per URL, no client-side routing. Only the image
+                              viewer ships JavaScript (~230 KB); every page
+                              renders without it.
+  src/pages.tsx               one component per page kind
+  src/components/             the cards: image, person, award, badge, header
+  src/client.tsx              the only JavaScript shipped: the image viewer
+  tools/routes.tsx            every URL, derived from the JSON
+  tools/prerender.tsx         renders each route to static HTML
   data/dpc/                   the committed export
 tests/                        mirrors src/dpc/
 ```
@@ -243,6 +247,11 @@ it twice — see <https://www.dpchallenge.com/image.php?IMAGE_ID=1160121>.
 GitHub Pages, published by `.github/workflows/deploy.yml` on any push to
 `main` that touches `site/`. Set **Settings → Pages → Source** to
 **GitHub Actions**.
+
+The site is served under `/dpc/`, so every link and asset URL is built with that
+prefix. The workflow passes it as `SITE_BASE` from `configure-pages`, so a
+repository rename carries through without editing anything. Building locally
+without it gives you a site rooted at `/`, which is what `make dev` wants.
 
 Previously the built HTML was committed to a second repository,
 `njtwomey/dpc`, and pushed by hand. That repo still serves the live site, so

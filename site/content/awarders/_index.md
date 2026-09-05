@@ -1,4 +1,0 @@
----
-title: Awarders
-layout: list
----

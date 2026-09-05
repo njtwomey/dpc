@@ -1,7 +1,0 @@
-{{- range $recipient := hugo.Data.dpc.recipients }}
-    {{- $.AddPage (dict
-        "path" $recipient.slug
-        "title" (printf "%s's gallery" $recipient.name)
-        "layout" "single"
-        "params" (dict "recipient" $recipient)) }}
-{{- end }}

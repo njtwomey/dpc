@@ -1,4 +1,0 @@
----
-title: Challenges
-layout: list
----
