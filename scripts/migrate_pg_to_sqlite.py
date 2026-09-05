@@ -30,6 +30,7 @@ from loguru import logger
 from sqlalchemy import Engine, create_engine, text
 from sqlalchemy.engine import make_url
 from sqlalchemy.orm import Session
+from tqdm import tqdm
 
 from dpc.db.migrate import stamp
 from dpc.db.models import Award, AwardGrant, Challenge, Comment, Image, Member
@@ -55,18 +56,25 @@ def _copy(
 ) -> int:
     total = 0
     pending: list[Any] = []
-    for row in _rows(source, sql):
-        pending.append(build(row))
-        total += 1
-        if len(pending) >= BATCH:
+    with tqdm(
+        desc=f"{label:<14}",
+        unit="row",
+        unit_scale=True,
+        disable=None,  # auto-off when stderr is not a terminal
+    ) as bar:
+        for row in _rows(source, sql):
+            pending.append(build(row))
+            total += 1
+            if len(pending) >= BATCH:
+                session.bulk_save_objects(pending)
+                session.commit()
+                bar.update(len(pending))
+                pending.clear()
+        if pending:
             session.bulk_save_objects(pending)
             session.commit()
-            pending.clear()
-            logger.info("{}: {} rows", label, total)
-    if pending:
-        session.bulk_save_objects(pending)
-        session.commit()
-    logger.info("{}: {} rows (done)", label, total)
+            bar.update(len(pending))
+    logger.info("{:<14} {:>9,} rows", label, total)
     return total
 
 
@@ -229,7 +237,7 @@ def main() -> int:
     configure(verbose=False)
     counts = migrate(args.source, args.target, overwrite=args.overwrite)
     for table, count in counts.items():
-        print(f"{table:>14}: {count:,}")
+        logger.info("{:>14}: {:,}", table, count)
     return 0
 
 

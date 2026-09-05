@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 from loguru import logger
+from tqdm import tqdm
 
 from dpc.config import Settings
 from dpc.log import configure
@@ -88,7 +89,7 @@ def main() -> int:
     connection = sqlite3.connect(target)
 
     total = 0
-    for table, column in columns:
+    for table, column in tqdm(columns, desc="scanning", unit="column"):
         count = repair_column(connection, table, column, write=args.write)
         total += count
         if count:
@@ -99,9 +100,9 @@ def main() -> int:
     connection.close()
 
     verb = "repaired" if args.write else "would repair"
-    print(f"{verb} {total:,} rows in {target}")
+    logger.success("{} {:,} rows in {}", verb, total, target)
     if total and not args.write:
-        print("re-run with --write to apply")
+        logger.info("re-run with --write to apply")
     return 0
 
 

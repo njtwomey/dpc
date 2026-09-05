@@ -9,6 +9,7 @@ from __future__ import annotations
 import sys
 
 from loguru import logger
+from tqdm import tqdm
 
 FORMAT = (
     "<green>{time:HH:mm:ss}</green> "
@@ -17,11 +18,20 @@ FORMAT = (
 )
 
 
+def _write(message: str) -> None:
+    """Emit through tqdm, so a log line does not shred an active progress bar.
+
+    Both write to stderr; tqdm.write clears the bar, prints, and redraws it.
+    With no bar on screen this is just a write to stderr.
+    """
+    tqdm.write(message, end="", file=sys.stderr)
+
+
 def configure(*, verbose: bool = False) -> None:
     """Point loguru at stderr at the requested verbosity."""
     logger.remove()
     logger.add(
-        sys.stderr,
+        _write,
         level="DEBUG" if verbose else "INFO",
         format=FORMAT,
         colorize=True,

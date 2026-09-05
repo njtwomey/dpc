@@ -48,12 +48,21 @@ stays out of git entirely — git keeps every version forever, which is the
 opposite of what a backup wants. `database-backup/` and `backups/` are ignored.
 
 ```bash
-make backup     # VACUUM INTO a dated snapshot in backups/, then xz it
+make backup          # one SQL file per table -> backups/sql
+make backup-awards   # only rows an award touches -> backups/sql-awards
+make restore         # rebuild a SQLite database from backups/sql
 ```
 
-`VACUUM INTO` is consistent even with the database in use, and compacts as it
-goes. Keep the snapshots wherever you keep other personal backups; roughly 96%
-of the volume is comment text, which compresses about 6x.
+The dumps are plain SQL, one file per table, deliberately not compressed: the
+point is for git to diff and delta-compress the actual values rather than store
+an opaque blob whole on every version.
+
+`comments` is filtered to those that granted an award — around 7,000 rows rather
+than 3.6 million. The award scope goes further and keeps only rows an award
+touches; it is about 6.5 MB of text, and rebuilding from it produces a
+**byte-identical** `site/data/dpc` export to the one built from the full 1.2 GB
+database. The archive itself — the other 380,000 images and 3.6M comments — is
+not in either dump and lives only in `dpc.sqlite`.
 
 > `database-backup/backup.sql.zip` — a 2020 dump — was tracked in git LFS until
 > recently. It is untracked now, but the object is still in history and still in

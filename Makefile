@@ -2,14 +2,10 @@
 # `uv run dpc --help` -- so it is deliberately not mirrored here, where the
 # targets could only ever hide the CLI's own options.
 #
-# Tools are invoked through the venv directly rather than through `uv run`:
-# uv revalidates the environment against uv.lock on every invocation, which
-# costs far more than the checks themselves. `make install` builds that venv.
+PY := uv run python
+DPC := uv run dpc
 
-PY := .venv/bin/python
-DPC := .venv/bin/dpc
-
-.PHONY: help install check test fmt parse serve revision backup clean
+.PHONY: help install check test fmt parse serve revision backup backup-awards restore clean
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -18,23 +14,20 @@ help:  ## Show this help
 install:  ## Sync the virtualenv from uv.lock
 	uv sync --locked
 
-$(PY):
-	@echo "no virtualenv yet -- run 'make install'" >&2; exit 1
-
-check: $(PY)  ## Everything CI runs: lint, format, types, tests
+check:  ## Everything CI runs: lint, format, types, tests
 	$(PY) -m ruff check .
 	$(PY) -m ruff format --check .
 	$(PY) -m mypy
 	$(PY) -m pytest -q
 
-test: $(PY)  ## Run the test suite
+test:  ## Run the test suite
 	$(PY) -m pytest -q
 
-fmt: $(PY)  ## Format and apply safe lint fixes
+fmt:  ## Format and apply safe lint fixes
 	$(PY) -m ruff format .
 	$(PY) -m ruff check --fix .
 
-parse: $(PY)  ## Fetch new challenges, rematch awards, refresh site/data/dpc
+parse:  ## Fetch new challenges, rematch awards, refresh site/data/dpc
 	$(DPC) scrape --from-history
 	$(DPC) awards
 	$(DPC) export
@@ -42,14 +35,19 @@ parse: $(PY)  ## Fetch new challenges, rematch awards, refresh site/data/dpc
 serve:  ## Hugo dev server against the committed data
 	cd site && hugo server --disableFastRender
 
-revision: $(PY)  ## Autogenerate a migration after changing models (make revision m="add x")
+revision:  ## Autogenerate a migration after changing models (make revision m="add x")
 	$(PY) -m alembic revision --autogenerate -m "$(m)"
 
-backup:  ## Snapshot the database to backups/ (local only, never committed)
-	@mkdir -p backups
-	@f=backups/dpc-$$(date +%F).sqlite; \
-	 rm -f $$f $$f.xz; \
-	 sqlite3 dpc.sqlite "VACUUM INTO '$$f'" && xz -6 $$f && ls -lh $$f.xz
+# Plain SQL, not gzipped: the point is for git to diff and delta-compress the
+# actual values. A gzipped dump is an opaque blob stored whole every version.
+backup:  ## Dump one SQL file per table to backups/sql
+	$(PY) scripts/dump_sql.py --out backups/sql
+
+backup-awards:  ## Award-scoped dump: only rows an award touches
+	$(PY) scripts/dump_sql.py --out backups/sql-awards --scope awards
+
+restore:  ## Rebuild a SQLite database from a dump (make restore to=rebuilt.sqlite)
+	$(PY) scripts/restore_sql.py --from backups/sql --to $(or $(to),rebuilt.sqlite)
 
 clean:  ## Remove build output. Leaves .mypy_cache: rebuilding it is slow and it is gitignored.
 	rm -rf site/public site/resources site/.hugo_build.lock

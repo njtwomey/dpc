@@ -19,6 +19,7 @@ dependencies = [
     "pyyaml>=6.0",
     "rich>=13.7",
     "sqlalchemy>=2.0.30",
+    "tqdm>=4.66",
 ]
 
 [project.scripts]
@@ -35,6 +36,7 @@ dev = [
     "pytest-cov>=5.0",
     "ruff>=0.5",
     "types-pyyaml>=6.0",
+    "types-tqdm>=4.66",
 ]
 
 [build-system]
