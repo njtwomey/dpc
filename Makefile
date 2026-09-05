@@ -7,8 +7,9 @@
 # costs far more than the checks themselves. `make install` builds that venv.
 
 PY := .venv/bin/python
+DPC := .venv/bin/dpc
 
-.PHONY: help install check test fmt serve revision backup clean
+.PHONY: help install check test fmt parse serve revision backup clean
 
 help:  ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
@@ -32,6 +33,11 @@ test: $(PY)  ## Run the test suite
 fmt: $(PY)  ## Format and apply safe lint fixes
 	$(PY) -m ruff format .
 	$(PY) -m ruff check --fix .
+
+parse: $(PY)  ## Fetch new challenges, rematch awards, refresh site/data/dpc
+	$(DPC) scrape --from-history
+	$(DPC) awards
+	$(DPC) export
 
 serve:  ## Hugo dev server against the committed data
 	cd site && hugo server --disableFastRender

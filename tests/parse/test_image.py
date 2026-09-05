@@ -28,18 +28,33 @@ class TestRealPage:
         assert comments, "the real page should carry comments"
         assert all(c.image_id == IMAGE_ID for c in comments)
 
-    def test_stats_panel_absence_is_not_a_disqualification(self, html):
-        # The crucial distinction. An anonymous page has no panel at all; a
-        # disqualified image HAS the panel but no averages. Reading one as the
-        # other would mark the entire archive disqualified.
-        with pytest.raises(ImageStatsUnavailableError):
-            parse_image_stats(html("image/anonymous.html"))
+    def test_statistics_are_public(self, html):
+        # No login required: an anonymous capture carries the full panel.
+        stats = parse_image_stats(html("image/anonymous.html"))
+        assert stats.disqualified is False
+        assert stats.position == 22
+        assert stats.average_all == pytest.approx(6.152)
+        assert stats.num_votes == 171
 
-    def test_parse_image_propagates_that_rather_than_guessing(self, html):
+    def test_avg_commenters_survives_where_the_page_still_shows_it(self, html):
+        # Present on this 2010 image, absent on a 2024 one -- conditional, not
+        # removed, so it must be read when offered and left None when not.
+        assert parse_image_stats(html("image/anonymous.html")).average_commenters == pytest.approx(
+            7.85
+        )
+
+    def test_a_page_with_no_panel_at_all_raises(self):
+        # Not a disqualification: it means an error page, or markup that has
+        # changed again. Guessing would mark the whole archive disqualified.
+        with pytest.raises(ImageStatsUnavailableError):
+            parse_image_stats("<html><body>nothing here</body></html>")
+
+    def test_parse_image_propagates_that_rather_than_guessing(self):
         # The old parser split on the panel marker and indexed [1], so this
         # raised a bare IndexError that the caller swallowed with a print.
+        page = '<div class="imagetitle">T</div><a class="u" href="?USER_ID=1">u</a>'
         with pytest.raises(ImageStatsUnavailableError):
-            parse_image(html("image/anonymous.html"), IMAGE_ID, CHALLENGE_ID)
+            parse_image(page, IMAGE_ID, CHALLENGE_ID)
 
 
 class TestRealComments:
@@ -73,27 +88,80 @@ class TestRealComments:
         assert all(c.date is not None for c in comments)
 
 
-class TestStatsFromASyntheticPanel:
-    """The panel is login-only, so these use fixtures built to its markup."""
+class TestCurrentStatsPanel:
+    """image/scored.html is a real logged-in capture, trimmed to what is parsed.
+
+    dpchallenge redesigned this panel: it is headed "Statistics" now, no longer
+    carries the ten-bucket vote histogram, and has dropped Avg (commenters).
+    """
+
+    def test_reads_every_field_the_panel_still_has(self, html):
+        stats = parse_image_stats(html("image/scored.html"))
+
+        assert stats.disqualified is False
+        assert stats.position == 1  # rendered as "1 out of 40"
+        assert stats.average_all == pytest.approx(7.2727)
+        assert stats.average_participants == pytest.approx(7.1333)
+        assert stats.average_non_participants == pytest.approx(7.5714)
+        assert stats.num_views == 697
+        assert stats.num_votes == 22
+
+    def test_place_takes_the_rank_not_the_field_size(self, html):
+        # "1 out of 40" must not be read as 40.
+        assert parse_image_stats(html("image/scored.html")).position == 1
+
+    def test_the_histogram_is_simply_gone(self, html):
+        # The current site does not publish per-score counts at all.
+        assert parse_image_stats(html("image/scored.html")).votes == ()
+
+    def test_avg_commenters_is_absent_rather_than_wrong(self, html):
+        assert parse_image_stats(html("image/scored.html")).average_commenters is None
+
+    def test_identity_and_photographer(self, html):
+        image = parse_image(html("image/scored.html"), image_id=1287065, challenge_id=3729)
+        assert image.id == 1287065
+        assert image.challenge_id == 3729
+        assert image.photographer_id == 138630
+        assert image.name == "So Many Geese!"
+
+    def test_photographer_is_found_by_user_id_not_by_position(self):
+        # The page renders ruleset and portfolio links with the same class, and
+        # their order has changed. Picking the Nth link silently mis-attributes.
+        page = (
+            '<div class="imagetitle">T</div>'
+            '<a class="u" href="challenge_rules.php?RULES_ID=19">Rules</a>'
+            '<a class="u" href="portfolio.php?USER_ID=4242&collection_id=1">Portfolio</a>'
+            '<table><tr class="forum-heading"><td>Statistics</td></tr>'
+            "<tr><td><b>Avg (all users):</b> 5.0</td></tr></table>"
+        )
+        assert parse_image(page, 1, 1).photographer_id == 4242
+
+
+class TestLegacyStatsPanel:
+    """Pages cached before the redesign must still parse."""
 
     def test_scored_image_has_every_average(self, html):
-        stats = parse_image_stats(html("image/scored.html"))
+        stats = parse_image_stats(html("image/legacy_scored.html"))
 
         assert stats.disqualified is False
         assert stats.position == 7
         assert stats.average_all == pytest.approx(5.9432)
         assert stats.average_commenters == pytest.approx(6.1)
         assert stats.average_participants == pytest.approx(5.8)
-        assert stats.average_non_participants == pytest.approx(6.05)
         assert stats.num_votes == 234
 
     def test_view_count_survives_a_thousands_separator(self, html):
         # The old regex was ([\d\.]+), which stopped dead at the comma, so
         # "Views since voting: 1,234" was recorded as 1.
-        assert parse_image_stats(html("image/scored.html")).num_views == 1234
+        assert parse_image_stats(html("image/legacy_scored.html")).num_views == 1234
+
+    def test_the_vote_histogram_is_only_available_here(self, html):
+        stats = parse_image_stats(html("image/legacy_scored.html"))
+        assert stats.votes == (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        assert len(stats.votes) == VOTE_BUCKETS
 
     def test_disqualified_image_keeps_votes_and_views_but_loses_averages(self, html):
-        stats = parse_image_stats(html("image/disqualified.html"))
+        stats = parse_image_stats(html("image/legacy_disqualified.html"))
 
         assert stats.disqualified is True
         assert stats.num_views == 87
@@ -101,9 +169,6 @@ class TestStatsFromASyntheticPanel:
         assert stats.position is None
         assert stats.average_all is None
         assert stats.num_votes is None
-
-    def test_vote_histogram_has_ten_buckets(self, html):
-        assert parse_image_stats(html("image/scored.html")).votes == (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
     def test_wrong_bucket_count_is_rejected(self):
         page = (
@@ -115,13 +180,6 @@ class TestStatsFromASyntheticPanel:
         with pytest.raises(ValueError, match="vote buckets"):
             parse_image_stats(page)
 
-    def test_identity_and_photographer(self, html):
-        image = parse_image(html("image/scored.html"), image_id=IMAGE_ID, challenge_id=CHALLENGE_ID)
-        assert image.id == IMAGE_ID
-        assert image.challenge_id == CHALLENGE_ID
-        assert image.photographer_id == PHOTOGRAPHER_ID
-        assert image.name == "Disconnect"
-
 
 class TestSyntheticComments:
     """Cases the real capture does not happen to contain."""
@@ -130,19 +188,19 @@ class TestSyntheticComments:
         assert parse_comments(html("image/no_comments.html"), image_id=1) == []
 
     def test_edit_marker_is_split_off_the_body(self, html):
-        _, second = parse_comments(html("image/scored.html"), image_id=IMAGE_ID)
+        _, second = parse_comments(html("image/legacy_scored.html"), image_id=IMAGE_ID)
         assert second.comment == "Congratulations!"
         assert second.edited == datetime(2004, 1, 21, 11, 0, 0)
 
     def test_unedited_comment_has_no_edit_timestamp(self, html):
-        first, _ = parse_comments(html("image/scored.html"), image_id=IMAGE_ID)
+        first, _ = parse_comments(html("image/legacy_scored.html"), image_id=IMAGE_ID)
         assert first.edited is None
 
     def test_during_challenge_flag_follows_the_divider_row(self, html):
-        comments = parse_comments(html("image/scored.html"), image_id=IMAGE_ID)
+        comments = parse_comments(html("image/legacy_scored.html"), image_id=IMAGE_ID)
         assert all(c.made_during_challenge for c in comments)
 
     def test_award_markers_survive_only_in_the_raw_html(self, html):
-        first, _ = parse_comments(html("image/scored.html"), image_id=IMAGE_ID)
+        first, _ = parse_comments(html("image/legacy_scored.html"), image_id=IMAGE_ID)
         assert "blackyak.com/dpc/bluepost" in first.raw_comment
         assert "blackyak.com/dpc/bluepost" not in first.comment

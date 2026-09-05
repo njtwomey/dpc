@@ -11,10 +11,18 @@ from bs4 import BeautifulSoup, Tag
 from dpc.parse.text import clean_text, parse_datetime, soupify
 from dpc.parse.types import VOTE_BUCKETS, CommentRecord, ImageRecord, ImageStats
 
-_BREAKDOWN_START = '<td>Voting Breakdown <span style="font-weight: normal;">'
-_BREAKDOWN_END = '<td valign="top" width="450" class="textsm">'
+_STATS_HEADING = "Statistics"
+"""Current markup: a table headed "Statistics" holding <b>Label:</b> value rows."""
 
-_DISQUALIFIED_MARKER = "Avg (all users)"
+_LEGACY_START = '<td>Voting Breakdown <span style="font-weight: normal;">'
+_LEGACY_END = '<td valign="top" width="450" class="textsm">'
+"""The panel dpchallenge served until it was redesigned. Pages cached before
+then still parse, and the ten-bucket vote histogram only exists there -- the
+current site does not publish it at all."""
+
+_LABEL = re.compile(r"<b>\s*([^<:]+?)\s*:\s*</b>\s*([^<]*)")
+
+_DISQUALIFIED_MARKER = "avg (all users)"
 _DURING_CHALLENGE_MARKER = "Comments Made During the Challenge"
 _EDITED_MARKER = "Message edited by author "
 
@@ -33,20 +41,17 @@ _EDITED_DATE_FORMATS = ("%Y-%m-%d %H:%M:%S",)
 # the first comma -- so "Views since voting: 1,234" was silently recorded as 1.
 _NUMBER = r"([\d,]+(?:\.\d+)?)"
 
-_PHOTOGRAPHER_LINK_INDEX = 1
-"""The second ``a.u`` on the page is the photographer; the first is the viewer."""
-
 _COMMENTER_LINK_INDEX = 2
 """The third anchor in a comment header row links to the commenter."""
 
 
 class ImageStatsUnavailableError(Exception):
-    """The page carried no voting-breakdown panel at all.
+    """The page carried no statistics panel in any known markup.
 
-    That panel is only served to a logged-in session, so an anonymous fetch
-    produces a page that is otherwise complete but has no scores. It must not be
-    confused with a disqualified image, which *has* the panel but no averages --
-    reading one as the other would mark the entire archive disqualified.
+    Distinct from a disqualified image, which *has* the panel but no averages.
+    Confusing the two would mark the entire archive disqualified, so a missing
+    panel is raised rather than guessed at -- it means the page is an error page
+    or the markup has changed again.
 
     The old parser split on the panel's marker and indexed ``[1]``, so this case
     raised a bare IndexError that ``get_challenge`` swallowed with
@@ -59,19 +64,24 @@ def parse_image(html: str, image_id: int, challenge_id: int) -> ImageRecord:
 
     title = clean_text(soup.find("div", {"class": "imagetitle"}))
 
-    user_links = soup.find_all("a", {"class": "u"})
-    if len(user_links) <= _PHOTOGRAPHER_LINK_INDEX:
-        msg = f"image {image_id}: could not find the photographer link"
-        raise ValueError(msg)
-    match = _USER_ID.search(str(user_links[_PHOTOGRAPHER_LINK_INDEX].get("href", "")))
-    if match is None:
-        msg = f"image {image_id}: photographer link carried no USER_ID"
+    # The first a.u carrying a USER_ID, rather than a fixed position among them.
+    # The page also renders ruleset and portfolio links with the same class, and
+    # their order has changed before -- picking by position silently attributes
+    # an image to whoever happens to sit in that slot.
+    photographer_id = None
+    for link in soup.find_all("a", {"class": "u"}):
+        found = _USER_ID.search(str(link.get("href", "")))
+        if found:
+            photographer_id = int(found.group(1))
+            break
+    if photographer_id is None:
+        msg = f"image {image_id}: no link carrying a USER_ID"
         raise ValueError(msg)
 
     return ImageRecord(
         id=image_id,
         challenge_id=challenge_id,
-        photographer_id=int(match.group(1)),
+        photographer_id=photographer_id,
         name=title,
         stats=parse_image_stats(html, soup),
     )
@@ -84,11 +94,16 @@ def parse_image_stats(html: str, soup: BeautifulSoup | None = None) -> ImageStat
     average and its finishing place, so those come back as ``None``.
     """
     soup = soup if soup is not None else soupify(html)
-    if _BREAKDOWN_START not in html:
-        msg = "no voting-breakdown panel on the page; is the session logged in?"
+    section = _stats_section(html, soup)
+    if section is None:
+        msg = "no statistics panel on the page in any known markup"
         raise ImageStatsUnavailableError(msg)
-    section = _breakdown_section(html)
 
+    fields = {label.strip().lower(): value.strip() for label, value in _LABEL.findall(section)}
+
+    # The histogram exists only in the pre-redesign markup; the current site
+    # does not publish per-score counts, so this is empty for new scrapes.
+    # Averages remain public -- no login needed for any of this.
     votes = tuple(
         int(clean_text(el)) for el in soup.find_all("div", {"class": "breakdown_vote_count"})
     )
@@ -96,22 +111,24 @@ def parse_image_stats(html: str, soup: BeautifulSoup | None = None) -> ImageStat
         msg = f"expected {VOTE_BUCKETS} vote buckets, found {len(votes)}"
         raise ValueError(msg)
 
-    disqualified = _DISQUALIFIED_MARKER not in section
-    views = _int(section, "<b>Views since voting:</b> ")
+    views = _int(fields, "views since voting")
 
-    if disqualified:
+    # A disqualified image keeps its view count but loses every average and its
+    # finishing place. Judged inside the panel, never by the panel's absence.
+    if _DISQUALIFIED_MARKER not in fields:
         return ImageStats(votes=votes, disqualified=True, num_views=views)
 
     return ImageStats(
         votes=votes,
         disqualified=False,
-        position=_int(section, "<b>Place:</b> "),
-        average_all=_float(section, "<b>Avg (all users):</b> "),
-        average_commenters=_float(section, "<b>Avg (commenters):</b> "),
-        average_participants=_float(section, "<b>Avg (participants):</b> "),
-        average_non_participants=_float(section, "<b>Avg (non-participants):</b> "),
+        position=_int(fields, "place"),
+        average_all=_float(fields, "avg (all users)"),
+        # Dropped in the redesign; still present on pages cached before it.
+        average_commenters=_float(fields, "avg (commenters)"),
+        average_participants=_float(fields, "avg (participants)"),
+        average_non_participants=_float(fields, "avg (non-participants)"),
         num_views=views,
-        num_votes=_int(section, "<b>Votes:</b> "),
+        num_votes=_int(fields, "votes"),
     )
 
 
@@ -192,29 +209,37 @@ def _inner_html(cell: Tag) -> str:
     return str(inner if inner is not None else cell)
 
 
-def _breakdown_section(html: str) -> str:
-    _, marker, rest = html.partition(_BREAKDOWN_START)
-    if not marker:
-        return ""
-    section, _, _ = rest.partition(_BREAKDOWN_END)
-    return section
+def _stats_section(html: str, soup: BeautifulSoup) -> str | None:
+    """The statistics panel's HTML, in whichever markup the page uses."""
+    for heading in soup.find_all("tr", {"class": "forum-heading"}):
+        if clean_text(heading) == _STATS_HEADING:
+            table = heading.find_parent("table")
+            if table is not None:
+                return str(table)
+
+    _, marker, rest = html.partition(_LEGACY_START)
+    if marker:
+        section, _, _ = rest.partition(_LEGACY_END)
+        return section
+
+    return None
 
 
-def _raw_number(section: str, label: str) -> str | None:
-    if label not in section:
+def _raw_number(fields: dict[str, str], label: str) -> str | None:
+    """The leading number of a field, e.g. "1 out of 40" -> "1"."""
+    value = fields.get(label)
+    if value is None:
         return None
-    match = re.search(_NUMBER, section.split(label, 1)[1])
-    if match is None:
-        return None
-    return match.group(1).replace(",", "")
+    match = re.search(_NUMBER, value)
+    return None if match is None else match.group(1).replace(",", "")
 
 
-def _int(section: str, label: str) -> int | None:
-    raw = _raw_number(section, label)
+def _int(fields: dict[str, str], label: str) -> int | None:
+    raw = _raw_number(fields, label)
     # Some counts render as "7.0"; int() will not take that directly.
     return None if raw is None else int(float(raw))
 
 
-def _float(section: str, label: str) -> float | None:
-    raw = _raw_number(section, label)
+def _float(fields: dict[str, str], label: str) -> float | None:
+    raw = _raw_number(fields, label)
     return None if raw is None else float(raw)
