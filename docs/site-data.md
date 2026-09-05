@@ -11,6 +11,10 @@ Then commit the result. The export is deterministic — an unchanged database
 re-exports byte-identically — so a diff here means the underlying data really
 changed, and the diff is worth reading.
 
+Each record is minified onto its own line. That is within a few hundred bytes of
+fully minified once git has compressed it, while keeping a changed challenge to
+one changed line instead of turning the whole file into a single altered blob.
+
 The database itself and the scraped HTML cache stay local and are gitignored.
 
 | File | Contents |

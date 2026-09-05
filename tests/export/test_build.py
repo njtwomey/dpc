@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from datetime import date, datetime
 
 import pytest
@@ -9,6 +10,7 @@ from dpc.awards.service import find_grants, sync_catalog
 from dpc.db.models import Challenge, Comment, Image, Member
 from dpc.export.build import build_site_data
 from dpc.export.model import SCHEMA_VERSION
+from dpc.export.writer import FILENAMES, write_site_data
 
 CATALOG = AwardCatalog.model_validate(
     {
@@ -186,6 +188,40 @@ class TestImages:
         assert data.images["502"].awards == ["posthumous-blue", "posthumous-red"]
 
 
+class TestWriter:
+    def test_writes_one_file_per_collection(self, populated, tmp_path):
+        written = write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        assert {p.stem for p in written} == set(FILENAMES)
+
+    def test_output_is_valid_json(self, populated, tmp_path):
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        loaded = json.loads((tmp_path / "awards.json").read_text(encoding="utf-8"))
+        assert loaded[0]["slug"] == "posthumous-blue"
+
+    def test_re_export_is_byte_identical(self, populated, tmp_path):
+        # An unchanged database must produce an empty git diff, so that a diff
+        # genuinely means the data changed.
+        first, second = tmp_path / "a", tmp_path / "b"
+        write_site_data(build_site_data(populated, CATALOG), first)
+        write_site_data(build_site_data(populated, CATALOG), second)
+
+        for name in FILENAMES:
+            assert (first / f"{name}.json").read_bytes() == (second / f"{name}.json").read_bytes()
+
+    def test_files_end_with_a_newline(self, populated, tmp_path):
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        assert (tmp_path / "meta.json").read_text(encoding="utf-8").endswith("\n")
+
+    def test_unicode_is_not_escaped(self, populated, tmp_path):
+        populated.query(Challenge).filter_by(id=101).one().name = "Hidden Gem — Quiz"
+        populated.commit()
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+
+        raw = (tmp_path / "challenges.json").read_text(encoding="utf-8")
+        assert "—" in raw
+        assert "\\u2014" not in raw
+
+
 class TestGrantsWithoutAComment:
     """comment_id is nullable, so the grants query must not inner-join Comment."""
 
@@ -227,3 +263,41 @@ class TestGrantsWithoutAComment:
             a for a in build_site_data(populated, CATALOG).awards if a.slug == "posthumous-red"
         )
         assert 500 in red.image_ids
+
+
+class TestOutputFormat:
+    """One minified record per line: small, but still diffable per record."""
+
+    def test_each_record_is_on_its_own_line(self, populated, tmp_path):
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        text = (tmp_path / "awards.json").read_text(encoding="utf-8")
+
+        lines = text.splitlines()
+        assert lines[0] == "["
+        assert lines[-1] == "]"
+        assert len(lines) == 2 + len(json.loads(text))
+
+    def test_images_are_one_per_line_keyed_by_id(self, populated, tmp_path):
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        text = (tmp_path / "images.json").read_text(encoding="utf-8")
+
+        lines = text.splitlines()
+        assert lines[0] == "{"
+        assert lines[-1] == "}"
+        assert all(line.lstrip().startswith('"') for line in lines[1:-1])
+
+    def test_records_carry_no_internal_padding(self, populated, tmp_path):
+        write_site_data(build_site_data(populated, CATALOG), tmp_path)
+        text = (tmp_path / "challenges.json").read_text(encoding="utf-8")
+        assert '", "' not in text
+        assert '": ' not in text
+
+    def test_still_parses_and_stays_deterministic(self, populated, tmp_path):
+        first, second = tmp_path / "a", tmp_path / "b"
+        write_site_data(build_site_data(populated, CATALOG), first)
+        write_site_data(build_site_data(populated, CATALOG), second)
+
+        for name in FILENAMES:
+            raw = (first / f"{name}.json").read_bytes()
+            assert raw == (second / f"{name}.json").read_bytes()
+            json.loads(raw)
