@@ -65,6 +65,9 @@ class ChallengeOut(BaseModel):
     id: int
     name: str
     slug: str
+    ended: str
+    """ISO date voting closed. A string, not a date: the writer dumps in python
+    mode, and this is the only ordering the site has to group challenges by."""
     num_granted: int
     award_counts: list[Count]
     image_ids: list[int]

@@ -130,6 +130,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
             id=challenge_id,
             name=challenges[challenge_id].name,
             slug=slugify(challenges[challenge_id].name),
+            ended=challenges[challenge_id].voting_end.isoformat(),
             num_granted=len(items),
             award_counts=counts(items),
             image_ids=ordered_image_ids(items),

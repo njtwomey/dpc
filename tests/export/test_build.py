@@ -144,6 +144,11 @@ class TestChallenges:
         data = build_site_data(populated, CATALOG)
         assert [c.id for c in data.challenges] == [101, 100]
 
+    def test_carries_the_date_voting_closed(self, populated):
+        # The only chronology the site has: the list groups on it.
+        data = build_site_data(populated, CATALOG)
+        assert [c.ended for c in data.challenges] == ["2005-01-14", "2004-01-14"]
+
     def test_award_counts_are_most_common_first(self, populated):
         data = build_site_data(populated, CATALOG)
         recent = next(c for c in data.challenges if c.id == 101)

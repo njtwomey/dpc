@@ -29,6 +29,7 @@ export type Award = {
 }
 export type Challenge = {
   id: number; name: string; slug: string
+  ended: string
   num_granted: number; award_counts: { slug: string; count: number }[]; image_ids: number[]
 }
 export type Recipient = {
