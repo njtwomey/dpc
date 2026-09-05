@@ -166,7 +166,7 @@ builders agree with the Python ones, since the export ships ids rather than URLs
 ## Deployment
 
 GitHub Pages, published by `.github/workflows/deploy.yml` on any push to
-`master` that touches `site/`. Set **Settings → Pages → Source** to
+`main` that touches `site/`. Set **Settings → Pages → Source** to
 **GitHub Actions**.
 
 Previously the built HTML was committed to a second repository,
