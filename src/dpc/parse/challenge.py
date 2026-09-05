@@ -8,6 +8,7 @@ crashed) and was then cached forever, never to be retried.
 
 from __future__ import annotations
 
+import copy
 import re
 from datetime import date
 from enum import StrEnum
@@ -29,6 +30,7 @@ _RESULTS_PREAMBLE = "Challenge Results for "
 _IMAGE_HREF = re.compile(r"/image\.php\?IMAGE_ID=(\d+)")
 
 _DESCRIPTION_STYLE = "display:block; margin-left: 22px; margin-top: -16px;"
+_DESCRIPTION_HEADING = "description"
 _STATS_STYLE = "margin: 2px;"
 
 _DATE_FORMATS = ("%b %d %Y", "%b. %d %Y", "%B %d %Y")
@@ -104,8 +106,7 @@ def parse_challenge(html: str, challenge_id: int) -> ChallengeRecord:
         raise ValueError(msg)
     name = name[len(_RESULTS_PREAMBLE) :].strip()
 
-    description_node = soup.find("div", {"style": _DESCRIPTION_STYLE})
-    description = collapse_whitespace(description_node)
+    description = _description(soup)
 
     fields = _stats_fields(soup, challenge_id)
     submission_start, submission_end = _date_range(fields, _SUBMISSION_DATES, challenge_id)
@@ -146,6 +147,19 @@ def parse_image_ids(html: str) -> tuple[int, ...]:
         if match:
             seen.setdefault(int(match.group(1)), None)
     return tuple(seen)
+
+
+def _description(soup: BeautifulSoup) -> str:
+    """The challenge blurb, without the bold "Description" heading above it."""
+    node = soup.find("div", {"style": _DESCRIPTION_STYLE})
+    if node is None:
+        return ""
+
+    node = copy.copy(node)
+    heading = node.find("b")
+    if heading is not None and clean_text(heading).rstrip(":").lower() == _DESCRIPTION_HEADING:
+        heading.decompose()
+    return collapse_whitespace(node)
 
 
 def _stats_fields(soup: BeautifulSoup, challenge_id: int) -> dict[str, str]:

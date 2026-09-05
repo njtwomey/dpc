@@ -1,35 +1,58 @@
-# --- secrets ---
+# ---------------------------------------------------------------- secrets
+# Anything .env-shaped stays out, with the committed template as the one
+# exception. .env itself was tracked until recently: `git check-ignore -v .env`
+# is the way to confirm a rule is actually taking effect, because gitignore
+# never applies to a file already in the index.
 .env
-login_details.json
+.env.*
+!.env.example
 
-# --- python ---
+# ----------------------------------------------------------------- python
 __pycache__/
 *.py[cod]
+*.egg-info/
+build/
+dist/
+
+# uv manages .venv; uv.lock is committed on purpose.
 .venv/
+.python-version.local
+
+# ----------------------------------------------------------------- caches
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
-*.egg-info/
-dist/
-build/
+.coverage
+.coverage.*
+htmlcov/
 
-# --- local data (never committed; the JSON export in site/data/dpc is) ---
-downloaded/
+# ------------------------------------------------------------- local data
+# The database, the scraped HTML cache and the Postgres dumps stay local.
+# The JSON under site/data/dpc IS committed: it is the site's build input.
 *.sqlite
+*.sqlite3
 *.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
 *.sql
+dpc_cache/
 
-# --- hugo ---
+# ------------------------------------------------------------------- hugo
 site/public/
-# The old deployment working copy: a checkout of njtwomey/dpc, still serving the
-# live site until the first Actions deploy. Not part of this repository.
-hugo-website/
 site/resources/
 site/.hugo_build.lock
 
-# --- editors / os ---
+# The previous deployment: a working copy of njtwomey/dpc, which still serves
+# the live site. Not part of this repository; delete once Pages is switched to
+# GitHub Actions.
+hugo-website/
+
+# ---------------------------------------------------------- editors and OS
 .idea/
 .vscode/
-.DS_Store
 *.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
 nvim.log

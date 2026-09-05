@@ -2,30 +2,36 @@
 
 ## Real captures
 
-Taken verbatim from the scraper's on-disk cache (`downloaded/`).
+Fetched from dpchallenge and committed verbatim. Everything the tests assert
+about them was read off the real page.
 
-| File | What it is |
-| --- | --- |
-| `challenge/invalid.html` | `CHALLENGE_ID=1` — the site's "Invalid CHALLENGE_ID" response |
-| `challenge/unfinished.html` | `CHALLENGE_ID=3882` — a *Challenge Details* page for a challenge still open. The old parser had no notion of this page type: it would parse garbage out of it and then cache it permanently, so the challenge was never revisited once it finished. |
+| File | What it is | Why it is here |
+| --- | --- | --- |
+| `challenge/results.html` | `CHALLENGE_ID=1303`, "Posthumous Ribbon" (Nov 2010) | a finished challenge: the stats block, the `<b>Description</b>` heading, `23,001` votes with a thousands separator, and 133 image links |
+| `challenge/invalid.html` | `CHALLENGE_ID=75` | the site's "Invalid CHALLENGE_ID" response. Some low ids really do return this. |
+| `challenge/unfinished.html` | `CHALLENGE_ID=3882`, captured mid-voting | a *Challenge Details* page. The old parser had no notion of this third page type: it produced garbage from it and then cached it permanently, so the challenge was never revisited once it finished. |
+| `image/anonymous.html` | `IMAGE_ID=921974`, fetched without a session | 29 real comments, and **no voting-breakdown panel** — that panel is served only to logged-in users |
+| `member/odriew.html` | `USER_ID=75618` | `Name:` and `Username:` are different fields; `Registered: Mar. 16th 2007` has an ordinal suffix and a dotted month |
+| `history/page.html` | `challenge_history.php`, first 60 rows | the full page is 2.7 MB. Note it interleaves still-open challenges (4193–4197) among the finished ones, so the listing is **not** sorted. |
 
 ## Synthesised
 
-Built to the markup contract the previous parser encoded (the selectors, labels
-and inline styles it relied on), because the cache held no authenticated capture
-of these pages.
+Built to the markup contract, for cases a real capture cannot cover.
 
-| File | What it exercises |
-| --- | --- |
-| `challenge/results.html` | a finished challenge; em dash in the title; duplicate image links |
-| `member/normal.html` | `Registered: Jan. 1st 2004` — ordinal suffix and `.`-separated month |
-| `member/cancelled.html` | the red-font cancelled-membership notice |
-| `image/scored.html` | full stats, `1,234` views, two comments, one of them edited |
-| `image/disqualified.html` | no `Avg (all users)`, so averages and place are absent |
-| `image/no_comments.html` | no comment table at all |
-| `history/page.html` | challenge-id extraction with a duplicate and an unrelated link |
-| `encoding/cp1252.html` | raw `0x97` bytes — the source of the `\x97` mojibake |
+| File | What it exercises | Why not real |
+| --- | --- | --- |
+| `image/scored.html` | full stats, `1,234` views, an edited comment | the voting-breakdown panel needs a logged-in session |
+| `image/disqualified.html` | panel present, averages absent | same |
+| `image/no_comments.html` | no comment table at all | same |
+| `member/cancelled.html` | the red-font cancellation notice | no cancelled account to hand |
+| `encoding/cp1252.html` | raw `0x97` bytes | the source of the `\x97` mojibake |
 
-**Replace the synthesised ones with real captures on the first authenticated
-scrape.** They encode assumptions about labels and markup that only a real page
-can confirm. `dpc scrape --save-fixture` is the intended way to do that.
+## Replacing the synthesised ones
+
+`image/scored.html` and `image/disqualified.html` encode assumptions about a
+panel none of these captures contains. Replace them with real pages on the first
+authenticated scrape — they are the last guesses left in the fixture set.
+
+Note that a *missing* panel and a *disqualified* image are different things, and
+`ImageStatsUnavailableError` exists to keep them apart. Confusing the two would
+mark the entire archive disqualified.

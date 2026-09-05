@@ -13,8 +13,13 @@ from dpc.parse.challenge import (
     parse_image_ids,
 )
 from dpc.parse.history import parse_challenge_ids
-from dpc.parse.image import parse_comments, parse_image, parse_image_stats
-from dpc.parse.member import parse_member
+from dpc.parse.image import (
+    ImageStatsUnavailableError,
+    parse_comments,
+    parse_image,
+    parse_image_stats,
+)
+from dpc.parse.member import MemberProfileUnavailableError, parse_member
 from dpc.parse.types import (
     ChallengeRecord,
     CommentRecord,
@@ -30,6 +35,8 @@ __all__ = [
     "CommentRecord",
     "ImageRecord",
     "ImageStats",
+    "ImageStatsUnavailableError",
+    "MemberProfileUnavailableError",
     "MemberRecord",
     "classify",
     "parse_challenge",

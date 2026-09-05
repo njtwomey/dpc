@@ -40,6 +40,20 @@ _COMMENTER_LINK_INDEX = 2
 """The third anchor in a comment header row links to the commenter."""
 
 
+class ImageStatsUnavailableError(Exception):
+    """The page carried no voting-breakdown panel at all.
+
+    That panel is only served to a logged-in session, so an anonymous fetch
+    produces a page that is otherwise complete but has no scores. It must not be
+    confused with a disqualified image, which *has* the panel but no averages --
+    reading one as the other would mark the entire archive disqualified.
+
+    The old parser split on the panel's marker and indexed ``[1]``, so this case
+    raised a bare IndexError that ``get_challenge`` swallowed with
+    ``print(f"Failed with {link=}")``.
+    """
+
+
 def parse_image(html: str, image_id: int, challenge_id: int) -> ImageRecord:
     soup = soupify(html)
 
@@ -70,6 +84,9 @@ def parse_image_stats(html: str, soup: BeautifulSoup | None = None) -> ImageStat
     average and its finishing place, so those come back as ``None``.
     """
     soup = soup if soup is not None else soupify(html)
+    if _BREAKDOWN_START not in html:
+        msg = "no voting-breakdown panel on the page; is the session logged in?"
+        raise ImageStatsUnavailableError(msg)
     section = _breakdown_section(html)
 
     votes = tuple(

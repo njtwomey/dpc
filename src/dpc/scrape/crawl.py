@@ -20,6 +20,9 @@ from dpc.parse import challenge as challenge_parser
 from dpc.parse import history as history_parser
 from dpc.parse import image as image_parser
 from dpc.parse import member as member_parser
+from dpc.parse.image import ImageStatsUnavailableError
+from dpc.parse.member import MemberProfileUnavailableError
+from dpc.parse.types import MemberRecord
 from dpc.scrape.cache import HtmlCache
 from dpc.scrape.client import DpcClient
 from dpc.scrape.store import (
@@ -102,6 +105,18 @@ class Crawler:
         for challenge_id in challenge_ids:
             try:
                 self._crawl_challenge(challenge_id, stats, with_images=with_images)
+            except ImageStatsUnavailableError:
+                # The voting-breakdown panel is served only to a logged-in
+                # session. If it has gone missing the session has expired, and
+                # every subsequent image would fail the same way -- so stop
+                # rather than work through thousands of pointless requests.
+                self._session.rollback()
+                logger.error(
+                    "challenge {}: no voting breakdown, so the session is no longer "
+                    "logged in. Stopping.",
+                    challenge_id,
+                )
+                raise
             except Exception:
                 logger.exception("challenge {} failed", challenge_id)
                 stats.failures.append(challenge_id)
@@ -170,7 +185,13 @@ class Crawler:
             return
 
         html = self._page("member", member_id, MEMBER_PATH.format(id=member_id))
-        record = member_parser.parse_member(html, member_id, fallback_name=fallback_name)
+        try:
+            record = member_parser.parse_member(html, member_id, fallback_name=fallback_name)
+        except MemberProfileUnavailableError as error:
+            # An unreadable profile must not abandon the image that referenced
+            # it: record what the comment already told us and move on.
+            logger.warning("member {}: {}; storing name only", member_id, error)
+            record = MemberRecord(id=member_id, name=fallback_name, join_date=None)
         upsert_member(self._session, record)
         self._known_members.add(member_id)
 

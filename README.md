@@ -22,8 +22,13 @@ database, no credentials and no network access to dpchallenge.
 
 ```bash
 uv sync
-cp .env.example .env      # then fill in DPC_USERNAME and DPC_PASSWORD
+cp .env.example .env
+chmod 600 .env            # it will hold a plaintext password
+# then fill in DPC_USERNAME and DPC_PASSWORD
 ```
+
+Every `dpc` command warns if `.env` is readable beyond its owner; `make secure`
+fixes it.
 
 Credentials live only in `.env`, which is gitignored. The password is held as a
 `SecretStr`, so it cannot reach a log line, a repr or a traceback —

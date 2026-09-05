@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from loguru import logger
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings, CliApp, CliSubCommand, SettingsConfigDict
 from rich.console import Console
@@ -17,7 +18,7 @@ from rich.table import Table
 from dpc.awards.asigmatic import grant_asigmatics
 from dpc.awards.catalog import AwardCatalog
 from dpc.awards.service import find_grants, sync_catalog
-from dpc.config import PROJECT_ROOT, Credentials, Settings
+from dpc.config import PROJECT_ROOT, Credentials, Settings, env_file_permission_warning
 from dpc.db.migrate import upgrade
 from dpc.db.session import create_db_engine, create_session_factory, session_scope
 from dpc.export.build import build_site_data
@@ -210,6 +211,9 @@ class Cli(BaseSettings):
 
     def cli_cmd(self) -> None:
         configure_logging(verbose=self.verbose)
+        warning = env_file_permission_warning()
+        if warning:
+            logger.warning(warning)
         CliApp.run_subcommand(self)
 
 
