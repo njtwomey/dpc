@@ -28,6 +28,7 @@ from typing import Any
 
 from loguru import logger
 from sqlalchemy import Engine, create_engine, text
+from sqlalchemy.engine import make_url
 from sqlalchemy.orm import Session
 
 from dpc.db.migrate import stamp
@@ -69,8 +70,20 @@ def _copy(
     return total
 
 
-def migrate(source_url: str, target_url: str) -> dict[str, int]:
+def migrate(source_url: str, target_url: str, *, overwrite: bool = False) -> dict[str, int]:
     source = create_engine(source_url)
+
+    target_file = Path(make_url(target_url).database or "")
+    if overwrite and target_file.is_file():
+        logger.warning("removing existing {}", target_file)
+        target_file.unlink()
+    elif target_file.is_file() and target_file.stat().st_size > 0:
+        msg = (
+            f"{target_file} already exists. A partial load cannot be resumed; "
+            f"pass --overwrite to start again."
+        )
+        raise SystemExit(msg)
+
     target = create_db_engine(target_url)
     create_all(target)
 
@@ -164,12 +177,22 @@ def migrate(source_url: str, target_url: str) -> dict[str, int]:
             "awards",
         )
 
-        # awards -> award_grants
+        # awards -> award_grants.
+        #
+        # DISTINCT ON collapses the handful of cases where an awarder mentioned
+        # the same award on the same image in more than one comment. The award
+        # was given once; the repeat is an artefact of matching on comments. The
+        # earliest comment wins, which is exactly what awards.find_grants does,
+        # so a migrated database matches one rebuilt from scratch.
         counts["award_grants"] = _copy(
             session,
             source,
-            """SELECT id, bling_id, user_id, comment_id, image_id, challenge_id
-               FROM awards ORDER BY id""",
+            """SELECT DISTINCT ON (a.bling_id, a.image_id)
+                      a.id, a.bling_id, a.user_id, a.comment_id,
+                      a.image_id, a.challenge_id
+               FROM awards a
+               LEFT JOIN comments c ON c.id = a.comment_id
+               ORDER BY a.bling_id, a.image_id, c.date NULLS LAST, a.comment_id""",
             lambda r: AwardGrant(
                 id=r["id"],
                 award_id=r["bling_id"],
@@ -200,10 +223,11 @@ def main() -> int:
         default=f"sqlite+pysqlite:///{Path.cwd() / 'dpc.sqlite'}",
         help="SQLAlchemy URL of the SQLite file to create",
     )
+    parser.add_argument("--overwrite", action="store_true", help="Delete an existing target first")
     args = parser.parse_args()
 
     configure(verbose=False)
-    counts = migrate(args.source, args.target)
+    counts = migrate(args.source, args.target, overwrite=args.overwrite)
     for table, count in counts.items():
         print(f"{table:>14}: {count:,}")
     return 0

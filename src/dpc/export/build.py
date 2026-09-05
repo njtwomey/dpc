@@ -33,9 +33,9 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
     members = {m.id: m for m in session.scalars(select(Member))}
     challenges = {c.id: c for c in session.scalars(select(Challenge))}
 
-    # An OUTER join: derived awards (asigmatic) carry no comment, and an inner
-    # join drops them from the export entirely. They are dated by the challenge's
-    # voting_end, which is when the vote spread they are computed from was fixed.
+    # An OUTER join, because AwardGrant.comment_id is nullable: an inner join
+    # would silently drop any grant without one instead of failing. Such a grant
+    # is dated by its challenge's voting_end.
     grants = list(
         session.scalars(
             select(AwardGrant)

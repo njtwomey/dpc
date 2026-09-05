@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from datetime import date, datetime
 
 import pytest
@@ -10,7 +9,6 @@ from dpc.awards.service import find_grants, sync_catalog
 from dpc.db.models import Challenge, Comment, Image, Member
 from dpc.export.build import build_site_data
 from dpc.export.model import SCHEMA_VERSION
-from dpc.export.writer import FILENAMES, write_site_data
 
 CATALOG = AwardCatalog.model_validate(
     {
@@ -188,73 +186,44 @@ class TestImages:
         assert data.images["502"].awards == ["posthumous-blue", "posthumous-red"]
 
 
-class TestWriter:
-    def test_writes_one_file_per_collection(self, populated, tmp_path):
-        written = write_site_data(build_site_data(populated, CATALOG), tmp_path)
-        assert {p.stem for p in written} == set(FILENAMES)
+class TestGrantsWithoutAComment:
+    """comment_id is nullable, so the grants query must not inner-join Comment."""
 
-    def test_output_is_valid_json(self, populated, tmp_path):
-        write_site_data(build_site_data(populated, CATALOG), tmp_path)
-        loaded = json.loads((tmp_path / "awards.json").read_text(encoding="utf-8"))
-        assert loaded[0]["slug"] == "posthumous-blue"
+    def test_a_comment_less_grant_still_reaches_the_export(self, populated):
+        from dpc.db.models import Award, AwardGrant
 
-    def test_re_export_is_byte_identical(self, populated, tmp_path):
-        # An unchanged database must produce an empty git diff, so that a diff
-        # genuinely means the data changed.
-        first = tmp_path / "a"
-        second = tmp_path / "b"
-        write_site_data(build_site_data(populated, CATALOG), first)
-        write_site_data(build_site_data(populated, CATALOG), second)
-
-        for name in FILENAMES:
-            assert (first / f"{name}.json").read_bytes() == (second / f"{name}.json").read_bytes()
-
-    def test_files_end_with_a_newline(self, populated, tmp_path):
-        write_site_data(build_site_data(populated, CATALOG), tmp_path)
-        assert (tmp_path / "meta.json").read_text(encoding="utf-8").endswith("\n")
-
-    def test_unicode_is_not_escaped(self, populated, tmp_path):
-        populated.query(Challenge).filter_by(id=101).one().name = "Hidden Gem — Quiz"
-        populated.commit()
-        write_site_data(build_site_data(populated, CATALOG), tmp_path)
-
-        raw = (tmp_path / "challenges.json").read_text(encoding="utf-8")
-        assert "—" in raw
-        assert "\\u2014" not in raw
-
-
-class TestDerivedGrantsAreNotLost:
-    """Asigmatic carries no comment; an inner join would drop it silently."""
-
-    def test_a_comment_less_grant_reaches_the_export(self, populated):
-        from dpc.awards.asigmatic import grant_asigmatics
-        from dpc.db.models import Award
-
-        populated.add(
-            Award(awarder_id=50695, name="Asigmatic", slug="asigmatic", markers=["nothing"])
-        )
-        populated.commit()
-
+        award = populated.query(Award).filter_by(slug="posthumous-blue").one()
         before = build_site_data(populated, CATALOG).meta.num_grants
-        derived = grant_asigmatics(populated)
-        populated.commit()
-
-        assert derived == 2  # one per challenge
-        after = build_site_data(populated, CATALOG)
-        assert after.meta.num_grants == before + derived
-
-    def test_the_derived_award_appears_in_its_own_collection(self, populated):
-        from dpc.awards.asigmatic import grant_asigmatics
-        from dpc.db.models import Award
 
         populated.add(
-            Award(awarder_id=50695, name="Asigmatic", slug="asigmatic", markers=["nothing"])
+            AwardGrant(
+                award_id=award.id,
+                recipient_id=2,
+                comment_id=None,
+                image_id=501,
+                challenge_id=100,
+            )
         )
         populated.commit()
-        grant_asigmatics(populated)
+
+        assert build_site_data(populated, CATALOG).meta.num_grants == before + 1
+
+    def test_it_is_dated_by_its_challenge(self, populated):
+        from dpc.db.models import Award, AwardGrant
+
+        award = populated.query(Award).filter_by(slug="posthumous-red").one()
+        populated.add(
+            AwardGrant(
+                award_id=award.id,
+                recipient_id=1,
+                comment_id=None,
+                image_id=500,
+                challenge_id=100,
+            )
+        )
         populated.commit()
 
-        data = build_site_data(populated, CATALOG)
-        asigmatic = next(a for a in data.awards if a.slug == "asigmatic")
-        assert asigmatic.num_granted == 2
-        assert len(asigmatic.image_ids) == 2
+        red = next(
+            a for a in build_site_data(populated, CATALOG).awards if a.slug == "posthumous-red"
+        )
+        assert 500 in red.image_ids

@@ -123,7 +123,7 @@ src/dpc/
                 database — which is what makes them testable
   scrape/       HTTP client, HTML cache, and the crawler that composes the above
   db/           SQLAlchemy models and session handling
-  awards/       the award catalogue, comment matching, and derived awards
+  awards/       the award catalogue and comment matching
   export/       database to deterministic JSON
 site/
   content/*/_content.gotmpl   content adapters: every award, challenge and
@@ -143,6 +143,11 @@ blank, slugs must be unique across awarders, and no awarder may have two awards
 whose markers contain one another — that last rule exists because `vlado`'s
 MUAIMHO marker is the bare `Copyrighted_Image_Reuse_Prohibited_` prefix, which
 matches every embedded image and is only safe while it is their only award.
+
+Awards are only ever found in comments that actually gave them; nothing is
+derived after the fact. Matching ignores anything a comment *quotes*, because
+replying to an award copies its image into the reply and would otherwise award
+it twice — see <https://www.dpchallenge.com/image.php?IMAGE_ID=1160121>.
 
 ## Development
 

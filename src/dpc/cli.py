@@ -15,7 +15,6 @@ from pydantic_settings import BaseSettings, CliApp, CliSubCommand, SettingsConfi
 from rich.console import Console
 from rich.table import Table
 
-from dpc.awards.asigmatic import grant_asigmatics
 from dpc.awards.catalog import AwardCatalog
 from dpc.awards.service import find_grants, sync_catalog
 from dpc.config import PROJECT_ROOT, Credentials, Settings, env_file_permission_warning
@@ -114,7 +113,6 @@ class Awards(_Command):
     """Sync the award catalogue and find the awards hiding in comments."""
 
     catalog: Path = Field(DEFAULT_CATALOG, description="Award catalogue YAML.")
-    asigmatic: bool = Field(True, description="Also derive the Asigmatic award.")
 
     def cli_cmd(self) -> None:
         settings = self.settings()
@@ -125,7 +123,6 @@ class Awards(_Command):
         with session_scope(factory) as session:
             report = sync_catalog(session, catalog)
             granted = find_grants(session, catalog)
-            derived = grant_asigmatics(session) if self.asigmatic else 0
 
         engine.dispose()
         console.print(
@@ -136,7 +133,6 @@ class Awards(_Command):
                     ("awards updated", report.updated),
                     ("awards unchanged", report.unchanged),
                     ("grants from comments", granted),
-                    ("grants derived (asigmatic)", derived),
                 ],
             )
         )
