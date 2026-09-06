@@ -101,12 +101,24 @@ export function ImageViewer({
                   onClick={() => step(-1)} aria-label="Previous">
             <ChevronLeft className="size-5" />
           </Button>
-          <img
-            key={image.id}
-            src={imageUrl(image.challenge_id, image.id)}
-            alt={image.title}
-            className="max-h-full max-w-full object-contain"
-          />
+          {/* The photograph is itself the way out to dpchallenge. The file on
+              its own shows the picture and nothing else; the image page carries
+              the comment the award was given in, and the conversation around
+              it, which is the part worth reading. */}
+          <a
+            href={imagePage(image.id)}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${image.title} on DPChallenge`}
+            className="flex h-full items-center justify-center"
+          >
+            <img
+              key={image.id}
+              src={imageUrl(image.challenge_id, image.id)}
+              alt={image.title}
+              className="max-h-full max-w-full object-contain"
+            />
+          </a>
           <Button variant="secondary" size="icon"
                   className="absolute right-3 z-10 rounded-full shadow-md"
                   onClick={() => step(1)} aria-label="Next">
@@ -126,7 +138,16 @@ export function ImageViewer({
               </Badge>
             ) : null
           })}
-          <span className="text-muted-foreground ml-auto text-xs tabular-nums">
+          <a
+            href={imagePage(image.id)}
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-foreground ml-auto flex shrink-0 items-center gap-1 text-xs"
+          >
+            <span className="hover:underline">Comments on DPChallenge</span>
+            <Out />
+          </a>
+          <span className="text-muted-foreground shrink-0 text-xs tabular-nums">
             {index + 1} / {images.length}
           </span>
         </div>
