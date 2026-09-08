@@ -110,7 +110,12 @@ export function ImageViewer({
             target="_blank"
             rel="noreferrer"
             aria-label={`${image.title} on DPChallenge`}
-            className="flex h-full items-center justify-center"
+            // min-w-0/max-w-full so the anchor shrinks to the frame. Images are
+            // requested at 1200px and the frame is narrower, so without this a
+            // flex item's automatic minimum size can hold it at full width and
+            // DialogContent's overflow-hidden crops the photograph instead of
+            // letterboxing it.
+            className="flex h-full min-w-0 max-w-full items-center justify-center"
           >
             <img
               key={image.id}
