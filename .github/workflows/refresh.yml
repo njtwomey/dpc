@@ -32,7 +32,9 @@ env:
   # Everything runs against a scratch database rebuilt from backups/sql. The
   # real one never leaves the laptop, and nothing here needs it.
   DPC_DATABASE_URL: sqlite+pysqlite:///${{ github.workspace }}/refresh.sqlite
-  DPC_CACHE_DIR: ${{ runner.temp }}/dpc_cache
+  # Workspace, not runner.temp: the runner context does not exist at workflow
+  # level. Both paths are gitignored, so neither reaches a commit.
+  DPC_CACHE_DIR: ${{ github.workspace }}/dpc_cache
 
 jobs:
   refresh:
