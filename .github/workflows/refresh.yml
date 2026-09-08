@@ -1,0 +1,132 @@
+name: refresh
+
+# Weekly: rebuild the archive from the committed SQL, fetch whatever
+# dpchallenge has run since, commit the result and publish.
+#
+# One workflow, two jobs, deliberately. A push made with the default
+# GITHUB_TOKEN does not trigger other workflows, so a design that committed
+# here and relied on deploy.yml noticing would update the data and then never
+# publish it. Keeping the build in this run also keeps a refresh to a single
+# Actions run.
+on:
+  schedule:
+    - cron: "17 6 * * 1" # Mondays, 06:17 UTC
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Commit and publish the result"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write # commits the refreshed data back to main
+  pages: write
+  id-token: write
+
+# Shared with deploy.yml: two things must never publish at once.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Everything runs against a scratch database rebuilt from backups/sql. The
+  # real one never leaves the laptop, and nothing here needs it.
+  DPC_DATABASE_URL: sqlite+pysqlite:///${{ github.workspace }}/refresh.sqlite
+  DPC_CACHE_DIR: ${{ runner.temp }}/dpc_cache
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - run: uv sync --locked
+
+      - name: Rebuild the archive from the committed SQL
+        run: uv run python scripts/restore_sql.py --from backups/sql --to refresh.sqlite
+
+      # --anonymous: challenge results, image pages (statistics and the full
+      # comment thread) and profiles are all public, so this needs no secrets.
+      # See docs/automated-refresh.md for the evidence.
+      - name: Fetch new challenges
+        run: uv run dpc scrape --anonymous --from-history
+
+      # Fails the run on an integrity contradiction, which stops a wrong site
+      # from being published. Missing data and inherited artefacts only report.
+      - name: Verify
+        run: uv run dpc verify
+
+      - name: Match awards
+        run: uv run dpc awards
+
+      - name: Export the site data
+        run: uv run dpc export
+
+      - name: Rewrite the SQL backup
+        run: uv run python scripts/dump_sql.py --out backups/sql
+
+      - name: Commit if anything changed
+        id: commit
+        run: |
+          if git diff --quiet -- site/data/dpc backups/sql; then
+            echo "nothing new since the last refresh"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --stat -- site/data/dpc backups/sql
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+             && [ "${{ inputs.publish }}" != "true" ]; then
+            echo "dry run: not committing"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/dpc backups/sql
+          git commit -m "Refresh the archive from dpchallenge"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/configure-pages@v6
+        if: steps.commit.outputs.changed == 'true'
+        id: pages
+
+      - name: Install site dependencies
+        if: steps.commit.outputs.changed == 'true'
+        run: npm ci
+        working-directory: site
+
+      - name: Build
+        if: steps.commit.outputs.changed == 'true'
+        run: npm run build
+        working-directory: site
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path || '/' }}
+
+      - uses: actions/upload-pages-artifact@v5
+        if: steps.commit.outputs.changed == 'true'
+        with:
+          path: site/dist
+
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
