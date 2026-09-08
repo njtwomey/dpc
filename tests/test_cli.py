@@ -42,6 +42,11 @@ class TestArgumentParsing:
         assert _scrape(["scrape"]).images is True
         assert _scrape(["scrape", "--no-images"]).images is False
 
+    def test_anonymous_is_off_by_default_and_can_be_set(self):
+        # CI has no secrets; a local run logs in. Both must be expressible.
+        assert _scrape(["scrape"]).anonymous is False
+        assert _scrape(["scrape", "--anonymous"]).anonymous is True
+
     def test_out_defaults_to_none_meaning_the_settings_value(self):
         export = _parse(["export"]).export
         assert export is not None

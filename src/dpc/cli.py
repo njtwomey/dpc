@@ -74,6 +74,9 @@ class Scrape(_Command):
     )
     refresh: bool = Field(False, description="Ignore the HTML cache and refetch.")
     images: bool = Field(True, description="Follow image pages. --no-images for metadata only.")
+    anonymous: bool = Field(
+        False, description="Scrape without logging in. Every page the crawler reads is public."
+    )
 
     def cli_cmd(self) -> None:
         settings = self.settings()
@@ -85,8 +88,14 @@ class Scrape(_Command):
         factory = create_session_factory(engine)
         cache = HtmlCache(settings.cache_dir)
 
-        with DpcClient(settings, Credentials()) as client:
-            client.login()
+        # Anonymous works: challenge results, image pages (statistics and the
+        # full comment thread) and profiles are all public. Logging in is the
+        # polite default for a site we have permission to scrape; --anonymous
+        # is what lets CI run with no secrets at all.
+        credentials = None if self.anonymous else Credentials()
+        with DpcClient(settings, credentials) as client:
+            if credentials is not None:
+                client.login()
             with session_scope(factory) as session:
                 crawler = Crawler(client, session, cache, refresh=self.refresh)
                 if self.challenge:
