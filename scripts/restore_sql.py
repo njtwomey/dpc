@@ -49,10 +49,20 @@ def find(source: Path, name: str) -> Path | None:
 
 
 def read(path: Path) -> str:
+    """Read a dump verbatim.
+
+    ``newline=""`` matters: comment HTML contains carriage returns, and the
+    default universal-newline translation would rewrite every ``\r`` to ``\n``
+    on the way in. That is invisible until you dump the restored database and
+    diff it against the file you restored from -- 21,806 characters of the
+    archive quietly changed.
+    """
     if path.suffix == ".gz":
-        with gzip.open(path, "rt", encoding="utf-8") as handle:
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as handle:
             return handle.read()
-    return path.read_text(encoding="utf-8")
+    # Path.read_text gained newline= only in 3.13; open() has always had it.
+    with path.open(encoding="utf-8", newline="") as handle:
+        return handle.read()
 
 
 def restore(source: Path, target: Path, *, overwrite: bool = False) -> dict[str, int]:

@@ -107,9 +107,13 @@ def _literal(value: Any) -> str:
 
 
 def _open(path: Path, *, compress: bool) -> AbstractContextManager[IO[str]]:
+    # newline="" on both sides of the round trip: without it the reader would
+    # translate the carriage returns in comment HTML, and the writer would
+    # translate line endings per platform. The dump is committed, so it has to
+    # come out identical on a laptop and on a runner.
     if compress:
-        return gzip.open(path, "wt", encoding="utf-8")
-    return path.open("w", encoding="utf-8")
+        return gzip.open(path, "wt", encoding="utf-8", newline="")
+    return path.open("w", encoding="utf-8", newline="")
 
 
 def _count(connection: sqlite3.Connection, select: str) -> int:
