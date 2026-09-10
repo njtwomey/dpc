@@ -1,0 +1,49 @@
+-- comments for challenge 2995
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7655291, 1246309, 59737, '<td valign="top">love it, that''s quite the speed bump, was this done with perspective warp or merging two photos</td>', 'love it, that''s quite the speed bump, was this done with perspective warp or merging two photos', '2020-03-11 19:19:35.000000', NULL, 1),
+(7655292, 1246552, 59737, '<td valign="top">would have scored better for me if the figure on the sign had been turned into a more alien looking shape, the selective color is interesting</td>', 'would have scored better for me if the figure on the sign had been turned into a more alien looking shape, the selective color is interesting', '2020-03-11 19:20:30.000000', NULL, 1),
+(7655293, 1246557, 59737, '<td valign="top">the title is great gave me a laugh</td>', 'the title is great gave me a laugh', '2020-03-11 19:20:54.000000', NULL, 1),
+(7655308, 1246561, 98565, '<td valign="top">I like the idea, the atmosphere and the fighter on the right. The backside of the opponent is somewhat scary because the neck seems to expire in the air and has no connection to the sign/head. At least it is not visible for me.<br/>The "Stop Man" alone would have been sufficient for a high score imo - even higher than the 8 I''m giving now.</td>', 'I like the idea, the atmosphere and the fighter on the right. The backside of the opponent is somewhat scary because the neck seems to expire in the air and has no connection to the sign/head. At least it is not visible for me.The "Stop Man" alone would have been sufficient for a high score imo - even higher than the 8 I''m giving now.', '2020-03-12 12:28:33.000000', NULL, 1),
+(7655309, 1246309, 98565, '<td valign="top">I''ts more about the street than the sign... but that is fantastically done!</td>', 'I''ts more about the street than the sign... but that is fantastically done!', '2020-03-12 12:30:15.000000', NULL, 1),
+(7655338, 1246309, 181505, '<td valign="top">This is so cool! Well done!! My pick for the blue!</td>', 'This is so cool! Well done!! My pick for the blue!', '2020-03-13 09:16:32.000000', NULL, 1),
+(7655339, 1246544, 181505, '<td valign="top">I worked in NYC years ago and locked up my bike through the tires. I came out and someone had stolen my seat!</td>', 'I worked in NYC years ago and locked up my bike through the tires. I came out and someone had stolen my seat!', '2020-03-13 09:30:10.000000', NULL, 1),
+(7655374, 1246557, 42733, '<td valign="top">LOLOLOL.</td>', 'LOLOLOL.', '2020-03-14 09:11:34.000000', NULL, 1),
+(7655376, 1246570, 42733, '<td valign="top">Haha!</td>', 'Haha!', '2020-03-14 09:12:03.000000', NULL, 1),
+(7655377, 1246237, 42733, '<td valign="top">Clever!</td>', 'Clever!', '2020-03-14 09:12:38.000000', NULL, 1),
+(7655382, 1246552, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2020-03-14 09:14:17.000000', NULL, 1),
+(7655479, 1246570, 100831, '<td valign="top">Excellent!</td>', 'Excellent!', '2020-03-15 16:26:35.000000', NULL, 1),
+(7655582, 1246570, 86447, '<td valign="top">Hahahaha!  I love it!</td>', 'Hahahaha!  I love it!', '2020-03-16 16:09:51.000000', NULL, 1),
+(7655583, 1246572, 86447, '<td valign="top">LOL!</td>', 'LOL!', '2020-03-16 16:10:27.000000', NULL, 1),
+(7655608, 1246309, 124729, '<td valign="top">My favourite in the challenge, very nice! :-)</td>', 'My favourite in the challenge, very nice! :-)', '2020-03-17 06:22:34.000000', NULL, 1),
+(7655666, 1246570, 97225, '<td valign="top">Nice creation. Top 3.</td>', 'Nice creation. Top 3.', '2020-03-17 22:50:26.000000', NULL, 1),
+(7655667, 1246309, 97225, '<td valign="top">Oh, the poor guy''s not going to see that till it''s too late. Lol. Top two.</td>', 'Oh, the poor guy''s not going to see that till it''s too late. Lol. Top two.', '2020-03-17 22:50:49.000000', NULL, 1),
+(7655668, 1246561, 97225, '<td valign="top">I love your interpretation and your execution. Top shot. 10</td>', 'I love your interpretation and your execution. Top shot. 10', '2020-03-17 22:51:52.000000', NULL, 1),
+(7655687, 1246309, 114285, '<td valign="top">This was brilliant Larry, and my top pick! Well deserving of the blue.</td>', 'This was brilliant Larry, and my top pick! Well deserving of the blue.', '2020-03-18 00:48:15.000000', NULL, 0),
+(7655692, 1246309, 141319, '<td valign="top">Brilliant, congratulations, and I love the new title :-)<br/></td>', 'Brilliant, congratulations, and I love the new title :-)', '2020-03-18 02:12:01.000000', NULL, 0),
+(7655693, 1246570, 141319, '<td valign="top">:-) <br/>Very clever, congratulations</td>', ':-) Very clever, congratulations', '2020-03-18 02:12:51.000000', NULL, 0),
+(7655695, 1246570, 114285, '<td valign="top">Lol, you did all that :) ha, good on you it paid off!</td>', 'Lol, you did all that :) ha, good on you it paid off!', '2020-03-18 05:34:40.000000', NULL, 0),
+(7655696, 1246561, 114285, '<td valign="top">Really freaky, my second pick.</td>', 'Really freaky, my second pick.', '2020-03-18 05:35:04.000000', NULL, 0),
+(7655697, 1246237, 114285, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by spencelg:</b></div><hr/><i> Clever! </i></td></tr></table> ditto!</td>', 'Originally posted by spencelg: Clever!  ditto!', '2020-03-18 05:35:45.000000', NULL, 0),
+(7655700, 1246309, 135744, '<td valign="top">Very clever! Congrats on a well deserved blue!</td>', 'Very clever! Congrats on a well deserved blue!', '2020-03-18 07:46:28.000000', NULL, 0),
+(7655704, 1246309, 123833, '<td valign="top">Great image and amazing score, and a new PB!! Congrats!</td>', 'Great image and amazing score, and a new PB!! Congrats!', '2020-03-18 08:01:56.000000', NULL, 0),
+(7655705, 1246570, 123833, '<td valign="top">Love the idea, congrats on the Red</td>', 'Love the idea, congrats on the Red', '2020-03-18 08:03:08.000000', NULL, 0),
+(7655706, 1246561, 135744, '<td valign="top">Weird but wonderful! Congrats!</td>', 'Weird but wonderful! Congrats!', '2020-03-18 08:38:10.000000', NULL, 0),
+(7655715, 1246579, 38162, '<td valign="top">this is the best - 10 from me but border totally unnecessary.  congrats.</td>', 'this is the best - 10 from me but border totally unnecessary.  congrats.', '2020-03-18 10:58:25.000000', NULL, 0),
+(7655729, 1246309, 140305, '<td valign="top">Congrats on the blue! That''s one speed bump that''s gonna hurt :o</td>', 'Congrats on the blue! That''s one speed bump that''s gonna hurt :o', '2020-03-18 11:58:32.000000', NULL, 0),
+(7655730, 1246309, 86447, '<td valign="top">Brilliant, Larry!<br/> <br/>Congratulations on your BLUE!!<br/></td>', 'Brilliant, Larry! Congratulations on your BLUE!!', '2020-03-18 12:13:18.000000', NULL, 0),
+(7655731, 1246570, 86447, '<td valign="top">Hilarious!   So much fun!<br/> <br/>Congrats on your RIBBON!<br/> <br/></td>', 'Hilarious!   So much fun! Congrats on your RIBBON! ', '2020-03-18 12:13:56.000000', NULL, 0),
+(7655732, 1246561, 86447, '<td valign="top">Bizarre and cool.<br/> <br/>COngratulations on your RIBBON!<br/></td>', 'Bizarre and cool. COngratulations on your RIBBON!', '2020-03-18 12:16:55.000000', NULL, 0),
+(7655736, 1246237, 140305, '<td valign="top">Congrats on the HM Lydia, and cheers!</td>', 'Congrats on the HM Lydia, and cheers!', '2020-03-18 12:51:52.000000', NULL, 0),
+(7655739, 1246579, 153275, '<td valign="top">10 from me too!<br/>(???)</td>', '10 from me too!(???)', '2020-03-18 13:29:49.000000', NULL, 0),
+(7655755, 1246579, 118703, '<td valign="top">congratulations Marion on top 5,great image, well created and cropped,</td>', 'congratulations Marion on top 5,great image, well created and cropped,', '2020-03-18 20:04:49.000000', NULL, 0),
+(7655756, 1246561, 97225, '<td valign="top">Congrats on the ribbon. I love it.</td>', 'Congrats on the ribbon. I love it.', '2020-03-18 21:07:24.000000', NULL, 0),
+(7655758, 1246309, 97225, '<td valign="top">Congrats on the blue, Larry. Clever and well done.</td>', 'Congrats on the blue, Larry. Clever and well done.', '2020-03-18 21:43:45.000000', NULL, 0),
+(7655762, 1246309, 67145, '<td valign="top">many congratulation on the blue for this fantastic and imaginative creation . .<br/>were you as imaginative and creative as a dentist . ??!! .. <br/>my previous dentist was way ahead of his time and did some things to me that were probably quite experimental in those days .. i''m still here ... so its all good .. ;)</td>', 'many congratulation on the blue for this fantastic and imaginative creation . .were you as imaginative and creative as a dentist . ??!! .. my previous dentist was way ahead of his time and did some things to me that were probably quite experimental in those days .. i''m still here ... so its all good .. ;)', '2020-03-19 01:13:18.000000', NULL, 0),
+(7655763, 1246570, 97225, '<td valign="top">Congrats on the red, Mary Ann. Well done. (I hope that''s not a well used road.)</td>', 'Congrats on the red, Mary Ann. Well done. (I hope that''s not a well used road.)', '2020-03-19 01:45:30.000000', NULL, 0),
+(7655764, 1246237, 97225, '<td valign="top">Congrats on the HM, Lydia. The background makes me feel like I''ve been at that bar for too many drinks.</td>', 'Congrats on the HM, Lydia. The background makes me feel like I''ve been at that bar for too many drinks.', '2020-03-19 01:47:23.000000', NULL, 0),
+(7655784, 1246570, 68504, '<td valign="top">perfect.</td>', 'perfect.', '2020-03-19 13:36:34.000000', NULL, 0),
+(7655785, 1246279, 68504, '<td valign="top">profound.</td>', 'profound.', '2020-03-19 13:38:17.000000', NULL, 0),
+(7655822, 1246309, 182284, '<td valign="top">Awesome! Great job and Congratulations!</td>', 'Awesome! Great job and Congratulations!', '2020-03-19 22:04:00.000000', NULL, 0);
+COMMIT;

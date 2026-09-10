@@ -1,0 +1,39 @@
+-- comments for challenge 3550
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7739040, 1276227, 27608, '<td valign="top">My favorite of the challenge!  Love the subject, angle and the story being told here!</td>', 'My favorite of the challenge!  Love the subject, angle and the story being told here!', '2023-02-24 00:39:47.000000', NULL, 1),
+(7739041, 1276230, 27608, '<td valign="top">LOL!!  Godzilla is making the DPC rounds :)</td>', 'LOL!!  Godzilla is making the DPC rounds :)', '2023-02-24 00:40:41.000000', NULL, 1),
+(7739042, 1276254, 27608, '<td valign="top">Interesting beer glass!</td>', 'Interesting beer glass!', '2023-02-24 00:41:05.000000', NULL, 1),
+(7739053, 1276254, 163081, '<td valign="top">Kwak?</td>', 'Kwak?', '2023-02-24 07:19:27.000000', NULL, 1),
+(7739068, 1276266, 27608, '<td valign="top">Decent composition, but the door being ever so angled is throwing me off.  As well, without your title, I''d never have known it was a brewing company.  Just looks like a restaurant.</td>', 'Decent composition, but the door being ever so angled is throwing me off.  As well, without your title, I''d never have known it was a brewing company.  Just looks like a restaurant.', '2023-02-24 19:10:30.000000', NULL, 1),
+(7739069, 1276228, 27608, '<td valign="top">My kind of job!!</td>', 'My kind of job!!', '2023-02-24 19:10:41.000000', NULL, 1),
+(7739070, 1276125, 27608, '<td valign="top">Great DOF.</td>', 'Great DOF.', '2023-02-24 19:11:30.000000', NULL, 1),
+(7739071, 1276269, 27608, '<td valign="top">What does 25518 mean?</td>', 'What does 25518 mean?', '2023-02-24 19:11:43.000000', NULL, 1),
+(7739072, 1276267, 27608, '<td valign="top">The Beer Store...where the Beers are</td>', 'The Beer Store...where the Beers are', '2023-02-24 19:12:14.000000', NULL, 1),
+(7739073, 1276257, 27608, '<td valign="top">For some reason this is making me think of Orangesicles</td>', 'For some reason this is making me think of Orangesicles', '2023-02-24 19:13:02.000000', NULL, 1),
+(7739323, 1276227, 28742, '<td valign="top">If I had one of these, I''d use it as a sensory deprivation tank. ;P</td>', 'If I had one of these, I''d use it as a sensory deprivation tank. ;P', '2023-02-28 23:25:44.000000', NULL, 1),
+(7739324, 1276257, 28742, '<td valign="top">No, I did not slurp the screen. Didn''t even think about it. ;-)</td>', 'No, I did not slurp the screen. Didn''t even think about it. ;-)', '2023-02-28 23:27:07.000000', NULL, 1),
+(7739325, 1276213, 28742, '<td valign="top">Hmm, no checks or credit cards? Put it on my tab then.</td>', 'Hmm, no checks or credit cards? Put it on my tab then.', '2023-02-28 23:28:00.000000', NULL, 1),
+(7739326, 1276269, 28742, '<td valign="top">One of each, my good fellow.</td>', 'One of each, my good fellow.', '2023-02-28 23:28:57.000000', NULL, 1),
+(7739327, 1276267, 28742, '<td valign="top">None.Of.It.Is.COLD. ;p</td>', 'None.Of.It.Is.COLD. ;p', '2023-02-28 23:29:36.000000', NULL, 1),
+(7739328, 1276228, 28742, '<td valign="top">Tough job, but someone''s gotta do it.</td>', 'Tough job, but someone''s gotta do it.', '2023-02-28 23:30:17.000000', NULL, 1),
+(7739329, 1276270, 28742, '<td valign="top">Glug, Glug Glug, and Glug Glug Glug? :)</td>', 'Glug, Glug Glug, and Glug Glug Glug? :)', '2023-02-28 23:31:15.000000', NULL, 1),
+(7739469, 1276271, 8759, '<td valign="top">I have a friend who introduced me to Bundaberg. Whilst not a fan of ginger beer I do very much enjoy the Lemon Lime &amp; Bitters. My friend said he pours a little  in his beer. Good luck!</td>', 'I have a friend who introduced me to Bundaberg. Whilst not a fan of ginger beer I do very much enjoy the Lemon Lime & Bitters. My friend said he pours a little  in his beer. Good luck!', '2023-03-02 22:12:30.000000', NULL, 1),
+(7739470, 1276269, 8759, '<td valign="top">Buy more, save more! But no local bear, George?</td>', 'Buy more, save more! But no local bear, George?', '2023-03-02 22:17:26.000000', NULL, 1),
+(7739480, 1276227, 97225, '<td valign="top">Love the colour and shape of the equipment. My top pick.</td>', 'Love the colour and shape of the equipment. My top pick.', '2023-03-02 23:43:22.000000', NULL, 1),
+(7739481, 1276230, 97225, '<td valign="top">Lol! Earns the red from me.</td>', 'Lol! Earns the red from me.', '2023-03-02 23:44:22.000000', NULL, 1),
+(7739484, 1276227, 27608, '<td valign="top">Congrats on your first blue!!  This was my pic to win.  But geez.  Such low scoring for this challenge.</td>', 'Congrats on your first blue!!  This was my pic to win.  But geez.  Such low scoring for this challenge.', '2023-03-03 00:11:53.000000', NULL, 0),
+(7739485, 1276125, 27608, '<td valign="top">Congrats on the 3rd place!!  Very close race for 1-3</td>', 'Congrats on the 3rd place!!  Very close race for 1-3', '2023-03-03 00:29:02.000000', NULL, 0),
+(7739486, 1276227, 273224, '<td valign="top">I am very happy, thank you, a nice day for me</td>', 'I am very happy, thank you, a nice day for me', '2023-03-03 02:48:51.000000', NULL, 0),
+(7739513, 1276227, 122678, '<td valign="top">Congratulations<br/>A lovely image for this challenge.</td>', 'CongratulationsA lovely image for this challenge.', '2023-03-03 11:14:34.000000', NULL, 0),
+(7739514, 1276270, 122678, '<td valign="top">Very nice Congratulations a top pick for me. Nice Work!</td>', 'Very nice Congratulations a top pick for me. Nice Work!', '2023-03-03 11:15:32.000000', NULL, 0),
+(7739515, 1276125, 122678, '<td valign="top">Congratulations, Very well done and direct.</td>', 'Congratulations, Very well done and direct.', '2023-03-03 11:16:23.000000', NULL, 0),
+(7739516, 1276271, 122678, '<td valign="top">Congrats, I love ginger beer at least the ones I have tried. I will look for this one.</td>', 'Congrats, I love ginger beer at least the ones I have tried. I will look for this one.', '2023-03-03 11:17:22.000000', NULL, 0),
+(7739517, 1276259, 122678, '<td valign="top">A really nice image, it gives me the feeling of Ireland on St. Patricks Day.</td>', 'A really nice image, it gives me the feeling of Ireland on St. Patricks Day.', '2023-03-03 11:18:24.000000', NULL, 0),
+(7739518, 1276230, 122678, '<td valign="top">LOL A top pick for me.</td>', 'LOL A top pick for me.', '2023-03-03 11:19:22.000000', NULL, 0),
+(7739557, 1276271, 118703, '<td valign="top">Congratulations Marion, Had an Australian flavour</td>', 'Congratulations Marion, Had an Australian flavour', '2023-03-03 20:26:26.000000', NULL, 0),
+(7739572, 1276227, 2158, '<td valign="top">Congratulations on you first ribbon.</td>', 'Congratulations on you first ribbon.', '2023-03-04 13:21:33.000000', NULL, 0),
+(7739588, 1276227, 97225, '<td valign="top">Congratulations on your first ribbon and new PB.</td>', 'Congratulations on your first ribbon and new PB.', '2023-03-05 00:19:49.000000', NULL, 0),
+(7739640, 1276125, 29535, '<td valign="top">Thanks for your comments all, I''m kind of shocked this scored highly let alone ribboned as it seemed like a typical ''instagram shot'' I just took as a last minute effort after hitting a bit of a busy period and not being able to dedicate much time. Plus I was a little blocked creatively after throwing everything at the ''Drink'' challenge and didn''t want to just repeat the shot.<br/> <br/>Thank you for your votes though!</td>', 'Thanks for your comments all, I''m kind of shocked this scored highly let alone ribboned as it seemed like a typical ''instagram shot'' I just took as a last minute effort after hitting a bit of a busy period and not being able to dedicate much time. Plus I was a little blocked creatively after throwing everything at the ''Drink'' challenge and didn''t want to just repeat the shot. Thank you for your votes though!', '2023-03-06 04:44:43.000000', NULL, 0);
+COMMIT;

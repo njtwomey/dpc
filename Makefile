@@ -66,6 +66,9 @@ snapshot-push:  ## ...and copy it offsite via rclone (needs DPC_BACKUP_REMOTE)
 restore:  ## Rebuild a SQLite database from a dump (make restore to=rebuilt.sqlite)
 	$(PY) scripts/restore_sql.py --from backups/sql --to $(or $(to),rebuilt.sqlite)
 
+restore-full:  ## ...including every comment, not just award-granting ones
+	$(PY) scripts/restore_sql.py --from backups/sql --to $(or $(to),rebuilt.sqlite) --full
+
 clean:  ## Remove build output. Leaves .mypy_cache: rebuilding it is slow and it is gitignored.
 	rm -rf site/dist
 	rm -rf .pytest_cache .ruff_cache

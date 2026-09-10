@@ -7,18 +7,23 @@ accepted; the directory can hold either.
 Refuses to overwrite an existing database unless told to, because restoring
 over a live archive is not something to do by accident. Even with
 ``--overwrite`` it refuses when the existing database holds *more* rows than
-the dump would put back: the default dump keeps only award-granting comments,
-so restoring it over a full archive would discard millions of them. ``--force``
-overrides that, and says so loudly.
+the dump would put back: without ``--full`` only ``award_comments.sql`` is
+replayed, so restoring over a full archive would discard millions of comments.
+``--force`` overrides that, and says so loudly.
 
 The rebuild happens in a ``.partial`` file beside the target which is swapped
 into place at the end, so a restore that dies halfway leaves the original
 untouched rather than deleted.
 
+``--full`` replays ``challenge_comments/`` -- the whole 3.6M-comment corpus --
+in place of ``award_comments.sql``, which holds only the ones that granted an
+award. In place of, not as well as: the second is a subset of the first, and
+replaying both would collide on the primary key.
+
 Usage::
 
     uv run python scripts/restore_sql.py --from backups/sql --to rebuilt.sqlite
-    uv run python scripts/restore_sql.py --from backups/sql --overwrite
+    uv run python scripts/restore_sql.py --from backups/sql --full --overwrite
 """
 
 from __future__ import annotations
@@ -36,24 +41,48 @@ from tqdm import tqdm
 from dpc.config import Settings
 from dpc.log import configure
 
-# Same order dump_sql.py writes them in.
+# Same order dump_sql.py writes them in: file stems, which are not always the
+# table they fill.
 ORDER: tuple[str, ...] = (
     "schema",
     "members",
     "challenges",
     "images",
-    "comments",
+    "award_comments",
     "awards",
     "award_grants",
     "challenge_probes",
 )
 
+TABLE_FOR = {"award_comments": "comments"}
+
+LEGACY_NAMES = {"award_comments": "comments"}
+"""Dumps written before the rename. Restoring an old checkout should work
+rather than quietly producing a database with no comments in it."""
+
+
+COMMENTS_DIR = "challenge_comments"
+
+
+def challenge_comment_files(source: Path) -> list[Path]:
+    """Every per-challenge comment dump, oldest challenge first."""
+    directory = source / COMMENTS_DIR
+    if not directory.is_dir():
+        return []
+    return sorted(
+        (p for p in directory.iterdir() if p.name.endswith((".sql", ".sql.gz"))),
+        key=lambda p: int(p.name.split(".", 1)[0]),
+    )
+
 
 def find(source: Path, name: str) -> Path | None:
     """The plain or gzipped file for ``name``, whichever is present."""
-    for candidate in (source / f"{name}.sql", source / f"{name}.sql.gz"):
-        if candidate.is_file():
-            return candidate
+    for stem in (name, LEGACY_NAMES.get(name)):
+        if stem is None:
+            continue
+        for candidate in (source / f"{stem}.sql", source / f"{stem}.sql.gz"):
+            if candidate.is_file():
+                return candidate
     return None
 
 
@@ -121,7 +150,7 @@ def _build(present: list[tuple[str, Path]], into: Path) -> dict[str, int]:
 
         counts = {
             name: int(connection.execute(f"SELECT COUNT(*) FROM {name}").fetchone()[0])  # noqa: S608
-            for name, _ in present
+            for name in dict.fromkeys(name for name, _ in present)
             if name != "schema"
         }
         problems = connection.execute("PRAGMA foreign_key_check").fetchall()
@@ -134,17 +163,42 @@ def _build(present: list[tuple[str, Path]], into: Path) -> dict[str, int]:
 
 
 def restore(
-    source: Path, target: Path, *, overwrite: bool = False, force: bool = False
+    source: Path,
+    target: Path,
+    *,
+    overwrite: bool = False,
+    force: bool = False,
+    full: bool = False,
 ) -> dict[str, int]:
     """Replay every dump file into ``target``. Returns row counts per table."""
     if target.exists() and not overwrite:
         msg = f"{target} already exists; pass --overwrite to replace it"
         raise SystemExit(msg)
 
-    present = [(name, path) for name in ORDER if (path := find(source, name)) is not None]
+    present = [
+        (TABLE_FOR.get(stem, stem), path)
+        for stem in ORDER
+        if (path := find(source, stem)) is not None
+    ]
     if not present:
         msg = f"no dump files found in {source}"
         raise SystemExit(msg)
+
+    if full:
+        corpus = challenge_comment_files(source)
+        if not corpus:
+            msg = f"--full needs {source / COMMENTS_DIR}, which does not exist"
+            raise SystemExit(msg)
+        # In place of comments.sql, not alongside it: comments.sql is a subset,
+        # so replaying both would hit the primary key. Slotted in at the same
+        # position so images are already there for the foreign key.
+        expanded: list[tuple[str, Path]] = []
+        for name, path in present:
+            if name == "comments":
+                expanded.extend(("comments", p) for p in corpus)
+            else:
+                expanded.append((name, path))
+        present = expanded
 
     target.parent.mkdir(parents=True, exist_ok=True)
 
@@ -190,6 +244,11 @@ def main() -> int:
     parser.add_argument("--to", dest="target", type=Path, default=None)
     parser.add_argument("--overwrite", action="store_true")
     parser.add_argument(
+        "--full",
+        action="store_true",
+        help="Replay challenge_comments/ -- every comment, not just award-granting ones",
+    )
+    parser.add_argument(
         "--force",
         action="store_true",
         help="Overwrite even when the existing database holds more rows than the dump",
@@ -206,7 +265,9 @@ def main() -> int:
         return 1
 
     logger.info("restoring {} -> {}", args.source, target)
-    counts = restore(args.source, target, overwrite=args.overwrite, force=args.force)
+    counts = restore(
+        args.source, target, overwrite=args.overwrite, force=args.force, full=args.full
+    )
     for table, count in counts.items():
         logger.info("{:<16} {:>9,} rows", table, count)
     logger.success("restored {} ({:,} bytes)", target, target.stat().st_size)

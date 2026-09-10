@@ -1,0 +1,18 @@
+-- comments for challenge 3678
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7759945, 1284970, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2023-11-13 10:52:42.000000', NULL, 1),
+(7759946, 1285005, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2023-11-13 10:52:52.000000', NULL, 1),
+(7759947, 1285000, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2023-11-13 10:53:04.000000', NULL, 1),
+(7759983, 1284996, 50641, '<td valign="top">so myst(ib)erious!</td>', 'so myst(ib)erious!', '2023-11-14 19:21:21.000000', NULL, 1),
+(7760004, 1285005, 50864, '<td valign="top">This is wonderful. Hadnt looked at this challenge. The chairs seem perfect with the majestic tree.</td>', 'This is wonderful. Hadnt looked at this challenge. The chairs seem perfect with the majestic tree.', '2023-11-15 08:52:54.000000', NULL, 0),
+(7760006, 1285001, 103142, '<td valign="top">drat drat drat!! I forgot to vote on this one. I don''t understand how this didn''t do spectacularly well. I think it''s brilliant. I''m looking at it on my phone, so it may change looking at it on my monitor. But I absolutely love it. It would have been a 10 from me. I can hardly wait to see it on a larger screen.</td>', 'drat drat drat!! I forgot to vote on this one. I don''t understand how this didn''t do spectacularly well. I think it''s brilliant. I''m looking at it on my phone, so it may change looking at it on my monitor. But I absolutely love it. It would have been a 10 from me. I can hardly wait to see it on a larger screen.', '2023-11-15 09:05:05.000000', NULL, 0),
+(7760008, 1284990, 50695, '<td valign="top">i gave you a 9. a thoughtful and creative arrangement that took effort.</td>', 'i gave you a 9. a thoughtful and creative arrangement that took effort.', '2023-11-15 09:20:22.000000', NULL, 0),
+(7760009, 1285001, 50695, '<td valign="top">i gave you a 9. great mood.</td>', 'i gave you a 9. great mood.', '2023-11-15 09:20:51.000000', NULL, 0),
+(7760010, 1284981, 50695, '<td valign="top">10 from me. moody and interesting</td>', '10 from me. moody and interesting', '2023-11-15 09:21:48.000000', NULL, 0),
+(7760011, 1285000, 138630, '<td valign="top">Hahaha - love this and the title lifted it over the top, I''m sure.  Congrats on the blue!</td>', 'Hahaha - love this and the title lifted it over the top, I''m sure.  Congrats on the blue!', '2023-11-15 09:49:07.000000', NULL, 0),
+(7760049, 1284996, 30049, '<td valign="top">This would be an excellent candidate for the ''<a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1411075" rel="nofollow" target="_blank">post your original</a>'' thread.  What say you?  :-)</td>', 'This would be an excellent candidate for the ''post your original'' thread.  What say you?  :-)', '2023-11-16 09:31:15.000000', NULL, 0),
+(7760050, 1285005, 30049, '<td valign="top">This would be an excellent candidate for the ''<a href="https://www.dpchallenge.com/forum.php?action=read&amp;FORUM_THREAD_ID=1411075" rel="nofollow" target="_blank">post your original</a>'' thread.  What say you?  :-)</td>', 'This would be an excellent candidate for the ''post your original'' thread.  What say you?  :-)', '2023-11-16 09:31:57.000000', NULL, 0),
+(7760225, 1285000, 12611, '<td valign="top">Nice shot Mark. Congrats.</td>', 'Nice shot Mark. Congrats.', '2023-11-21 09:06:39.000000', NULL, 0);
+COMMIT;

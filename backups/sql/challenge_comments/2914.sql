@@ -1,0 +1,44 @@
+-- comments for challenge 2914
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7642853, 1241662, 96751, '<td valign="top">Splendid</td>', 'Splendid', '2019-10-02 03:33:56.000000', NULL, 1),
+(7642907, 1241343, 153275, '<td valign="top">Beautiful bokeh... my pick for the blue</td>', 'Beautiful bokeh... my pick for the blue', '2019-10-02 17:42:37.000000', NULL, 1),
+(7642908, 1241713, 153275, '<td valign="top">I like the light on the girls face. The boy seems to have a little smile... does not really feel like separation</td>', 'I like the light on the girls face. The boy seems to have a little smile... does not really feel like separation', '2019-10-02 17:49:05.000000', NULL, 1),
+(7642909, 1241605, 153275, '<td valign="top">I like the light and colors especially the sea and sky. Pity the horizon is slightly tilted.</td>', 'I like the light and colors especially the sea and sky. Pity the horizon is slightly tilted.', '2019-10-02 17:52:29.000000', NULL, 1),
+(7642918, 1241401, 86447, '<td valign="top">Sideways is an interesting choice.  <br/> <br/>Did you, by chance, submit your entry straight from a cellphone?   This has happened to me a couple of times on vertical images... it always rotates them.<br/>*sigh*</td>', 'Sideways is an interesting choice.   Did you, by chance, submit your entry straight from a cellphone?   This has happened to me a couple of times on vertical images... it always rotates them.*sigh*', '2019-10-02 18:35:44.000000', NULL, 1),
+(7643247, 1241343, 42733, '<td valign="top">Love this!!<br/> <br/>back to add: my favorite in this challenge.</td>', 'Love this!! back to add: my favorite in this challenge.', '2019-10-07 21:49:30.000000', NULL, 1),
+(7643248, 1241722, 42733, '<td valign="top">Wonderful face on the fish!<br/> <br/>back to add: My pick for red in this challenge.</td>', 'Wonderful face on the fish! back to add: My pick for red in this challenge.', '2019-10-07 21:49:43.000000', NULL, 1),
+(7643307, 1241343, 124815, '<td valign="top">What''s not to like? I could imagine it in a booklet format about color for instance. It needs more context otherwise it might get overlooked as a single image</td>', 'What''s not to like? I could imagine it in a booklet format about color for instance. It needs more context otherwise it might get overlooked as a single image', '2019-10-08 14:30:56.000000', NULL, 1),
+(7643308, 1241732, 124815, '<td valign="top">Composition is lovely - could be a little mural.<br/>I find a touch oversharpened</td>', 'Composition is lovely - could be a little mural.I find a touch oversharpened', '2019-10-08 14:31:47.000000', NULL, 1),
+(7643309, 1241722, 124815, '<td valign="top">Intimate</td>', 'Intimate', '2019-10-08 14:32:06.000000', NULL, 1),
+(7643310, 1241374, 124815, '<td valign="top">and on a verge of an anxiety attack!</td>', 'and on a verge of an anxiety attack!', '2019-10-08 14:32:59.000000', NULL, 1),
+(7643311, 1241721, 124815, '<td valign="top">Nice feel, a bit otherworldly</td>', 'Nice feel, a bit otherworldly', '2019-10-08 14:36:14.000000', NULL, 1),
+(7643312, 1241735, 124815, '<td valign="top">looks more like "the encounter" but I like this elegant image</td>', 'looks more like "the encounter" but I like this elegant image', '2019-10-08 14:37:04.000000', NULL, 1),
+(7643313, 1241383, 124815, '<td valign="top">Very nice. Sense of purpose.</td>', 'Very nice. Sense of purpose.', '2019-10-08 14:37:59.000000', NULL, 1),
+(7643314, 1241715, 124815, '<td valign="top">now, for some witchcraft</td>', 'now, for some witchcraft', '2019-10-08 14:38:38.000000', NULL, 1),
+(7643315, 1241307, 124815, '<td valign="top">the buildings in the background are in dire need of separation</td>', 'the buildings in the background are in dire need of separation', '2019-10-08 14:40:47.000000', NULL, 1),
+(7643318, 1241515, 30861, '<td valign="top">Porthleven, if I am not mistaken :-)</td>', 'Porthleven, if I am not mistaken :-)', '2019-10-08 16:53:09.000000', NULL, 1),
+(7643347, 1241712, 50695, '<td valign="top">mysterious image that clots into perception</td>', 'mysterious image that clots into perception', '2019-10-09 00:52:03.000000', NULL, 1),
+(7643348, 1241733, 50695, '<td valign="top">A beautiful perspective. A homespun Ed Clarke scape.</td>', 'A beautiful perspective. A homespun Ed Clarke scape.', '2019-10-09 00:53:42.000000', NULL, 1),
+(7643351, 1241237, 124815, '<td valign="top">Marvelous colors. Was too late with bumping and comment</td>', 'Marvelous colors. Was too late with bumping and comment', '2019-10-09 01:04:39.000000', NULL, 0),
+(7643352, 1241733, 68504, '<td valign="top">cunning.</td>', 'cunning.', '2019-10-09 01:12:05.000000', NULL, 0),
+(7643353, 1241708, 68504, '<td valign="top">beautiful.</td>', 'beautiful.', '2019-10-09 01:14:24.000000', NULL, 0),
+(7643362, 1241521, 30049, '<td valign="top">Glad to see this made the Top 10, but I had it picked much higher.  My top pick (voted 9) for this challenge (fish bowl 2nd).  Something about the layers in this and the B&amp;W choice that made this, IMO, fit the challenge quite well.  Nicely seen and captured.</td>', 'Glad to see this made the Top 10, but I had it picked much higher.  My top pick (voted 9) for this challenge (fish bowl 2nd).  Something about the layers in this and the B&W choice that made this, IMO, fit the challenge quite well.  Nicely seen and captured.', '2019-10-09 07:49:29.000000', NULL, 0),
+(7643363, 1241732, 65234, '<td valign="top">Congratulations! Perfect capture for this challenge and very well composed.</td>', 'Congratulations! Perfect capture for this challenge and very well composed.', '2019-10-09 08:32:09.000000', NULL, 0),
+(7643364, 1241722, 65234, '<td valign="top">Congratulations! Love that fish face :-)</td>', 'Congratulations! Love that fish face :-)', '2019-10-09 08:32:57.000000', NULL, 0),
+(7643365, 1241435, 65234, '<td valign="top">Congratulations! That sky is just fabulous.</td>', 'Congratulations! That sky is just fabulous.', '2019-10-09 08:34:50.000000', NULL, 0),
+(7643366, 1241715, 65234, '<td valign="top">Congratulations! It does look like magic was afoot.</td>', 'Congratulations! It does look like magic was afoot.', '2019-10-09 08:35:56.000000', NULL, 0),
+(7643369, 1241722, 19825, '<td valign="top">This is a delight.</td>', 'This is a delight.', '2019-10-09 12:39:03.000000', NULL, 0),
+(7643381, 1241732, 109227, '<td valign="top">Nicely done; congrats on the Blue!</td>', 'Nicely done; congrats on the Blue!', '2019-10-09 16:35:49.000000', NULL, 0),
+(7643382, 1241343, 109227, '<td valign="top">Soft beautiful colors.  Congratulations on the ribbon.</td>', 'Soft beautiful colors.  Congratulations on the ribbon.', '2019-10-09 16:37:12.000000', NULL, 0),
+(7643383, 1241435, 109227, '<td valign="top">Another beautiful image Dennis.</td>', 'Another beautiful image Dennis.', '2019-10-09 16:39:07.000000', NULL, 0),
+(7643385, 1241715, 193969, '<td valign="top">It was freaking cold that night.</td>', 'It was freaking cold that night.', '2019-10-09 18:20:34.000000', NULL, 0),
+(7643388, 1241715, 96751, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by rgrenaderphoto:</b></div><hr/><i> It was freaking cold that night. </i></td></tr></table> <br/> <br/>And freaking WINDY!!!</td>', 'Originally posted by rgrenaderphoto: It was freaking cold that night.   And freaking WINDY!!!', '2019-10-09 19:52:30.000000', NULL, 0),
+(7643400, 1241732, 52549, '<td valign="top">Beautiful composition. Congrats on your Blue.</td>', 'Beautiful composition. Congrats on your Blue.', '2019-10-10 11:09:58.000000', NULL, 0),
+(7643402, 1241343, 24454, '<td valign="top">Way to go, Mary!  This is beautiful!</td>', 'Way to go, Mary!  This is beautiful!', '2019-10-10 14:11:49.000000', NULL, 0),
+(7643403, 1241715, 24454, '<td valign="top">Wow, Johanna!  Wow!  I agree... the clouds add so much beautiful drama!</td>', 'Wow, Johanna!  Wow!  I agree... the clouds add so much beautiful drama!', '2019-10-10 14:13:15.000000', NULL, 0),
+(7643430, 1241733, 61396, '<td valign="top">a good one</td>', 'a good one', '2019-10-10 20:38:11.000000', NULL, 0),
+(7643441, 1241435, 24454, '<td valign="top">Oh how GLORIOUS!  Are you guys still traveling?  I''ve been running so crazy I haven''t had a chance to check in on your blog, but your photos are truly magical!<br/> <br/></td>', 'Oh how GLORIOUS!  Are you guys still traveling?  I''ve been running so crazy I haven''t had a chance to check in on your blog, but your photos are truly magical! ', '2019-10-11 00:43:32.000000', NULL, 0),
+(7643442, 1241722, 24454, '<td valign="top">I love this so much!  That face!</td>', 'I love this so much!  That face!', '2019-10-11 00:44:58.000000', NULL, 0);
+COMMIT;

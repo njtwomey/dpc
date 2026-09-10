@@ -1,0 +1,60 @@
+-- comments for challenge 2943
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7648376, 1243741, 43774, '<td valign="top">Why is this so pixelated?</td>', 'Why is this so pixelated?', '2019-12-15 18:25:49.000000', NULL, 1),
+(7648377, 1243805, 43774, '<td valign="top">Cool find.</td>', 'Cool find.', '2019-12-15 18:25:59.000000', NULL, 1),
+(7648378, 1243833, 43774, '<td valign="top">Cute!</td>', 'Cute!', '2019-12-15 18:26:16.000000', NULL, 1),
+(7648379, 1243487, 43774, '<td valign="top">Nice artwork.</td>', 'Nice artwork.', '2019-12-15 18:26:26.000000', NULL, 1),
+(7648380, 1243825, 43774, '<td valign="top">Clever!</td>', 'Clever!', '2019-12-15 18:26:32.000000', NULL, 1),
+(7648381, 1243732, 43774, '<td valign="top">Impressive.</td>', 'Impressive.', '2019-12-15 18:26:44.000000', NULL, 1),
+(7648382, 1243634, 43774, '<td valign="top">Great detail.</td>', 'Great detail.', '2019-12-15 18:27:25.000000', NULL, 1),
+(7648383, 1243771, 43774, '<td valign="top">Neat</td>', 'Neat', '2019-12-15 18:28:22.000000', NULL, 1),
+(7648384, 1243489, 43774, '<td valign="top">Winner</td>', 'Winner', '2019-12-15 18:28:29.000000', NULL, 1),
+(7648385, 1243639, 43774, '<td valign="top">Lovely</td>', 'Lovely', '2019-12-15 18:28:40.000000', NULL, 1),
+(7648390, 1243489, 96751, '<td valign="top">I love this except for the face of the lower dancer. Very strange.</td>', 'I love this except for the face of the lower dancer. Very strange.', '2019-12-15 20:49:58.000000', NULL, 1),
+(7648391, 1243613, 96751, '<td valign="top">Brilliant. Took me a moment to realize it''s not some sort of filter.</td>', 'Brilliant. Took me a moment to realize it''s not some sort of filter.', '2019-12-15 20:50:59.000000', NULL, 1),
+(7648392, 1243639, 96751, '<td valign="top">Ghostly and delicate. Bravo.</td>', 'Ghostly and delicate. Bravo.', '2019-12-15 20:51:40.000000', NULL, 1),
+(7648393, 1243707, 96751, '<td valign="top">You have SUCH a way with glass.  What are the floating jellyfish?</td>', 'You have SUCH a way with glass.  What are the floating jellyfish?', '2019-12-15 20:52:30.000000', NULL, 1),
+(7648433, 1243487, 101668, '<td valign="top">Sublime piece of work.</td>', 'Sublime piece of work.', '2019-12-16 02:55:33.000000', NULL, 1),
+(7648489, 1243487, 3306, '<td valign="top">I really like your processing. Print on canvas!</td>', 'I really like your processing. Print on canvas!', '2019-12-16 18:08:38.000000', NULL, 1),
+(7648490, 1243771, 3306, '<td valign="top">I dont think I have ever seen an entry without a title! Good composition none-the-less.</td>', 'I dont think I have ever seen an entry without a title! Good composition none-the-less.', '2019-12-16 18:11:23.000000', NULL, 1),
+(7648709, 1243734, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2019-12-20 09:06:57.000000', NULL, 1),
+(7648710, 1243707, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2019-12-20 09:07:09.000000', NULL, 1),
+(7648711, 1243711, 42733, '<td valign="top">Majestic! My favorite in this challenge.</td>', 'Majestic! My favorite in this challenge.', '2019-12-20 09:07:20.000000', NULL, 1),
+(7648771, 1243830, 68504, '<td valign="top">8, with pleasure.</td>', '8, with pleasure.', '2019-12-22 00:10:38.000000', NULL, 0),
+(7648772, 1243831, 68504, '<td valign="top">the eye.</td>', 'the eye.', '2019-12-22 00:10:59.000000', NULL, 0),
+(7648773, 1243734, 67145, '<td valign="top">I thought this would win .. either this or the bear .. my two absolute favourites .. <br/>congratulations on a magnificent image .. :)<br/></td>', 'I thought this would win .. either this or the bear .. my two absolute favourites .. congratulations on a magnificent image .. :)', '2019-12-22 01:08:46.000000', NULL, 0),
+(7648774, 1243830, 61396, '<td valign="top">glorious</td>', 'glorious', '2019-12-22 03:55:51.000000', NULL, 0),
+(7648776, 1243487, 101668, '<td valign="top">What a way to celebrate your first Ribbon! Congratulations, this is stunning</td>', 'What a way to celebrate your first Ribbon! Congratulations, this is stunning', '2019-12-22 05:40:13.000000', NULL, 0),
+(7648796, 1243634, 114285, '<td valign="top">Didnt get round to voting on this challenge, but this one stood out on my first view, unique composition and love the fiery colours.<br/>Congratulations.</td>', 'Didnt get round to voting on this challenge, but this one stood out on my first view, unique composition and love the fiery colours.Congratulations.', '2019-12-22 08:30:22.000000', NULL, 0),
+(7648797, 1243734, 114285, '<td valign="top">Love it!</td>', 'Love it!', '2019-12-22 08:31:26.000000', NULL, 0),
+(7648798, 1243830, 114285, '<td valign="top">Beautiful, if I had of voted it would of been a good one.</td>', 'Beautiful, if I had of voted it would of been a good one.', '2019-12-22 08:32:39.000000', NULL, 0),
+(7648799, 1243816, 114285, '<td valign="top">I quite like this, some cool abstract motion blur going on. Most ppl dislike blur but had this been in a challenge which called for blur it may have done well.<br/><br/><i>Message edited by author 2019-12-22 21:44:05.</i></td>', 'I quite like this, some cool abstract motion blur going on. Most ppl dislike blur but had this been in a challenge which called for blur it may have done well.', '2019-12-22 08:43:20.000000', '2019-12-22 21:44:05.000000', 0),
+(7648800, 1243487, 113411, '<td valign="top">Susan !!!! How fabulous! Welcome to DPC!</td>', 'Susan !!!! How fabulous! Welcome to DPC!', '2019-12-22 08:53:25.000000', NULL, 0),
+(7648801, 1243711, 113411, '<td valign="top">Hey Jake!</td>', 'Hey Jake!', '2019-12-22 09:13:28.000000', NULL, 0),
+(7648808, 1243734, 19825, '<td valign="top">Very nice.</td>', 'Very nice.', '2019-12-22 10:34:18.000000', NULL, 0),
+(7648809, 1243830, 19825, '<td valign="top">Captivating. Nicely done.</td>', 'Captivating. Nicely done.', '2019-12-22 10:35:43.000000', NULL, 0),
+(7648810, 1243734, 86447, '<td valign="top">Well done, Johanna!<br/> <br/>I think if where the base of the trunk meets the city had a bit of city over it, this would have gotten the BLUE.<br/> <br/>Congratulations on trying something new and getting a ribbon for it!!<br/></td>', 'Well done, Johanna! I think if where the base of the trunk meets the city had a bit of city over it, this would have gotten the BLUE. Congratulations on trying something new and getting a ribbon for it!!', '2019-12-22 10:38:54.000000', NULL, 0),
+(7648811, 1243734, 86447, '<td valign="top">oops!  TT for it*</td>', 'oops!  TT for it*', '2019-12-22 10:39:50.000000', NULL, 0),
+(7648813, 1243634, 80096, '<td valign="top">I knew this was yours. Congratulations Roz! Very timely and very well done!</td>', 'I knew this was yours. Congratulations Roz! Very timely and very well done!', '2019-12-22 11:48:48.000000', NULL, 0),
+(7648815, 1243487, 251422, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by MeMex2:</b></div><hr/><i> Susan !!!! How fabulous! Welcome to DPC! </i></td></tr></table> <br/> <br/>thank you!<br/></td>', 'Originally posted by MeMex2: Susan !!!! How fabulous! Welcome to DPC!   thank you!', '2019-12-22 12:16:06.000000', NULL, 0),
+(7648816, 1243487, 251422, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Ammie:</b></div><hr/><i> What a way to celebrate your first Ribbon! Congratulations, this is stunning </i></td></tr></table> <br/> <br/>Thank you!</td>', 'Originally posted by Ammie: What a way to celebrate your first Ribbon! Congratulations, this is stunning   Thank you!', '2019-12-22 12:16:51.000000', NULL, 0),
+(7648817, 1243487, 251422, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Ka1renNfld:</b></div><hr/><i> Nice artwork. </i></td></tr></table> <br/>Thank you<br/></td>', 'Originally posted by Ka1renNfld: Nice artwork.  Thank you', '2019-12-22 12:18:00.000000', NULL, 0),
+(7648818, 1243806, 50695, '<td valign="top">good eye. 9 from me. I didn''t think the warp was added on, which shows how well you did it.</td>', 'good eye. 9 from me. I didn''t think the warp was added on, which shows how well you did it.', '2019-12-22 12:18:05.000000', NULL, 0),
+(7648819, 1243819, 50695, '<td valign="top">9 from me. there is the sense of a story here.</td>', '9 from me. there is the sense of a story here.', '2019-12-22 12:19:13.000000', NULL, 0),
+(7648820, 1243805, 50695, '<td valign="top">I was intrigued by this blend of reality and photoshop. 8 from me.</td>', 'I was intrigued by this blend of reality and photoshop. 8 from me.', '2019-12-22 12:19:59.000000', NULL, 0),
+(7648821, 1243832, 50695, '<td valign="top">I gave this an 8. There is a certain very creative disregard to the trees at different angles, like a pile of negatives from a day in the woods that will never be developed.</td>', 'I gave this an 8. There is a certain very creative disregard to the trees at different angles, like a pile of negatives from a day in the woods that will never be developed.', '2019-12-22 12:21:16.000000', NULL, 0),
+(7648822, 1243838, 50695, '<td valign="top">same swan, but the world wasn''t ready for you. I was Ingres and you were Van Gogh.</td>', 'same swan, but the world wasn''t ready for you. I was Ingres and you were Van Gogh.', '2019-12-22 12:22:57.000000', NULL, 0),
+(7648834, 1243487, 86447, '<td valign="top">You go, Susan!  WOw!<br/> <br/>Look your scores on your only three entries so far!   You rock!<br/> <br/>Welcome!<br/></td>', 'You go, Susan!  WOw! Look your scores on your only three entries so far!   You rock! Welcome!', '2019-12-22 13:42:51.000000', NULL, 0),
+(7648835, 1243634, 86447, '<td valign="top">Lovely job of it, Roz!<br/> <br/>Congratulations on your RIBBON!</td>', 'Lovely job of it, Roz! Congratulations on your RIBBON!', '2019-12-22 13:44:14.000000', NULL, 0),
+(7648836, 1243711, 86447, '<td valign="top">Stunning, Jake!<br/> <br/>WOW!<br/></td>', 'Stunning, Jake! WOW!', '2019-12-22 13:44:58.000000', NULL, 0),
+(7648837, 1243689, 86447, '<td valign="top">LOL @ your notes!  <br/></td>', 'LOL @ your notes!  ', '2019-12-22 13:45:34.000000', NULL, 0),
+(7648838, 1243707, 43774, '<td valign="top">Thanks. They''re glass bubbles.<br/> <br/><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by tanguera:</b></div><hr/><i> You have SUCH a way with glass.  What are the floating jellyfish? </i></td></tr></table></td>', 'Thanks. They''re glass bubbles. Originally posted by tanguera: You have SUCH a way with glass.  What are the floating jellyfish? ', '2019-12-22 14:12:44.000000', NULL, 0),
+(7648839, 1243732, 179608, '<td valign="top">Underrated, for me it was podium<br/></td>', 'Underrated, for me it was podium', '2019-12-22 15:44:22.000000', NULL, 0),
+(7648841, 1243711, 181505, '<td valign="top">Magnificent!!</td>', 'Magnificent!!', '2019-12-22 16:31:03.000000', NULL, 0),
+(7648849, 1243838, 53814, '<td valign="top">The beauties are the beast, maybe the troll under the bridge? Well seen!</td>', 'The beauties are the beast, maybe the troll under the bridge? Well seen!', '2019-12-22 22:35:32.000000', NULL, 0),
+(7648960, 1243487, 31637, '<td valign="top">That looks like a hot bear. Not sure Florida is a good place for a Bear farm...anyway, great shot.</td>', 'That looks like a hot bear. Not sure Florida is a good place for a Bear farm...anyway, great shot.', '2019-12-25 03:24:34.000000', NULL, 0),
+(7649102, 1243734, 193969, '<td valign="top">Wow, just wow.</td>', 'Wow, just wow.', '2019-12-28 12:25:22.000000', NULL, 0),
+(7663691, 1243634, 135744, '<td valign="top">Wow this is really awesome! It has a lot to keep me interested, wonderful colours and shadows and very unusual flies.</td>', 'Wow this is really awesome! It has a lot to keep me interested, wonderful colours and shadows and very unusual flies.', '2020-05-24 10:25:09.000000', NULL, 0);
+COMMIT;

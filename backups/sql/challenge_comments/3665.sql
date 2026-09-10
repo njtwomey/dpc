@@ -1,0 +1,43 @@
+-- comments for challenge 3665
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7758843, 1284544, 124815, '<td valign="top">Terrific find. And shot. The end of this movie still reveals the truth and shall be rated R for predicting the end of the world as we know it. Filled with regrets.10</td>', 'Terrific find. And shot. The end of this movie still reveals the truth and shall be rated R for predicting the end of the world as we know it. Filled with regrets.10', '2023-10-13 11:04:49.000000', NULL, 1),
+(7758844, 1284540, 124815, '<td valign="top">Good parenting</td>', 'Good parenting', '2023-10-13 11:06:08.000000', NULL, 1),
+(7758970, 1284544, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2023-10-17 12:15:15.000000', NULL, 1),
+(7758971, 1284528, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2023-10-17 12:15:24.000000', NULL, 1),
+(7758972, 1284540, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2023-10-17 12:15:34.000000', NULL, 1),
+(7758993, 1284432, 273854, '<td valign="top">Love the photo.. personally, I feel the quality/edit detracts from the photo.</td>', 'Love the photo.. personally, I feel the quality/edit detracts from the photo.', '2023-10-18 02:44:31.000000', NULL, 1),
+(7758994, 1284530, 273854, '<td valign="top">Epic concept!! Poor quality/edit really detracts</td>', 'Epic concept!! Poor quality/edit really detracts', '2023-10-18 02:45:04.000000', NULL, 1),
+(7758995, 1284543, 273854, '<td valign="top">This feels like an attempt at the winning image of the prior Vegetable Bestiary...</td>', 'This feels like an attempt at the winning image of the prior Vegetable Bestiary...', '2023-10-18 02:46:48.000000', NULL, 1),
+(7759053, 1284540, 173844, '<td valign="top">Wonderful, beautiful and natural scene.  Emotionally involving.  A new realm of imagination.<br/>Personal favorite of the challenge.</td>', 'Wonderful, beautiful and natural scene.  Emotionally involving.  A new realm of imagination.Personal favorite of the challenge.', '2023-10-19 22:44:45.000000', NULL, 1),
+(7759054, 1284544, 173844, '<td valign="top">This is totally believeable.  With so many constraints down there, evolution has to  pick magic''s pocket.  Fine, compelling image.</td>', 'This is totally believeable.  With so many constraints down there, evolution has to  pick magic''s pocket.  Fine, compelling image.', '2023-10-19 22:57:30.000000', NULL, 1),
+(7759062, 1284481, 50695, '<td valign="top">reflexively (pun intended) putting a thingie on a reflective surface even though you''re trying to make it look like a dog, not a thingie. We have to fight our instincts, sometimes.</td>', 'reflexively (pun intended) putting a thingie on a reflective surface even though you''re trying to make it look like a dog, not a thingie. We have to fight our instincts, sometimes.', '2023-10-20 00:20:35.000000', NULL, 1),
+(7759063, 1284544, 50695, '<td valign="top">Lovecraftian.</td>', 'Lovecraftian.', '2023-10-20 00:21:56.000000', NULL, 1),
+(7759064, 1284538, 50695, '<td valign="top">dunno how you did this but really impressive</td>', 'dunno how you did this but really impressive', '2023-10-20 00:22:12.000000', NULL, 1),
+(7759065, 1284541, 50695, '<td valign="top">oh yes, the drama!</td>', 'oh yes, the drama!', '2023-10-20 00:22:20.000000', NULL, 1),
+(7759066, 1284528, 50695, '<td valign="top">you made me chuckle. 7</td>', 'you made me chuckle. 7', '2023-10-20 00:22:30.000000', NULL, 1),
+(7759067, 1284533, 50695, '<td valign="top">good arrangement</td>', 'good arrangement', '2023-10-20 00:23:03.000000', NULL, 1),
+(7759068, 1284540, 50695, '<td valign="top">beautiful illusion</td>', 'beautiful illusion', '2023-10-20 00:23:17.000000', NULL, 1),
+(7759069, 1284543, 50695, '<td valign="top">cute</td>', 'cute', '2023-10-20 00:23:25.000000', NULL, 1),
+(7759073, 1284540, 50864, '<td valign="top">Woo hoo! Congratulations Marjory. Wonderful photograph.</td>', 'Woo hoo! Congratulations Marjory. Wonderful photograph.', '2023-10-20 01:01:03.000000', NULL, 0),
+(7759074, 1284540, 68504, '<td valign="top">Gourdplay! Revolution!</td>', 'Gourdplay! Revolution!', '2023-10-20 01:03:48.000000', NULL, 0),
+(7759076, 1284533, 68504, '<td valign="top">delightful.</td>', 'delightful.', '2023-10-20 01:05:01.000000', NULL, 0),
+(7759078, 1284544, 55542, '<td valign="top">This is so great and my favorite of the challenge - congratulations!</td>', 'This is so great and my favorite of the challenge - congratulations!', '2023-10-20 01:05:43.000000', NULL, 0),
+(7759079, 1284528, 68504, '<td valign="top">couldn''t resist. 9</td>', 'couldn''t resist. 9', '2023-10-20 01:05:51.000000', NULL, 0),
+(7759080, 1284538, 68504, '<td valign="top">vibrant, natural, surprising.</td>', 'vibrant, natural, surprising.', '2023-10-20 01:06:37.000000', NULL, 0),
+(7759082, 1284541, 68504, '<td valign="top">ok. I was your 10, Cabbageface.</td>', 'ok. I was your 10, Cabbageface.', '2023-10-20 01:08:06.000000', NULL, 0),
+(7759083, 1284533, 55542, '<td valign="top">That is one beautiful fish - terrific shot!</td>', 'That is one beautiful fish - terrific shot!', '2023-10-20 01:08:44.000000', NULL, 0),
+(7759084, 1284540, 2158, '<td valign="top">Congratulations on the blue ribbon and personal best.</td>', 'Congratulations on the blue ribbon and personal best.', '2023-10-20 06:31:47.000000', NULL, 0),
+(7759085, 1284540, 66597, '<td valign="top">I was one of your many 8s on this. So cleverly executed and oddly touching</td>', 'I was one of your many 8s on this. So cleverly executed and oddly touching', '2023-10-20 07:50:31.000000', NULL, 0),
+(7759088, 1284538, 50695, '<td valign="top">naughty</td>', 'naughty', '2023-10-20 11:23:27.000000', NULL, 0),
+(7759089, 1284542, 50695, '<td valign="top">I like the background</td>', 'I like the background', '2023-10-20 11:24:59.000000', NULL, 0),
+(7759090, 1284540, 53814, '<td valign="top">Marj, great job of capturing these wily critters!</td>', 'Marj, great job of capturing these wily critters!', '2023-10-20 11:34:46.000000', NULL, 0),
+(7759097, 1284538, 55542, '<td valign="top">That''s a nice little pillow you gave him/her. . .</td>', 'That''s a nice little pillow you gave him/her. . .', '2023-10-20 16:09:12.000000', NULL, 0),
+(7759122, 1284533, 96751, '<td valign="top">The bubbles....</td>', 'The bubbles....', '2023-10-21 13:28:04.000000', NULL, 0),
+(7759123, 1284538, 96751, '<td valign="top">taxidermy at its best</td>', 'taxidermy at its best', '2023-10-21 13:30:37.000000', NULL, 0),
+(7759130, 1284540, 97225, '<td valign="top">Congrats on the blue. This is such a beautiful  depiction of the character of your little family.</td>', 'Congrats on the blue. This is such a beautiful  depiction of the character of your little family.', '2023-10-21 19:15:07.000000', NULL, 0),
+(7759170, 1284544, 68504, '<td valign="top">deserves looks and thinkings.</td>', 'deserves looks and thinkings.', '2023-10-22 15:03:48.000000', NULL, 0),
+(7759302, 1284540, 50641, '<td valign="top">Love it! Always see birds in gourds!</td>', 'Love it! Always see birds in gourds!', '2023-10-24 11:39:50.000000', NULL, 0),
+(7759820, 1284544, 12611, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by posthumous:</b></div><hr/><i> Lovecraftian. </i></td></tr></table> <br/> <br/>Cthulhu came to mind for sure!(now where did I leave my opium?)</td>', 'Originally posted by posthumous: Lovecraftian.   Cthulhu came to mind for sure!(now where did I leave my opium?)', '2023-11-08 17:03:59.000000', NULL, 0);
+COMMIT;

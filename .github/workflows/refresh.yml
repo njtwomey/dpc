@@ -1,7 +1,9 @@
 name: refresh
 
-# Weekly: rebuild the archive from the committed SQL, fetch whatever
-# dpchallenge has run since, commit the result and publish.
+# Weekly: rebuild the archive from the committed SQL -- including the full
+# comment corpus in backups/sql/challenge_comments -- fetch whatever dpchallenge
+# has run since, commit the result and publish. Because the corpus round-trips
+# through git, the archive grows here rather than only on the laptop.
 #
 # One workflow, two jobs, deliberately. A push made with the default
 # GITHUB_TOKEN does not trigger other workflows, so a design that committed
@@ -56,8 +58,13 @@ jobs:
 
       - run: uv sync --locked
 
+      # --full is not optional here. The dump prunes challenge_comments/ files
+      # for challenges the database does not have, so restoring award-only and
+      # then dumping would delete the corpus for every challenge but a handful.
       - name: Rebuild the archive from the committed SQL
-        run: uv run python scripts/restore_sql.py --from backups/sql --to refresh.sqlite
+        run: |
+          uv run python scripts/restore_sql.py \
+            --from backups/sql --to refresh.sqlite --full
 
       # --anonymous: challenge results, image pages (statistics and the full
       # comment thread) and profiles are all public, so this needs no secrets.

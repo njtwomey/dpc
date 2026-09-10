@@ -1,0 +1,57 @@
+-- comments for challenge 2964
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7650212, 1244577, 28742, '<td valign="top">Typical tenants - left the place a mess. Well there goes their cleaning deposit!</td>', 'Typical tenants - left the place a mess. Well there goes their cleaning deposit!', '2020-01-10 19:15:14.000000', NULL, 1),
+(7650213, 1244331, 28742, '<td valign="top">They are not your anemones, their your friends. :P</td>', 'They are not your anemones, their your friends. :P', '2020-01-10 19:15:56.000000', NULL, 1),
+(7650214, 1244226, 28742, '<td valign="top">Now that''s my kind of fortress. :)</td>', 'Now that''s my kind of fortress. :)', '2020-01-10 19:16:31.000000', NULL, 1),
+(7650215, 1244433, 28742, '<td valign="top">Luckily nobody''s home. ;-)</td>', 'Luckily nobody''s home. ;-)', '2020-01-10 19:17:11.000000', NULL, 1),
+(7650217, 1244534, 28742, '<td valign="top">Majestic! Great shot. Of all the creatures on the planet, the bald eagle arguably has the most serious expression. I mean look at <a href="https://d31nslwc7cjjw5.cloudfront.net/image-cache/1/0/2/4/4/102445494fbcefc49d80b1f1ba66337fde7f9548-12-week-internships-at-the-sloth-conservation-and-wildlife-experience-6583.jpeg" rel="nofollow" target="_blank">this guy...</a> :)<br/> <br/>Well done.</td>', 'Majestic! Great shot. Of all the creatures on the planet, the bald eagle arguably has the most serious expression. I mean look at this guy... :) Well done.', '2020-01-10 20:10:05.000000', NULL, 1),
+(7650218, 1244507, 28742, '<td valign="top">Straight Outta Antarctica. :)</td>', 'Straight Outta Antarctica. :)', '2020-01-10 20:10:48.000000', NULL, 1),
+(7650220, 1244128, 28742, '<td valign="top">I saw this place on goatbnb.com. :P</td>', 'I saw this place on goatbnb.com. :P', '2020-01-10 20:12:13.000000', NULL, 1),
+(7650308, 1244547, 173844, '<td valign="top">Most endearing.<br/>Personal favorite of the challenge.</td>', 'Most endearing.Personal favorite of the challenge.', '2020-01-11 21:42:58.000000', NULL, 1),
+(7650410, 1244534, 3306, '<td valign="top">Great shot that opening in the pine is in a perfect place.</td>', 'Great shot that opening in the pine is in a perfect place.', '2020-01-13 08:47:24.000000', NULL, 1),
+(7650412, 1244366, 3306, '<td valign="top">Thats interesting. I did not know some owls live in burrows.</td>', 'Thats interesting. I did not know some owls live in burrows.', '2020-01-13 08:50:07.000000', NULL, 1),
+(7650413, 1244446, 3306, '<td valign="top">Wow. I wouldnt mind living there!</td>', 'Wow. I wouldnt mind living there!', '2020-01-13 08:51:29.000000', NULL, 1),
+(7650429, 1244226, 124815, '<td valign="top">Got my 9 and ignored the title</td>', 'Got my 9 and ignored the title', '2020-01-13 15:33:48.000000', NULL, 1),
+(7650430, 1244507, 124815, '<td valign="top">Totally charming</td>', 'Totally charming', '2020-01-13 15:34:25.000000', NULL, 1),
+(7650443, 1244577, 251965, '<td valign="top">Good</td>', 'Good', '2020-01-13 22:11:24.000000', NULL, 1),
+(7650488, 1244391, 42733, '<td valign="top">I love this! <br/>My favorite in the challenge.</td>', 'I love this! My favorite in the challenge.', '2020-01-15 09:00:50.000000', NULL, 1),
+(7650489, 1244537, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2020-01-15 09:01:11.000000', NULL, 1),
+(7650490, 1244534, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2020-01-15 09:01:22.000000', NULL, 1),
+(7650491, 1244226, 42733, '<td valign="top">In my top 4.</td>', 'In my top 4.', '2020-01-15 09:01:30.000000', NULL, 1),
+(7650519, 1244537, 3306, '<td valign="top">Ordinarily I would not like the wire fence showing in the photo but here it definitely works. Nicely done. Front page picture.</td>', 'Ordinarily I would not like the wire fence showing in the photo but here it definitely works. Nicely done. Front page picture.', '2020-01-15 20:00:31.000000', NULL, 1),
+(7650520, 1244565, 3306, '<td valign="top">This is a difficult picture to expose correctly and you have done it very well.</td>', 'This is a difficult picture to expose correctly and you have done it very well.', '2020-01-15 20:01:33.000000', NULL, 1),
+(7650521, 1244547, 3306, '<td valign="top">I like this composition very much. Especially the focus on the horse.</td>', 'I like this composition very much. Especially the focus on the horse.', '2020-01-15 20:02:33.000000', NULL, 1),
+(7650522, 1244536, 3306, '<td valign="top">He wants out!</td>', 'He wants out!', '2020-01-15 20:03:26.000000', NULL, 1),
+(7650557, 1244366, 156466, '<td valign="top">Best of the bunch for me</td>', 'Best of the bunch for me', '2020-01-16 09:56:15.000000', NULL, 1),
+(7650573, 1244547, 97225, '<td valign="top">Beautiful! Top 3.</td>', 'Beautiful! Top 3.', '2020-01-16 17:47:22.000000', NULL, 1),
+(7650581, 1244537, 97225, '<td valign="top">What a beautiful photo! The little bit of barbed wire adds to the narrative. My pick for blue. 10</td>', 'What a beautiful photo! The little bit of barbed wire adds to the narrative. My pick for blue. 10', '2020-01-16 20:54:02.000000', NULL, 1),
+(7650583, 1244391, 97225, '<td valign="top">Great photo. My pick for red. 9</td>', 'Great photo. My pick for red. 9', '2020-01-16 20:54:42.000000', NULL, 1),
+(7650594, 1244547, 138630, '<td valign="top">This was my favorite.  I love the perspective, the lighting, the tones.  Just beautiful and deserved a higher finish.</td>', 'This was my favorite.  I love the perspective, the lighting, the tones.  Just beautiful and deserved a higher finish.', '2020-01-17 00:03:46.000000', NULL, 0),
+(7650595, 1244534, 138630, '<td valign="top">Splendid perspective.  One of my top two and I''m delighted to see it finish with the Blue.  Congratulations.</td>', 'Splendid perspective.  One of my top two and I''m delighted to see it finish with the Blue.  Congratulations.', '2020-01-17 00:07:27.000000', NULL, 0),
+(7650596, 1244537, 138630, '<td valign="top">Perfectly lovely photo, Ammie.  Congratulations on the red.</td>', 'Perfectly lovely photo, Ammie.  Congratulations on the red.', '2020-01-17 00:08:18.000000', NULL, 0),
+(7650597, 1244391, 138630, '<td valign="top">I liked this a lot.  Clever idea and a great shot - just look at that precarious perch you caught.</td>', 'I liked this a lot.  Clever idea and a great shot - just look at that precarious perch you caught.', '2020-01-17 00:09:01.000000', NULL, 0),
+(7650598, 1244226, 138630, '<td valign="top">Imposing nest for sure.  Congratulations on the HM, Judi.</td>', 'Imposing nest for sure.  Congratulations on the HM, Judi.', '2020-01-17 00:09:48.000000', NULL, 0),
+(7650600, 1244366, 241259, '<td valign="top">Congrats Nikki.</td>', 'Congrats Nikki.', '2020-01-17 00:21:52.000000', NULL, 0),
+(7650601, 1244501, 124815, '<td valign="top">I suppose that he takes his breakfast in bed also</td>', 'I suppose that he takes his breakfast in bed also', '2020-01-17 00:25:11.000000', NULL, 0),
+(7650602, 1244534, 101668, '<td valign="top">Oh boy, you are stringing them! Congratulations! It is beautiful</td>', 'Oh boy, you are stringing them! Congratulations! It is beautiful', '2020-01-17 00:32:06.000000', NULL, 0),
+(7650603, 1244536, 68504, '<td valign="top">love the welcoming snarl!</td>', 'love the welcoming snarl!', '2020-01-17 00:43:17.000000', NULL, 0),
+(7650613, 1244537, 86218, '<td valign="top">Welgedaan Amanda. Goeie interpretasie van die tema en hou van die verwerking van jou foto. Beste daar</td>', 'Welgedaan Amanda. Goeie interpretasie van die tema en hou van die verwerking van jou foto. Beste daar', '2020-01-17 03:02:30.000000', NULL, 0),
+(7650619, 1244534, 251422, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Ammie:</b></div><hr/><i> Oh boy, you are stringing them! Congratulations! It is beautiful </i></td></tr></table> <br/>Thank you!</td>', 'Originally posted by Ammie: Oh boy, you are stringing them! Congratulations! It is beautiful  Thank you!', '2020-01-17 06:43:19.000000', NULL, 0),
+(7650620, 1244534, 251422, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Ammie:</b></div><hr/><i> Oh boy, you are stringing them! Congratulations! It is beautiful </i></td></tr></table> <br/>Thank you!</td>', 'Originally posted by Ammie: Oh boy, you are stringing them! Congratulations! It is beautiful  Thank you!', '2020-01-17 06:43:55.000000', NULL, 0),
+(7650627, 1244391, 101668, '<td valign="top">Such a beautiful image. Congratulations</td>', 'Such a beautiful image. Congratulations', '2020-01-17 08:55:31.000000', NULL, 0),
+(7650628, 1244226, 101668, '<td valign="top">Splendid, congrats</td>', 'Splendid, congrats', '2020-01-17 08:56:17.000000', NULL, 0),
+(7650629, 1244366, 101668, '<td valign="top">Lovely, congratulations</td>', 'Lovely, congratulations', '2020-01-17 08:57:03.000000', NULL, 0),
+(7650630, 1244534, 123833, '<td valign="top">My top score for this challenge, congrats on the second Blue in a row!</td>', 'My top score for this challenge, congrats on the second Blue in a row!', '2020-01-17 09:08:34.000000', NULL, 0),
+(7650653, 1244537, 109227, '<td valign="top">Beautifully done.  Congrats!</td>', 'Beautifully done.  Congrats!', '2020-01-17 14:52:58.000000', NULL, 0),
+(7650661, 1244537, 97225, '<td valign="top">Congratulations, Ammie. Such a lovely photo.</td>', 'Congratulations, Ammie. Such a lovely photo.', '2020-01-17 17:05:58.000000', NULL, 0),
+(7650662, 1244534, 97225, '<td valign="top">Congratulations! Beautiful shot.</td>', 'Congratulations! Beautiful shot.', '2020-01-17 17:08:17.000000', NULL, 0),
+(7650814, 1244537, 251422, '<td valign="top">Just love this photo- so peaceful and well done</td>', 'Just love this photo- so peaceful and well done', '2020-01-19 08:23:21.000000', NULL, 0),
+(7650816, 1244391, 251422, '<td valign="top">This was my favorite.  I just love it.</td>', 'This was my favorite.  I just love it.', '2020-01-19 08:24:45.000000', NULL, 0),
+(7650822, 1244226, 251422, '<td valign="top">I can visualize those babies popping out of the eggs.  Such a nice image. Well done.</td>', 'I can visualize those babies popping out of the eggs.  Such a nice image. Well done.', '2020-01-19 08:28:26.000000', NULL, 0),
+(7650823, 1244226, 251422, '<td valign="top">I can visualize those babies popping out of the eggs.  Such a nice image. Well done. Certainly a protections from predators</td>', 'I can visualize those babies popping out of the eggs.  Such a nice image. Well done. Certainly a protections from predators', '2020-01-19 08:28:49.000000', NULL, 0),
+(7650824, 1244366, 251422, '<td valign="top">I just love to shoot burrowing owls. You captured this one perfect.  Congratulations</td>', 'I just love to shoot burrowing owls. You captured this one perfect.  Congratulations', '2020-01-19 08:29:27.000000', NULL, 0),
+(7650864, 1244391, 59029, '<td valign="top">lol turtle in Locust pose, very cute, congrats on the ribbon!</td>', 'lol turtle in Locust pose, very cute, congrats on the ribbon!', '2020-01-19 19:18:12.000000', NULL, 0),
+(7650887, 1244391, 251422, '<td valign="top">I loved this.  Really nice photo.</td>', 'I loved this.  Really nice photo.', '2020-01-20 00:44:45.000000', NULL, 0);
+COMMIT;

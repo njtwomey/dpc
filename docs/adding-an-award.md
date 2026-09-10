@@ -110,12 +110,11 @@ make backup              # fold the new grants into backups/sql
 
 Then commit `config/awards.yaml`, `site/data/dpc` and `backups/sql` together.
 
-**Committing `awards.yaml` alone is not enough**, even though the weekly refresh
-runs `dpc awards` itself. The runner rebuilds its database from `backups/sql`,
-which holds only the ~7,000 comments that already granted an award — the other
-3.6 million are on your machine and nowhere else. So the runner would find the
-new bling in challenges scraped from that day onward, and would silently miss
-every historical award. Only a local `dpc awards` sees the whole corpus.
+Committing `config/awards.yaml` on its own is now enough, if you would rather
+let the weekly job do the work: it restores `challenge_comments/` in full, so
+`dpc awards` on the runner sees the same 3.6 M comments you do and backfills the
+history by itself. Running it locally is still the faster feedback loop, and
+lets you check the counts before anything is published.
 
 ## Awards that were never given in a comment
 

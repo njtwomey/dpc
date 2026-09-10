@@ -1,0 +1,43 @@
+-- comments for challenge 3236
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7696088, 1262254, 4008, '<td valign="top">Great perspective. I have been there but did not think of this one.</td>', 'Great perspective. I have been there but did not think of this one.', '2021-06-16 11:00:08.000000', NULL, 1),
+(7696089, 1262245, 4008, '<td valign="top">It needs a slight clockwise rotation</td>', 'It needs a slight clockwise rotation', '2021-06-16 11:04:00.000000', NULL, 1),
+(7696145, 1262023, 100831, '<td valign="top">Nice symmetry.</td>', 'Nice symmetry.', '2021-06-17 18:15:12.000000', NULL, 1),
+(7696146, 1262160, 100831, '<td valign="top">Nice light and angle.</td>', 'Nice light and angle.', '2021-06-17 18:16:09.000000', NULL, 1),
+(7696147, 1262098, 100831, '<td valign="top">Awesome capture.. great color!</td>', 'Awesome capture.. great color!', '2021-06-17 18:16:51.000000', NULL, 1),
+(7696148, 1262150, 100831, '<td valign="top">What a cool picture!</td>', 'What a cool picture!', '2021-06-17 18:19:30.000000', NULL, 1),
+(7696149, 1262263, 100831, '<td valign="top">I feel it.</td>', 'I feel it.', '2021-06-17 18:25:48.000000', NULL, 1),
+(7696328, 1262099, 257467, '<td valign="top">https://www.dpchallenge.com/images/white_to_black.gif</td>', 'https://www.dpchallenge.com/images/white_to_black.gif', '2021-06-21 12:32:00.000000', NULL, 1),
+(7696367, 1262261, 40391, '<td valign="top">My favourite of the bunch</td>', 'My favourite of the bunch', '2021-06-22 08:35:43.000000', NULL, 1),
+(7696380, 1261995, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2021-06-22 14:05:02.000000', NULL, 1),
+(7696381, 1262098, 42733, '<td valign="top">In my top three.</td>', 'In my top three.', '2021-06-22 14:05:10.000000', NULL, 1),
+(7696382, 1262255, 42733, '<td valign="top">In my top three.</td>', 'In my top three.', '2021-06-22 14:05:18.000000', NULL, 1),
+(7696383, 1262268, 3306, '<td valign="top">When I saw this I was thinking it would do great in a DPC challenge called Taken Back By Nature!</td>', 'When I saw this I was thinking it would do great in a DPC challenge called Taken Back By Nature!', '2021-06-22 14:10:11.000000', NULL, 1),
+(7696384, 1262105, 3306, '<td valign="top">I like your choice of B&amp;W.</td>', 'I like your choice of B&W.', '2021-06-22 14:11:35.000000', NULL, 1),
+(7696414, 1262254, 97225, '<td valign="top">Definitely best in show. 10</td>', 'Definitely best in show. 10', '2021-06-23 00:49:08.000000', NULL, 1),
+(7696417, 1262265, 55281, '<td valign="top">Beautiful place .. I love the lines and tones - this was my favourite of the challenge :)</td>', 'Beautiful place .. I love the lines and tones - this was my favourite of the challenge :)', '2021-06-23 06:25:28.000000', NULL, 0),
+(7696424, 1262254, 117099, '<td valign="top">Very beautiful!</td>', 'Very beautiful!', '2021-06-23 06:38:13.000000', NULL, 0),
+(7696425, 1262098, 117099, '<td valign="top">Wonderful!</td>', 'Wonderful!', '2021-06-23 06:38:56.000000', NULL, 0),
+(7696426, 1262238, 117099, '<td valign="top">Excellent!</td>', 'Excellent!', '2021-06-23 06:39:36.000000', NULL, 0),
+(7696433, 1262256, 30214, '<td valign="top">Who knew that car parks can be so gorgeous? ) Nice shot, it was one of my top choices</td>', 'Who knew that car parks can be so gorgeous? ) Nice shot, it was one of my top choices', '2021-06-23 10:08:24.000000', NULL, 0),
+(7696434, 1262105, 30214, '<td valign="top">This was one of my top choices.  Lovely photograph</td>', 'This was one of my top choices.  Lovely photograph', '2021-06-23 10:10:36.000000', NULL, 0),
+(7696435, 1261961, 138630, '<td valign="top">My favorite and only 10 - guess it wasn''t "architectural" enough for some?  It''s a wonderful picture, though, and I enjoy it a lot.</td>', 'My favorite and only 10 - guess it wasn''t "architectural" enough for some?  It''s a wonderful picture, though, and I enjoy it a lot.', '2021-06-23 10:32:31.000000', NULL, 0),
+(7696436, 1262238, 138630, '<td valign="top">Soooo cool - one of my top three.  I love art deco and this is classic and well presented.  Congratulations, Anita.</td>', 'Soooo cool - one of my top three.  I love art deco and this is classic and well presented.  Congratulations, Anita.', '2021-06-23 10:34:04.000000', NULL, 0),
+(7696437, 1262098, 138630, '<td valign="top">Very neat place.  Congratulations on 2nd place.</td>', 'Very neat place.  Congratulations on 2nd place.', '2021-06-23 10:34:30.000000', NULL, 0),
+(7696438, 1262254, 138630, '<td valign="top">So much going on here!  Must be wonderful to explore, both in person and with the camera.  Congratulations on the blue.</td>', 'So much going on here!  Must be wonderful to explore, both in person and with the camera.  Congratulations on the blue.', '2021-06-23 10:35:32.000000', NULL, 0),
+(7696439, 1262150, 138630, '<td valign="top">Very cool and intriguing as well.  One of my top three.  Congratulations on the HM.</td>', 'Very cool and intriguing as well.  One of my top three.  Congratulations on the HM.', '2021-06-23 10:36:29.000000', NULL, 0),
+(7696456, 1262254, 107697, '<td valign="top">Congratulations!  Amazing photo!</td>', 'Congratulations!  Amazing photo!', '2021-06-23 15:26:58.000000', NULL, 0),
+(7696457, 1262238, 107697, '<td valign="top">Love this!!  Was one of my top votes!  So well composed with great color and light.  Congratulations!</td>', 'Love this!!  Was one of my top votes!  So well composed with great color and light.  Congratulations!', '2021-06-23 15:37:11.000000', NULL, 0),
+(7696458, 1262150, 107697, '<td valign="top">You framed this well!!  Love all the lines and shapes.  A feast for the eyes!  Congratulations!</td>', 'You framed this well!!  Love all the lines and shapes.  A feast for the eyes!  Congratulations!', '2021-06-23 15:38:34.000000', NULL, 0),
+(7696459, 1262265, 107697, '<td valign="top">Beautiful capture!  Well composed!</td>', 'Beautiful capture!  Well composed!', '2021-06-23 15:39:53.000000', NULL, 0),
+(7696460, 1261995, 107697, '<td valign="top">Love the lines and colors!!  Great job!</td>', 'Love the lines and colors!!  Great job!', '2021-06-23 15:40:50.000000', NULL, 0),
+(7696466, 1262098, 30214, '<td valign="top">Congrats on your first ribbon Jacquie! Nicely framed!</td>', 'Congrats on your first ribbon Jacquie! Nicely framed!', '2021-06-23 18:59:53.000000', NULL, 0),
+(7696467, 1262098, 114285, '<td valign="top">Very fancy indeed, I see this is your first ribbon. Congratulations.</td>', 'Very fancy indeed, I see this is your first ribbon. Congratulations.', '2021-06-23 21:30:40.000000', NULL, 0),
+(7696475, 1262257, 173844, '<td valign="top">Lovely, airy image that epitomizes Greece.  So it''s more than the typical architecture, in bright blue and white, but the expanse of that great culture spread out before us.  The darker blue of the sea beyond, and the rocky, jutting land, is seen from above, as if by the gods.  I love how the sea and sky mingle at the horizon, beckoning.  It''s as much about the architecture of the world as of this church.<br/>Personal favorite of the challenge.  9.</td>', 'Lovely, airy image that epitomizes Greece.  So it''s more than the typical architecture, in bright blue and white, but the expanse of that great culture spread out before us.  The darker blue of the sea beyond, and the rocky, jutting land, is seen from above, as if by the gods.  I love how the sea and sky mingle at the horizon, beckoning.  It''s as much about the architecture of the world as of this church.Personal favorite of the challenge.  9.', '2021-06-24 01:24:38.000000', NULL, 0),
+(7696521, 1262254, 97225, '<td valign="top">Congrats on the blue. Fabulous!</td>', 'Congrats on the blue. Fabulous!', '2021-06-24 23:57:17.000000', NULL, 0),
+(7696862, 1262185, 98912, '<td valign="top">Amazing!</td>', 'Amazing!', '2021-06-30 11:38:32.000000', NULL, 0),
+(7698155, 1262098, 107697, '<td valign="top">Thank you so much!</td>', 'Thank you so much!', '2021-07-28 14:34:34.000000', NULL, 0),
+(7724125, 1262253, 30049, '<td valign="top">I found this to be an interesting entry.  Wondering if the ''Miniature Effect'' bleeding into the lower stone area had any impact on your score.  Overall I like the color and detail.<br/> <br/>About time to enter a new challenge, don''t you think?  :-)</td>', 'I found this to be an interesting entry.  Wondering if the ''Miniature Effect'' bleeding into the lower stone area had any impact on your score.  Overall I like the color and detail. About time to enter a new challenge, don''t you think?  :-)', '2022-07-27 10:20:00.000000', NULL, 0);
+COMMIT;

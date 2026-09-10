@@ -1,0 +1,56 @@
+-- comments for challenge 3224
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7694888, 1261681, 163081, '<td valign="top">Wow, very good. 10 from me and my Blue Dragon Award <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1173261" rel="nofollow" target="_blank"><img border="0" src="//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg'', strrpos(''//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg'', ''/'') + 1) . ''"/></a></td>', 'Wow, very good. 10 from me and my Blue Dragon Award ', '2021-05-24 02:25:13.000000', NULL, 1),
+(7694902, 1261668, 29748, '<td valign="top">The dust spots are very distracting</td>', 'The dust spots are very distracting', '2021-05-24 08:34:11.000000', NULL, 1),
+(7694910, 1261695, 55281, '<td valign="top">This puts me in mind of the film Mrs Lowry &amp; Son - nicely done!</td>', 'This puts me in mind of the film Mrs Lowry & Son - nicely done!', '2021-05-24 10:05:09.000000', NULL, 1),
+(7694953, 1261673, 52549, '<td valign="top">Wonderful image.</td>', 'Wonderful image.', '2021-05-25 04:59:56.000000', NULL, 1),
+(7694954, 1261695, 52549, '<td valign="top">Beautiful! Top three. I seem to recognize this extremely photographic lady :)</td>', 'Beautiful! Top three. I seem to recognize this extremely photographic lady :)', '2021-05-25 05:01:23.000000', NULL, 1),
+(7694955, 1261674, 52549, '<td valign="top">I see a Blue Ribbon in your future... Fantastic image.</td>', 'I see a Blue Ribbon in your future... Fantastic image.', '2021-05-25 05:02:20.000000', NULL, 1),
+(7694956, 1261681, 52549, '<td valign="top">Top three! Beautiful, creative image.</td>', 'Top three! Beautiful, creative image.', '2021-05-25 05:02:54.000000', NULL, 1),
+(7694957, 1261565, 52549, '<td valign="top">She looks great!</td>', 'She looks great!', '2021-05-25 05:03:31.000000', NULL, 1),
+(7695191, 1261721, 30049, '<td valign="top">Too bad they''re walking away and you can''t see Moms faces.</td>', 'Too bad they''re walking away and you can''t see Moms faces.', '2021-05-29 00:47:29.000000', NULL, 1),
+(7695213, 1261681, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2021-05-29 20:56:10.000000', NULL, 1),
+(7695214, 1261695, 42733, '<td valign="top">In my top three.</td>', 'In my top three.', '2021-05-29 20:56:24.000000', NULL, 1),
+(7695215, 1261674, 42733, '<td valign="top">In my top three.</td>', 'In my top three.', '2021-05-29 20:56:37.000000', NULL, 1),
+(7695217, 1261734, 175219, '<td valign="top">I think the lack of some sky makes this look closed in.</td>', 'I think the lack of some sky makes this look closed in.', '2021-05-29 22:37:12.000000', NULL, 1),
+(7695218, 1261732, 175219, '<td valign="top">Very busy, I find It hard to see the main subject.</td>', 'Very busy, I find It hard to see the main subject.', '2021-05-29 22:38:10.000000', NULL, 1),
+(7695219, 1261721, 175219, '<td valign="top">Nice snapshot</td>', 'Nice snapshot', '2021-05-29 22:38:30.000000', NULL, 1),
+(7695220, 1261673, 175219, '<td valign="top">Very interesting, I gave an 8</td>', 'Very interesting, I gave an 8', '2021-05-29 22:38:54.000000', NULL, 1),
+(7695221, 1261695, 175219, '<td valign="top">Beaufiful</td>', 'Beaufiful', '2021-05-29 22:39:22.000000', NULL, 1),
+(7695222, 1261565, 175219, '<td valign="top">Nice</td>', 'Nice', '2021-05-29 22:39:30.000000', NULL, 1),
+(7695223, 1261735, 175219, '<td valign="top">Nice caption</td>', 'Nice caption', '2021-05-29 22:39:48.000000', NULL, 1),
+(7695224, 1261681, 175219, '<td valign="top">Well Done. I gave a 10</td>', 'Well Done. I gave a 10', '2021-05-29 22:40:05.000000', NULL, 1),
+(7695225, 1261718, 175219, '<td valign="top">Rather grainy, probably high ISO</td>', 'Rather grainy, probably high ISO', '2021-05-29 22:41:10.000000', NULL, 1),
+(7695226, 1261674, 175219, '<td valign="top">Interesting composition, I gave a 9</td>', 'Interesting composition, I gave a 9', '2021-05-29 22:41:35.000000', NULL, 1),
+(7695227, 1261703, 175219, '<td valign="top">Good take on motherhood. I gave a 9</td>', 'Good take on motherhood. I gave a 9', '2021-05-29 22:42:25.000000', NULL, 1),
+(7695228, 1261512, 175219, '<td valign="top">Well composed</td>', 'Well composed', '2021-05-29 22:43:08.000000', NULL, 1),
+(7695230, 1261695, 30861, '<td valign="top">This is gorgeous, Lev! Give her a hug for me :-)</td>', 'This is gorgeous, Lev! Give her a hug for me :-)', '2021-05-30 00:37:58.000000', NULL, 1),
+(7695233, 1261695, 40391, '<td valign="top">Beautiful portrait</td>', 'Beautiful portrait', '2021-05-30 06:52:26.000000', NULL, 1),
+(7695251, 1261674, 173844, '<td valign="top">Two personal co-favorites in this challenge. <br/>In one a mother drapes her hands on her son''s shoulders.<br/>Here a fox and her pup look into each other''s eyes.<br/>Both show a world of tenderness.</td>', 'Two personal co-favorites in this challenge. In one a mother drapes her hands on her son''s shoulders.Here a fox and her pup look into each other''s eyes.Both show a world of tenderness.', '2021-05-30 22:01:40.000000', NULL, 1),
+(7695252, 1261695, 173844, '<td valign="top">Two personal co-favorites in this challenge.<br/>In one a fox and her pup look into each others eyes.<br/>Here a mother drapes her hands on her son''s shoulders.<br/>Both show a world of tenderness.</td>', 'Two personal co-favorites in this challenge.In one a fox and her pup look into each others eyes.Here a mother drapes her hands on her son''s shoulders.Both show a world of tenderness.', '2021-05-30 22:01:46.000000', NULL, 1),
+(7695263, 1261674, 97225, '<td valign="top">Congrats on the red, Wendy. Stunning shot, I love the obvious affection. ( This was my top pick.)</td>', 'Congrats on the red, Wendy. Stunning shot, I love the obvious affection. ( This was my top pick.)', '2021-05-31 01:42:09.000000', NULL, 0),
+(7695274, 1261681, 60581, '<td valign="top">Thank you so much Georges! This means a lot to me :)<br/><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by GeorgesBogaert:</b></div><hr/><i> Wow, very good. 10 from me and my Blue Dragon Award <a href="https://www.dpchallenge.com/image.php?IMAGE_ID=1173261" rel="nofollow" target="_blank"><img border="0" src="//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg" xalt="'' . substr(''//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg'', strrpos(''//images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1173261.jpg'', ''/'') + 1) . ''"/></a> </i></td></tr></table></td>', 'Thank you so much Georges! This means a lot to me :)Originally posted by GeorgesBogaert: Wow, very good. 10 from me and my Blue Dragon Award  ', '2021-05-31 09:53:59.000000', NULL, 0),
+(7695275, 1261695, 96751, '<td valign="top">Precious</td>', 'Precious', '2021-05-31 12:38:39.000000', NULL, 0),
+(7695276, 1261674, 96751, '<td valign="top">I love foxes! This is adorable. Looks like mom''s patience is wearing thin...</td>', 'I love foxes! This is adorable. Looks like mom''s patience is wearing thin...', '2021-05-31 12:39:35.000000', NULL, 0),
+(7695277, 1261681, 96751, '<td valign="top">I especially like that the blanket is heart-shaped :)</td>', 'I especially like that the blanket is heart-shaped :)', '2021-05-31 12:39:59.000000', NULL, 0),
+(7695278, 1261673, 96751, '<td valign="top">I love these birds!</td>', 'I love these birds!', '2021-05-31 12:41:09.000000', NULL, 0),
+(7695279, 1261657, 96751, '<td valign="top">Sweet</td>', 'Sweet', '2021-05-31 12:43:02.000000', NULL, 0),
+(7695284, 1261681, 30214, '<td valign="top">Congrats Girish! You have adorable family!</td>', 'Congrats Girish! You have adorable family!', '2021-05-31 20:43:25.000000', NULL, 0),
+(7695285, 1261565, 30214, '<td valign="top">Say hi to your mom from my mom Lydia!</td>', 'Say hi to your mom from my mom Lydia!', '2021-05-31 20:44:09.000000', NULL, 0),
+(7695286, 1261674, 30214, '<td valign="top">Beautiful family! Congrats Wendy!</td>', 'Beautiful family! Congrats Wendy!', '2021-05-31 20:45:09.000000', NULL, 0),
+(7695289, 1261695, 103142, '<td valign="top">Absolutely incredible shot. What a treasure to have and what a treasure to have taken.</td>', 'Absolutely incredible shot. What a treasure to have and what a treasure to have taken.', '2021-05-31 22:04:19.000000', NULL, 0),
+(7695296, 1261674, 50641, '<td valign="top">Great catch, congrats!  Would you be willing to share your settings?...because this has such nice depth and sharpness despite the gentle lighting. Thanks!</td>', 'Great catch, congrats!  Would you be willing to share your settings?...because this has such nice depth and sharpness despite the gentle lighting. Thanks!', '2021-06-01 01:06:36.000000', NULL, 0),
+(7695311, 1261681, 122678, '<td valign="top">Beautiful image<br/>Congratulations</td>', 'Beautiful imageCongratulations', '2021-06-01 09:06:34.000000', NULL, 0),
+(7695312, 1261695, 122678, '<td valign="top">Congratulations<br/>Beautiful image, love the glow in you both.</td>', 'CongratulationsBeautiful image, love the glow in you both.', '2021-06-01 09:08:03.000000', NULL, 0),
+(7695313, 1261674, 122678, '<td valign="top">Great Capture and especially for this challenge.<br/>A well deserved congratulations.<br/></td>', 'Great Capture and especially for this challenge.A well deserved congratulations.', '2021-06-01 09:09:19.000000', NULL, 0),
+(7695314, 1261565, 122678, '<td valign="top">Beautiful!</td>', 'Beautiful!', '2021-06-01 09:09:50.000000', NULL, 0),
+(7695316, 1261673, 122678, '<td valign="top">Amazing capture<br/></td>', 'Amazing capture', '2021-06-01 09:10:20.000000', NULL, 0),
+(7695321, 1261695, 52549, '<td valign="top">Congratulations Lev. It''s a wonderful image.</td>', 'Congratulations Lev. It''s a wonderful image.', '2021-06-01 09:21:03.000000', NULL, 0),
+(7695322, 1261674, 52549, '<td valign="top">A beautiful family portrait, Wendy. Many congrats.</td>', 'A beautiful family portrait, Wendy. Many congrats.', '2021-06-01 09:21:39.000000', NULL, 0),
+(7695323, 1261681, 52549, '<td valign="top">So glad this did well for you. Wonderful image.</td>', 'So glad this did well for you. Wonderful image.', '2021-06-01 09:22:08.000000', NULL, 0),
+(7695324, 1261565, 52549, '<td valign="top">You''ve a lovely Mum, Lydia my friend.</td>', 'You''ve a lovely Mum, Lydia my friend.', '2021-06-01 09:23:10.000000', NULL, 0),
+(7695325, 1261673, 52549, '<td valign="top">Their expressions are absolutely priceless. Fabulous shot.</td>', 'Their expressions are absolutely priceless. Fabulous shot.', '2021-06-01 09:24:02.000000', NULL, 0),
+(7695464, 1261695, 86447, '<td valign="top">Your mom...   She''s amazing!<br/> <br/>I love seeing her in images!<br/></td>', 'Your mom...   She''s amazing! I love seeing her in images!', '2021-06-03 19:37:28.000000', NULL, 0);
+COMMIT;

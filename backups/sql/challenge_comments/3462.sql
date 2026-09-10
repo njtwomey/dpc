@@ -1,0 +1,44 @@
+-- comments for challenge 3462
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7729172, 1272807, 114285, '<td valign="top">Haha.</td>', 'Haha.', '2022-09-05 01:10:49.000000', NULL, 1),
+(7729173, 1272795, 114285, '<td valign="top">Haha, too cute Roz.</td>', 'Haha, too cute Roz.', '2022-09-05 01:11:15.000000', NULL, 1),
+(7729193, 1272807, 66597, '<td valign="top">This is very cute, and nicely lit.</td>', 'This is very cute, and nicely lit.', '2022-09-05 14:35:54.000000', NULL, 1),
+(7729210, 1272795, 66597, '<td valign="top">Love the dogs expression here. Well done.</td>', 'Love the dogs expression here. Well done.', '2022-09-05 18:31:05.000000', NULL, 1),
+(7729366, 1272787, 42733, '<td valign="top">LOL.</td>', 'LOL.', '2022-09-08 10:39:52.000000', NULL, 1),
+(7729408, 1272806, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2022-09-09 11:36:37.000000', NULL, 1),
+(7729409, 1272794, 42733, '<td valign="top">In my top three for this challenge.</td>', 'In my top three for this challenge.', '2022-09-09 11:45:04.000000', NULL, 1),
+(7729410, 1272795, 42733, '<td valign="top">In my top three for this challenge.</td>', 'In my top three for this challenge.', '2022-09-09 11:49:57.000000', NULL, 1),
+(7729428, 1272795, 68504, '<td valign="top">oh roz... don''t make me cry.</td>', 'oh roz... don''t make me cry.', '2022-09-10 15:16:30.000000', NULL, 1),
+(7729429, 1272594, 68504, '<td valign="top">what a gorgeous photo/picture.</td>', 'what a gorgeous photo/picture.', '2022-09-10 15:18:05.000000', NULL, 1),
+(7729430, 1272796, 68504, '<td valign="top">oh my, here is heart wrenching order in chaos.</td>', 'oh my, here is heart wrenching order in chaos.', '2022-09-10 15:19:52.000000', NULL, 1),
+(7729464, 1272798, 103142, '<td valign="top">Brilliant idea, but rather a so so shot. Sorry!</td>', 'Brilliant idea, but rather a so so shot. Sorry!', '2022-09-11 20:47:55.000000', NULL, 1),
+(7729467, 1272806, 273637, '<td valign="top">Brilliant</td>', 'Brilliant', '2022-09-11 21:46:41.000000', NULL, 1),
+(7729468, 1272763, 273637, '<td valign="top">So beautiful.</td>', 'So beautiful.', '2022-09-11 21:47:31.000000', NULL, 1),
+(7729487, 1272808, 103142, '<td valign="top">I didnt know this was yours when I voted. Excellent!</td>', 'I didnt know this was yours when I voted. Excellent!', '2022-09-12 01:03:47.000000', NULL, 0),
+(7729490, 1272807, 97225, '<td valign="top">Congratulations, Wendy. Love this - I was your 10. Now I need a ferret!</td>', 'Congratulations, Wendy. Love this - I was your 10. Now I need a ferret!', '2022-09-12 03:29:10.000000', NULL, 0),
+(7729491, 1272795, 97225, '<td valign="top">Oh, he''s a good boy!!! Congrats on the red. Wonderful photo. 9 from me.</td>', 'Oh, he''s a good boy!!! Congrats on the red. Wonderful photo. 9 from me.', '2022-09-12 03:30:32.000000', NULL, 0),
+(7729492, 1272806, 97225, '<td valign="top">Spectacular! Congrats on the ribbon. 9 from me.</td>', 'Spectacular! Congrats on the ribbon. 9 from me.', '2022-09-12 03:31:36.000000', NULL, 0),
+(7729493, 1272794, 97225, '<td valign="top">Very well done and very emotive. Congrats on the HM.</td>', 'Very well done and very emotive. Congrats on the HM.', '2022-09-12 03:36:18.000000', NULL, 0),
+(7729494, 1272787, 97225, '<td valign="top">Congrats on the HM, Barbara.</td>', 'Congrats on the HM, Barbara.', '2022-09-12 03:37:48.000000', NULL, 0),
+(7729495, 1272769, 97225, '<td valign="top">Lol!</td>', 'Lol!', '2022-09-12 03:38:26.000000', NULL, 0),
+(7729497, 1272807, 114285, '<td valign="top">Astonishing!</td>', 'Astonishing!', '2022-09-12 04:25:38.000000', NULL, 0),
+(7729498, 1272795, 114285, '<td valign="top">Toddy has the best ears ever!<br/> <br/>Love it!</td>', 'Toddy has the best ears ever! Love it!', '2022-09-12 04:26:02.000000', NULL, 0),
+(7729500, 1272754, 30861, '<td valign="top">New-to-you car, Paul?</td>', 'New-to-you car, Paul?', '2022-09-12 05:45:00.000000', NULL, 0),
+(7729502, 1272795, 242379, '<td valign="top">Congratulations roz! This pic was my,favourite in this challenge. Very emocional</td>', 'Congratulations roz! This pic was my,favourite in this challenge. Very emocional', '2022-09-12 05:53:44.000000', NULL, 0),
+(7729503, 1272794, 242379, '<td valign="top">I voted 9 for this pic. Really heartouching</td>', 'I voted 9 for this pic. Really heartouching', '2022-09-12 05:54:41.000000', NULL, 0),
+(7729510, 1272794, 173844, '<td valign="top">Every so often I miss, by shortsightedness or obscure principle or sense of ignorance about the challenge, voting.  This time it was mere shortsightedness.  "relief, then grief," by my lights, is a very fine image with strong emotional gravity.  I can''t see me voting less than an 8 here.  I have great admiration for your ability to create this scene, which does nail the full breadth of the challenge rather than being a slapped on title for an extraneous image.  Sorry I snoozed past the challenge.</td>', 'Every so often I miss, by shortsightedness or obscure principle or sense of ignorance about the challenge, voting.  This time it was mere shortsightedness.  "relief, then grief," by my lights, is a very fine image with strong emotional gravity.  I can''t see me voting less than an 8 here.  I have great admiration for your ability to create this scene, which does nail the full breadth of the challenge rather than being a slapped on title for an extraneous image.  Sorry I snoozed past the challenge.', '2022-09-12 10:51:19.000000', NULL, 0),
+(7729512, 1272795, 103142, '<td valign="top">Mr. Todd is so incredibly photogenic!! But you are doing amazing things with him. I keep thinking I should go into the pet photography business (to make some extra money and to maybe shorten my 1.25 hour commute), but I''m afraid to do it. I need to start trying harder!</td>', 'Mr. Todd is so incredibly photogenic!! But you are doing amazing things with him. I keep thinking I should go into the pet photography business (to make some extra money and to maybe shorten my 1.25 hour commute), but I''m afraid to do it. I need to start trying harder!', '2022-09-12 11:02:01.000000', NULL, 0),
+(7729513, 1272795, 3306, '<td valign="top">Great shot Roz. I love Toddies expression!</td>', 'Great shot Roz. I love Toddies expression!', '2022-09-12 11:21:18.000000', NULL, 0),
+(7729521, 1272763, 38162, '<td valign="top">Where on the island?  Im in Miller Place. My only 10. Terrific capture.</td>', 'Where on the island?  Im in Miller Place. My only 10. Terrific capture.', '2022-09-12 11:56:13.000000', NULL, 0),
+(7729524, 1272763, 119705, '<td valign="top">Thank you so much! <br/>This was taken at Orient State Park. There were a few patches of thistle right at the entrance/ exit of the walking trail.</td>', 'Thank you so much! This was taken at Orient State Park. There were a few patches of thistle right at the entrance/ exit of the walking trail.', '2022-09-12 12:06:50.000000', NULL, 0),
+(7729526, 1272807, 24454, '<td valign="top">So stinkin CUTE!!!!!!!</td>', 'So stinkin CUTE!!!!!!!', '2022-09-12 12:57:06.000000', NULL, 0),
+(7729527, 1272795, 24454, '<td valign="top">You are a goooooood dog, Toddy!  Congratulations on your red ribbon for your efforts.  Too bad it isnt edible!</td>', 'You are a goooooood dog, Toddy!  Congratulations on your red ribbon for your efforts.  Too bad it isnt edible!', '2022-09-12 12:59:39.000000', NULL, 0),
+(7729528, 1272806, 24454, '<td valign="top">Wow!!!  That is amazing!</td>', 'Wow!!!  That is amazing!', '2022-09-12 13:00:39.000000', NULL, 0),
+(7729536, 1272796, 100831, '<td valign="top">I was your 7. I like a good story.</td>', 'I was your 7. I like a good story.', '2022-09-12 15:14:19.000000', NULL, 0),
+(7729560, 1272807, 66597, '<td valign="top">This is really so unbelievably cute. Absolutely top notch!</td>', 'This is really so unbelievably cute. Absolutely top notch!', '2022-09-12 21:53:27.000000', NULL, 0),
+(7729561, 1272795, 66597, '<td valign="top">Roz, what an adorable shot! I absolutely love tour doggys expression here. Captures the title just perfectly.</td>', 'Roz, what an adorable shot! I absolutely love tour doggys expression here. Captures the title just perfectly.', '2022-09-12 21:54:41.000000', NULL, 0),
+(7729570, 1272794, 114285, '<td valign="top">I love the write-up, especially the good news you got top five bad news no ribbon.<br/> <br/>I feel you put this together brilliantly.</td>', 'I love the write-up, especially the good news you got top five bad news no ribbon. I feel you put this together brilliantly.', '2022-09-13 00:35:23.000000', NULL, 0),
+(7729686, 1272807, 58728, '<td valign="top">OMG This is soooooo flipping cute!!!!!!  GREAT photo!</td>', 'OMG This is soooooo flipping cute!!!!!!  GREAT photo!', '2022-09-15 15:12:54.000000', NULL, 0);
+COMMIT;

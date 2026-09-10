@@ -1,0 +1,67 @@
+-- comments for challenge 2741
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7602626, 1228682, 86447, '<td valign="top">Oh.   I really like this!</td>', 'Oh.   I really like this!', '2018-11-15 00:06:42.000000', NULL, 1),
+(7602627, 1228699, 86447, '<td valign="top">Oh golly!   This is... FABULOUS!    Blue ribbon!</td>', 'Oh golly!   This is... FABULOUS!    Blue ribbon!', '2018-11-15 00:07:39.000000', NULL, 1),
+(7602634, 1228151, 123833, '<td valign="top">Great work, Judi?</td>', 'Great work, Judi?', '2018-11-15 07:20:07.000000', NULL, 1),
+(7602635, 1228723, 123833, '<td valign="top">They are cute, aren''t they :)</td>', 'They are cute, aren''t they :)', '2018-11-15 07:20:28.000000', NULL, 1),
+(7602636, 1228568, 123833, '<td valign="top">Great colors and diagonals</td>', 'Great colors and diagonals', '2018-11-15 07:20:57.000000', NULL, 1),
+(7602637, 1228699, 123833, '<td valign="top">Great double exposure, Mark?</td>', 'Great double exposure, Mark?', '2018-11-15 07:21:33.000000', NULL, 1),
+(7602743, 1228712, 114285, '<td valign="top">Youre not wrong about that, if this is you Mary Ann this is so beautifully done, the light is exquisite.</td>', 'Youre not wrong about that, if this is you Mary Ann this is so beautifully done, the light is exquisite.', '2018-11-15 21:03:07.000000', NULL, 1),
+(7603103, 1228723, 83313, '<td valign="top">Grog and Thag get sepurated frum hunting party. Enkountur weerd burds. Grog not knows if weerd burd meet is gud but have biggur problum bekaus burds also hunt.</td>', 'Grog and Thag get sepurated frum hunting party. Enkountur weerd burds. Grog not knows if weerd burd meet is gud but have biggur problum bekaus burds also hunt.', '2018-11-18 14:26:23.000000', NULL, 1),
+(7603104, 1228677, 83313, '<td valign="top">Is rare instense of grown female joining tribe uv Grog. Female wears blud of enumies, so Grog knows female will make many strong younglings for tribe... One day, when males don''t be skared uv hur enymore.</td>', 'Is rare instense of grown female joining tribe uv Grog. Female wears blud of enumies, so Grog knows female will make many strong younglings for tribe... One day, when males don''t be skared uv hur enymore.', '2018-11-18 14:34:42.000000', NULL, 1),
+(7603165, 1228625, 83313, '<td valign="top">Cave gets stinkee. Thag insist not him, must be kitteh. Grog give bath, but Thag get to clip claws.</td>', 'Cave gets stinkee. Thag insist not him, must be kitteh. Grog give bath, but Thag get to clip claws.', '2018-11-18 20:24:38.000000', NULL, 1),
+(7603168, 1228725, 83313, '<td valign="top">Female hold kitteh still so Thag can clip claws.</td>', 'Female hold kitteh still so Thag can clip claws.', '2018-11-18 20:26:18.000000', NULL, 1),
+(7603316, 1227891, 38032, '<td valign="top">great comp!</td>', 'great comp!', '2018-11-19 07:01:45.000000', NULL, 1),
+(7603506, 1228723, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2018-11-20 10:09:38.000000', NULL, 1),
+(7603507, 1228693, 42733, '<td valign="top">In my top 3.</td>', 'In my top 3.', '2018-11-20 10:09:54.000000', NULL, 1),
+(7603508, 1228491, 42733, '<td valign="top">In my top 3.</td>', 'In my top 3.', '2018-11-20 10:10:22.000000', NULL, 1),
+(7603651, 1228693, 113411, '<td valign="top">what beauties!!!</td>', 'what beauties!!!', '2018-11-21 08:01:54.000000', NULL, 1),
+(7603652, 1228707, 113411, '<td valign="top">what a great capture!!!!</td>', 'what a great capture!!!!', '2018-11-21 08:03:11.000000', NULL, 1),
+(7603653, 1228723, 113411, '<td valign="top">wow!!! how fabulous..it looks like an animated cartoon...The middle one looks like an Emu.<br/>I hope you described the circumstances around this shoot.</td>', 'wow!!! how fabulous..it looks like an animated cartoon...The middle one looks like an Emu.I hope you described the circumstances around this shoot.', '2018-11-21 08:06:03.000000', NULL, 1),
+(7603654, 1228712, 113411, '<td valign="top">wonderful still life .MAA!</td>', 'wonderful still life .MAA!', '2018-11-21 08:08:29.000000', NULL, 1),
+(7603782, 1228710, 114285, '<td valign="top">Sublime, crazy good, bumping up.</td>', 'Sublime, crazy good, bumping up.', '2018-11-21 22:45:35.000000', NULL, 1),
+(7603783, 1228727, 114285, '<td valign="top">Ohh the many faces.</td>', 'Ohh the many faces.', '2018-11-21 22:45:55.000000', NULL, 1),
+(7603790, 1228699, 86447, '<td valign="top">Wow, Mark!!!  <br/> <br/>Wow!</td>', 'Wow, Mark!!!   Wow!', '2018-11-22 00:06:21.000000', NULL, 0),
+(7603792, 1228699, 86447, '<td valign="top">I... actually...  have NO idea how I beat you this round. <br/> <br/>This is...  AMAZING!</td>', 'I... actually...  have NO idea how I beat you this round.  This is...  AMAZING!', '2018-11-22 00:11:28.000000', NULL, 0),
+(7603793, 1228682, 97225, '<td valign="top">Sorry I didn''t comment during voting, Mariuca. I really like this and it was in my top (equal) three. I was your 9</td>', 'Sorry I didn''t comment during voting, Mariuca. I really like this and it was in my top (equal) three. I was your 9', '2018-11-22 00:58:28.000000', NULL, 0),
+(7603794, 1228453, 97225, '<td valign="top">I really like this, Karen. I was your 8.</td>', 'I really like this, Karen. I was your 8.', '2018-11-22 01:01:53.000000', NULL, 0),
+(7603795, 1228723, 97225, '<td valign="top">Congratulations, Lydia. This is really funny, and cute.</td>', 'Congratulations, Lydia. This is really funny, and cute.', '2018-11-22 01:04:21.000000', NULL, 0),
+(7603796, 1228699, 97225, '<td valign="top">Congrats on the red, Mark. This is brilliant. It was in my top (equal) three.</td>', 'Congrats on the red, Mark. This is brilliant. It was in my top (equal) three.', '2018-11-22 01:05:37.000000', NULL, 0),
+(7603797, 1228712, 97225, '<td valign="top">Congratulations Mary Ann. That is a very funky pumpkin. It makes me think of dragons and genies.</td>', 'Congratulations Mary Ann. That is a very funky pumpkin. It makes me think of dragons and genies.', '2018-11-22 01:07:22.000000', NULL, 0),
+(7603798, 1228568, 97225, '<td valign="top">Congratulations. Good design elements and colours.</td>', 'Congratulations. Good design elements and colours.', '2018-11-22 01:08:17.000000', NULL, 0),
+(7603802, 1228670, 114285, '<td valign="top">Very artistic Marion. Congratulations.</td>', 'Very artistic Marion. Congratulations.', '2018-11-22 03:53:31.000000', NULL, 0),
+(7603803, 1228723, 135744, '<td valign="top">I absolutely love this! Right up my street. Congrats! Such a fun photo</td>', 'I absolutely love this! Right up my street. Congrats! Such a fun photo', '2018-11-22 04:15:29.000000', NULL, 0),
+(7603804, 1228682, 67258, '<td valign="top">Lovely!</td>', 'Lovely!', '2018-11-22 05:20:34.000000', NULL, 0),
+(7603805, 1228670, 52549, '<td valign="top">Congrats Marion. Love the color composition you chose.</td>', 'Congrats Marion. Love the color composition you chose.', '2018-11-22 06:38:29.000000', NULL, 0),
+(7603806, 1228723, 52549, '<td valign="top">You''re great, Lydia! ((Hugs))</td>', 'You''re great, Lydia! ((Hugs))', '2018-11-22 06:44:40.000000', NULL, 0),
+(7603807, 1228699, 52549, '<td valign="top">WOW! Congrats, Mark. This is a brilliant image..</td>', 'WOW! Congrats, Mark. This is a brilliant image..', '2018-11-22 06:45:30.000000', NULL, 0),
+(7603808, 1228712, 52549, '<td valign="top">Congrats, Mary Ann. I agree with Neat, the lighting is indeed exquisite.</td>', 'Congrats, Mary Ann. I agree with Neat, the lighting is indeed exquisite.', '2018-11-22 06:47:35.000000', NULL, 0),
+(7603809, 1228568, 52549, '<td valign="top">Love this, it''s a fabulous image.</td>', 'Love this, it''s a fabulous image.', '2018-11-22 06:48:39.000000', NULL, 0),
+(7603814, 1228723, 3306, '<td valign="top">Congrats on the Blue. Great image Lydia!</td>', 'Congrats on the Blue. Great image Lydia!', '2018-11-22 07:55:01.000000', NULL, 0),
+(7603815, 1228699, 3306, '<td valign="top">Well done. Congrats on Second.</td>', 'Well done. Congrats on Second.', '2018-11-22 07:56:48.000000', NULL, 0),
+(7603816, 1228712, 3306, '<td valign="top">Very nice composition. Deserved to be in the top 3. Congrats.</td>', 'Very nice composition. Deserved to be in the top 3. Congrats.', '2018-11-22 07:58:36.000000', NULL, 0),
+(7603817, 1228670, 3306, '<td valign="top">Beautifully done. I can see this very big, framed and on the wall in an expensive restaurant or Hotel.</td>', 'Beautifully done. I can see this very big, framed and on the wall in an expensive restaurant or Hotel.', '2018-11-22 08:00:39.000000', NULL, 0),
+(7603818, 1228151, 3306, '<td valign="top">Wonderfully imagined an composed. I can see you put a lot of work into it. My favorite in the challenge.</td>', 'Wonderfully imagined an composed. I can see you put a lot of work into it. My favorite in the challenge.', '2018-11-22 08:03:21.000000', NULL, 0),
+(7603819, 1228711, 61651, '<td valign="top">well, I for one find this fascinating, don''t know what it''s doing all the way down here</td>', 'well, I for one find this fascinating, don''t know what it''s doing all the way down here', '2018-11-22 08:19:03.000000', NULL, 0),
+(7603823, 1228699, 109227, '<td valign="top">One of your best, congrats!</td>', 'One of your best, congrats!', '2018-11-22 09:06:51.000000', NULL, 0),
+(7603824, 1228723, 109227, '<td valign="top">Oh Lydia, this is so you!  Congrats on the Blue.</td>', 'Oh Lydia, this is so you!  Congrats on the Blue.', '2018-11-22 09:07:53.000000', NULL, 0),
+(7603825, 1228670, 109227, '<td valign="top">This is beautiful Marion.</td>', 'This is beautiful Marion.', '2018-11-22 09:09:59.000000', NULL, 0),
+(7603828, 1228670, 124815, '<td valign="top">A robust design, looking like pietre dura - marble inlay. <br/>I missed voting on this so here are my compliments for a beautiful image</td>', 'A robust design, looking like pietre dura - marble inlay. I missed voting on this so here are my compliments for a beautiful image', '2018-11-22 09:35:30.000000', NULL, 0),
+(7603830, 1228568, 124815, '<td valign="top">This street the way you concocted it should be used in a movie.</td>', 'This street the way you concocted it should be used in a movie.', '2018-11-22 09:36:57.000000', NULL, 0),
+(7603866, 1228151, 123833, '<td valign="top">Amazed this did not do better.</td>', 'Amazed this did not do better.', '2018-11-22 13:37:28.000000', NULL, 0),
+(7603995, 1228670, 50695, '<td valign="top">nice painterly quality to this</td>', 'nice painterly quality to this', '2018-11-22 22:28:59.000000', NULL, 0),
+(7604004, 1228725, 50695, '<td valign="top">born free! lovely</td>', 'born free! lovely', '2018-11-22 22:33:20.000000', NULL, 0),
+(7604008, 1228492, 50695, '<td valign="top">oh, wow, I *love* those bones!!</td>', 'oh, wow, I *love* those bones!!', '2018-11-22 22:43:03.000000', NULL, 0),
+(7604010, 1228453, 50695, '<td valign="top">wow, great windshield effect</td>', 'wow, great windshield effect', '2018-11-22 22:44:16.000000', NULL, 0),
+(7604011, 1228718, 50695, '<td valign="top">interesting and beautiful image</td>', 'interesting and beautiful image', '2018-11-22 22:45:01.000000', NULL, 0),
+(7604012, 1227473, 50695, '<td valign="top">nice watercolor effect</td>', 'nice watercolor effect', '2018-11-22 22:46:03.000000', NULL, 0),
+(7604013, 1228711, 50695, '<td valign="top">I can feel the vibrations</td>', 'I can feel the vibrations', '2018-11-22 22:46:25.000000', NULL, 0),
+(7604014, 1228507, 50695, '<td valign="top">great light in this and I am intrigued by the trash-like pile melded with nature</td>', 'great light in this and I am intrigued by the trash-like pile melded with nature', '2018-11-22 22:47:55.000000', NULL, 0),
+(7604025, 1228699, 45631, '<td valign="top">Love this work you are producing Mark.  Another lovely one.</td>', 'Love this work you are producing Mark.  Another lovely one.', '2018-11-23 00:33:58.000000', NULL, 0),
+(7604026, 1228699, 45631, '<td valign="top">Love this work you are producing Mark.  Another lovely one.</td>', 'Love this work you are producing Mark.  Another lovely one.', '2018-11-23 00:34:16.000000', NULL, 0),
+(7604107, 1228699, 30982, '<td valign="top">How do you do this?  It''s fascinating!!!</td>', 'How do you do this?  It''s fascinating!!!', '2018-11-23 21:53:30.000000', NULL, 0),
+(7604135, 1228693, 30982, '<td valign="top">The eyelashes!!</td>', 'The eyelashes!!', '2018-11-23 23:30:45.000000', NULL, 0),
+(7604449, 1228723, 114285, '<td valign="top">I love the funky  vintage editing on this one, very charming</td>', 'I love the funky  vintage editing on this one, very charming', '2018-11-26 04:34:34.000000', NULL, 0);
+COMMIT;

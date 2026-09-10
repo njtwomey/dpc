@@ -160,9 +160,33 @@ the full database — so it is enough to reconstruct the site, though it is not 
 backup of the archive. The database itself is gitignored and lives only on your
 machine.
 
-**`backups/sql` is not a backup of the comment corpus.** It carries the ~7,000
-comments that granted an award; the other 3.6 million exist only in your local
-`dpc.sqlite`, and nothing in this repository can reconstruct them.
+### What is in `backups/sql`
+
+| file | rows |
+| --- | --- |
+| `award_comments.sql` | the ~7,000 comments that granted an award |
+| `challenge_comments/<id>.sql` | **every** comment, 3.6 M of them, one file per challenge |
+| everything else | one file per table |
+
+Sharded by challenge on purpose. A single 1 GB `comments.sql` would be rewritten
+whole on every dump and git would store a fresh copy each time; per challenge,
+only the few that gained a comment produce new blobs and an unchanged challenge
+is stored once forever. It costs about 290 MB in the pack.
+
+```bash
+make restore              # award_comments.sql only -- quick, enough to build the site
+make restore-full         # ...plus the whole corpus (~70 s, 3.6 M comments)
+```
+
+`--full` replays `challenge_comments/` *instead of* `award_comments.sql`, not as
+well as: the second is a subset of the first and replaying both collides on the
+primary key.
+
+Note that `dump_sql.py` prunes `challenge_comments/` files for challenges the
+database does not have. So a restore without `--full` followed by a dump deletes
+the corpus for every challenge that never had an award — which is why
+`refresh.yml` restores with `--full`, and why `tests/test_backup.py` pins that
+exact failure.
 
 ### Offsite snapshots
 

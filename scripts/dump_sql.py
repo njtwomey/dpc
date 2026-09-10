@@ -6,9 +6,14 @@ the database to hand.
 Two scopes:
 
 ``full``
-    Every row, except that ``comments`` is filtered to those that actually
-    granted an award -- around 7,000 rather than 3.6 million. A backup of the
-    archive minus the comment corpus, and too large to keep in git.
+    Every row. ``award_comments.sql`` holds only the ~7,000 that granted an
+    award, so a default restore stays quick; the whole corpus goes to
+    ``challenge_comments/<id>.sql``, one file per challenge.
+
+    Sharded by challenge on purpose. A single 1 GB ``comments.sql`` would be
+    rewritten whole on every dump and git would store a fresh copy each time;
+    per challenge, only the handful that actually gained a comment produce new
+    blobs, and an old challenge that never changes is stored once forever.
 
 ``awards``
     Only rows an award touches. About 1 MB gzipped, small enough to commit, and
@@ -21,7 +26,7 @@ Usage::
 
     uv run python scripts/dump_sql.py                          # full, to backups/sql/
     uv run python scripts/dump_sql.py --scope awards --gzip
-    uv run python scripts/dump_sql.py --scope full --all-comments
+    uv run python scripts/dump_sql.py --no-challenge-comments   # skip the corpus
 """
 
 from __future__ import annotations
@@ -87,6 +92,13 @@ AWARD_SCOPED: dict[str, str] = {
 }
 
 ROWS_PER_INSERT = 200
+
+FILENAME_FOR = {"comments": "award_comments"}
+"""Tables whose dump file is named for what it holds rather than for the table.
+
+``comments.sql`` invited exactly the wrong assumption -- it carries the ~7,000
+comments that granted an award, not the corpus. ``award_comments.sql`` sitting
+beside ``challenge_comments/`` says which is which without having to be told."""
 
 
 def queries_for(scope: str) -> dict[str, str]:
@@ -171,7 +183,8 @@ def dump_table(
     total = _count(connection, select)
     cursor = connection.execute(select)
     column_list = ", ".join(f'"{c}"' for c in columns)
-    path = destination / (f"{table}.sql.gz" if compress else f"{table}.sql")
+    stem = FILENAME_FOR.get(table, table)
+    path = destination / (f"{stem}.sql.gz" if compress else f"{stem}.sql")
 
     written = 0
     with (
@@ -196,6 +209,70 @@ def dump_table(
     return path, written
 
 
+COMMENTS_DIR = "challenge_comments"
+
+
+def dump_challenge_comments(
+    connection: sqlite3.Connection, destination: Path, *, compress: bool
+) -> tuple[int, int, int]:
+    """Write every comment, one file per challenge.
+
+    Returns ``(files, rows, bytes)``. Files for challenges that no longer have
+    any comments are removed, so the directory always matches the database
+    rather than accumulating orphans.
+    """
+    directory = destination / COMMENTS_DIR
+    directory.mkdir(parents=True, exist_ok=True)
+    columns = [r[1] for r in connection.execute("PRAGMA table_info(comments)")]
+    column_list = ", ".join(f'"{c}"' for c in columns)
+
+    challenges = [
+        int(row[0])
+        for row in connection.execute(
+            "SELECT DISTINCT i.challenge_id FROM comments cm "
+            "JOIN images i ON i.id = cm.image_id ORDER BY i.challenge_id"
+        )
+    ]
+
+    suffix = ".sql.gz" if compress else ".sql"
+    written = 0
+    total_bytes = 0
+    keep: set[str] = set()
+
+    for challenge_id in tqdm(
+        challenges, desc=f"{COMMENTS_DIR:<16}", unit="ch", leave=False, disable=None
+    ):
+        path = directory / f"{challenge_id}{suffix}"
+        keep.add(path.name)
+        # Ordered by comment id so the file is stable: an unchanged challenge
+        # re-dumps byte-identically and git sees nothing to store.
+        rows = connection.execute(
+            "SELECT cm.* FROM comments cm JOIN images i ON i.id = cm.image_id "
+            "WHERE i.challenge_id = ? ORDER BY cm.id",
+            (challenge_id,),
+        )
+        with _open(path, compress=compress) as out:
+            out.write(
+                f"-- comments for challenge {challenge_id}\n"
+                "PRAGMA foreign_keys=OFF;\nBEGIN TRANSACTION;\n"
+            )
+            for batch in _batched(iter(rows), ROWS_PER_INSERT):
+                values = ",\n".join(
+                    "(" + ", ".join(_literal(v) for v in row) + ")" for row in batch
+                )
+                out.write(f"INSERT INTO comments ({column_list}) VALUES\n{values};\n")
+                written += len(batch)
+            out.write("COMMIT;\n")
+        total_bytes += path.stat().st_size
+
+    for stale in directory.iterdir():
+        if stale.name not in keep:
+            logger.info("removing stale {}", stale.name)
+            stale.unlink()
+
+    return len(challenges), written, total_bytes
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--database", type=Path, default=None)
@@ -209,9 +286,9 @@ def main() -> int:
         "awards: only rows an award touches, small enough to commit.",
     )
     parser.add_argument(
-        "--all-comments",
+        "--no-challenge-comments",
         action="store_true",
-        help="With --scope full, dump every comment too (large)",
+        help="Skip the per-challenge comment corpus (much faster, much less complete)",
     )
     args = parser.parse_args()
     configure(verbose=False)
@@ -227,8 +304,6 @@ def main() -> int:
     connection = sqlite3.connect(target)
 
     queries = queries_for(args.scope)
-    if args.all_comments and args.scope == "full":
-        queries.pop("comments", None)
 
     logger.info("dumping {} ({} scope) -> {}", target, args.scope, args.out)
     total_bytes = dump_schema(connection, args.out, compress=args.gzip).stat().st_size
@@ -244,6 +319,13 @@ def main() -> int:
             rows,
             size,
             "  (scoped)" if query else "",
+        )
+
+    if args.scope == "full" and not args.no_challenge_comments:
+        files, rows, size = dump_challenge_comments(connection, args.out, compress=args.gzip)
+        total_bytes += size
+        logger.info(
+            "{:<16} {:>9,} rows  {:>12,} bytes  ({} files)", COMMENTS_DIR, rows, size, files
         )
 
     connection.close()

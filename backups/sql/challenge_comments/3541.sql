@@ -1,0 +1,69 @@
+-- comments for challenge 3541
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7737886, 1275895, 28742, '<td valign="top">Alright, there''s the blue right thar. :) 10</td>', 'Alright, there''s the blue right thar. :) 10', '2023-02-06 01:38:57.000000', NULL, 1),
+(7737887, 1275873, 28742, '<td valign="top">Excellent! 9</td>', 'Excellent! 9', '2023-02-06 01:40:00.000000', NULL, 1),
+(7737888, 1275665, 28742, '<td valign="top">Wow. Love that detail! 9</td>', 'Wow. Love that detail! 9', '2023-02-06 01:40:32.000000', NULL, 1),
+(7737896, 1275673, 273619, '<td valign="top">Great shot!</td>', 'Great shot!', '2023-02-06 10:00:24.000000', NULL, 1),
+(7737930, 1275905, 91360, '<td valign="top">perfect!</td>', 'perfect!', '2023-02-06 13:52:45.000000', NULL, 1),
+(7738067, 1275874, 27608, '<td valign="top">Not sure how this is portraying delicate.  If anything I see strength.  Good composition and lighting though.</td>', 'Not sure how this is portraying delicate.  If anything I see strength.  Good composition and lighting though.', '2023-02-08 07:34:00.000000', NULL, 1),
+(7738068, 1275905, 27608, '<td valign="top">Very pastel.  Nice!!</td>', 'Very pastel.  Nice!!', '2023-02-08 07:34:26.000000', NULL, 1),
+(7738069, 1275863, 27608, '<td valign="top">Hmmm...hopefully a marriage starts off strong.</td>', 'Hmmm...hopefully a marriage starts off strong.', '2023-02-08 07:35:16.000000', NULL, 1),
+(7738070, 1275872, 27608, '<td valign="top">Weirdly creepy :)</td>', 'Weirdly creepy :)', '2023-02-08 07:35:27.000000', NULL, 1),
+(7738071, 1275665, 27608, '<td valign="top">Love this, and the little pop of red.  Very delicate indeed. 9</td>', 'Love this, and the little pop of red.  Very delicate indeed. 9', '2023-02-08 07:35:42.000000', NULL, 1),
+(7738072, 1275918, 27608, '<td valign="top">Would have fit well in the DOF challenge.</td>', 'Would have fit well in the DOF challenge.', '2023-02-08 07:35:52.000000', NULL, 1),
+(7738073, 1275895, 27608, '<td valign="top">Is this a painting?</td>', 'Is this a painting?', '2023-02-08 07:37:20.000000', NULL, 1),
+(7738074, 1275914, 27608, '<td valign="top">Memories of doing this when I was a kid.  I like the story here.</td>', 'Memories of doing this when I was a kid.  I like the story here.', '2023-02-08 07:39:50.000000', NULL, 1),
+(7738075, 1275673, 27608, '<td valign="top">Favorite of the challenge!  Beautiful symmetry and lighting.  10</td>', 'Favorite of the challenge!  Beautiful symmetry and lighting.  10', '2023-02-08 07:40:55.000000', NULL, 1),
+(7738104, 1275864, 273252, '<td valign="top">gorgeous colors and lovely detail</td>', 'gorgeous colors and lovely detail', '2023-02-08 12:55:07.000000', NULL, 1),
+(7738216, 1275673, 122678, '<td valign="top">Gorgeous image, I think you will ribbon.</td>', 'Gorgeous image, I think you will ribbon.', '2023-02-09 20:40:25.000000', NULL, 1),
+(7738217, 1275864, 122678, '<td valign="top">Stunning colors in this delicate beautiful bubble.</td>', 'Stunning colors in this delicate beautiful bubble.', '2023-02-09 20:42:34.000000', NULL, 1),
+(7738218, 1275895, 122678, '<td valign="top">yes, a very soft, beautiful and delicate image.</td>', 'yes, a very soft, beautiful and delicate image.', '2023-02-09 20:43:42.000000', NULL, 1),
+(7738219, 1275842, 122678, '<td valign="top">I like this image a lot, very special.</td>', 'I like this image a lot, very special.', '2023-02-09 20:44:41.000000', NULL, 1),
+(7738220, 1275905, 122678, '<td valign="top">gorgeous with beautiful color.</td>', 'gorgeous with beautiful color.', '2023-02-09 20:45:03.000000', NULL, 1),
+(7738221, 1275874, 122678, '<td valign="top">This is a beautiful portrait. I like this for this challenge, her movement and facial expression demonstrate delicate.<br/>Very well presented.</td>', 'This is a beautiful portrait. I like this for this challenge, her movement and facial expression demonstrate delicate.Very well presented.', '2023-02-09 20:48:14.000000', NULL, 1),
+(7738313, 1275892, 61396, '<td valign="top">well caught (hopefully?)</td>', 'well caught (hopefully?)', '2023-02-10 15:04:18.000000', NULL, 1),
+(7738348, 1275665, 65234, '<td valign="top">Love that little pop of red, skeletally caged. Great find for this challenge,nicely captured.</td>', 'Love that little pop of red, skeletally caged. Great find for this challenge,nicely captured.', '2023-02-11 12:12:41.000000', NULL, 1),
+(7738349, 1275895, 65234, '<td valign="top">Poignant, and I love the processing.</td>', 'Poignant, and I love the processing.', '2023-02-11 12:14:19.000000', NULL, 1),
+(7738350, 1275905, 65234, '<td valign="top">Lovely, soft image with bright Spring colors. .</td>', 'Lovely, soft image with bright Spring colors. .', '2023-02-11 12:15:19.000000', NULL, 1),
+(7738351, 1275918, 65234, '<td valign="top">Like the creamy bokeh and soft colors.</td>', 'Like the creamy bokeh and soft colors.', '2023-02-11 12:18:34.000000', NULL, 1),
+(7738362, 1275857, 83313, '<td valign="top">I suppose a good day is something delicate and easily ruined. At least that is how I am interpreting your entry.</td>', 'I suppose a good day is something delicate and easily ruined. At least that is how I am interpreting your entry.', '2023-02-11 19:34:48.000000', NULL, 1),
+(7738363, 1275908, 83313, '<td valign="top">A little soft but for this it seems to give it a painterly quality.</td>', 'A little soft but for this it seems to give it a painterly quality.', '2023-02-11 19:36:22.000000', NULL, 1),
+(7738383, 1275895, 114285, '<td valign="top">Has Mary Ann written all over it :) <br/> <br/>Top pick.<br/> <br/>Beautiful as usual.</td>', 'Has Mary Ann written all over it :)  Top pick. Beautiful as usual.', '2023-02-12 19:02:00.000000', NULL, 1),
+(7738384, 1275673, 114285, '<td valign="top">My pick for red.<br/> <br/>Sharp as.</td>', 'My pick for red. Sharp as.', '2023-02-12 19:02:30.000000', NULL, 1),
+(7738385, 1275915, 114285, '<td valign="top">My pick for the yellow, definitely fits the challenge.</td>', 'My pick for the yellow, definitely fits the challenge.', '2023-02-12 19:02:55.000000', NULL, 1),
+(7738386, 1275864, 114285, '<td valign="top">Top five.</td>', 'Top five.', '2023-02-12 19:03:28.000000', NULL, 1),
+(7738390, 1275673, 5705, '<td valign="top">So pretty</td>', 'So pretty', '2023-02-12 21:12:29.000000', NULL, 1),
+(7738391, 1275905, 5705, '<td valign="top">Delicate indeed</td>', 'Delicate indeed', '2023-02-12 21:12:55.000000', NULL, 1),
+(7738396, 1275673, 114285, '<td valign="top">I thought this could be yours. Only the master :)<br/> <br/>Congrats.</td>', 'I thought this could be yours. Only the master :) Congrats.', '2023-02-13 00:09:18.000000', NULL, 0),
+(7738397, 1275895, 114285, '<td valign="top">There seems to be a nest and an egg at just the right time in your neck of the woods, congrats,</td>', 'There seems to be a nest and an egg at just the right time in your neck of the woods, congrats,', '2023-02-13 00:10:19.000000', NULL, 0),
+(7738398, 1275673, 28742, '<td valign="top">Congratulations!</td>', 'Congratulations!', '2023-02-13 00:11:08.000000', NULL, 0),
+(7738399, 1275914, 68504, '<td valign="top">quelles pensees...</td>', 'quelles pensees...', '2023-02-13 00:16:51.000000', NULL, 0),
+(7738400, 1275921, 124815, '<td valign="top">Stunning. Forgot to look and vote. Would 10 cum laude have helped ?</td>', 'Stunning. Forgot to look and vote. Would 10 cum laude have helped ?', '2023-02-13 00:17:16.000000', NULL, 0),
+(7738401, 1275883, 68504, '<td valign="top">my favourite.</td>', 'my favourite.', '2023-02-13 00:17:18.000000', NULL, 0),
+(7738404, 1275922, 68504, '<td valign="top">bricoleur(e).</td>', 'bricoleur(e).', '2023-02-13 00:20:36.000000', NULL, 0),
+(7738405, 1275902, 68504, '<td valign="top">lovely patterns.</td>', 'lovely patterns.', '2023-02-13 00:21:16.000000', NULL, 0),
+(7738414, 1275864, 141319, '<td valign="top">Hi, please let me (us) know how you photographed this. Its beautiful. I tried to follow a tut a few years ago and failed miserably.</td>', 'Hi, please let me (us) know how you photographed this. Its beautiful. I tried to follow a tut a few years ago and failed miserably.', '2023-02-13 07:02:16.000000', NULL, 0),
+(7738415, 1275673, 109227, '<td valign="top">Beautiful and fits challenge perfectly.  Congratulations!</td>', 'Beautiful and fits challenge perfectly.  Congratulations!', '2023-02-13 09:37:22.000000', NULL, 0),
+(7738416, 1275665, 109227, '<td valign="top">Nicely seen and photographed, fits the challenge well.  Congratulations on the ribbon.</td>', 'Nicely seen and photographed, fits the challenge well.  Congratulations on the ribbon.', '2023-02-13 09:37:58.000000', NULL, 0),
+(7738417, 1275905, 109227, '<td valign="top">Beautiful, soft image.</td>', 'Beautiful, soft image.', '2023-02-13 09:38:23.000000', NULL, 0),
+(7738419, 1275914, 109227, '<td valign="top">My favorite.</td>', 'My favorite.', '2023-02-13 09:38:58.000000', NULL, 0),
+(7738423, 1275673, 60805, '<td valign="top">My top pic. These TENd to do well</td>', 'My top pic. These TENd to do well', '2023-02-13 10:04:52.000000', NULL, 0),
+(7738424, 1275895, 60805, '<td valign="top">Top 3 as well</td>', 'Top 3 as well', '2023-02-13 10:06:58.000000', NULL, 0),
+(7738425, 1275665, 60805, '<td valign="top">Top 3 also</td>', 'Top 3 also', '2023-02-13 10:07:11.000000', NULL, 0),
+(7738426, 1275864, 273619, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by kasaba:</b></div><hr/><i> Hi, please let me (us) know how you photographed this. Its beautiful. I tried to follow a tut a few years ago and failed miserably. </i></td></tr></table> <br/> <br/>Thank you so much for your comment! Make sure to use glycerin to keep the bubble from popping. The hardest part is getting your softbox right on top of the bubble. Soda cans are a great height for propping up your light. I gave up after a few hours trying to get the perfect shot.... Here is a link to a really helpful video <a href="https://youtu.be/FGu-LekEHsw" rel="nofollow" target="_blank">https://youtu.be/FGu-LekEHsw</a> <br/> <br/>Here is a link to the original photo: <br/><a href="https://imgur.com/a/kOCcuQ5" rel="nofollow" target="_blank">https://imgur.com/a/kOCcuQ5</a> <br/></td>', 'Originally posted by kasaba: Hi, please let me (us) know how you photographed this. Its beautiful. I tried to follow a tut a few years ago and failed miserably.   Thank you so much for your comment! Make sure to use glycerin to keep the bubble from popping. The hardest part is getting your softbox right on top of the bubble. Soda cans are a great height for propping up your light. I gave up after a few hours trying to get the perfect shot.... Here is a link to a really helpful video https://youtu.be/FGu-LekEHsw  Here is a link to the original photo: https://imgur.com/a/kOCcuQ5 ', '2023-02-13 10:22:27.000000', NULL, 0),
+(7738428, 1275895, 43565, '<td valign="top">Beautiful image. Congratulations.</td>', 'Beautiful image. Congratulations.', '2023-02-13 12:19:51.000000', NULL, 0),
+(7738429, 1275673, 43565, '<td valign="top">Congratulations!<br/></td>', 'Congratulations!', '2023-02-13 12:20:42.000000', NULL, 0),
+(7738430, 1275673, 122678, '<td valign="top">WOW!!! Congratulations, Spectacular and beautiful, 10 from me.</td>', 'WOW!!! Congratulations, Spectacular and beautiful, 10 from me.', '2023-02-13 12:40:50.000000', NULL, 0),
+(7738431, 1275895, 122678, '<td valign="top">Congratulations, a beautiful image.</td>', 'Congratulations, a beautiful image.', '2023-02-13 12:41:29.000000', NULL, 0),
+(7738432, 1275665, 122678, '<td valign="top">Very nice and very delicate. Congratulations</td>', 'Very nice and very delicate. Congratulations', '2023-02-13 12:42:08.000000', NULL, 0),
+(7738433, 1275864, 122678, '<td valign="top">Congrats, I know this is really challenging image to make, you did beautiful a presentation with delicate stunning colors here. This bubble looks like the sun is at the center of the earth.</td>', 'Congrats, I know this is really challenging image to make, you did beautiful a presentation with delicate stunning colors here. This bubble looks like the sun is at the center of the earth.', '2023-02-13 12:48:25.000000', NULL, 0),
+(7738434, 1275874, 122678, '<td valign="top">Beautiful!!! Congrats top 10</td>', 'Beautiful!!! Congrats top 10', '2023-02-13 12:51:24.000000', NULL, 0),
+(7738459, 1275895, 96751, '<td valign="top">Glorious.</td>', 'Glorious.', '2023-02-13 19:45:38.000000', NULL, 0),
+(7738466, 1275673, 138630, '<td valign="top">Exquisite.  Congratulations on the Blue.<br/></td>', 'Exquisite.  Congratulations on the Blue.', '2023-02-13 22:50:42.000000', NULL, 0),
+(7738473, 1275665, 29535, '<td valign="top">Thank you all for the kind comments! A surprise ribbon this one, and topping off a crazy string of results! I fully expect normality to resume now based on current scores :) Here''s to the next one!</td>', 'Thank you all for the kind comments! A surprise ribbon this one, and topping off a crazy string of results! I fully expect normality to resume now based on current scores :) Here''s to the next one!', '2023-02-14 06:59:47.000000', NULL, 0),
+(7738488, 1275883, 30982, '<td valign="top">Really lovely, Tibi!  Well seen.</td>', 'Really lovely, Tibi!  Well seen.', '2023-02-14 15:01:51.000000', NULL, 0),
+(7738597, 1275673, 97225, '<td valign="top">Congrats on the blue, Roz. I absolutely love this.</td>', 'Congrats on the blue, Roz. I absolutely love this.', '2023-02-15 17:15:17.000000', NULL, 0),
+(7738621, 1275673, 3306, '<td valign="top">Beautiful and perfect for the challenge. You are masterful!</td>', 'Beautiful and perfect for the challenge. You are masterful!', '2023-02-16 19:46:30.000000', NULL, 0);
+COMMIT;

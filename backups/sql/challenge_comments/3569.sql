@@ -1,0 +1,53 @@
+-- comments for challenge 3569
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7741384, 1277133, 83313, '<td valign="top">Interesting scene. I can''t tell if this is processed or is actually a 3D relief of the scene. The "rising sun" in the scene (flash?) might have worked better for me if you had adjusted the white balance to warm the scene up some.</td>', 'Interesting scene. I can''t tell if this is processed or is actually a 3D relief of the scene. The "rising sun" in the scene (flash?) might have worked better for me if you had adjusted the white balance to warm the scene up some.', '2023-04-03 02:24:14.000000', NULL, 1),
+(7741385, 1277034, 83313, '<td valign="top">Not super abstract, but I really like the strong contrasting colors and textures in this. Abstract enough.</td>', 'Not super abstract, but I really like the strong contrasting colors and textures in this. Abstract enough.', '2023-04-03 02:25:10.000000', NULL, 1),
+(7741387, 1277148, 83313, '<td valign="top">I was going to slap a quick 5 on this, but something made me pause. I feel like I am trapped in a factory where I work, gazing out the dirty window at fragments of nature overtaken by what we call "progress". Now you get a 7 for making me look longer and comment.</td>', 'I was going to slap a quick 5 on this, but something made me pause. I feel like I am trapped in a factory where I work, gazing out the dirty window at fragments of nature overtaken by what we call "progress". Now you get a 7 for making me look longer and comment.', '2023-04-03 02:28:03.000000', NULL, 1),
+(7741388, 1277139, 83313, '<td valign="top">That''s odd. I''ll be curious to find out what those lines are. But this IS an extended editing challenge. (Which I didn''t realize until 5 minutes ago)</td>', 'That''s odd. I''ll be curious to find out what those lines are. But this IS an extended editing challenge. (Which I didn''t realize until 5 minutes ago)', '2023-04-03 02:29:38.000000', NULL, 1),
+(7741389, 1277132, 83313, '<td valign="top">Very nice, though my eye is drawn to that radio tower in the middle of the scene.</td>', 'Very nice, though my eye is drawn to that radio tower in the middle of the scene.', '2023-04-03 02:30:37.000000', NULL, 1),
+(7741622, 1277149, 23098, '<td valign="top">A favorite. Really like the colors and motion.</td>', 'A favorite. Really like the colors and motion.', '2023-04-07 08:07:30.000000', NULL, 1),
+(7741623, 1277140, 23098, '<td valign="top">So it seems! Nicely done.</td>', 'So it seems! Nicely done.', '2023-04-07 08:08:11.000000', NULL, 1),
+(7741624, 1277034, 23098, '<td valign="top">Love how you captured the weather conditions here.</td>', 'Love how you captured the weather conditions here.', '2023-04-07 08:09:18.000000', NULL, 1),
+(7741676, 1277140, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2023-04-07 16:38:03.000000', NULL, 1),
+(7741677, 1277126, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2023-04-07 16:38:13.000000', NULL, 1),
+(7741678, 1277139, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2023-04-07 16:38:23.000000', NULL, 1),
+(7741754, 1276855, 30049, '<td valign="top">Overall, I like this.  IMO, it may have been stronger without the bank at the top.</td>', 'Overall, I like this.  IMO, it may have been stronger without the bank at the top.', '2023-04-08 13:53:36.000000', NULL, 1),
+(7741755, 1277130, 30049, '<td valign="top">Is this in the wrong challenge accidentally?  Fun shot, but doesn''t appear to be a landscape.  Maybe an abstract person?  :-)</td>', 'Is this in the wrong challenge accidentally?  Fun shot, but doesn''t appear to be a landscape.  Maybe an abstract person?  :-)', '2023-04-08 13:57:27.000000', NULL, 1),
+(7741800, 1277140, 2158, '<td valign="top">Excellent. I thought of Van Gogh before I saw your title.</td>', 'Excellent. I thought of Van Gogh before I saw your title.', '2023-04-09 13:35:36.000000', NULL, 1),
+(7741830, 1277130, 83313, '<td valign="top">Not sure what is abstract or landscape about this, though it does make we wonder what the heck is going on  here?</td>', 'Not sure what is abstract or landscape about this, though it does make we wonder what the heck is going on  here?', '2023-04-09 20:28:43.000000', NULL, 1),
+(7741831, 1277151, 83313, '<td valign="top">Very cool looking! See you on the front page.</td>', 'Very cool looking! See you on the front page.', '2023-04-09 20:29:33.000000', NULL, 1),
+(7741832, 1276978, 83313, '<td valign="top">Looks itchy.</td>', 'Looks itchy.', '2023-04-09 20:30:59.000000', NULL, 1),
+(7741841, 1276887, 50695, '<td valign="top">Bold and jarring image. 10</td>', 'Bold and jarring image. 10', '2023-04-10 00:19:44.000000', NULL, 1),
+(7741842, 1276914, 50695, '<td valign="top">subtle, elegant. is it close or far? 10</td>', 'subtle, elegant. is it close or far? 10', '2023-04-10 00:20:10.000000', NULL, 1),
+(7741843, 1277148, 50695, '<td valign="top">ecstatic mash of things, like life. 10</td>', 'ecstatic mash of things, like life. 10', '2023-04-10 00:20:34.000000', NULL, 1),
+(7741844, 1277140, 50695, '<td valign="top">a fable of losing the sun.</td>', 'a fable of losing the sun.', '2023-04-10 00:21:13.000000', NULL, 1),
+(7741845, 1276882, 50695, '<td valign="top">the world''s almost abstract anyway. You just gave it a little push over the edge. 9</td>', 'the world''s almost abstract anyway. You just gave it a little push over the edge. 9', '2023-04-10 00:21:36.000000', NULL, 1),
+(7741846, 1277139, 50695, '<td valign="top">good meeting of the challenge.</td>', 'good meeting of the challenge.', '2023-04-10 00:21:49.000000', NULL, 1),
+(7741848, 1276887, 100831, '<td valign="top">This is one of my favorites in this challenge... just as I suspect the title explains it.</td>', 'This is one of my favorites in this challenge... just as I suspect the title explains it.', '2023-04-10 00:25:25.000000', NULL, 1),
+(7741849, 1277124, 100831, '<td valign="top">Very cool reflection and I like the softness.</td>', 'Very cool reflection and I like the softness.', '2023-04-10 00:25:55.000000', NULL, 1),
+(7741850, 1277149, 100831, '<td valign="top">icicles ... dancing.</td>', 'icicles ... dancing.', '2023-04-10 00:26:37.000000', NULL, 1),
+(7741851, 1276978, 100831, '<td valign="top">such fun... great seeing, or maybe composing (doesn''t matter).</td>', 'such fun... great seeing, or maybe composing (doesn''t matter).', '2023-04-10 00:27:59.000000', NULL, 1),
+(7741852, 1277140, 100831, '<td valign="top">Great rhythm and color.</td>', 'Great rhythm and color.', '2023-04-10 00:28:46.000000', NULL, 1),
+(7741853, 1277151, 100831, '<td valign="top">love the layers.</td>', 'love the layers.', '2023-04-10 00:29:34.000000', NULL, 1),
+(7741854, 1277138, 100831, '<td valign="top">I see it. a different take on fireworks.</td>', 'I see it. a different take on fireworks.', '2023-04-10 00:30:57.000000', NULL, 1),
+(7741855, 1276914, 100831, '<td valign="top">The awakening.</td>', 'The awakening.', '2023-04-10 00:32:08.000000', NULL, 1),
+(7741859, 1276914, 83313, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by posthumous:</b></div><hr/><i> subtle, elegant. is it close or far? 10 </i></td></tr></table> <br/>Close. From chest height to the ground.</td>', 'Originally posted by posthumous: subtle, elegant. is it close or far? 10  Close. From chest height to the ground.', '2023-04-10 01:24:00.000000', NULL, 0),
+(7741861, 1277139, 100831, '<td valign="top">Unknown for sure in a good way.</td>', 'Unknown for sure in a good way.', '2023-04-10 01:33:41.000000', NULL, 0),
+(7741863, 1277126, 104230, '<td valign="top">Love this.  Very creative.</td>', 'Love this.  Very creative.', '2023-04-10 01:38:02.000000', NULL, 0),
+(7741865, 1276978, 97225, '<td valign="top">Love this! 10 from me. Congrats on such a beautiful image (and the HM).</td>', 'Love this! 10 from me. Congrats on such a beautiful image (and the HM).', '2023-04-10 02:48:27.000000', NULL, 0),
+(7741867, 1277149, 114285, '<td valign="top">Lovely shot, congrats on your ribbon.</td>', 'Lovely shot, congrats on your ribbon.', '2023-04-10 05:13:05.000000', NULL, 0),
+(7741868, 1277140, 114285, '<td valign="top">Love the filter you used. <br/> <br/>Congrats.</td>', 'Love the filter you used.  Congrats.', '2023-04-10 05:13:38.000000', NULL, 0),
+(7741897, 1277140, 96751, '<td valign="top">Truly perfect.</td>', 'Truly perfect.', '2023-04-10 16:01:47.000000', NULL, 0),
+(7741898, 1277124, 96751, '<td valign="top">Great symmetry</td>', 'Great symmetry', '2023-04-10 16:02:08.000000', NULL, 0),
+(7741901, 1277140, 86447, '<td valign="top">This is brilliant, Mary Ann!<br/> <br/>I was one of your eights.<br/></td>', 'This is brilliant, Mary Ann! I was one of your eights.', '2023-04-10 16:15:21.000000', NULL, 0),
+(7741902, 1277124, 86447, '<td valign="top">THis was my only 10 vote.   Perfect.<br/></td>', 'THis was my only 10 vote.   Perfect.', '2023-04-10 16:15:47.000000', NULL, 0),
+(7741903, 1277149, 86447, '<td valign="top">I called this to be tied for second.   I was one of your eights.</td>', 'I called this to be tied for second.   I was one of your eights.', '2023-04-10 16:16:39.000000', NULL, 0),
+(7741930, 1277140, 122678, '<td valign="top">Congratulations - Beautiful</td>', 'Congratulations - Beautiful', '2023-04-10 21:03:26.000000', NULL, 0),
+(7741931, 1277124, 122678, '<td valign="top">Very beautiful, Congratulations</td>', 'Very beautiful, Congratulations', '2023-04-10 21:03:55.000000', NULL, 0),
+(7741932, 1277149, 122678, '<td valign="top">Congratulations, this is beautiful.</td>', 'Congratulations, this is beautiful.', '2023-04-10 21:04:35.000000', NULL, 0),
+(7741933, 1276978, 122678, '<td valign="top">Congrats a top pick for me. A very nice image.</td>', 'Congrats a top pick for me. A very nice image.', '2023-04-10 21:05:54.000000', NULL, 0),
+(7741936, 1277126, 114285, '<td valign="top">Incredibly clever image. I stopped and stared at it for a long time, congrats on the top five.</td>', 'Incredibly clever image. I stopped and stared at it for a long time, congrats on the top five.', '2023-04-10 21:39:16.000000', NULL, 0),
+(7741942, 1277151, 83313, '<td valign="top">Grog say he-who-speak-from-grave wuz robbed at spearpoint.</td>', 'Grog say he-who-speak-from-grave wuz robbed at spearpoint.', '2023-04-11 00:56:40.000000', NULL, 0);
+COMMIT;

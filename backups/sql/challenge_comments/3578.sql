@@ -1,0 +1,46 @@
+-- comments for challenge 3578
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7742882, 1277367, 30049, '<td valign="top">Wow.  That''s bizzare!</td>', 'Wow.  That''s bizzare!', '2023-04-22 18:57:36.000000', NULL, 1),
+(7742883, 1277463, 30049, '<td valign="top">Nicely done!</td>', 'Nicely done!', '2023-04-22 18:58:01.000000', NULL, 1),
+(7742884, 1277388, 30049, '<td valign="top">Love this.  :-)</td>', 'Love this.  :-)', '2023-04-22 19:05:53.000000', NULL, 1),
+(7743122, 1277461, 52549, '<td valign="top">Very pretty</td>', 'Very pretty', '2023-04-26 13:09:56.000000', NULL, 1),
+(7743123, 1277405, 52549, '<td valign="top">Tod flying high - lovely image.</td>', 'Tod flying high - lovely image.', '2023-04-26 13:11:40.000000', NULL, 1),
+(7743124, 1277384, 52549, '<td valign="top">Great shot!</td>', 'Great shot!', '2023-04-26 13:11:59.000000', NULL, 1),
+(7743125, 1277381, 52549, '<td valign="top">How beautiful, top three!</td>', 'How beautiful, top three!', '2023-04-26 13:12:41.000000', NULL, 1),
+(7743127, 1277455, 52549, '<td valign="top">Lovely, they look as if they''re dancing. Top three hopefully.</td>', 'Lovely, they look as if they''re dancing. Top three hopefully.', '2023-04-26 13:14:18.000000', NULL, 1),
+(7743128, 1277367, 52549, '<td valign="top">What an amazingly beautlful image!!  I see a Blue in your future. Fingers crossed.</td>', 'What an amazingly beautlful image!!  I see a Blue in your future. Fingers crossed.', '2023-04-26 13:16:08.000000', NULL, 1),
+(7743129, 1277388, 52549, '<td valign="top">OMG! WHAT a fabulous shot!!! The Eyes! Amazingly sharp. Top three please.</td>', 'OMG! WHAT a fabulous shot!!! The Eyes! Amazingly sharp. Top three please.', '2023-04-26 13:17:36.000000', NULL, 1),
+(7743130, 1277433, 52549, '<td valign="top">Beautifully clear and clean. I''d love this as a postcard.</td>', 'Beautifully clear and clean. I''d love this as a postcard.', '2023-04-26 13:18:31.000000', NULL, 1),
+(7743131, 1277346, 52549, '<td valign="top">Beautiful Image.</td>', 'Beautiful Image.', '2023-04-26 13:19:03.000000', NULL, 1),
+(7743132, 1277463, 52549, '<td valign="top">WOW! That is one versatile cat</td>', 'WOW! That is one versatile cat', '2023-04-26 13:22:37.000000', NULL, 1),
+(7743133, 1277439, 52549, '<td valign="top">Very nice, love the greenery.</td>', 'Very nice, love the greenery.', '2023-04-26 13:23:32.000000', NULL, 1),
+(7743191, 1277425, 42733, '<td valign="top">love, love, love, love, love!</td>', 'love, love, love, love, love!', '2023-04-27 18:50:21.000000', NULL, 1),
+(7743192, 1277388, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2023-04-27 18:50:31.000000', NULL, 1),
+(7743193, 1277435, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2023-04-27 18:50:50.000000', NULL, 1),
+(7743199, 1277462, 83313, '<td valign="top">A well done high key look to a common subject.</td>', 'A well done high key look to a common subject.', '2023-04-27 20:53:48.000000', NULL, 1),
+(7743200, 1277464, 83313, '<td valign="top">I dunno about that, I think this building has an infection of some kind.</td>', 'I dunno about that, I think this building has an infection of some kind.', '2023-04-27 20:54:35.000000', NULL, 1),
+(7743201, 1277388, 83313, '<td valign="top">Looks like a Wendy shot. Nice catch.</td>', 'Looks like a Wendy shot. Nice catch.', '2023-04-27 20:55:34.000000', NULL, 1),
+(7743202, 1277455, 83313, '<td valign="top">Hope you didn''t lie in an anthill like I once did trying to get a shot like this.</td>', 'Hope you didn''t lie in an anthill like I once did trying to get a shot like this.', '2023-04-27 20:56:26.000000', NULL, 1),
+(7743203, 1277346, 83313, '<td valign="top">Good framing and I love all the squiggly branches.</td>', 'Good framing and I love all the squiggly branches.', '2023-04-27 20:57:12.000000', NULL, 1),
+(7743204, 1277439, 83313, '<td valign="top">Looks like a fisheye, but not with that straight line up at the top. Curious what you got such a perspective using.</td>', 'Looks like a fisheye, but not with that straight line up at the top. Curious what you got such a perspective using.', '2023-04-27 20:58:49.000000', NULL, 1),
+(7743205, 1277397, 83313, '<td valign="top">Great perspective. Some stronger contrast might have appealed to me more, but that''s a nitpick about personal preferences.</td>', 'Great perspective. Some stronger contrast might have appealed to me more, but that''s a nitpick about personal preferences.', '2023-04-27 21:00:07.000000', NULL, 1),
+(7743215, 1277384, 75585, '<td valign="top">Congratulations on your ribbon - nice tones on this and lovely perspective</td>', 'Congratulations on your ribbon - nice tones on this and lovely perspective', '2023-04-28 01:03:05.000000', NULL, 0),
+(7743216, 1277455, 75585, '<td valign="top">Congratulations, lovely image!</td>', 'Congratulations, lovely image!', '2023-04-28 01:03:37.000000', NULL, 0),
+(7743218, 1277388, 75585, '<td valign="top">congratulations!  Perfection - looks like he is looking right at you!</td>', 'congratulations!  Perfection - looks like he is looking right at you!', '2023-04-28 01:26:29.000000', NULL, 0),
+(7743219, 1277367, 75585, '<td valign="top">Congratulations - what a phenomenal capture!</td>', 'Congratulations - what a phenomenal capture!', '2023-04-28 01:26:59.000000', NULL, 0),
+(7743236, 1277367, 114285, '<td valign="top">Amazing shot, was in my top picks. A sight to behold indeed!</td>', 'Amazing shot, was in my top picks. A sight to behold indeed!', '2023-04-28 04:06:03.000000', NULL, 0),
+(7743253, 1277439, 30214, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Yo_Spiff:</b></div><hr/><i> Looks like a fisheye, but not with that straight line up at the top. Curious what you got such a perspective using. </i></td></tr></table> <br/>It''s a vertical panorama, Steve.  Very easily done with my Samsung Galaxy</td>', 'Originally posted by Yo_Spiff: Looks like a fisheye, but not with that straight line up at the top. Curious what you got such a perspective using.  It''s a vertical panorama, Steve.  Very easily done with my Samsung Galaxy', '2023-04-28 09:49:32.000000', NULL, 0),
+(7743285, 1277398, 68504, '<td valign="top">ha. the little tyke has got so big. so happy.</td>', 'ha. the little tyke has got so big. so happy.', '2023-04-28 13:45:09.000000', NULL, 0),
+(7743286, 1277405, 68504, '<td valign="top">so when are you going to get Tod his own camera?</td>', 'so when are you going to get Tod his own camera?', '2023-04-28 13:46:48.000000', NULL, 0),
+(7743287, 1277439, 68504, '<td valign="top">I like how the curvature emphasizes the enclosure.</td>', 'I like how the curvature emphasizes the enclosure.', '2023-04-28 13:48:04.000000', NULL, 0),
+(7743288, 1277425, 68504, '<td valign="top">you is different.</td>', 'you is different.', '2023-04-28 13:49:10.000000', NULL, 0),
+(7743289, 1277466, 68504, '<td valign="top">cool. cool title.</td>', 'cool. cool title.', '2023-04-28 13:49:41.000000', NULL, 0),
+(7743290, 1277424, 68504, '<td valign="top">j''aime le tshirt. kid knows what''s what.</td>', 'j''aime le tshirt. kid knows what''s what.', '2023-04-28 13:52:29.000000', NULL, 0),
+(7743291, 1277469, 68504, '<td valign="top">great 3-d you-are-there feel.</td>', 'great 3-d you-are-there feel.', '2023-04-28 13:54:26.000000', NULL, 0),
+(7743292, 1277315, 68504, '<td valign="top">I like the composition, and the simple inclusion of the early spring elements of Muscari, Forsythia and tree coming into leaf- the blurring of the latter makes us stop, rather than go blah blah blah at the ordinary.</td>', 'I like the composition, and the simple inclusion of the early spring elements of Muscari, Forsythia and tree coming into leaf- the blurring of the latter makes us stop, rather than go blah blah blah at the ordinary.', '2023-04-28 13:59:34.000000', NULL, 0),
+(7743314, 1277367, 100393, '<td valign="top">Stunning, the image and the phenomenon.<br/> <br/>Absolutely not something you see every day. <br/> <br/>A really significant image, in a documentary sense. And a visual treat too.</td>', 'Stunning, the image and the phenomenon. Absolutely not something you see every day.  A really significant image, in a documentary sense. And a visual treat too.', '2023-04-29 05:22:00.000000', NULL, 0),
+(7743673, 1277367, 141319, '<td valign="top">This is amazing, both the actual "thing" and your image. Quite outerworldly</td>', 'This is amazing, both the actual "thing" and your image. Quite outerworldly', '2023-05-03 13:51:05.000000', NULL, 0),
+(7743685, 1277424, 163081, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by tnun:</b></div><hr/><i> j''aime le tshirt. kid knows what''s what. </i></td></tr></table> <br/>Of course we know , I speak French.</td>', 'Originally posted by tnun: j''aime le tshirt. kid knows what''s what.  Of course we know , I speak French.', '2023-05-03 15:26:05.000000', NULL, 0);
+COMMIT;

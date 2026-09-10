@@ -1,0 +1,22 @@
+-- comments for challenge 3589
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7744795, 1278195, 122678, '<td valign="top">Terrific! Every May all my ferns come up around my house as I watch them unfold. Beautiful imagery and a great May thought.</td>', 'Terrific! Every May all my ferns come up around my house as I watch them unfold. Beautiful imagery and a great May thought.', '2023-05-15 11:41:47.000000', NULL, 1),
+(7745390, 1278170, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2023-05-20 12:01:17.000000', NULL, 1),
+(7745391, 1277870, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2023-05-20 12:01:29.000000', NULL, 1),
+(7745392, 1278176, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2023-05-20 12:01:41.000000', NULL, 1),
+(7745524, 1278229, 30049, '<td valign="top">For us, the little ones show up in June.  But they''re working on it right now (nesting).  :-)</td>', 'For us, the little ones show up in June.  But they''re working on it right now (nesting).  :-)', '2023-05-21 21:05:45.000000', NULL, 1),
+(7745544, 1278229, 163081, '<td valign="top"><table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by glad2badad:</b></div><hr/><i> For us, the little ones show up in June.  But they''re working on it right now (nesting).  :-) </i></td></tr></table> <br/> <br/>Here in Taiwan we have a sub tropical climate In the warmer climates this will happen a little earlier in spring than in the colder areas. Migrating birds however are much later, usually August.</td>', 'Originally posted by glad2badad: For us, the little ones show up in June.  But they''re working on it right now (nesting).  :-)   Here in Taiwan we have a sub tropical climate In the warmer climates this will happen a little earlier in spring than in the colder areas. Migrating birds however are much later, usually August.', '2023-05-22 01:26:07.000000', NULL, 0),
+(7745545, 1278188, 96751, '<td valign="top">Gorgeous!</td>', 'Gorgeous!', '2023-05-22 01:43:44.000000', NULL, 0),
+(7745546, 1278231, 96751, '<td valign="top">So sweet. Degas al fresco.</td>', 'So sweet. Degas al fresco.', '2023-05-22 01:44:15.000000', NULL, 0),
+(7745565, 1278182, 38162, '<td valign="top">Terrific image and message lost on the willfully ignorant USA folks. Thanks for taking chances with your art.</td>', 'Terrific image and message lost on the willfully ignorant USA folks. Thanks for taking chances with your art.', '2023-05-22 09:36:16.000000', NULL, 0),
+(7745579, 1278170, 140305, '<td valign="top">It seems you have it figured out! Beautiful photo, has a little bit of everything you''d want in a landscape/waterscape, in perfect harmony. Congrats on the ribbon :)</td>', 'It seems you have it figured out! Beautiful photo, has a little bit of everything you''d want in a landscape/waterscape, in perfect harmony. Congrats on the ribbon :)', '2023-05-22 11:49:05.000000', NULL, 0),
+(7745601, 1278188, 122678, '<td valign="top">Amazing Capture! Congratulations</td>', 'Amazing Capture! Congratulations', '2023-05-22 14:41:45.000000', NULL, 0),
+(7745602, 1278231, 122678, '<td valign="top">Congratulation 10 perfection for this challenge.</td>', 'Congratulation 10 perfection for this challenge.', '2023-05-22 14:42:27.000000', NULL, 0),
+(7745604, 1278170, 122678, '<td valign="top">Congratulations, perfect top to bottom, corner to corner.</td>', 'Congratulations, perfect top to bottom, corner to corner.', '2023-05-22 14:44:19.000000', NULL, 0),
+(7745716, 1278231, 30861, '<td valign="top">This is SO lovely :-) I was one of your 9''s...</td>', 'This is SO lovely :-) I was one of your 9''s...', '2023-05-23 18:18:20.000000', NULL, 0),
+(7746011, 1278231, 109227, '<td valign="top">Perfection.</td>', 'Perfection.', '2023-05-25 22:53:40.000000', NULL, 0),
+(7746342, 1278231, 68504, '<td valign="top">Lovely indeed. Each so unassuming, so unposed, so different, but all of the peace and charm of the moment, of the season.</td>', 'Lovely indeed. Each so unassuming, so unposed, so different, but all of the peace and charm of the moment, of the season.', '2023-05-28 16:54:12.000000', NULL, 0),
+(7747402, 1278231, 100831, '<td valign="top">What a sweet collection!</td>', 'What a sweet collection!', '2023-06-03 13:24:54.000000', NULL, 0);
+COMMIT;

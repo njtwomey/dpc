@@ -1,0 +1,30 @@
+-- comments for challenge 3712
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+INSERT INTO comments ("id", "image_id", "commenter_id", "raw_comment", "comment", "date", "edited", "made_during_challenge") VALUES
+(7762146, 1286132, 129512, '<td valign="top">Foreground motion blue tells me you were moving yet you nailed the focus on the large right tree.. (what kind of tree is that anyway?). <br/> <br/>There is something about the texture and tone of the tree against the rest of the high key image that''s very pleasing and brings it all together for me.</td>', 'Foreground motion blue tells me you were moving yet you nailed the focus on the large right tree.. (what kind of tree is that anyway?).  There is something about the texture and tone of the tree against the rest of the high key image that''s very pleasing and brings it all together for me.', '2024-01-15 08:48:40.000000', NULL, 1),
+(7762147, 1286094, 129512, '<td valign="top">Looks like a macro of the Garden Cress Tiny Forest.. Love the detail, dof and overall tones. I too want more B&amp;W like this!</td>', 'Looks like a macro of the Garden Cress Tiny Forest.. Love the detail, dof and overall tones. I too want more B&W like this!', '2024-01-15 08:50:08.000000', NULL, 1),
+(7762148, 1286129, 129512, '<td valign="top">lovely grain and texture. Lovely FilmEsque processing and i''m here for it.</td>', 'lovely grain and texture. Lovely FilmEsque processing and i''m here for it.', '2024-01-15 08:51:49.000000', NULL, 1),
+(7762150, 1286125, 129512, '<td valign="top">To be flexible yet remain firm.. I needed that reminder.<br/> <br/>Photograph wise, i''m drawn to the dirty bucket more than anything unfortunately. Good overall lighting but some DOF, separation from the background and shadows may have added a touch more character.</td>', 'To be flexible yet remain firm.. I needed that reminder. Photograph wise, i''m drawn to the dirty bucket more than anything unfortunately. Good overall lighting but some DOF, separation from the background and shadows may have added a touch more character.', '2024-01-15 08:58:57.000000', NULL, 1),
+(7762151, 1286041, 129512, '<td valign="top">I love the leading line up the path. Great framing.</td>', 'I love the leading line up the path. Great framing.', '2024-01-15 08:59:46.000000', NULL, 1),
+(7762154, 1286087, 129512, '<td valign="top">I don''t have the patience or the nerves for this. Need a master class on how to capture this.. Focus Stacking? Single Shot? <br/> <br/>Color is great, dof is great, texture is great, lighting is great.. Not sure what if anything I would change.</td>', 'I don''t have the patience or the nerves for this. Need a master class on how to capture this.. Focus Stacking? Single Shot?  Color is great, dof is great, texture is great, lighting is great.. Not sure what if anything I would change.', '2024-01-15 09:07:24.000000', NULL, 1),
+(7762160, 1286087, 30861, '<td valign="top">Yeah, RIGHT :-) As if you can''t find enough... Recommendation: take a trip to Costa Rica, lots of new bugs for ya in the rain forest there :-)</td>', 'Yeah, RIGHT :-) As if you can''t find enough... Recommendation: take a trip to Costa Rica, lots of new bugs for ya in the rain forest there :-)', '2024-01-15 11:53:27.000000', NULL, 1),
+(7762208, 1286129, 67145, '<td valign="top">awesome .. <br/>love your editing .. <br/>not voting yet .. :)</td>', 'awesome .. love your editing .. not voting yet .. :)', '2024-01-17 05:27:09.000000', NULL, 1),
+(7762336, 1286031, 42733, '<td valign="top">My favorite in this challenge.</td>', 'My favorite in this challenge.', '2024-01-21 13:18:54.000000', NULL, 1),
+(7762337, 1286147, 42733, '<td valign="top">My pick for red in this challenge.</td>', 'My pick for red in this challenge.', '2024-01-21 13:19:07.000000', NULL, 1),
+(7762338, 1286087, 42733, '<td valign="top">My pick for yellow in this challenge.</td>', 'My pick for yellow in this challenge.', '2024-01-21 13:19:17.000000', NULL, 1),
+(7762357, 1286123, 30049, '<td valign="top">ARRRRGGGGG!  What IS that?!!!</td>', 'ARRRRGGGGG!  What IS that?!!!', '2024-01-21 20:54:26.000000', NULL, 1),
+(7762358, 1286104, 30049, '<td valign="top">Wedding outtake?  :-)</td>', 'Wedding outtake?  :-)', '2024-01-21 20:54:58.000000', NULL, 1),
+(7762366, 1286129, 50695, '<td valign="top">inspiring mess. the best kind of travel</td>', 'inspiring mess. the best kind of travel', '2024-01-21 22:20:24.000000', NULL, 1),
+(7762367, 1286141, 50695, '<td valign="top">lovely</td>', 'lovely', '2024-01-21 22:20:36.000000', NULL, 1),
+(7762368, 1286132, 50695, '<td valign="top">i hope you do</td>', 'i hope you do', '2024-01-21 22:20:56.000000', NULL, 1),
+(7762369, 1286147, 50695, '<td valign="top">amen or should i say namaste</td>', 'amen or should i say namaste', '2024-01-21 22:21:18.000000', NULL, 1),
+(7762370, 1286045, 50695, '<td valign="top">perspective is everything</td>', 'perspective is everything', '2024-01-21 22:21:44.000000', NULL, 1),
+(7762371, 1286144, 50695, '<td valign="top">after some thought I guess this is a geyser in winter. great capture.</td>', 'after some thought I guess this is a geyser in winter. great capture.', '2024-01-21 22:22:23.000000', NULL, 1),
+(7762377, 1286141, 97225, '<td valign="top">Beautiful abstract not abstract. Top two.</td>', 'Beautiful abstract not abstract. Top two.', '2024-01-21 23:48:09.000000', NULL, 1),
+(7762378, 1286144, 97225, '<td valign="top">Not too much room for improvement! Top shot. 10</td>', 'Not too much room for improvement! Top shot. 10', '2024-01-21 23:48:26.000000', NULL, 1),
+(7762412, 1286129, 100831, '<td valign="top">yes, hopefully.</td>', 'yes, hopefully.', '2024-01-22 12:16:09.000000', NULL, 0),
+(7762475, 1286147, 38032, '<td valign="top">inspiring</td>', 'inspiring', '2024-01-23 16:17:38.000000', NULL, 0),
+(7763162, 1286045, 68504, '<td valign="top">couldn''t be better.</td>', 'couldn''t be better.', '2024-02-02 23:47:56.000000', NULL, 0),
+(7763163, 1286132, 68504, '<td valign="top">oh yes. wish I had voted.</td>', 'oh yes. wish I had voted.', '2024-02-02 23:49:08.000000', NULL, 0);
+COMMIT;
