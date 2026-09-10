@@ -324,3 +324,50 @@ awarders:
     image: https://images.dpchallenge.com/images_portfolio/110000-114999/113156/120/Copyrighted_Image_Reuse_Prohibited_1153616.jpg
     markers:
     - '1153616'
+- name: Kali
+  user_id: 9462
+  awards:
+  - name: UpsyDaisy Blue
+    description: UpsyDaisy BLUE. You know you want one ;)
+    image: https://images.dpchallenge.com/images_portfolio/5000-9999/9462/120/670650.jpg
+    markers:
+    - '670650'
+  - name: UpsyDaisy Red
+    description: UpsyDaisy RED. You totally deserve it ;)
+    image: https://images.dpchallenge.com/images_portfolio/5000-9999/9462/120/670651.jpg
+    markers:
+    - '670651'
+  - name: UpsyDaisy Yellow
+    description: UpsyDaisy YELLOW. You deserve it! ;)
+    image: https://images.dpchallenge.com/images_portfolio/5000-9999/9462/120/670652.jpg
+    markers:
+    - '670652'
+- name: ciaeagle
+  user_id: 136989
+  awards:
+  - name: CiaFav5
+    description: I like to identify my favorite entry in each challenge with a comment that lets the
+      user know. Now I have an award to share too. :) Your picture made me smile and with this bling
+      I hope you'll smile too. All awards posted to entry comments prior to the completion of the
+      voting window.
+    image: https://images.dpchallenge.com/images_portfolio/135000-139999/136989/120/Copyrighted_Image_Reuse_Prohibited_1082013.jpg
+    markers:
+    - '1082013'
+- name: Bruce_the_Robert
+  user_id: 43073
+  awards:
+  - name: Story Tellers Blue
+    description: A ribbon from the Story Tellers Thread, for an image that tells one.
+    image: https://images.dpchallenge.com/images_portfolio/40000-44999/43073/120/669337.jpg
+    markers:
+    - '669337'
+  - name: Story Tellers Red
+    description: A ribbon from the Story Tellers Thread, for an image that tells one.
+    image: https://images.dpchallenge.com/images_portfolio/40000-44999/43073/120/669338.jpg
+    markers:
+    - '669338'
+  - name: Story Tellers Yellow
+    description: A ribbon from the Story Tellers Thread, for an image that tells one.
+    image: https://images.dpchallenge.com/images_portfolio/40000-44999/43073/120/669339.jpg
+    markers:
+    - '669339'

@@ -68,7 +68,8 @@ class TestCommandsAreConstructibleDirectly:
 
     def test_check_validates_the_real_catalogue(self, capsys):
         Check(catalog=CATALOG_PATH).cli_cmd()
-        assert "18 awarders" in capsys.readouterr().out
+        catalog = AwardCatalog.load(CATALOG_PATH)
+        assert f"{len(catalog.awarders)} awarders" in capsys.readouterr().out
 
     def test_scrape_without_a_source_exits_rather_than_hitting_the_network(self):
         with pytest.raises(SystemExit) as excinfo:
