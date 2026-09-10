@@ -214,13 +214,19 @@ class Export(_Command):
 class Verify(_Command):
     """Check the archive for inconsistencies."""
 
+    catalog: Path = Field(DEFAULT_CATALOG, description="Award catalogue YAML.")
+
     def cli_cmd(self) -> None:
         settings = self.settings()
         engine = create_db_engine(settings.database_url)
         factory = create_session_factory(engine)
 
+        # Passing the catalogue enables the orphaned-award check: awards left in
+        # the database by a rename, whose grants duplicate their replacement.
+        slugs = [award.slug for _, award in AwardCatalog.load(self.catalog).pairs()]
+
         with session_scope(factory) as session:
-            health = check_health(session)
+            health = check_health(session, slugs)
         engine.dispose()
 
         if health.incomplete:

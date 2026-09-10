@@ -24,9 +24,14 @@ class TestRealCatalog:
     """The catalogue that actually ships must stay valid."""
 
     def test_awards_yaml_loads_and_validates(self):
+        # Deliberately a floor, not an exact count: the catalogue grows every
+        # time someone tells Niall about a bling, and a test that has to be
+        # edited each time teaches people to edit tests.
         catalog = AwardCatalog.load(CATALOG_PATH)
-        assert len(catalog.awarders) == 18
-        assert len(catalog.pairs()) == 38
+        assert len(catalog.awarders) >= 18
+        assert len(catalog.pairs()) >= 38
+        assert all(award.markers for _, award in catalog.pairs())
+        assert all(award.name.strip() for _, award in catalog.pairs())
 
     def test_every_award_has_a_unique_slug(self):
         catalog = AwardCatalog.load(CATALOG_PATH)

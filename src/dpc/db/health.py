@@ -18,9 +18,10 @@ Three kinds of problem, deliberately kept apart:
 
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 
-from sqlalchemy import text
+from sqlalchemy import bindparam, text
 from sqlalchemy.orm import Session
 from tqdm import tqdm
 
@@ -107,9 +108,14 @@ INCOMPLETE_CHALLENGES = (
 )
 
 
-def check(session: Session) -> Health:
-    """Run every check. Cheap enough to run after any scrape."""
+def check(session: Session, catalogue_slugs: Iterable[str] = ()) -> Health:
+    """Run every check. Cheap enough to run after any scrape.
+
+    ``catalogue_slugs`` enables the orphaned-award check; omit it and that one
+    is skipped rather than reporting every award as an orphan.
+    """
     health = Health()
+    catalogue_slugs = list(catalogue_slugs)
 
     bar = tqdm(_INTEGRITY, desc="checking", unit="check", leave=False, disable=None)
     for name, sql, detail in bar:
@@ -123,6 +129,33 @@ def check(session: Session) -> Health:
         health.integrity.append(
             Finding("foreign key violations", violations, "reported by SQLite itself")
         )
+
+    # Renaming an award changes its slug, and sync_catalog adds the new one
+    # without removing the old: the grants are then duplicated under both, and
+    # the site shows an image winning two awards that are the same award. This
+    # happened once, to chromeydome's Post Lumy, and cost 758 duplicate grants.
+    if catalogue_slugs:
+        orphans = session.execute(
+            text(
+                "SELECT a.slug, COUNT(g.id) FROM awards a "
+                "LEFT JOIN award_grants g ON g.award_id = a.id "
+                "WHERE a.slug NOT IN :slugs GROUP BY a.id ORDER BY a.slug"
+            ).bindparams(bindparam("slugs", expanding=True)),
+            {"slugs": catalogue_slugs},
+        ).all()
+        for slug, count in orphans:
+            # Only an orphan holding grants is a contradiction: those grants
+            # duplicate whatever replaced it, and the site shows one image
+            # winning the same award twice. An orphan with none is just clutter
+            # left by an edit, so it reports without failing the run.
+            finding = Finding(
+                f"award not in the catalogue: {slug}",
+                count,
+                "left by a rename; its grants duplicate the replacement"
+                if count
+                else "in the database but not config/awards.yaml, and never granted",
+            )
+            (health.integrity if count else health.inherited).append(finding)
 
     partial = int(session.execute(text(INCOMPLETE_CHALLENGES)).scalar_one())
     if partial:

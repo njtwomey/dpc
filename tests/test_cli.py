@@ -4,6 +4,7 @@ import pytest
 from pydantic import ValidationError
 from pydantic_settings import CliApp
 
+from dpc.awards.catalog import AwardCatalog
 from dpc.cli import Awards, Check, Cli, DbInit, Export, Scrape
 
 REPO_ROOT = __import__("pathlib").Path(__file__).resolve().parents[1]
@@ -88,7 +89,10 @@ class TestPipelineOnAScratchDatabase:
         Export(catalog=CATALOG_PATH).cli_cmd()
 
         out = capsys.readouterr().out
-        assert "38" in out  # the catalogue's 38 awards
+        # Derived, not hardcoded: `dpc check` must report whatever the real
+        # catalogue holds today.
+        expected = len(AwardCatalog.load(CATALOG_PATH).pairs())
+        assert str(expected) in out
         assert (scratch / "site" / "data" / "dpc" / "awards.json").is_file()
 
     def test_export_honours_an_explicit_destination(self, scratch):

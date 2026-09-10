@@ -110,13 +110,23 @@ awarders:
   user_id: 82985
   thumb: https://images.dpchallenge.com/images_profile/120_nopicture.png
   awards:
-  - name: Post Lumy Award
+  - name: Post Lumy Award Nominee
     description: Nominations go to LUMINOUS images (often overlooked). I can't limit choices to 3 "ribbons"
       so this "Nomination" approach lets me recognize more images
-    image: https://images.dpchallenge.com/images_portfolio/80000-84999/82985/120/Copyrighted_Image_Reuse_Prohibited_677021.jpg
+    image: https://images.dpchallenge.com/images_portfolio/80000-84999/82985/120/677021.jpg
     markers:
-    - Copyrighted_Image_Reuse_Prohibited_677021
     - '677021'
+  - name: Post Lumy Award Winner
+    description: The winner among the Post Lumy nominees, chosen from the LUMINOUS images nominated
+      in a challenge
+    image: https://images.dpchallenge.com/images_portfolio/80000-84999/82985/120/677020.jpg
+    markers:
+    - '677020'
+  - name: Post Lumy Award Tiebreaker
+    description: Awarded when two images could not be separated for the Post Lumy win
+    image: https://images.dpchallenge.com/images_portfolio/80000-84999/82985/120/747600.jpg
+    markers:
+    - '747600'
 - name: bvy
   user_id: 76335
   awards:

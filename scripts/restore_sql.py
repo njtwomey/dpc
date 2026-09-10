@@ -56,10 +56,6 @@ ORDER: tuple[str, ...] = (
 
 TABLE_FOR = {"award_comments": "comments"}
 
-LEGACY_NAMES = {"award_comments": "comments"}
-"""Dumps written before the rename. Restoring an old checkout should work
-rather than quietly producing a database with no comments in it."""
-
 
 COMMENTS_DIR = "challenge_comments"
 
@@ -77,12 +73,9 @@ def challenge_comment_files(source: Path) -> list[Path]:
 
 def find(source: Path, name: str) -> Path | None:
     """The plain or gzipped file for ``name``, whichever is present."""
-    for stem in (name, LEGACY_NAMES.get(name)):
-        if stem is None:
-            continue
-        for candidate in (source / f"{stem}.sql", source / f"{stem}.sql.gz"):
-            if candidate.is_file():
-                return candidate
+    for candidate in (source / f"{name}.sql", source / f"{name}.sql.gz"):
+        if candidate.is_file():
+            return candidate
     return None
 
 

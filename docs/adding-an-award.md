@@ -34,24 +34,36 @@ from sqlalchemy import text
 from dpc.db.session import create_db_engine
 from dpc.config import Settings
 
-USER_ID = 30049          # <- the awarder
-BUCKET = f"{USER_ID // 5000 * 5000}-{USER_ID // 5000 * 5000 + 4999}"
+USER_ID = 82985          # <- the awarder
+
+# dpchallenge has used two portfolio filename styles: the bare image id, and
+# Copyrighted_Image_Reuse_Prohibited_<id>. Matching only the second silently
+# finds nothing for older awarders — chromeydome's 928 bling comments looked
+# like zero until this was fixed.
+GRAPHIC = re.compile(
+    r"images_portfolio/\d+-\d+/(\d+)/\d+/(?:Copyrighted_Image_Reuse_Prohibited_)?(\d+)\.\w+"
+)
 
 e = create_db_engine(Settings().database_url)
 with e.connect() as c:
     rows = c.execute(text("""
-        SELECT id, image_id, date, raw_comment FROM comments
-        WHERE commenter_id = :u AND raw_comment LIKE :pat ORDER BY date
-    """), {"u": USER_ID, "pat": f"%images_portfolio/{BUCKET}/{USER_ID}%"}).all()
+        SELECT image_id, date, raw_comment FROM comments
+        WHERE commenter_id = :u AND raw_comment LIKE '%images_portfolio%' ORDER BY date
+    """), {"u": USER_ID}).all()
 
-    seen = Counter()
-    for _, image_id, _, raw in rows:
-        for gid in re.findall(r"Copyrighted_Image_Reuse_Prohibited_(\d+)", raw):
-            if gid != str(image_id):
-                seen[gid] += 1
-    print(f"{len(rows)} comments embedding their own images")
+    seen, first, last, images = Counter(), {}, {}, {}
+    for image_id, date, raw in rows:
+        for owner, gid in GRAPHIC.findall(raw):
+            if int(owner) != USER_ID:
+                continue
+            seen[gid] += 1
+            first.setdefault(gid, date)
+            last[gid] = date
+            images.setdefault(gid, set()).add(image_id)
+
     for gid, n in seen.most_common():
-        print(f"  {gid:>9}  used {n:>4}x")
+        print(f"{gid:>9} used {n:>5}x on {len(images[gid]):>4} images  "
+              f"{str(first[gid])[:10]} .. {str(last[gid])[:10]}")
 e.dispose()
 PY
 ```
@@ -59,6 +71,10 @@ PY
 A graphic used many times across many images is a bling. One used once or twice
 is usually a photo edit they made for someone — check a few of the comments
 before assuming.
+
+Then open `https://www.dpchallenge.com/image.php?IMAGE_ID=<graphic>` for each:
+the image's own title is usually the award's name. That is how Post Lumy turned
+out to be three awards — nominee, winner and a tiebreaker — catalogued as one.
 
 ## Adding it
 
