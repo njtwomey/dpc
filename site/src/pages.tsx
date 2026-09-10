@@ -4,9 +4,11 @@ import { Award, ChevronRight, Trophy, Users, type LucideIcon } from "lucide-reac
 import { Card } from "@/components/ui/card"
 import { AwardBadge } from "@/components/AwardBadge"
 import { AwardCard } from "@/components/AwardCard"
+import { EverythingCard } from "@/components/EverythingCard"
 import { ChallengeCard } from "@/components/ChallengeCard"
 import { PageHeader } from "@/components/PageHeader"
 import { PersonCard } from "@/components/PersonCard"
+import { YearHeading, YearIndex, byYear } from "@/components/YearIndex"
 import { Portrait } from "@/components/Portrait"
 import { StaticGallery } from "@/components/gallery/StaticGallery"
 import {
@@ -181,6 +183,7 @@ export function AwarderPage({ slug }: { slug: string }) {
     <>
       <PageHeader title={`Awards given by ${awarder.name}`} thumb={awarder.thumb ?? undefined}
         stats={`${awarder.num_granted.toLocaleString()} awards across ${theirs.length} kinds`} />
+      <EverythingCard awarder={awarder} href={href(`/awarders/${slug}/all/`)} />
       <div className="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-4">
         {theirs.map((a) => (
           <AwardCard key={a.slug} award={a} href={href(`/awarders/${a.awarder_slug}/${a.slug}/`)} />
@@ -190,12 +193,39 @@ export function AwarderPage({ slug }: { slug: string }) {
   )
 }
 
+/** Every image a member has ever awarded anything to, in one gallery.
+ *
+ *  The per-award pages answer "who won this bling"; this answers "what has
+ *  this person been marking out", which is a different question and the one
+ *  you want when a member gives several related awards. */
+export function AwarderGalleryPage({ slug }: { slug: string }) {
+  const awarder = awarders.find((a) => a.slug === slug)!
+  const theirs = awards.filter((a) => a.awarder_slug === slug)
+  return (
+    <>
+      <PageHeader title={`Everything given by ${awarder.name}`} thumb={awarder.thumb ?? undefined}
+        stats={`${awarder.num_granted.toLocaleString()} awards to ${awarder.image_ids.length.toLocaleString()} images`}>
+        <div className="flex flex-wrap items-center gap-1.5 pt-1">
+          {theirs.map((a) => <AwardBadge key={a.slug} slug={a.slug} count={a.num_granted} />)}
+        </div>
+        <p className="pt-1 text-xs">
+          <a href={href(`/awarders/${slug}/`)}
+             className="text-muted-foreground hover:text-foreground hover:underline">
+            Back to {awarder.name}'s awards
+          </a>
+        </p>
+      </PageHeader>
+      <StaticGallery imageIds={awarder.image_ids} grouped />
+    </>
+  )
+}
+
 export function AwardPage({ award }: { award: AwardT }) {
   return (
     <>
       <PageHeader title={award.name} thumb={award.thumb} description={award.description}
         stats={`Given ${award.num_granted.toLocaleString()} times to ${award.num_recipients.toLocaleString()} photographers across ${award.num_challenges.toLocaleString()} challenges`} />
-      <StaticGallery imageIds={award.image_ids} />
+      <StaticGallery imageIds={award.image_ids} grouped />
     </>
   )
 }
@@ -204,52 +234,26 @@ export function AwardPage({ award }: { award: AwardT }) {
  *
  *  1,516 rows of text is a wall, and the export is already in date order, so
  *  the years were sitting there unused. Splitting on them turns the page into
- *  something you can navigate -- and the cards show what was actually won.
- */
-function byYear(list: Challenge[]) {
-  const years: { year: string; items: Challenge[] }[] = []
-  for (const c of list) {
-    const year = c.ended.slice(0, 4)
-    const last = years[years.length - 1]
-    if (last?.year === year) last.items.push(c)
-    else years.push({ year, items: [c] })
-  }
-  return years
-}
-
+ *  something you can navigate -- and the cards show what was actually won. */
 export function ChallengesList() {
-  const years = byYear(challenges)
+  const years = byYear(challenges, (c) => c.ended.slice(0, 4))
 
   return (
     <>
       <PageHeader title="Challenges"
         stats={`${challenges.length.toLocaleString()} challenges with awards, ${years[years.length - 1]!.year}–${years[0]!.year}`} />
 
-      {/* Sticks under the site header so the index is always to hand on a page
-          this long. One scrolling row rather than a wrapping block: two rows of
-          chips would eat a third of the screen on the way past. Plain anchors --
-          the page ships no JavaScript. */}
-      <nav data-year-index=""
-           className="bg-background/90 sticky top-14 z-30 -mx-4 mb-8 flex gap-1.5 overflow-x-auto border-b px-4 py-2.5 backdrop-blur">
-        {years.map(({ year, items }) => (
-          <a key={year} href={`#${year}`} title={`${items.length} challenges`}
-             className="bg-muted/60 text-muted-foreground hover:bg-accent hover:text-foreground data-[active]:bg-primary data-[active]:text-primary-foreground shrink-0 rounded-md px-2.5 py-1 text-xs font-medium tabular-nums transition-colors">
-            {year}
-          </a>
-        ))}
-      </nav>
+      <YearIndex years={years} />
 
       {years.map(({ year, items }) => (
         // scroll-mt clears both sticky bars: the h-14 site header and the year index.
         <section key={year} id={year} className="mb-10 scroll-mt-28">
-          <div className="mb-3 flex items-baseline gap-3 border-b pb-2">
-            <h2 className="text-xl font-semibold tabular-nums">{year}</h2>
-            <span className="text-muted-foreground text-xs">
-              {items.length} challenge{items.length === 1 ? "" : "s"}
-              {" \u00b7 "}
-              {items.reduce((n, c) => n + c.num_granted, 0).toLocaleString()} awards
-            </span>
-          </div>
+          <YearHeading
+            year={year}
+            detail={`${items.length} challenge${items.length === 1 ? "" : "s"} \u00b7 ${items
+              .reduce((n, c) => n + c.num_granted, 0)
+              .toLocaleString()} awards`}
+          />
           <div className="grid grid-cols-[repeat(auto-fill,minmax(215px,1fr))] gap-4">
             {items.map((c) => (
               <ChallengeCard key={c.id} challenge={c} href={href(`/challenges/${c.slug}/`)} />
@@ -310,7 +314,7 @@ export function RecipientPage({ person }: { person: Recipient }) {
           {person.award_counts.map((ac) => <AwardBadge key={ac.slug} slug={ac.slug} count={ac.count} />)}
         </div>
       </PageHeader>
-      <StaticGallery imageIds={person.image_ids} />
+      <StaticGallery imageIds={person.image_ids} grouped />
     </>
   )
 }

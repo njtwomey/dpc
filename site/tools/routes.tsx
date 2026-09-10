@@ -1,7 +1,7 @@
 import type { ReactElement } from "react"
 import { Layout } from "@/Layout"
 import {
-  AwarderPage, AwardersList, AwardPage, ChallengePage, ChallengesList,
+  AwarderGalleryPage, AwarderPage, AwardersList, AwardPage, ChallengePage, ChallengesList,
   Home, RecipientPage, RecipientsList,
 } from "@/pages"
 import { awarders, awards, challenges, recipients } from "@/lib/dpc"
@@ -25,6 +25,16 @@ export function routes(): Route[] {
       path: `/awarders/${a.slug}/`,
       title: `Awards given by ${a.name}`,
       element: <Layout active="Awarders"><AwarderPage slug={a.slug} /></Layout>,
+    })
+  }
+  // Every awarder gets one, including those who give a single award: it is a
+  // consistent place to land from their page, and duplicating one gallery
+  // costs less than a link that is sometimes there and sometimes not.
+  for (const a of awarders) {
+    all.push({
+      path: `/awarders/${a.slug}/all/`,
+      title: `Everything given by ${a.name}`,
+      element: <Layout active="Awarders"><AwarderGalleryPage slug={a.slug} /></Layout>,
     })
   }
   for (const award of awards) {

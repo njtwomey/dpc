@@ -20,6 +20,7 @@ import type { DpcImage } from "@/lib/urls"
 export type Awarder = {
   id: number; name: string; slug: string
   thumb: string | null; num_granted: number; award_slugs: string[]
+  image_ids: number[]
 }
 export type Award = {
   slug: string; name: string; description: string; thumb: string
@@ -49,6 +50,13 @@ export const meta = metaJson as {
 }
 
 export const awardBySlug = new Map(awards.map((a) => [a.slug, a]))
+
+/** Challenge id -> the year its voting closed.
+ *
+ *  Images carry a challenge id but no date, and a gallery groups by year, so
+ *  this is the bridge. Build-time only: the client island never imports this
+ *  module, and must not. */
+export const challengeYear = new Map(challenges.map((c) => [c.id, c.ended.slice(0, 4)]))
 
 export const lookupImages = (ids: number[]) =>
   ids.map((id) => images[String(id)]).filter(Boolean)
