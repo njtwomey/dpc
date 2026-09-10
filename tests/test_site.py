@@ -153,6 +153,11 @@ def built(tmp_path_factory) -> Path:
             stale.unlink()
         for restored in backup.glob("*.json"):
             shutil.copy(restored, live)
+        # This built the real site/dist from a one-image dataset. Leaving it
+        # there means the next person to open the local site sees a stub and
+        # believes it -- so remove it rather than restore it, and let
+        # `npm run build` say plainly that it needs running again.
+        shutil.rmtree(SITE / "dist", ignore_errors=True)
 
     return Path(out)
 
