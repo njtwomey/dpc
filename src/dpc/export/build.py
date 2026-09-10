@@ -103,9 +103,12 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
     ]
 
     stages.update(1)
+    # Built from the date-ordered grants rather than by concatenating
+    # by_award, which would group an awarder's grants by which award they were
+    # instead of when they were given.
     grants_by_awarder: dict[int, list[AwardGrant]] = defaultdict(list)
-    for award in awards.values():
-        grants_by_awarder[award.awarder_id].extend(by_award[award.id])
+    for grant in grants:
+        grants_by_awarder[awards[grant.award_id].awarder_id].append(grant)
 
     awarders_out = [
         AwarderOut(
@@ -118,6 +121,7 @@ def build_site_data(session: Session, catalog: AwardCatalog) -> SiteData:
                 (a.slug for a in awards.values() if a.awarder_id == member_id),
                 key=lambda s: catalogue_order.get(s, 0),
             ),
+            image_ids=ordered_image_ids(items),
         )
         for member_id, items in sorted(
             grants_by_awarder.items(), key=lambda kv: slugify(members[kv[0]].name)

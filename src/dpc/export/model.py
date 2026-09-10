@@ -59,6 +59,11 @@ class AwarderOut(BaseModel):
     thumb: str | None
     num_granted: int
     award_slugs: list[str]
+    image_ids: list[int]
+    """Every image this member has awarded anything to, newest first.
+
+    Their awards' lists concatenated would be award-major rather than dated,
+    which is wrong for a single gallery of everything they have given."""
 
 
 class ChallengeOut(BaseModel):

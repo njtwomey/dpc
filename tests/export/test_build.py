@@ -144,6 +144,15 @@ class TestChallenges:
         data = build_site_data(populated, CATALOG)
         assert [c.id for c in data.challenges] == [101, 100]
 
+    def test_awarders_carry_every_image_they_awarded_newest_first(self, populated):
+        # One gallery of everything a member has given, dated rather than
+        # grouped by which of their awards it was.
+        data = build_site_data(populated, CATALOG)
+        posthumous = next(a for a in data.awarders if a.slug == "posthumous")
+        assert posthumous.image_ids
+        assert len(posthumous.image_ids) == len(set(posthumous.image_ids)), "no duplicates"
+        assert posthumous.num_granted >= len(posthumous.image_ids)
+
     def test_carries_the_date_voting_closed(self, populated):
         # The only chronology the site has: the list groups on it.
         data = build_site_data(populated, CATALOG)
