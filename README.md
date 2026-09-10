@@ -162,8 +162,36 @@ machine.
 
 **`backups/sql` is not a backup of the comment corpus.** It carries the ~7,000
 comments that granted an award; the other 3.6 million exist only in your local
-`dpc.sqlite`. Keep a copy of that file somewhere off the machine — compressed it
-is about 313 MB — because nothing in this repository can reconstruct it.
+`dpc.sqlite`, and nothing in this repository can reconstruct them.
+
+### Offsite snapshots
+
+```bash
+make snapshot        # backups/snapshots/dpc-YYYY-MM-DD.sqlite.gz  (~313 MB)
+make snapshot-push   # ...and copy it offsite with rclone
+```
+
+`VACUUM INTO` rather than a file copy, so it is safe to take while a scrape is
+running and it drops free pages on the way out. Every snapshot is decompressed
+end to end before the script reports success — a backup nobody has read back is
+a hope, not a backup. `backups/snapshots/` is gitignored; the newest
+`DPC_BACKUP_KEEP` (default 6) are kept locally and the remote is never pruned.
+
+For the offsite copy, once:
+
+```bash
+brew install rclone
+rclone config            # interactive: n, name it gdrive, pick "drive", follow the browser
+echo 'DPC_BACKUP_REMOTE=gdrive:dpc-backups' >> .env
+```
+
+The OAuth token stays in `~/.config/rclone/rclone.conf`. `.env` holds only the
+destination — a Google refresh token has no business sitting next to it, and
+rclone is the thing that has to refresh it anyway.
+
+This is local-only on purpose. The weekly refresh workflow rebuilds from
+`backups/sql`, so a snapshot taken in CI would faithfully preserve the 0.2% that
+is already in git.
 
 Restoring guards against exactly that mistake. It rebuilds into a `.partial`
 file beside the target and swaps it in at the end, so a restore that fails part

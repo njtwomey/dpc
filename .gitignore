@@ -37,6 +37,10 @@ htmlcov/
 dpc_cache/
 database-backup/
 
+# Compressed database snapshots. 300+ MB each and they hold the whole comment
+# corpus, which is exactly what backups/sql deliberately leaves out.
+backups/snapshots/
+
 # backups/sql IS committed: plain SQL, one file per table, so git diffs and
 # delta-compresses the actual values. comments is filtered to those that granted
 # an award, which is what keeps it to ~58 MB rather than gigabytes.

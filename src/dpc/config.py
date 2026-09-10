@@ -69,9 +69,28 @@ class Settings(BaseSettings):
 
     max_retries: int = 5
 
+    snapshot_dir: Path = PROJECT_ROOT / "backups" / "snapshots"
+    """Where ``scripts/snapshot.py`` writes compressed copies of the database."""
+
+    backup_remote: str = ""
+    """An rclone destination such as ``gdrive:dpc-backups``, or empty for none.
+
+    Deliberately not a credential. rclone keeps its own OAuth token in
+    ``~/.config/rclone/rclone.conf``; putting a Google refresh token in .env
+    would be strictly worse than letting the tool that refreshes it own it.
+    """
+
+    backup_keep: int = 6
+    """Local snapshots to keep. The remote is never pruned automatically."""
+
     @property
     def export_dir(self) -> Path:
         return self.site_dir / "data" / "dpc"
+
+    @property
+    def database_path(self) -> Path:
+        """The SQLite file behind ``database_url``."""
+        return Path(self.database_url.split(":///", 1)[1])
 
 
 class Credentials(BaseSettings):

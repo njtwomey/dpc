@@ -57,6 +57,12 @@ backup:  ## Dump one SQL file per table to backups/sql
 backup-awards:  ## Award-scoped dump: only rows an award touches
 	$(PY) scripts/dump_sql.py --out backups/sql-awards --scope awards
 
+snapshot:  ## Compressed consistent copy of the database -> backups/snapshots
+	$(PY) scripts/snapshot.py
+
+snapshot-push:  ## ...and copy it offsite via rclone (needs DPC_BACKUP_REMOTE)
+	$(PY) scripts/snapshot.py --push
+
 restore:  ## Rebuild a SQLite database from a dump (make restore to=rebuilt.sqlite)
 	$(PY) scripts/restore_sql.py --from backups/sql --to $(or $(to),rebuilt.sqlite)
 
