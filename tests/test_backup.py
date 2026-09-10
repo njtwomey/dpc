@@ -121,3 +121,80 @@ def test_gzipped_dumps_round_trip_too(seeded: Path, tmp_path: Path) -> None:
     stored = connection.execute("SELECT raw_comment FROM comments WHERE id = 1000").fetchone()[0]
     connection.close()
     assert stored == AWKWARD
+
+
+def _comment_count(path: Path) -> int:
+    connection = sqlite3.connect(path)
+    try:
+        return int(connection.execute("SELECT COUNT(*) FROM comments").fetchone()[0])
+    finally:
+        connection.close()
+
+
+def _add_comments(path: Path, n: int) -> None:
+    connection = sqlite3.connect(path)
+    connection.executemany(
+        "INSERT INTO comments VALUES (?, 100, 'later')",
+        [(2000 + i,) for i in range(n)],
+    )
+    connection.commit()
+    connection.close()
+
+
+@pytest.mark.slow
+def test_refuses_to_restore_over_a_fuller_database(seeded: Path, tmp_path: Path) -> None:
+    """The real hazard: backups/sql keeps only award-granting comments, so
+    restoring it over the live archive would drop 3.6M rows on the floor."""
+    out = tmp_path / "dump"
+    _dump(seeded, out)
+    _add_comments(seeded, 50)
+    assert _comment_count(seeded) == 51
+
+    with pytest.raises(SystemExit) as excinfo:
+        restore_sql.restore(out, seeded, overwrite=True)
+
+    assert "more rows than the dump" in str(excinfo.value)
+    assert "comments" in str(excinfo.value)
+    assert _comment_count(seeded) == 51, "the original must be left alone"
+
+
+@pytest.mark.slow
+def test_force_overrides_the_guard(seeded: Path, tmp_path: Path) -> None:
+    out = tmp_path / "dump"
+    _dump(seeded, out)
+    _add_comments(seeded, 50)
+
+    restore_sql.restore(out, seeded, overwrite=True, force=True)
+    assert _comment_count(seeded) == 1
+
+
+@pytest.mark.slow
+def test_a_restore_that_grows_the_database_is_allowed(seeded: Path, tmp_path: Path) -> None:
+    # Same size is fine too -- that is what an unchanged round trip looks like.
+    out = tmp_path / "dump"
+    _add_comments(seeded, 5)
+    _dump(seeded, out)
+    restore_sql.restore(out, seeded, overwrite=True)
+    assert _comment_count(seeded) == 6
+
+
+@pytest.mark.slow
+def test_a_failed_restore_leaves_the_original_intact(seeded: Path, tmp_path: Path) -> None:
+    # The old code unlinked the target first, so a dump that blew up half way
+    # through took the archive with it.
+    out = tmp_path / "dump"
+    _dump(seeded, out)
+    (out / "images.sql").write_text("this is not valid SQL;", encoding="utf-8")
+    before = _comment_count(seeded)
+
+    with pytest.raises(sqlite3.Error):
+        restore_sql.restore(out, seeded, overwrite=True)
+
+    assert _comment_count(seeded) == before
+    assert not (seeded.parent / (seeded.name + ".partial")).exists(), "temp file left behind"
+
+
+def test_shrinkage_only_reports_tables_that_lost_rows() -> None:
+    before = {"comments": 3_656_434, "images": 399_485, "awards": 39}
+    after = {"comments": 7_389, "images": 399_485, "challenge_probes": 469}
+    assert restore_sql.shrinkage(before, after) == {"comments": (3_656_434, 7_389)}

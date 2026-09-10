@@ -160,6 +160,23 @@ the full database — so it is enough to reconstruct the site, though it is not 
 backup of the archive. The database itself is gitignored and lives only on your
 machine.
 
+**`backups/sql` is not a backup of the comment corpus.** It carries the ~7,000
+comments that granted an award; the other 3.6 million exist only in your local
+`dpc.sqlite`. Keep a copy of that file somewhere off the machine — compressed it
+is about 313 MB — because nothing in this repository can reconstruct it.
+
+Restoring guards against exactly that mistake. It rebuilds into a `.partial`
+file beside the target and swaps it in at the end, so a restore that fails part
+way through leaves the original alone; and even with `--overwrite` it refuses
+when the existing database holds more rows than the dump would put back:
+
+```
+refusing to overwrite dpc.sqlite: it holds more rows than the dump.
+    comments             3,656,434 -> 7,392        (-3,649,042)
+```
+
+`--force` proceeds anyway and logs each table it shrinks.
+
 ### Starting from nothing
 
 ```bash
