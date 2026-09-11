@@ -55,18 +55,19 @@ const yearIndex = document.querySelector<HTMLElement>("[data-year-index]")
 if (yearIndex) {
   const links = [...yearIndex.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')]
   const sections = links.map((link) => document.getElementById(link.hash.slice(1)))
+
+  // The reading line is where a section actually lands when you jump to it:
+  // its own scroll-margin-top, which clears the header and this index. Using
+  // the index's own bottom put the line about ten pixels higher, so the year
+  // you clicked had not yet passed it and the previous one stayed marked.
+  const first = sections.find((s): s is HTMLElement => s !== null)
+  const margin = first ? Number.parseFloat(getComputedStyle(first).scrollMarginTop) : 0
+  const line = (Number.isFinite(margin) ? margin : 0) + 2
+
   let current: HTMLAnchorElement | null = null
 
-  const sync = () => {
-    const line = yearIndex.getBoundingClientRect().bottom + 1
-    let active = 0
-    for (const [i, section] of sections.entries()) {
-      if (!section || section.getBoundingClientRect().top > line) break
-      active = i
-    }
-
-    const link = links[active]
-    if (!link || link === current) return
+  const mark = (link: HTMLAnchorElement) => {
+    if (link === current) return
     current?.removeAttribute("data-active")
     link.setAttribute("data-active", "")
     current = link
@@ -82,18 +83,61 @@ if (yearIndex) {
     }
   }
 
+  // A jump pins its own year until you actually scroll away from it. On a short
+  // gallery the last year or two sit too close to the bottom to ever reach the
+  // line, so position alone can never mark them; what you clicked is not in
+  // doubt, so intent wins over geometry until you move.
+  let pinned: HTMLAnchorElement | null = null
+  let pinnedAt = -1
+
+  const positional = () => {
+    const doc = document.documentElement
+    if (innerHeight + scrollY >= doc.scrollHeight - 2) return links.length - 1
+    let active = 0
+    for (const [i, section] of sections.entries()) {
+      if (!section || section.getBoundingClientRect().top > line) break
+      active = i
+    }
+    return active
+  }
+
+  const sync = () => {
+    if (pinned && Math.abs(Math.round(scrollY) - pinnedAt) < 4) {
+      mark(pinned)
+      return
+    }
+    pinned = null
+    const link = links[positional()]
+    if (link) mark(link)
+  }
+
   let queued = false
-  addEventListener(
-    "scroll",
-    () => {
-      if (queued) return
-      queued = true
-      requestAnimationFrame(() => {
-        queued = false
-        sync()
-      })
-    },
-    { passive: true },
-  )
-  sync()
+  const schedule = () => {
+    if (queued) return
+    queued = true
+    requestAnimationFrame(() => {
+      queued = false
+      sync()
+    })
+  }
+
+  // Both callers run after the browser has already scrolled, so scrollY is the
+  // anchored position and can be read straight away. Deferring it to a frame
+  // meant a throttled tab never recorded it, and the pin never released.
+  const pinFromHash = () => {
+    const link = links.find((l) => l.hash === location.hash)
+    if (!link) return
+    pinned = link
+    pinnedAt = Math.round(scrollY)
+    mark(link)
+  }
+
+  addEventListener("scroll", schedule, { passive: true })
+  // A jump that does not move the page far enough to fire a scroll event would
+  // otherwise leave the marker where it was.
+  addEventListener("hashchange", pinFromHash)
+  for (const link of links) link.addEventListener("click", () => setTimeout(pinFromHash, 0))
+
+  if (location.hash) pinFromHash()
+  else sync()
 }
