@@ -4171,5 +4171,8 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4196, 'Free Study 2026-07', 'Free Study for July, 2026.', '2026-07-01', '2026-07-31', '2026-08-01', '2026-08-07', 52, 0, 2104, 98, 6.01711, 7.1667, 6.0513, 4.7805),
 (4197, 'Extended Free Study 2026-07', 'Extended Free Study for July, 2026.', '2026-07-15', '2026-08-14', '2026-08-15', '2026-08-21', 39, 0, 1138, 25, 5.92091, 7.2414, 5.8477, 4.8),
 (4198, 'Whatever the Weather II (DPL2026 Playoff1A)', 'Just show us whatever the weather is wherever you are today.', '2026-08-17', '2026-08-30', '2026-08-31', '2026-09-06', 69, 0, 3534, 97, 5.8571, 7.2692, 5.8501, 4.3091),
-(4199, 'Free Study 2026-08', 'Free Study for August, 2026.', '2026-08-01', '2026-08-31', '2026-09-01', '2026-09-07', 48, 0, 1521, 83, 5.89218, 7.2424, 5.8485, 4.4688);
+(4199, 'Free Study 2026-08', 'Free Study for August, 2026.', '2026-08-01', '2026-08-31', '2026-09-01', '2026-09-07', 48, 0, 1521, 83, 5.89218, 7.2424, 5.8485, 4.4688),
+(4200, 'Something That Makes You Smile (DPL2026 Playoff1B)', 'In honor of ''World Photography Day'' we''d like to see everyone grab a camera, or a smartphone, or a drone, etc. and capture an image of something that makes you smile.', '2026-08-19', '2026-09-01', '2026-09-02', '2026-09-08', 62, 0, 2819, 123, 5.76091, 7.1163, 5.7778, 4.1915),
+(4202, 'Everything About the Color Indigo', 'Indigo is a dark, cool hue that is a balance of deep blue and violet. It is traditionally considered one of the 7 major spectral colors.', '2026-08-21', '2026-09-03', '2026-09-04', '2026-09-10', 22, 2, 555, 34, 5.63604, 7.3846, 5.44, 3.9167),
+(4203, 'Textures VIII', 'N/A', '2026-08-24', '2026-09-06', '2026-09-07', '2026-09-13', 28, 0, 726, 40, 6.09642, 7.3214, 5.9615, 4.0385);
 COMMIT;

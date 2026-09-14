@@ -7843,5 +7843,6 @@ INSERT INTO award_grants ("id", "award_id", "recipient_id", "comment_id", "image
 INSERT INTO award_grants ("id", "award_id", "recipient_id", "comment_id", "image_id", "challenge_id") VALUES
 (14937, 49, 50695, 7517741, 1200713, 2471),
 (14938, 47, 100831, 7517742, 1200730, 2471),
-(14939, 48, 94815, 7517743, 1199701, 2471);
+(14939, 48, 94815, 7517743, 1199701, 2471),
+(14940, 5, 12200, 7836419, 1312414, 4200);
 COMMIT;
