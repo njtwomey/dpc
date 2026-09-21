@@ -4174,5 +4174,8 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4199, 'Free Study 2026-08', 'Free Study for August, 2026.', '2026-08-01', '2026-08-31', '2026-09-01', '2026-09-07', 48, 0, 1521, 83, 5.89218, 7.2424, 5.8485, 4.4688),
 (4200, 'Something That Makes You Smile (DPL2026 Playoff1B)', 'In honor of ''World Photography Day'' we''d like to see everyone grab a camera, or a smartphone, or a drone, etc. and capture an image of something that makes you smile.', '2026-08-19', '2026-09-01', '2026-09-02', '2026-09-08', 62, 0, 2819, 123, 5.76091, 7.1163, 5.7778, 4.1915),
 (4202, 'Everything About the Color Indigo', 'Indigo is a dark, cool hue that is a balance of deep blue and violet. It is traditionally considered one of the 7 major spectral colors.', '2026-08-21', '2026-09-03', '2026-09-04', '2026-09-10', 22, 2, 555, 34, 5.63604, 7.3846, 5.44, 3.9167),
-(4203, 'Textures VIII', 'N/A', '2026-08-24', '2026-09-06', '2026-09-07', '2026-09-13', 28, 0, 726, 40, 6.09642, 7.3214, 5.9615, 4.0385);
+(4203, 'Textures VIII', 'N/A', '2026-08-24', '2026-09-06', '2026-09-07', '2026-09-13', 28, 0, 726, 40, 6.09642, 7.3214, 5.9615, 4.0385),
+(4204, 'Impossible II', 'N/A', '2026-08-26', '2026-09-08', '2026-09-09', '2026-09-15', 22, 1, 693, 87, 6.01876, 7.125, 5.8387, 4.75),
+(4205, 'Straight V', 'Capture an image that includes only straight lines.', '2026-08-28', '2026-09-10', '2026-09-11', '2026-09-17', 20, 0, 568, 21, 5.96303, 6.7857, 6.0, 4.8214),
+(4206, 'The Letter C II', 'Photograph anything that begins with the letter C.', '2026-08-31', '2026-09-13', '2026-09-14', '2026-09-20', 38, 0, 1252, 61, 5.84425, 7.3529, 5.8182, 4.6667);
 COMMIT;
