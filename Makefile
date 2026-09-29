@@ -32,7 +32,7 @@ fmt:  ## Format and apply safe lint fixes
 # that contradicts itself. It only fails on integrity: missing data and
 # inherited artefacts are reported and the pipeline carries on.
 parse:  ## Fetch new challenges, verify, rematch awards, refresh site/data/dpc
-	$(DPC) scrape --from-history
+	$(DPC) scrape --from-history --recent 10
 	$(DPC) verify
 	$(DPC) awards
 	$(DPC) export

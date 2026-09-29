@@ -50,6 +50,18 @@ class CrawlStats:
     skipped_unfinished: int = 0
     failures: list[int] = field(default_factory=list)
 
+    def merge(self, other: CrawlStats) -> None:
+        """Fold another pass's totals in. A refetch of recent challenges is a
+        second crawl with different cache rules, not a different kind of work,
+        so it is reported as one number."""
+        self.challenges += other.challenges
+        self.images += other.images
+        self.comments += other.comments
+        self.members += other.members
+        self.skipped_invalid += other.skipped_invalid
+        self.skipped_unfinished += other.skipped_unfinished
+        self.failures.extend(other.failures)
+
 
 class Crawler:
     def __init__(

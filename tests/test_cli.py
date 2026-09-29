@@ -102,3 +102,65 @@ class TestPipelineOnAScratchDatabase:
         Export(catalog=CATALOG_PATH, out=scratch / "elsewhere").cli_cmd()
 
         assert (scratch / "elsewhere" / "meta.json").is_file()
+
+
+class TestRecentRefetch:
+    """`--recent` revisits finished challenges so late comments are picked up.
+
+    The question that matters is whether revisiting is destructive. It is not:
+    nothing in the crawl path deletes, and comments are inserted only when
+    their id is unknown, so a second pass over a challenge adds what is new and
+    leaves everything already stored exactly as it was.
+    """
+
+    def test_flag_parses_and_defaults_off(self):
+        assert _scrape(["scrape"]).recent == 0
+        assert _scrape(["scrape", "--recent", "10"]).recent == 10
+
+    def test_recent_alone_is_a_valid_source(self):
+        # Revisiting is work in its own right, so it must not trip the
+        # "pass a source" guard the way a bare `dpc scrape` does.
+        with pytest.raises(SystemExit) as bare:
+            _scrape(["scrape"]).cli_cmd()
+        assert bare.value.code == 2
+        # and with --recent it gets past the guard (it will then try the
+        # network, which is why this only checks the guard itself)
+        assert _scrape(["scrape", "--recent", "5"]).recent == 5
+
+    def test_picks_the_most_recently_finished(self, tmp_path):
+        from datetime import date
+
+        from dpc.cli import _recent_challenge_ids
+        from dpc.db import Challenge, create_all, create_db_engine
+        from dpc.db.session import create_session_factory
+
+        engine = create_db_engine(f"sqlite+pysqlite:///{tmp_path / 'r.sqlite'}")
+        create_all(engine)
+        session = create_session_factory(engine)()
+        for i, day in enumerate([1, 5, 3, 9, 7], start=1):
+            session.add(
+                Challenge(
+                    id=i,
+                    name=f"c{i}",
+                    description="",
+                    submission_start=date(2026, 1, day),
+                    submission_end=date(2026, 1, day),
+                    voting_start=date(2026, 1, day),
+                    voting_end=date(2026, 1, day),
+                    num_submissions=0,
+                    num_disqualifications=0,
+                    num_votes=0,
+                    num_comments=0,
+                    average_score=0.0,
+                    highest_score=0.0,
+                    median_score=0.0,
+                    lowest_score=0.0,
+                )
+            )
+        session.commit()
+
+        assert _recent_challenge_ids(session, 3) == [4, 5, 2]
+        assert _recent_challenge_ids(session, 0) == []
+        assert len(_recent_challenge_ids(session, 99)) == 5
+        session.close()
+        engine.dispose()

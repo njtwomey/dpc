@@ -69,8 +69,12 @@ jobs:
       # --anonymous: challenge results, image pages (statistics and the full
       # comment thread) and profiles are all public, so this needs no secrets.
       # See docs/automated-refresh.md for the evidence.
+      # --recent 10 revisits the last ten finished challenges, ignoring the
+      # cache. Comments keep arriving after voting closes and an award given in
+      # one of them would otherwise never be seen, because the challenge is
+      # already stored and nothing would fetch it again.
       - name: Fetch new challenges
-        run: uv run dpc scrape --anonymous --from-history
+        run: uv run dpc scrape --anonymous --from-history --recent 10
 
       # Fails the run on an integrity contradiction, which stops a wrong site
       # from being published. Missing data and inherited artefacts only report.

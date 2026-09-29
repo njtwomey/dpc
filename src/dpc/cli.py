@@ -77,11 +77,17 @@ class Scrape(_Command):
     anonymous: bool = Field(
         False, description="Scrape without logging in. Every page the crawler reads is public."
     )
+    recent: int = Field(
+        0,
+        description="Also refetch the N most recently ended challenges, ignoring the cache.",
+    )
 
     def cli_cmd(self) -> None:
         settings = self.settings()
-        if not self.challenge and not self.from_history and not self.incomplete:
-            console.print("[yellow]pass --challenge, --from-history or --incomplete[/yellow]")
+        if not (self.challenge or self.from_history or self.incomplete or self.recent):
+            console.print(
+                "[yellow]pass --challenge, --from-history, --incomplete or --recent[/yellow]"
+            )
             raise SystemExit(2)
 
         engine = create_db_engine(settings.database_url)
@@ -102,8 +108,11 @@ class Scrape(_Command):
                     candidates = list(self.challenge)
                 elif self.incomplete:
                     candidates = _incomplete_challenge_ids(session)
-                else:
+                elif self.from_history:
                     candidates = list(crawler.challenge_ids_from_history())
+                else:
+                    # --recent on its own: no discovery to do.
+                    candidates = []
 
                 # Explicit ids and --incomplete both mean "do these", so the
                 # already-stored filter would defeat the point.
@@ -114,6 +123,20 @@ class Scrape(_Command):
                 )
                 console.print(f"{len(pending)} of {len(candidates)} challenges to fetch")
                 stats = crawler.crawl_challenges(pending, with_images=self.images)
+
+                # Comments keep arriving after voting closes, and an award given
+                # in one of them would otherwise never be seen: the challenge is
+                # stored, so nothing would fetch it again. Revisiting the last
+                # few on every run gives those late awards a window to land in.
+                revisit = [
+                    c for c in _recent_challenge_ids(session, self.recent) if c not in pending
+                ]
+                if revisit:
+                    console.print(f"revisiting {len(revisit)} recent challenges for late comments")
+                    # refresh=True: the point is the comments that arrived since,
+                    # and the cached page is by definition the one without them.
+                    recent_crawler = Crawler(client, session, cache, refresh=True)
+                    stats.merge(recent_crawler.crawl_challenges(revisit, with_images=self.images))
 
         engine.dispose()
         console.print(
@@ -131,6 +154,17 @@ class Scrape(_Command):
         )
         if stats.failures:
             console.print(f"[red]failed:[/red] {stats.failures}")
+
+
+def _recent_challenge_ids(session: Session, count: int) -> list[int]:
+    """The ``count`` most recently finished challenges already stored."""
+    if count <= 0:
+        return []
+    rows = session.execute(
+        text("SELECT id FROM challenges ORDER BY voting_end DESC, id DESC LIMIT :count"),
+        {"count": count},
+    )
+    return [int(row[0]) for row in rows]
 
 
 def _incomplete_challenge_ids(session: Session) -> list[int]:
