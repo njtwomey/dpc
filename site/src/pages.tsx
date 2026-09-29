@@ -107,11 +107,12 @@ export function Home() {
                  count={meta.num_awarders} unit="members give awards">
           {/* The awards themselves: an awarder is known by the medal they made.
               Packed tight and edge to edge -- spaced out on white cells they
-              read as a form, not as a collage. */}
+              read as a form, not as a collage. The cells stay light in both
+              themes, as in the viewer: the graphics are drawn for white. */}
           <div className="bg-muted absolute inset-0 grid grid-cols-5 gap-px">
             {medals.map((award) => (
               <img key={award.slug} src={award.thumb} alt="" loading="lazy"
-                   className="size-full bg-white object-cover" />
+                   className="size-full bg-white object-cover dark:bg-white/85" />
             ))}
           </div>
         </NavTile>

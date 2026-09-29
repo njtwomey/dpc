@@ -7,6 +7,7 @@
 import { mkdir, readdir, writeFile } from "node:fs/promises"
 import { dirname, join } from "node:path"
 import { renderToStaticMarkup } from "react-dom/server"
+import { THEME_SCRIPT } from "../src/lib/theme"
 // Set before importing anything that renders, so lib/base picks it up.
 ;(globalThis as { __SITE_BASE__?: string }).__SITE_BASE__ = process.env.SITE_BASE ?? "/"
 
@@ -28,6 +29,9 @@ async function assets(base: string) {
 const escape = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
 
+/** The theme script goes above the stylesheet link on purpose: a synchronous
+ *  script has to wait for every stylesheet declared before it, so putting it
+ *  after the 46 kB of CSS would hold first paint for no reason. */
 function document(title: string, body: string, css: string[], js: string[]) {
   return `<!doctype html>
 <html lang="en-GB">
@@ -35,6 +39,7 @@ function document(title: string, body: string, css: string[], js: string[]) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escape(title)} | DPChallenge Award Gallery</title>
+<script>${THEME_SCRIPT}</script>
 ${css.map((h) => `<link rel="stylesheet" href="${h}">`).join("\n")}
 </head>
 <body>

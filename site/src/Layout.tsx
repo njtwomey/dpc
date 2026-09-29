@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 import { href } from "@/lib/base"
-import { Award, Images, Trophy, Users } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Award, Images, Moon, Sun, Trophy, Users } from "lucide-react"
 
 const NAV = [
   { path: "/awarders/", label: "Awarders", icon: Award },
@@ -28,6 +29,21 @@ export function Layout({ active, children }: { active?: string; children: ReactN
               <Icon className="size-4" /> {label}
             </a>
           ))}
+          {/* A Button, not shadcn's Toggle: Toggle keeps `pressed` in React
+              state and nothing in this header is ever mounted. Which icon
+              shows is already decided by the `dark` class on <html>, so the
+              markup is identical on all 3,000 prerendered pages and
+              client.tsx only has to flip the class. */}
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            data-theme-toggle=""
+            aria-label="Switch between light and dark"
+            className="scripted:inline-flex ml-auto hidden"
+          >
+            <Sun className="size-4 dark:hidden" />
+            <Moon className="hidden size-4 dark:block" />
+          </Button>
         </div>
       </header>
       <main className="mx-auto max-w-7xl px-4 py-8">{children}</main>

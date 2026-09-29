@@ -29,12 +29,17 @@ export function AwardCard({ award, href }: { award: Award; href: string }) {
               />
             ))}
           </div>
-          {/* Dimmed so the badge stays legible over any photograph. */}
-          <div className="absolute inset-0 bg-white/55 transition-colors group-hover:bg-white/45" />
+          {/* Dimmed so the badge stays legible over any photograph. The scrim
+              takes the page's own background rather than white: a white veil
+              inside a dark card reads as a blown-out panel. */}
+          <div className="bg-background/55 group-hover:bg-background/45 absolute inset-0 transition-colors" />
+          {/* A quarter of the award graphics are GIF/PNG with transparent
+              backgrounds, drawn for a white page. The scrim used to be their
+              backing; now that it goes dark they need their own. */}
           <img
             src={award.thumb}
             alt=""
-            className="absolute top-1/2 left-1/2 max-h-[62%] max-w-[52%] -translate-x-1/2 -translate-y-1/2 rounded-md object-contain shadow-md ring-1 ring-black/10"
+            className="ring-border absolute top-1/2 left-1/2 max-h-[62%] max-w-[52%] -translate-x-1/2 -translate-y-1/2 rounded-md object-contain shadow-md ring-1 dark:bg-white/85"
           />
         </div>
 

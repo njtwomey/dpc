@@ -3,8 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Light mode only, per the brief: no dark block at all. */
+/* The theme toggle does nothing without the client bundle, and a dead control
+   in the header is worse than no control. The inline <head> script stamps
+   data-theme on <html>, which is what this variant waits for. */
+@custom-variant scripted (&:is([data-theme] *));
+
 :root {
+  color-scheme: light;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -24,6 +29,36 @@
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
   --ring: oklch(0.704 0.04 256.788);
+}
+
+/* Dark: the light palette's hues at a fraction of its chroma.
+ *
+ * Every surface here sits beside a photograph, and a tinted one throws its own
+ * cast over the picture next to it -- a blue-grey card that looks neutral on
+ * its own makes a warm print read as if it were white-balanced wrong. Nothing
+ * goes to pure black either: a photograph on #000 loses its own shadows, and
+ * the frame stops reading as a frame.
+ */
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.178 0.008 264.695);
+  --foreground: oklch(0.955 0.004 247.858);
+  --card: oklch(0.223 0.008 265.755);
+  --card-foreground: oklch(0.955 0.004 247.858);
+  --popover: oklch(0.223 0.008 265.755);
+  --popover-foreground: oklch(0.955 0.004 247.858);
+  --primary: oklch(0.922 0.006 255.508);
+  --primary-foreground: oklch(0.223 0.008 265.755);
+  --secondary: oklch(0.288 0.009 247.896);
+  --secondary-foreground: oklch(0.955 0.004 247.858);
+  --muted: oklch(0.288 0.009 247.896);
+  --muted-foreground: oklch(0.706 0.012 257.417);
+  --accent: oklch(0.288 0.009 247.896);
+  --accent-foreground: oklch(0.955 0.004 247.858);
+  --destructive: oklch(0.658 0.19 27.325);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.58 0.012 256.788);
 }
 
 @theme inline {

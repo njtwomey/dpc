@@ -23,7 +23,7 @@ export function AwardStamps({ slugs }: { slugs: string[] }) {
           <span
             key={slug}
             title={`${award.name} — ${award.awarder_name}`}
-            className="bg-muted/60 grid size-6 place-items-center rounded ring-1 ring-black/5"
+            className="bg-muted/60 ring-border grid size-6 place-items-center rounded ring-1"
           >
             <img
               src={award.thumb}

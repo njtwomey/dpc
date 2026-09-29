@@ -136,7 +136,10 @@ export function ImageViewer({
             const award = awards[slug]
             return award ? (
               <Badge key={slug} variant="secondary" className="gap-1.5 py-1 pl-1.5 font-normal">
-                <span className="grid size-5 place-items-center rounded-sm bg-white">
+                {/* Stays light in both themes: these graphics are transparent PNGs
+                    drawn for a white page, and a dark plate swallows their
+                    linework. Dimmed in dark so it is a plate, not a lamp. */}
+                <span className="grid size-5 place-items-center rounded-sm bg-white dark:bg-white/85">
                   <img src={award.thumb} alt="" className="max-h-4 max-w-4 object-contain" />
                 </span>
                 {award.name}

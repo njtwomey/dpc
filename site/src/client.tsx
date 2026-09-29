@@ -1,5 +1,5 @@
-/** The only JavaScript the site ships: the image viewer, and the year index's
- *  active marker.
+/** The only JavaScript the site ships: the image viewer, the year index's
+ *  active marker, and the theme toggle.
  *
  *  Everything else is static HTML. Each gallery embeds the data its viewer
  *  needs, so this bundle imports no dataset -- pulling in lib/dpc would drag
@@ -10,8 +10,52 @@
 import { useState } from "react"
 import { createRoot } from "react-dom/client"
 import { ImageViewer } from "@/components/gallery/ImageViewer"
+import { THEME_KEY } from "@/lib/theme"
 import type { AwardRef, DpcImage } from "@/lib/urls"
 import "./index.css"
+
+/** The theme toggle.
+ *
+ *  Plain DOM, like the year index below: the header is prerendered and no
+ *  component on these pages is ever mounted, so there is no React state to
+ *  hold a theme in. The inline <head> script has already resolved the theme
+ *  and put the class on <html>; this only flips it and records the choice,
+ *  which outranks prefers-color-scheme from then on.
+ */
+const root = document.documentElement
+
+function setTheme(theme: "light" | "dark") {
+  root.dataset.theme = theme
+  root.classList.toggle("dark", theme === "dark")
+}
+
+function storedTheme() {
+  try {
+    return localStorage.getItem(THEME_KEY)
+  } catch {
+    // Storage is not merely empty but throws in some privacy modes.
+    return null
+  }
+}
+
+for (const toggle of document.querySelectorAll<HTMLElement>("[data-theme-toggle]")) {
+  toggle.addEventListener("click", () => {
+    const next = root.classList.contains("dark") ? "light" : "dark"
+    setTheme(next)
+    try {
+      localStorage.setItem(THEME_KEY, next)
+    } catch {
+      // The flip still holds for this page; it just will not survive the next.
+    }
+  })
+}
+
+// Until the reader has chosen, an open tab follows the system -- otherwise a
+// laptop turning night mode on at sunset leaves this one page glaring.
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+  const chosen = storedTheme()
+  if (chosen !== "light" && chosen !== "dark") setTheme(event.matches ? "dark" : "light")
+})
 
 type Payload = { images: DpcImage[]; awards: Record<string, AwardRef> }
 

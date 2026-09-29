@@ -2,6 +2,7 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import tailwindcss from "@tailwindcss/vite"
 import { renderToStaticMarkup } from "react-dom/server"
+import { THEME_SCRIPT } from "./src/lib/theme.ts"
 
 const root = import.meta.dirname
 
@@ -31,6 +32,9 @@ function devSsr() {
               `<!doctype html><html lang="en-GB"><head><meta charset="utf-8">` +
                 `<meta name="viewport" content="width=device-width, initial-scale=1">` +
                 `<title>${route.title} | DPChallenge Award Gallery</title>` +
+                // Above the stylesheet, as in the build: dev must not flash
+                // the light page either.
+                `<script>${THEME_SCRIPT}</script>` +
                 // A real stylesheet link, so dev blocks on CSS the way the
                 // build does. Without it the styles arrive inside the JS
                 // module and every page flashes unstyled first.
