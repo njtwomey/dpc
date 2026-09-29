@@ -539,5 +539,9 @@ Yay, Henk-Jan!
 
 I was one of your 8s.
 
-Love it!', '2026-09-25 14:05:25.000000', NULL, 0);
+Love it!', '2026-09-25 14:05:25.000000', NULL, 0),
+(7838812, 1312931, 149964, '<td valign="top">
+This is a really striking photo. Congrats on the blue! 
+<br/>(Next time I head South to the big smoke I''m going to try and find this view!)</td>', 'This is a really striking photo. Congrats on the blue! 
+(Next time I head South to the big smoke I''m going to try and find this view!)', '2026-09-29 04:07:47.000000', NULL, 0);
 COMMIT;

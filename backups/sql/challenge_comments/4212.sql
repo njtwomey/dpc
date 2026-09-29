@@ -921,5 +921,47 @@ I knew that adorable little bug would do well 😊</td>', 'I knew that adorable 
 (7838721, 1313465, 65234, '<td valign="top">
 Way to go!</td>', 'Way to go!', '2026-09-28 09:13:02.000000', NULL, 0),
 (7838722, 1313241, 65234, '<td valign="top">
-Great finish!</td>', 'Great finish!', '2026-09-28 09:13:28.000000', NULL, 0);
+Great finish!</td>', 'Great finish!', '2026-09-28 09:13:28.000000', NULL, 0),
+(7838732, 1313199, 12200, '<td valign="top">
+Actually, at the time of this capture, both bugs were still alive. The wasp was in the process of dying, of course. I didn''t stick around to wait for the robber fly to finish--I already looked like a nut laying on my belly on the sidewalk outside the rural post office to capture this one. :-P The postmaster came out thinking I might have been having a medical emergency, but when I showed her what I was watching she was equally fascinated.</td>', 'Actually, at the time of this capture, both bugs were still alive. The wasp was in the process of dying, of course. I didn''t stick around to wait for the robber fly to finish--I already looked like a nut laying on my belly on the sidewalk outside the rural post office to capture this one. :-P The postmaster came out thinking I might have been having a medical emergency, but when I showed her what I was watching she was equally fascinated.', '2026-09-28 10:52:55.000000', NULL, 0),
+(7838734, 1313374, 86090, '<td valign="top">
+The detail in your macros is always amazing!</td>', 'The detail in your macros is always amazing!', '2026-09-28 11:23:20.000000', NULL, 0),
+(7838735, 1313475, 122678, '<td valign="top">
+Congratulations on the Blue! Gorgeous and what a catch, beautiful photography!</td>', 'Congratulations on the Blue! Gorgeous and what a catch, beautiful photography!', '2026-09-28 11:37:51.000000', NULL, 0),
+(7838736, 1313213, 122678, '<td valign="top">
+Congratulations, Superb capture!</td>', 'Congratulations, Superb capture!', '2026-09-28 11:38:29.000000', NULL, 0),
+(7838737, 1313374, 122678, '<td valign="top">
+Congratulations, stunning silver capture in all the shades of greys.
+<br/>I hate to mention but of all the nerve to give this stunning image a 2 and even 5''s excuse me for saying so. :(</td>', 'Congratulations, stunning silver capture in all the shades of greys.
+I hate to mention but of all the nerve to give this stunning image a 2 and even 5''s excuse me for saying so. :(', '2026-09-28 11:41:31.000000', NULL, 0),
+(7838738, 1313467, 122678, '<td valign="top">
+Congratulations, this is so well edited and shown. Stunning photography! One of my tippy top favs.</td>', 'Congratulations, this is so well edited and shown. Stunning photography! One of my tippy top favs.', '2026-09-28 11:43:03.000000', NULL, 0),
+(7838739, 1313356, 122678, '<td valign="top">
+Congratulations! What a capture! I love horses and this is really a good image and capture. I love, Love, love it!</td>', 'Congratulations! What a capture! I love horses and this is really a good image and capture. I love, Love, love it!', '2026-09-28 11:44:20.000000', NULL, 0),
+(7838741, 1313241, 122678, '<td valign="top">
+Stunning capture, with the light shining through the wings and so much detail. Congrats TT</td>', 'Stunning capture, with the light shining through the wings and so much detail. Congrats TT', '2026-09-28 11:45:26.000000', NULL, 0),
+(7838742, 1313059, 122678, '<td valign="top">
+Yes, the eye is wide open! nice B/W</td>', 'Yes, the eye is wide open! nice B/W', '2026-09-28 11:46:31.000000', NULL, 0),
+(7838743, 1313340, 122678, '<td valign="top">
+Looks like a few of us were looking forward to next years flowers from this years seeds.</td>', 'Looks like a few of us were looking forward to next years flowers from this years seeds.', '2026-09-28 11:47:39.000000', NULL, 0),
+(7838744, 1313174, 122678, '<td valign="top">
+Nice detail on the bee</td>', 'Nice detail on the bee', '2026-09-28 11:48:29.000000', NULL, 0),
+(7838745, 1313503, 122678, '<td valign="top">
+Beautiful butterfly image</td>', 'Beautiful butterfly image', '2026-09-28 11:49:02.000000', NULL, 0),
+(7838747, 1313501, 122678, '<td valign="top">
+Simply beautiful and the coloration is so good together.</td>', 'Simply beautiful and the coloration is so good together.', '2026-09-28 11:51:30.000000', NULL, 0),
+(7838748, 1313312, 122678, '<td valign="top">
+Delicate and beautiful.</td>', 'Delicate and beautiful.', '2026-09-28 11:51:51.000000', NULL, 0),
+(7838749, 1313345, 122678, '<td valign="top">
+Stunning, I love this my top pick 10</td>', 'Stunning, I love this my top pick 10', '2026-09-28 11:52:34.000000', NULL, 0),
+(7838750, 1313414, 122678, '<td valign="top">
+Beautiful and I love the way you shot this not typical but absolutely stunning. A gorgeous combination of colors.</td>', 'Beautiful and I love the way you shot this not typical but absolutely stunning. A gorgeous combination of colors.', '2026-09-28 11:53:43.000000', NULL, 0),
+(7838751, 1313199, 122678, '<td valign="top">
+yikes, nice capture.</td>', 'yikes, nice capture.', '2026-09-28 11:54:25.000000', NULL, 0),
+(7838752, 1313321, 122678, '<td valign="top">
+Gorgeous portrait.</td>', 'Gorgeous portrait.', '2026-09-28 11:54:49.000000', NULL, 0),
+(7838753, 1313492, 122678, '<td valign="top">
+I love the coloration and lighting.</td>', 'I love the coloration and lighting.', '2026-09-28 11:55:17.000000', NULL, 0),
+(7838754, 1313497, 122678, '<td valign="top">
+So literal, and yet so effective. Great details.</td>', 'So literal, and yet so effective. Great details.', '2026-09-28 11:56:50.000000', NULL, 0);
 COMMIT;

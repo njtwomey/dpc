@@ -663,5 +663,65 @@ Lev, this is incredible! Your trip really paid off on DPC. :-)</td>', 'Lev, this
 (7837731, 1313035, 30214, '<td valign="top">
 <table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by lei_73:</b></div><hr/><i> Lev, this is incredible! Your trip really paid off on DPC. :-) </i></td></tr></table>
 <br/>Actually, this artificial island is in San Diego, in the middle of the Mission bay, 20 minutes from my house. I have no clue why it is shaped like this.</td>', 'Originally posted by lei_73: Lev, this is incredible! Your trip really paid off on DPC. :-) 
-Actually, this artificial island is in San Diego, in the middle of the Mission bay, 20 minutes from my house. I have no clue why it is shaped like this.', '2026-09-21 00:56:56.000000', NULL, 0);
+Actually, this artificial island is in San Diego, in the middle of the Mission bay, 20 minutes from my house. I have no clue why it is shaped like this.', '2026-09-21 00:56:56.000000', NULL, 0),
+(7837761, 1313035, 86447, '<td valign="top">
+Way Cool, Lev.
+<br/>
+<br/>Yes, I see the seagull.
+<br/></td>', 'Way Cool, Lev.
+
+Yes, I see the seagull.', '2026-09-21 09:52:17.000000', NULL, 0),
+(7837763, 1312894, 86447, '<td valign="top">
+Hi Cassie!
+<br/></td>', 'Hi Cassie!', '2026-09-21 10:01:24.000000', NULL, 0),
+(7837785, 1313035, 122678, '<td valign="top">
+Congratulations on the Blue! Certainly an amazing shot for this challenge.10</td>', 'Congratulations on the Blue! Certainly an amazing shot for this challenge.10', '2026-09-21 11:26:49.000000', NULL, 0),
+(7837786, 1313206, 122678, '<td valign="top">
+Congratulations, Beautiful photography.</td>', 'Congratulations, Beautiful photography.', '2026-09-21 11:27:33.000000', NULL, 0),
+(7837792, 1312894, 122678, '<td valign="top">
+Congratulations! Your love of animals really shines through in all your images. I love this one, it is hard to take my eyes off that adorable little kitten. Beautiful work on every detail. 10</td>', 'Congratulations! Your love of animals really shines through in all your images. I love this one, it is hard to take my eyes off that adorable little kitten. Beautiful work on every detail. 10', '2026-09-21 12:05:15.000000', NULL, 0),
+(7837793, 1313015, 122678, '<td valign="top">
+Beautiful Photography, you have a masterful architectural eye.</td>', 'Beautiful Photography, you have a masterful architectural eye.', '2026-09-21 12:08:16.000000', NULL, 0),
+(7837795, 1313058, 122678, '<td valign="top">
+Congratulations, looks like you are getting ready for Halloween. Such an adorable witch! :)</td>', 'Congratulations, looks like you are getting ready for Halloween. Such an adorable witch! :)', '2026-09-21 12:09:57.000000', NULL, 0),
+(7837797, 1313129, 122678, '<td valign="top">
+Congrats, Is this a bull? He is beautiful and huge, a good model. I bet Todd is not happy having him around.</td>', 'Congrats, Is this a bull? He is beautiful and huge, a good model. I bet Todd is not happy having him around.', '2026-09-21 12:11:54.000000', NULL, 0),
+(7837798, 1313144, 122678, '<td valign="top">
+Oh My Goodness, are they cute. So adorable!</td>', 'Oh My Goodness, are they cute. So adorable!', '2026-09-21 12:12:54.000000', NULL, 0),
+(7837800, 1313160, 122678, '<td valign="top">
+A beautiful sway of motion.</td>', 'A beautiful sway of motion.', '2026-09-21 12:24:39.000000', NULL, 0),
+(7837801, 1313163, 122678, '<td valign="top">
+This is a beautiful tribute to 911. I love the use of chairs here. 9  A friend of mine sent me images from Lincoln Center beautiful tributes there also.</td>', 'This is a beautiful tribute to 911. I love the use of chairs here. 9  A friend of mine sent me images from Lincoln Center beautiful tributes there also.', '2026-09-21 12:26:57.000000', NULL, 0),
+(7837802, 1313229, 122678, '<td valign="top">
+Stunning coloration in this sunset. Beautiful image!</td>', 'Stunning coloration in this sunset. Beautiful image!', '2026-09-21 12:27:43.000000', NULL, 0),
+(7837804, 1313233, 122678, '<td valign="top">
+Congrats TT. When we see these beautiful sunrise/sunsets it is hard to capture the wholeness in nature. You captured it very well here.</td>', 'Congrats TT. When we see these beautiful sunrise/sunsets it is hard to capture the wholeness in nature. You captured it very well here.', '2026-09-21 12:29:33.000000', NULL, 0),
+(7837805, 1312947, 122678, '<td valign="top">
+like a color wheel outstanding find and well presented.</td>', 'like a color wheel outstanding find and well presented.', '2026-09-21 12:30:15.000000', NULL, 0),
+(7837806, 1313088, 122678, '<td valign="top">
+Beautiful spot, well captured.</td>', 'Beautiful spot, well captured.', '2026-09-21 12:31:07.000000', NULL, 0),
+(7837814, 1313228, 103142, '<td valign="top">
+I actually liked this one quite a bit -- an 8 from me</td>', 'I actually liked this one quite a bit -- an 8 from me', '2026-09-21 14:03:21.000000', NULL, 0),
+(7837818, 1313206, 30214, '<td valign="top">
+Nice photo! Congrats on your ribbon!</td>', 'Nice photo! Congrats on your ribbon!', '2026-09-21 15:31:32.000000', NULL, 0),
+(7837819, 1312894, 30214, '<td valign="top">
+So well done! You are a magician</td>', 'So well done! You are a magician', '2026-09-21 15:38:55.000000', NULL, 0),
+(7838035, 1313035, 97225, '<td valign="top">
+You can''t beat that for a C challenge. Congratulations, Lev.</td>', 'You can''t beat that for a C challenge. Congratulations, Lev.', '2026-09-23 00:47:27.000000', NULL, 0),
+(7838056, 1313129, 67145, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Barroness:</b></div><hr/><i> Congrats, Is this a bull? He is beautiful and huge, a good model. I bet Todd is not happy having him around. </i></td></tr></table>
+<br/>
+<br/>lol Debbi .. 
+<br/>yes he''s a bull called Bruce  .. 
+<br/>and tod was pretty chill around him and the two cows ..
+<br/>they''ve gone back home now because the cows are expecting and due quite soon xx</td>', 'Originally posted by Barroness: Congrats, Is this a bull? He is beautiful and huge, a good model. I bet Todd is not happy having him around. 
+
+lol Debbi .. 
+yes he''s a bull called Bruce  .. 
+and tod was pretty chill around him and the two cows ..
+they''ve gone back home now because the cows are expecting and due quite soon xx', '2026-09-23 04:31:48.000000', NULL, 0),
+(7838228, 1313204, 50641, '<td valign="top">
+Nice slant. Perfect distribution of cows.</td>', 'Nice slant. Perfect distribution of cows.', '2026-09-24 06:52:01.000000', NULL, 0),
+(7838484, 1313206, 18505, '<td valign="top">
+Beautiful, beautiful image...  I love everything about this.  Congratulations on your ribbon!  So well-deserved!!</td>', 'Beautiful, beautiful image...  I love everything about this.  Congratulations on your ribbon!  So well-deserved!!', '2026-09-25 15:44:30.000000', NULL, 0);
 COMMIT;

@@ -553,5 +553,126 @@ Note: *Weighted category voting.
 
 ROFL', '2026-09-14 02:28:06.000000', NULL, 0),
 (7836861, 1312971, 141319, '<td valign="top">
-Very clever ...</td>', 'Very clever ...', '2026-09-14 02:28:53.000000', NULL, 0);
+Very clever ...</td>', 'Very clever ...', '2026-09-14 02:28:53.000000', NULL, 0),
+(7836877, 1313034, 122678, '<td valign="top">
+Mark, Congratulations, perfect texture here for the challenge and you caught every detail in it.</td>', 'Mark, Congratulations, perfect texture here for the challenge and you caught every detail in it.', '2026-09-14 10:52:47.000000', NULL, 0),
+(7836878, 1312517, 122678, '<td valign="top">
+Stunning iridescent coloration in the bird. Congratulations</td>', 'Stunning iridescent coloration in the bird. Congratulations', '2026-09-14 10:55:03.000000', NULL, 0),
+(7836880, 1312628, 122678, '<td valign="top">
+This is perfect and very creative for this challenge. I was very impressed and surprised on first glance. Lots of texture and well presented. Congratulations!</td>', 'This is perfect and very creative for this challenge. I was very impressed and surprised on first glance. Lots of texture and well presented. Congratulations!', '2026-09-14 10:56:43.000000', NULL, 0),
+(7836882, 1313006, 122678, '<td valign="top">
+Stunning in texture and coloration. Congratulations</td>', 'Stunning in texture and coloration. Congratulations', '2026-09-14 10:57:25.000000', NULL, 0),
+(7836883, 1312995, 122678, '<td valign="top">
+Wow he is big! You certainly have unusual hose guests. LOL Great shot and curls make him a perfect candidate for this challenge. Congrats.</td>', 'Wow he is big! You certainly have unusual hose guests. LOL Great shot and curls make him a perfect candidate for this challenge. Congrats.', '2026-09-14 11:00:05.000000', NULL, 0),
+(7836885, 1313031, 122678, '<td valign="top">
+Whoa! That is high and such an unexpected top on this mountain, great view so clear. Congrats TT!</td>', 'Whoa! That is high and such an unexpected top on this mountain, great view so clear. Congrats TT!', '2026-09-14 11:03:33.000000', NULL, 0),
+(7836887, 1313033, 122678, '<td valign="top">
+Lovely artistic view of texture and light. You have shared a view of texture with the viewer that is very special and  beautiful. Congrats TT</td>', 'Lovely artistic view of texture and light. You have shared a view of texture with the viewer that is very special and  beautiful. Congrats TT', '2026-09-14 11:06:20.000000', NULL, 0),
+(7836889, 1313033, 61396, '<td valign="top">
+we want some inside information about this one, please!</td>', 'we want some inside information about this one, please!', '2026-09-14 11:06:50.000000', NULL, 0),
+(7836890, 1312963, 122678, '<td valign="top">
+Wonderful capture. I guess for birds losing a feather is like losing your hair! LOL Congrats TT</td>', 'Wonderful capture. I guess for birds losing a feather is like losing your hair! LOL Congrats TT', '2026-09-14 11:07:41.000000', NULL, 0),
+(7836899, 1313033, 50695, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by mitalapo:</b></div><hr/><i> we want some inside information about this one, please! </i></td></tr></table>
+<br/>
+<br/>The Cornell Lab of Ornithology, who brought you that wonderful bird app, Merlin, has a nice nature walk. This leaf was still on the tree, had a lot going on, and I took 23 pictures of it. This was the best.
+<br/>
+<br/>I think the only editing I did was a hit of Topaz to hide the soft focus.</td>', 'Originally posted by mitalapo: we want some inside information about this one, please! 
+
+The Cornell Lab of Ornithology, who brought you that wonderful bird app, Merlin, has a nice nature walk. This leaf was still on the tree, had a lot going on, and I took 23 pictures of it. This was the best.
+
+I think the only editing I did was a hit of Topaz to hide the soft focus.', '2026-09-14 11:34:12.000000', NULL, 0),
+(7836904, 1313034, 30214, '<td valign="top">
+Great shot Mark! I thought you were in Africa, too )). I just saw her relatives there, but not at such close range.<br/><br/><i>Message edited by author 2026-09-14 19:20:34.</i></td>', 'Great shot Mark! I thought you were in Africa, too )). I just saw her relatives there, but not at such close range.', '2026-09-14 12:03:21.000000', '2026-09-14 19:20:34.000000', 0),
+(7836914, 1312680, 122678, '<td valign="top">
+Congrats TT. A little creepy but very cool creatures.</td>', 'Congrats TT. A little creepy but very cool creatures.', '2026-09-14 13:16:14.000000', NULL, 0),
+(7836915, 1313024, 122678, '<td valign="top">
+I love this gorgeous color and texture.</td>', 'I love this gorgeous color and texture.', '2026-09-14 13:17:06.000000', NULL, 0),
+(7836917, 1312986, 122678, '<td valign="top">
+This crossing does have lots of texture.</td>', 'This crossing does have lots of texture.', '2026-09-14 13:17:37.000000', NULL, 0),
+(7836918, 1312688, 122678, '<td valign="top">
+Beautiful</td>', 'Beautiful', '2026-09-14 13:17:53.000000', NULL, 0),
+(7836919, 1312951, 122678, '<td valign="top">
+Very nice texture.</td>', 'Very nice texture.', '2026-09-14 13:18:16.000000', NULL, 0),
+(7836925, 1313034, 86447, '<td valign="top">
+Cool!  I thought it might be a museum.  
+<br/>
+<br/>Congratulations!  
+<br/>
+<br/>I was one of your 9s.
+<br/>
+<br/></td>', 'Cool!  I thought it might be a museum.  
+
+Congratulations!  
+
+I was one of your 9s.', '2026-09-14 15:31:45.000000', NULL, 0),
+(7836931, 1312517, 86447, '<td valign="top">
+I gave it my only 10, but...
+<br/>
+<br/>If it really were going to be PERFECT, in my opinion, the image would have some off of the left and added to the right.  More room for the beak.
+<br/>
+<br/>But, that''s my opinion.  ;D
+<br/>
+<br/>oops.   Reverse that.
+<br/>
+<br/>Some off of the right and added to the left.
+<br/><br/><br/><i>Message edited by author 2026-09-14 16:50:06.</i></td>', 'I gave it my only 10, but...
+
+If it really were going to be PERFECT, in my opinion, the image would have some off of the left and added to the right.  More room for the beak.
+
+But, that''s my opinion.  ;D
+
+oops.   Reverse that.
+
+Some off of the right and added to the left.', '2026-09-14 16:48:22.000000', '2026-09-14 16:50:06.000000', 0),
+(7836939, 1313034, 68504, '<td valign="top">
+unexpectedly beautiful, inviting. thank you.</td>', 'unexpectedly beautiful, inviting. thank you.', '2026-09-14 19:03:25.000000', NULL, 0),
+(7836940, 1313033, 68504, '<td valign="top">
+textures in light, life and death.</td>', 'textures in light, life and death.', '2026-09-14 19:09:03.000000', NULL, 0),
+(7836941, 1312963, 68504, '<td valign="top">
+delight.</td>', 'delight.', '2026-09-14 19:09:59.000000', NULL, 0),
+(7836942, 1312680, 68504, '<td valign="top">
+wow.</td>', 'wow.', '2026-09-14 19:12:56.000000', NULL, 0),
+(7836943, 1312971, 68504, '<td valign="top">
+stop right there!</td>', 'stop right there!', '2026-09-14 19:19:19.000000', NULL, 0),
+(7836944, 1312986, 68504, '<td valign="top">
+craquelure allure.</td>', 'craquelure allure.', '2026-09-14 19:21:50.000000', NULL, 0),
+(7836945, 1312946, 68504, '<td valign="top">
+fireworks!</td>', 'fireworks!', '2026-09-14 19:23:02.000000', NULL, 0),
+(7836946, 1313026, 68504, '<td valign="top">
+it moves.</td>', 'it moves.', '2026-09-14 19:24:23.000000', NULL, 0),
+(7836947, 1312945, 68504, '<td valign="top">
+and yet inviting.</td>', 'and yet inviting.', '2026-09-14 19:25:39.000000', NULL, 0),
+(7836948, 1313036, 68504, '<td valign="top">
+astonishing.</td>', 'astonishing.', '2026-09-14 19:27:05.000000', NULL, 0),
+(7836949, 1313019, 68504, '<td valign="top">
+makes me long for the days I used to knit.</td>', 'makes me long for the days I used to knit.', '2026-09-14 19:28:21.000000', NULL, 0),
+(7836950, 1313028, 68504, '<td valign="top">
+makes me dizzy.</td>', 'makes me dizzy.', '2026-09-14 19:32:11.000000', NULL, 0),
+(7836952, 1312517, 3306, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Lydia:</b></div><hr/><i> I gave it my only 10, but...
+<br/>
+<br/>If it really were going to be PERFECT, in my opinion, the image would have some off of the left and added to the right.  More room for the beak.
+<br/>
+<br/>But, that''s my opinion.  ;D
+<br/>
+<br/>oops.   Reverse that.
+<br/>
+<br/>Some off of the right and added to the left. </i></td></tr></table>
+<br/>
+<br/>Thanks Lydia,
+<br/>   Constructive criticism is always appreciated.</td>', 'Originally posted by Lydia: I gave it my only 10, but...
+
+If it really were going to be PERFECT, in my opinion, the image would have some off of the left and added to the right.  More room for the beak.
+
+But, that''s my opinion.  ;D
+
+oops.   Reverse that.
+
+Some off of the right and added to the left. 
+
+Thanks Lydia,
+   Constructive criticism is always appreciated.', '2026-09-14 21:09:46.000000', NULL, 0),
+(7837141, 1312628, 50641, '<td valign="top">
+Great idea and treatment.  I like how the blacklight purplish hues make the chartreuse pop.</td>', 'Great idea and treatment.  I like how the blacklight purplish hues make the chartreuse pop.', '2026-09-15 22:55:15.000000', NULL, 0);
 COMMIT;
