@@ -4181,5 +4181,8 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4206, 'The Letter C II', 'Photograph anything that begins with the letter C.', '2026-08-31', '2026-09-13', '2026-09-14', '2026-09-20', 38, 0, 1252, 61, 5.84425, 7.3529, 5.8182, 4.6667),
 (4210, 'Naturally Framed III', 'Take a photograph where the subject is naturally framed by its surroundings.', '2026-09-02', '2026-09-15', '2026-09-16', '2026-09-22', 26, 0, 913, 57, 5.84337, 7.1176, 5.7778, 5.027),
 (4211, 'Untitled II', 'For this challenge let''s communicate without words. Shoot an image that works best WITHOUT a title. When you enter it, call it "Untitled". Every entry will be titled "Untitled".', '2026-09-04', '2026-09-17', '2026-09-18', '2026-09-24', 30, 0, 906, 144, 6.10155, 7.3, 6.129, 5.1034),
-(4212, 'Up Close & Wide Open (DPL2026 Playoff 2A)', 'N/A', '2026-09-07', '2026-09-20', '2026-09-21', '2026-09-27', 48, 0, 2151, 89, 5.83171, 7.0714, 5.8333, 4.8913);
+(4212, 'Up Close & Wide Open (DPL2026 Playoff 2A)', 'N/A', '2026-09-07', '2026-09-20', '2026-09-21', '2026-09-27', 48, 0, 2151, 89, 5.83171, 7.0714, 5.8333, 4.8913),
+(4213, 'Landscape/Cityscape/Waterscape VI (DPL Playoff2B)', 'N/A', '2026-09-09', '2026-09-22', '2026-09-23', '2026-09-29', 48, 0, 2114, 115, 5.92573, 7.087, 5.8537, 4.4348),
+(4214, 'Capture an Adventure', 'Focus on storytelling.', '2026-09-11', '2026-09-24', '2026-09-25', '2026-10-01', 17, 0, 479, 104, 5.90605, 6.8571, 6.0, 5.0),
+(4217, 'Double Take V', 'Take a photo in which two similar subjects are captured at once.', '2026-09-14', '2026-09-27', '2026-09-28', '2026-10-04', 24, 0, 818, 55, 6.13447, 7.4, 6.0303, 4.7059);
 COMMIT;

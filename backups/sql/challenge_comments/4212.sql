@@ -963,5 +963,42 @@ Gorgeous portrait.</td>', 'Gorgeous portrait.', '2026-09-28 11:54:49.000000', NU
 (7838753, 1313492, 122678, '<td valign="top">
 I love the coloration and lighting.</td>', 'I love the coloration and lighting.', '2026-09-28 11:55:17.000000', NULL, 0),
 (7838754, 1313497, 122678, '<td valign="top">
-So literal, and yet so effective. Great details.</td>', 'So literal, and yet so effective. Great details.', '2026-09-28 11:56:50.000000', NULL, 0);
+So literal, and yet so effective. Great details.</td>', 'So literal, and yet so effective. Great details.', '2026-09-28 11:56:50.000000', NULL, 0),
+(7838901, 1313475, 33068, '<td valign="top">
+Incredible capture, dof, and colors.</td>', 'Incredible capture, dof, and colors.', '2026-09-29 19:53:52.000000', NULL, 0),
+(7838934, 1313374, 58728, '<td valign="top">
+Just fantastic!!!</td>', 'Just fantastic!!!', '2026-09-29 21:27:31.000000', NULL, 0),
+(7839024, 1313374, 34171, '<td valign="top">
+My only 10.  Well done and congratulations.  That centered comp is so good with great dof + amazing lighting. My pick for the Blue, congrats Roz.</td>', 'My only 10.  Well done and congratulations.  That centered comp is so good with great dof + amazing lighting. My pick for the Blue, congrats Roz.', '2026-09-30 02:52:20.000000', NULL, 0),
+(7839043, 1313471, 61396, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by tnun:</b></div><hr/><i> well deserved post hanging. </i></td></tr></table>
+<br/>what t said</td>', 'Originally posted by tnun: well deserved post hanging. 
+what t said', '2026-09-30 06:41:07.000000', NULL, 0),
+(7839054, 1313475, 67444, '<td valign="top">
+Wow... an Olympus E5 in action &lt;3 lovely moment and colors.. what a masterpiece</td>', 'Wow... an Olympus E5 in action <3 lovely moment and colors.. what a masterpiece', '2026-09-30 09:37:35.000000', NULL, 0),
+(7839062, 1313213, 67444, '<td valign="top">
+So sharp in the right places... I like the complimentary colors &lt;3 congratulations</td>', 'So sharp in the right places... I like the complimentary colors <3 congratulations', '2026-09-30 10:04:08.000000', NULL, 0),
+(7839064, 1313374, 67444, '<td valign="top">
+The OG master of insect photography for me, even outside DPC (without discounting anyone) 😍 . COngratulations, roz! Lovely to see this in B&amp;W. Proud of my teammate(s) as always ❤️</td>', 'The OG master of insect photography for me, even outside DPC (without discounting anyone) 😍 . COngratulations, roz! Lovely to see this in B&W. Proud of my teammate(s) as always ❤️', '2026-09-30 10:10:05.000000', NULL, 0),
+(7839065, 1313467, 67444, '<td valign="top">
+This is a photograph that evokes emotions and memories. thank you and congratulations</td>', 'This is a photograph that evokes emotions and memories. thank you and congratulations', '2026-09-30 10:10:52.000000', NULL, 0),
+(7839066, 1313356, 67444, '<td valign="top">
+A photograph that invites you to look for a long time. more than 10x for me... Congratulations! &lt;3</td>', 'A photograph that invites you to look for a long time. more than 10x for me... Congratulations! <3', '2026-09-30 10:11:55.000000', NULL, 0),
+(7839188, 1313475, 177870, '<td valign="top">
+I am honestly shocked that someone voted 2 and 4 for this photo..
+<br/>
+<br/>But what a great shot...
+<br/>congrats to you &lt;3 love this shot
+<br/></td>', 'I am honestly shocked that someone voted 2 and 4 for this photo..
+
+But what a great shot...
+congrats to you <3 love this shot', '2026-09-30 19:39:56.000000', NULL, 0),
+(7839189, 1313213, 177870, '<td valign="top">
+Congrats on a great shot... wonderful.
+<br/>
+<br/>But like for the winner i am shocked someone gave 2 for this brilliant shot</td>', 'Congrats on a great shot... wonderful.
+
+But like for the winner i am shocked someone gave 2 for this brilliant shot', '2026-09-30 19:40:52.000000', NULL, 0),
+(7839506, 1313467, 173558, '<td valign="top">
+Nice job! Beautiful!</td>', 'Nice job! Beautiful!', '2026-10-03 12:29:04.000000', NULL, 0);
 COMMIT;

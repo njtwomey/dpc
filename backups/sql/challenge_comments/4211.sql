@@ -893,5 +893,11 @@ Thanks Art or should I say Ken!</td>', 'Thanks Art or should I say Ken!', '2026-
 (7838649, 1313355, 33068, '<td valign="top">
 Brilliant.</td>', 'Brilliant.', '2026-09-27 21:15:46.000000', NULL, 0),
 (7838650, 1313113, 33068, '<td valign="top">
-Perfect composition, exposure, and post processing.</td>', 'Perfect composition, exposure, and post processing.', '2026-09-27 21:17:19.000000', NULL, 0);
+Perfect composition, exposure, and post processing.</td>', 'Perfect composition, exposure, and post processing.', '2026-09-27 21:17:19.000000', NULL, 0),
+(7839067, 1313366, 67444, '<td valign="top">
+They are, and this shot, is a work of serendipity and art &lt;3</td>', 'They are, and this shot, is a work of serendipity and art <3', '2026-09-30 10:17:10.000000', NULL, 0),
+(7839068, 1313113, 67444, '<td valign="top">
+Just wow.. it''s like seeing this in person. congratulations</td>', 'Just wow.. it''s like seeing this in person. congratulations', '2026-09-30 10:17:44.000000', NULL, 0),
+(7839069, 1313355, 67444, '<td valign="top">
+Ribbon-worthy! &lt;3 love this</td>', 'Ribbon-worthy! <3 love this', '2026-09-30 10:18:22.000000', NULL, 0);
 COMMIT;
