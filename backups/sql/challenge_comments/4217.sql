@@ -403,5 +403,56 @@ Faved &lt;3 The movement, the moment, and the grain are just perfect. Even the s
 (7839652, 1313642, 67444, '<td valign="top">
 Right in front of their salad. kidding! 😅 I love the color grading/treatment here and the spot light... congratulations on the TT, johnathan &lt;3</td>', 'Right in front of their salad. kidding! 😅 I love the color grading/treatment here and the spot light... congratulations on the TT, johnathan <3', '2026-10-05 10:05:20.000000', NULL, 0),
 (7839653, 1313676, 67444, '<td valign="top">
-reminds me of Ethiopia &lt;3</td>', 'reminds me of Ethiopia <3', '2026-10-05 10:06:28.000000', NULL, 0);
+reminds me of Ethiopia &lt;3</td>', 'reminds me of Ethiopia <3', '2026-10-05 10:06:28.000000', NULL, 0),
+(7839700, 1313667, 28742, '<td valign="top">
+Boy, did I underrate this. Not sure why. I''m guessing the tags put me off. I think it would be legal to clone those out in Standard. Just an unnecessary annoyance. But hey, whaddoIknow. Congrats on top ten in spite of my nitpickyness. 🤪</td>', 'Boy, did I underrate this. Not sure why. I''m guessing the tags put me off. I think it would be legal to clone those out in Standard. Just an unnecessary annoyance. But hey, whaddoIknow. Congrats on top ten in spite of my nitpickyness. 🤪', '2026-10-05 16:06:27.000000', NULL, 0),
+(7839706, 1313440, 122678, '<td valign="top">
+Congratulations this is stunning in coloration (gorgeous sunset color) and the contrast from the birds is beautiful.</td>', 'Congratulations this is stunning in coloration (gorgeous sunset color) and the contrast from the birds is beautiful.', '2026-10-05 16:53:22.000000', NULL, 0),
+(7839708, 1313625, 122678, '<td valign="top">
+Congratulations, This is simply gorgeous! I love the texture and detail of the Thistles. You captured this beautifully.</td>', 'Congratulations, This is simply gorgeous! I love the texture and detail of the Thistles. You captured this beautifully.', '2026-10-05 16:54:49.000000', NULL, 0),
+(7839709, 1313563, 122678, '<td valign="top">
+Congratulations! This had to be taken quickly they are fast and catching two together like that nearly impossible.
+<br/></td>', 'Congratulations! This had to be taken quickly they are fast and catching two together like that nearly impossible.', '2026-10-05 16:56:53.000000', NULL, 0),
+(7839710, 1313343, 122678, '<td valign="top">
+Congratulations! This is stunning!</td>', 'Congratulations! This is stunning!', '2026-10-05 16:57:40.000000', NULL, 0),
+(7839711, 1313675, 122678, '<td valign="top">
+Congrats, the imitator is adorable!</td>', 'Congrats, the imitator is adorable!', '2026-10-05 16:58:41.000000', NULL, 0),
+(7839712, 1313673, 122678, '<td valign="top">
+Beautiful and to see it in double is very unusual, wonderful capture.</td>', 'Beautiful and to see it in double is very unusual, wonderful capture.', '2026-10-05 17:00:08.000000', NULL, 0),
+(7839713, 1313642, 122678, '<td valign="top">
+and it looks like you put the spotlight on them, nice capture.</td>', 'and it looks like you put the spotlight on them, nice capture.', '2026-10-05 17:01:16.000000', NULL, 0),
+(7839714, 1313608, 122678, '<td valign="top">
+A very nice couple.</td>', 'A very nice couple.', '2026-10-05 17:01:54.000000', NULL, 0),
+(7839716, 1313667, 122678, '<td valign="top">
+Certainly doubled, I like this a lot. 8</td>', 'Certainly doubled, I like this a lot. 8', '2026-10-05 17:02:55.000000', NULL, 0),
+(7839717, 1313676, 122678, '<td valign="top">
+A beautiful sense of peace.</td>', 'A beautiful sense of peace.', '2026-10-05 17:03:28.000000', NULL, 0),
+(7839719, 1313657, 122678, '<td valign="top">
+OMG what a catch! 9</td>', 'OMG what a catch! 9', '2026-10-05 17:04:09.000000', NULL, 0),
+(7839722, 1313569, 122678, '<td valign="top">
+This is a beautiful capture, Seeing doubles that might go unnoticed by many and you brought them to a space to be noticed in this challenge.</td>', 'This is a beautiful capture, Seeing doubles that might go unnoticed by many and you brought them to a space to be noticed in this challenge.', '2026-10-05 17:06:24.000000', NULL, 0),
+(7839723, 1313630, 122678, '<td valign="top">
+A beautiful autumn harvest.</td>', 'A beautiful autumn harvest.', '2026-10-05 17:06:51.000000', NULL, 0),
+(7839724, 1313382, 122678, '<td valign="top">
+Gorgeous horses well shot.</td>', 'Gorgeous horses well shot.', '2026-10-05 17:07:14.000000', NULL, 0),
+(7839725, 1313645, 122678, '<td valign="top">
+lovely silver tones here.</td>', 'lovely silver tones here.', '2026-10-05 17:07:48.000000', NULL, 0),
+(7839743, 1313440, 86090, '<td valign="top">
+Congratulations on a great finish for such an amazing image.</td>', 'Congratulations on a great finish for such an amazing image.', '2026-10-05 21:00:11.000000', NULL, 0),
+(7839790, 1313612, 67444, '<td valign="top">
+Thank you, Don &lt;3</td>', 'Thank you, Don <3', '2026-10-06 13:01:31.000000', NULL, 0),
+(7839887, 1313625, 57886, '<td valign="top">
+Super nice picture😊</td>', 'Super nice picture😊', '2026-10-07 09:46:54.000000', NULL, 0),
+(7839946, 1313625, 12200, '<td valign="top">
+Truly gorgeous, Roz. I''m struggling to find time to comment lately, but simply had to circle back to this one to commend the level of clarity and tonal contrast you''ve achieved here.</td>', 'Truly gorgeous, Roz. I''m struggling to find time to comment lately, but simply had to circle back to this one to commend the level of clarity and tonal contrast you''ve achieved here.', '2026-10-07 23:19:33.000000', NULL, 0),
+(7839947, 1313563, 12200, '<td valign="top">
+Simply incredible macro work. The kind that feels both uber-realistic and whimsical at the same time.</td>', 'Simply incredible macro work. The kind that feels both uber-realistic and whimsical at the same time.', '2026-10-07 23:20:34.000000', NULL, 0),
+(7839948, 1313343, 12200, '<td valign="top">
+You really know how to work some black magic with that Sony. :-D</td>', 'You really know how to work some black magic with that Sony. :-D', '2026-10-07 23:23:36.000000', NULL, 0),
+(7839949, 1313675, 12200, '<td valign="top">
+My top pick this challenge. Very charming.</td>', 'My top pick this challenge. Very charming.', '2026-10-07 23:25:09.000000', NULL, 0),
+(7839950, 1313675, 12200, '<td valign="top">
+[duplicate]<br/><br/><i>Message edited by author 2026-10-07 23:25:28.</i></td>', '[duplicate]', '2026-10-07 23:25:10.000000', '2026-10-07 23:25:28.000000', 0),
+(7840212, 1313440, 52628, '<td valign="top">
+Great shot!</td>', 'Great shot!', '2026-10-10 19:19:57.000000', NULL, 0);
 COMMIT;

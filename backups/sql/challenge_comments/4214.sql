@@ -440,5 +440,7 @@ Great story to go along with a great image, Mark!
 <br/>I gave it a 10.
 <br/></td>', 'Great story to go along with a great image, Mark!
 
-I gave it a 10.', '2026-10-04 14:40:08.000000', NULL, 0);
+I gave it a 10.', '2026-10-04 14:40:08.000000', NULL, 0),
+(7840021, 1313624, 33068, '<td valign="top">
+What an incredible capture.  Her six pack is almost identical to the statue.  I would have bet money that it was staged!</td>', 'What an incredible capture.  Her six pack is almost identical to the statue.  I would have bet money that it was staged!', '2026-10-08 17:07:50.000000', NULL, 0);
 COMMIT;
