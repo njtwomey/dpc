@@ -171,5 +171,11 @@ This is absolutely stunning.</td>', 'This is absolutely stunning.', '2026-10-11 
 (7840267, 1313845, 122678, '<td valign="top">
 Huge Eyes! Great Shot, Congratulations</td>', 'Huge Eyes! Great Shot, Congratulations', '2026-10-11 12:19:13.000000', NULL, 0),
 (7840300, 1313767, 67444, '<td valign="top">
-#hypnotizing... i think I saw the meaning of life after staring in the eye for 5seconds 😅 I just love the colors here.... and the lil bit of grains in the green add depth and character... the head reminds me of MTG praetors.. the border is working on this one too. deserves higher placement</td>', '#hypnotizing... i think I saw the meaning of life after staring in the eye for 5seconds 😅 I just love the colors here.... and the lil bit of grains in the green add depth and character... the head reminds me of MTG praetors.. the border is working on this one too. deserves higher placement', '2026-10-11 21:20:50.000000', NULL, 0);
+#hypnotizing... i think I saw the meaning of life after staring in the eye for 5seconds 😅 I just love the colors here.... and the lil bit of grains in the green add depth and character... the head reminds me of MTG praetors.. the border is working on this one too. deserves higher placement</td>', '#hypnotizing... i think I saw the meaning of life after staring in the eye for 5seconds 😅 I just love the colors here.... and the lil bit of grains in the green add depth and character... the head reminds me of MTG praetors.. the border is working on this one too. deserves higher placement', '2026-10-11 21:20:50.000000', NULL, 0),
+(7840726, 1313848, 69325, '<td valign="top">
+Nice work homie! I dig this quite a bit.</td>', 'Nice work homie! I dig this quite a bit.', '2026-10-14 16:31:16.000000', NULL, 0),
+(7840828, 1313767, 68504, '<td valign="top">
+haunting.</td>', 'haunting.', '2026-10-15 00:27:07.000000', NULL, 0),
+(7840969, 1313845, 63398, '<td valign="top">
+There ya have it.... The definition of creepy-cute.</td>', 'There ya have it.... The definition of creepy-cute.', '2026-10-15 21:33:20.000000', NULL, 0);
 COMMIT;

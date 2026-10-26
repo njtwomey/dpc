@@ -35222,5 +35222,8 @@ INSERT INTO members ("id", "name", "join_date", "cancelled") VALUES
 (274543, 'Merrick', '2026-05-17', 0),
 (274556, 'Jabez', '2026-06-11', 0),
 (274566, 'Teerai28', '2026-07-08', 0),
-(274580, 'RyBPhotos', '2026-08-04', 0);
+(274580, 'RyBPhotos', '2026-08-04', 0),
+(274609, 'photobooth96', '2026-09-23', 0),
+(274615, 'designsbynati', '2026-10-02', 0),
+(274617, 'angie47', '2026-10-04', 0);
 COMMIT;

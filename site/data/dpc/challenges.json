@@ -1,4 +1,9 @@
 [
+{"award_counts":[{"count":4,"slug":"posthumous-fantasy"}],"ended":"2026-10-25","id":4223,"image_ids":[1314330,1314090,1314192,1314025],"name":"A Longer Look","num_granted":4,"slug":"a-longer-look"},
+{"award_counts":[{"count":2,"slug":"posthumous-fantasy"}],"ended":"2026-10-21","id":4251,"image_ids":[1314091,1314258],"name":"Extended Free Study 2026-09","num_granted":2,"slug":"extended-free-study-2026-09"},
+{"award_counts":[{"count":7,"slug":"posthumous-fantasy"}],"ended":"2026-10-20","id":4208,"image_ids":[1314112,1313895,1314230,1314194,1314061,1314190,1314197],"name":"Motion III  (DPL2026 Playoff3B)","num_granted":7,"slug":"motion-iii-dpl2026-playoff3b"},
+{"award_counts":[{"count":4,"slug":"posthumous-fantasy"},{"count":1,"slug":"blue-balloon"},{"count":1,"slug":"yellow-balloon"}],"ended":"2026-10-18","id":4219,"image_ids":[1314045,1313954,1314024,1313897,1314015],"name":"Simplicity IV (DPL2026 Playoff3A)","num_granted":6,"slug":"simplicity-iv-dpl2026-playoff3a"},
+{"award_counts":[{"count":3,"slug":"posthumous-fantasy"},{"count":1,"slug":"yellow-balloon"}],"ended":"2026-10-15","id":4220,"image_ids":[1313983,1313889,1313773],"name":"Sun-Something II","num_granted":4,"slug":"sun-something-ii"},
 {"award_counts":[{"count":4,"slug":"posthumous-fantasy"},{"count":1,"slug":"muaimho"}],"ended":"2026-10-11","id":4216,"image_ids":[1313896,1313906,1313924,1313911,1313736],"name":"A Part of a Thing III","num_granted":5,"slug":"a-part-of-a-thing-iii"},
 {"award_counts":[{"count":1,"slug":"posthumous-fantasy"}],"ended":"2026-09-29","id":4213,"image_ids":[1313557],"name":"Landscape/Cityscape/Waterscape VI (DPL Playoff2B)","num_granted":1,"slug":"landscape-cityscape-waterscape-vi-dpl-playoff2b"},
 {"award_counts":[{"count":1,"slug":"posthumous-fantasy"}],"ended":"2026-09-27","id":4212,"image_ids":[1313471],"name":"Up Close & Wide Open (DPL2026 Playoff 2A)","num_granted":1,"slug":"up-close-wide-open-dpl2026-playoff-2a"},

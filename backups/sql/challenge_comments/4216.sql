@@ -495,5 +495,19 @@ Congratulations!! I wonder how you took a macro shot using 12-150 zoom... did yo
 (7840425, 1313911, 67444, '<td valign="top">
 Will score well in simplicity as well. Congratulations! so much story in this &lt;3
 <br/>PS. Also looks like an infrared/inverted image &lt;3<br/><br/><i>Message edited by author 2026-10-12 11:11:41.</i></td>', 'Will score well in simplicity as well. Congratulations! so much story in this <3
-PS. Also looks like an infrared/inverted image <3', '2026-10-12 11:11:09.000000', '2026-10-12 11:11:41.000000', 0);
+PS. Also looks like an infrared/inverted image <3', '2026-10-12 11:11:09.000000', '2026-10-12 11:11:41.000000', 0),
+(7840427, 1313704, 6576, '<td valign="top">
+Yes it was cropped</td>', 'Yes it was cropped', '2026-10-12 12:16:30.000000', NULL, 0),
+(7840433, 1313921, 67444, '<td valign="top">
+So sharp! It gives me planetary vibes with all the circles, flat disks, orbital lines, and blue glow. Congratulations!</td>', 'So sharp! It gives me planetary vibes with all the circles, flat disks, orbital lines, and blue glow. Congratulations!', '2026-10-12 13:12:53.000000', NULL, 0),
+(7840440, 1313906, 68504, '<td valign="top">
+nostalgia for me.</td>', 'nostalgia for me.', '2026-10-12 14:23:21.000000', NULL, 0),
+(7840448, 1313880, 61234, '<td valign="top">
+Congratulations! An amazing image!</td>', 'Congratulations! An amazing image!', '2026-10-12 17:07:27.000000', NULL, 0),
+(7840459, 1313921, 67145, '<td valign="top">
+stand out in the challenge for me Debbi .. 
+<br/>wonderful photography and idea .. congrats on top 5 .. xx ..</td>', 'stand out in the challenge for me Debbi .. 
+wonderful photography and idea .. congrats on top 5 .. xx ..', '2026-10-12 20:15:14.000000', NULL, 0),
+(7840571, 1313921, 3306, '<td valign="top">
+Way to go Debbi. Great entry. Perfect for the challenge. Congrats on front page!</td>', 'Way to go Debbi. Great entry. Perfect for the challenge. Congrats on front page!', '2026-10-13 22:23:10.000000', NULL, 0);
 COMMIT;
