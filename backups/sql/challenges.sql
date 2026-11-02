@@ -4181,6 +4181,7 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4206, 'The Letter C II', 'Photograph anything that begins with the letter C.', '2026-08-31', '2026-09-13', '2026-09-14', '2026-09-20', 38, 0, 1252, 61, 5.84425, 7.3529, 5.8182, 4.6667),
 (4207, 'DiStOrTiOnS II', 'Deliberately, by means of digital editing, distort your entry in a manner that enhances the impact of the submission.', '2026-09-18', '2026-10-01', '2026-10-02', '2026-10-08', 23, 1, 532, 63, 6.04323, 6.9091, 5.99815, 5.2174),
 (4208, 'Motion III  (DPL2026 Playoff3B)', 'N/A', '2026-09-30', '2026-10-13', '2026-10-14', '2026-10-20', 43, 0, 1820, 125, 5.78407, 7.2683, 5.79545, 3.6444),
+(4209, 'Unusual Objects II  (ARCHIVAL)', 'Photograph one or more unusual objects.', '2026-10-09', '2026-10-22', '2026-10-23', '2026-10-29', 20, 1, 682, 72, 6.03959, 6.7353, 6.0571, 5.2571),
 (4210, 'Naturally Framed III', 'Take a photograph where the subject is naturally framed by its surroundings.', '2026-09-02', '2026-09-15', '2026-09-16', '2026-09-22', 26, 0, 913, 57, 5.84337, 7.1176, 5.7778, 5.027),
 (4211, 'Untitled II', 'For this challenge let''s communicate without words. Shoot an image that works best WITHOUT a title. When you enter it, call it "Untitled". Every entry will be titled "Untitled".', '2026-09-04', '2026-09-17', '2026-09-18', '2026-09-24', 30, 0, 906, 144, 6.10155, 7.3, 6.129, 5.1034),
 (4212, 'Up Close & Wide Open (DPL2026 Playoff 2A)', 'N/A', '2026-09-07', '2026-09-20', '2026-09-21', '2026-09-27', 48, 0, 2151, 89, 5.83171, 7.0714, 5.8333, 4.8913),
@@ -4192,8 +4193,11 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4218, 'Numbers VI', 'You find them everywhere: They''re on road signs, buildings, vehicles, price tags, EVERYWHERE. Photograph numbers this week.', '2026-09-23', '2026-10-06', '2026-10-07', '2026-10-13', 27, 0, 829, 59, 5.73583, 7.4, 5.54085, 4.8),
 (4219, 'Simplicity IV (DPL2026 Playoff3A)', 'Clarity of expression; lack of sophistication; absence of complexity; plainness. Capture the essence of simplicity in your photograph.', '2026-09-28', '2026-10-11', '2026-10-12', '2026-10-18', 47, 0, 1960, 269, 5.87296, 7.3421, 5.8301, 4.75),
 (4220, 'Sun-Something II', 'Sunrise, Sunset, Sunday, Sunfish, Sunflower, the list goes on... get inspired by something that begins with "sun"!', '2026-09-25', '2026-10-08', '2026-10-09', '2026-10-15', 27, 1, 890, 60, 5.87528, 7.3636, 5.76895, 4.9688),
+(4221, 'Pink and/or Red II', 'Either color, or both, should be prominent in your image. The catch? This is MINIMAL editing, so get it right in-camera.', '2026-10-07', '2026-10-20', '2026-10-21', '2026-10-27', 30, 1, 1081, 71, 5.83719, 6.7429, 5.9189, 4.5135),
 (4222, 'Off-Centered Subject VII', 'The main subject of your photograph should be off-center -- not much more to it! Have fun!', '2026-10-02', '2026-10-15', '2026-10-16', '2026-10-22', 32, 1, 787, 23, 5.98729, 7.24, 5.76, 5.2),
 (4223, 'A Longer Look', 'Take a photo that rewards a longer look.', '2026-10-05', '2026-10-18', '2026-10-19', '2026-10-25', 34, 1, 1088, 151, 5.95496, 6.875, 5.9688, 4.4375),
+(4224, 'Still Life XI', 'N/A', '2026-10-12', '2026-10-25', '2026-10-26', '2026-11-01', 22, 0, 638, 60, 5.78056, 7.6207, 5.6667, 4.2333),
 (4250, 'Free Study 2026-09', 'Free Study for September, 2026.', '2026-09-01', '2026-09-30', '2026-10-01', '2026-10-07', 40, 0, 1186, 38, 6.14165, 7.5484, 6.1724, 4.7667),
-(4251, 'Extended Free Study 2026-09', 'Extended Free Study for September, 2026.', '2026-09-15', '2026-10-14', '2026-10-15', '2026-10-21', 30, 1, 788, 50, 6.10914, 7.1538, 5.9231, 5.2222);
+(4251, 'Extended Free Study 2026-09', 'Extended Free Study for September, 2026.', '2026-09-15', '2026-10-14', '2026-10-15', '2026-10-21', 30, 1, 788, 50, 6.10914, 7.1538, 5.9231, 5.2222),
+(4255, 'Unusual Objects 2.5 (Archival)', 'Photograph one or more unusual objects.', '2026-10-25', '2026-10-25', '2026-10-26', '2026-10-29', 24, 0, 602, 84, 5.87209, 6.6154, 5.8462, 5.12);
 COMMIT;

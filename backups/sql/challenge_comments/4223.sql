@@ -661,5 +661,41 @@ The warm editorial feel of this is delicious. It was a challenge favorite for me
 (7842310, 1314313, 12200, '<td valign="top">
 One of my favorites. The particular moment of maternal expression you captured--whether intentionally composed or curated from a happy accident--makes the storytelling jump out of the frame. I feel like you''ve told a dozen small tales with a single suspended moment. :-)</td>', 'One of my favorites. The particular moment of maternal expression you captured--whether intentionally composed or curated from a happy accident--makes the storytelling jump out of the frame. I feel like you''ve told a dozen small tales with a single suspended moment. :-)', '2026-10-26 01:27:41.000000', NULL, 0),
 (7842311, 1314027, 12200, '<td valign="top">
-A valentine from Tim Burton. ;-) This was a 7 from me. I think I might have underrated it.</td>', 'A valentine from Tim Burton. ;-) This was a 7 from me. I think I might have underrated it.', '2026-10-26 01:30:12.000000', NULL, 0);
+A valentine from Tim Burton. ;-) This was a 7 from me. I think I might have underrated it.</td>', 'A valentine from Tim Burton. ;-) This was a 7 from me. I think I might have underrated it.', '2026-10-26 01:30:12.000000', NULL, 0),
+(7842323, 1314355, 61234, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by posthumous:</b></div><hr/><i> what''s on his hat?
+<br/>
+<br/>nice warm light </i></td></tr></table>
+<br/>
+<br/>Those are two feathers. Thank you.</td>', 'Originally posted by posthumous: what''s on his hat?
+
+nice warm light 
+
+Those are two feathers. Thank you.', '2026-10-26 10:16:16.000000', NULL, 0),
+(7842329, 1314335, 122678, '<td valign="top">
+I love the creativity, candor and seasonality in your work. On top of that you are a master photographer and editor. This is so special and your love of cats shines through in your work. A well deserved BLUE! Congratulations!  Happy Halloween</td>', 'I love the creativity, candor and seasonality in your work. On top of that you are a master photographer and editor. This is so special and your love of cats shines through in your work. A well deserved BLUE! Congratulations!  Happy Halloween', '2026-10-26 11:14:00.000000', NULL, 0),
+(7842330, 1314216, 122678, '<td valign="top">
+Congratulations! How could you even think this would not make a ribbon. Masterful editing amazing photography. Absolutely off the charts!</td>', 'Congratulations! How could you even think this would not make a ribbon. Masterful editing amazing photography. Absolutely off the charts!', '2026-10-26 11:16:54.000000', NULL, 0),
+(7842331, 1314025, 122678, '<td valign="top">
+Congratulations! a perfect capture for this challenge.</td>', 'Congratulations! a perfect capture for this challenge.', '2026-10-26 11:55:52.000000', NULL, 0),
+(7842333, 1314265, 122678, '<td valign="top">
+Congrats, A top pick for me. This is amazing photography. A great dancer on top of your amazing photography. I bet this was so much fun to put together and any of the shots independently are  ribbon worthy. This is super imagery!</td>', 'Congrats, A top pick for me. This is amazing photography. A great dancer on top of your amazing photography. I bet this was so much fun to put together and any of the shots independently are  ribbon worthy. This is super imagery!', '2026-10-26 12:00:19.000000', NULL, 0),
+(7842334, 1314178, 122678, '<td valign="top">
+Congrats, What a find!</td>', 'Congrats, What a find!', '2026-10-26 12:01:01.000000', NULL, 0),
+(7842345, 1314365, 173558, '<td valign="top">
+Iguana, top left.</td>', 'Iguana, top left.', '2026-10-26 15:25:40.000000', NULL, 0),
+(7842346, 1314308, 61552, '<td valign="top">
+Didn''t miss it by much.
+<br/></td>', 'Didn''t miss it by much.', '2026-10-26 15:42:09.000000', NULL, 0),
+(7842354, 1314216, 103142, '<td valign="top">
+so creepy and amazing!! Huge congrats!
+<br/></td>', 'so creepy and amazing!! Huge congrats!', '2026-10-26 17:02:01.000000', NULL, 0),
+(7842364, 1314362, 16148, '<td valign="top">
+I tried to leave a comment on your image during the challenge but couldn''t come up with words.  Coming back I realize your photo takes us to two places at the same time.  The hanging blouse transports the viewer.</td>', 'I tried to leave a comment on your image during the challenge but couldn''t come up with words.  Coming back I realize your photo takes us to two places at the same time.  The hanging blouse transports the viewer.', '2026-10-26 20:33:30.000000', NULL, 0),
+(7842366, 1314362, 68504, '<td valign="top">
+Just a note to say Don is right, the t-shirt is shot through a window which was reflecting the tree.  Don is one of the masters of reflection on this site.</td>', 'Just a note to say Don is right, the t-shirt is shot through a window which was reflecting the tree.  Don is one of the masters of reflection on this site.', '2026-10-26 20:43:04.000000', NULL, 0),
+(7842377, 1314318, 50695, '<td valign="top">
+I actually did find the leaf tucked in there. very ambitious leaf</td>', 'I actually did find the leaf tucked in there. very ambitious leaf', '2026-10-26 22:29:01.000000', NULL, 0),
+(7842412, 1314025, 30982, '<td valign="top">
+OH!  This is incredible!!!</td>', 'OH!  This is incredible!!!', '2026-10-27 18:44:47.000000', NULL, 0);
 COMMIT;

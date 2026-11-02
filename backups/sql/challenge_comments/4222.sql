@@ -197,5 +197,18 @@ Oh, Roz, you make me laugh at that. Believe it or not, if someone asked me how I
 
 mutual admiration .. bring it on ..!!.. 
 but seriously  .. its not just your editing that I admire.. its also your ability to capture those fleeting moments .. where you capture life and emotion ..
-ps .. and i know Anita loved your week work too .. xx ..', '2026-10-24 15:11:20.000000', NULL, 0);
+ps .. and i know Anita loved your week work too .. xx ..', '2026-10-24 15:11:20.000000', NULL, 0),
+(7842660, 1314289, 86447, '<td valign="top">
+I immediately thought of SHERPET, Sherryl.
+<br/>
+<br/>This is magnificent.
+<br/></td>', 'I immediately thought of SHERPET, Sherryl.
+
+This is magnificent.', '2026-10-29 19:06:41.000000', NULL, 0),
+(7842661, 1314289, 86447, '<td valign="top">
+Double post.  
+<br/>
+<br/>Sorry.<br/><br/><i>Message edited by author 2026-10-29 19:08:00.</i></td>', 'Double post.  
+
+Sorry.', '2026-10-29 19:06:43.000000', '2026-10-29 19:08:00.000000', 0);
 COMMIT;
