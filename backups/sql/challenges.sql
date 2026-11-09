@@ -4197,7 +4197,11 @@ INSERT INTO challenges ("id", "name", "description", "submission_start", "submis
 (4222, 'Off-Centered Subject VII', 'The main subject of your photograph should be off-center -- not much more to it! Have fun!', '2026-10-02', '2026-10-15', '2026-10-16', '2026-10-22', 32, 1, 787, 23, 5.98729, 7.24, 5.76, 5.2),
 (4223, 'A Longer Look', 'Take a photo that rewards a longer look.', '2026-10-05', '2026-10-18', '2026-10-19', '2026-10-25', 34, 1, 1088, 151, 5.95496, 6.875, 5.9688, 4.4375),
 (4224, 'Still Life XI', 'N/A', '2026-10-12', '2026-10-25', '2026-10-26', '2026-11-01', 22, 0, 638, 60, 5.78056, 7.6207, 5.6667, 4.2333),
+(4225, 'Drama II', 'Use compelling lighting or subject matter to create a dramatic photo.', '2026-10-14', '2026-10-27', '2026-10-28', '2026-11-03', 27, 0, 922, 88, 6.10521, 7.1143, 6.10295, 5.0),
+(4226, 'Square III', 'The main subject of your photograph should be square shaped.', '2026-10-16', '2026-10-29', '2026-10-30', '2026-11-05', 23, 0, 608, 39, 5.99836, 7.0769, 6.05555, 5.0),
+(4228, 'Calendar V', 'Your challenge is to take a picture that would look good in a yearly calendar. Your title should be the month to which your photo belongs.', '2026-10-19', '2026-11-01', '2026-11-02', '2026-11-08', 23, 0, 558, 22, 6.04122, 7.7826, 5.92, 5.0417),
 (4250, 'Free Study 2026-09', 'Free Study for September, 2026.', '2026-09-01', '2026-09-30', '2026-10-01', '2026-10-07', 40, 0, 1186, 38, 6.14165, 7.5484, 6.1724, 4.7667),
 (4251, 'Extended Free Study 2026-09', 'Extended Free Study for September, 2026.', '2026-09-15', '2026-10-14', '2026-10-15', '2026-10-21', 30, 1, 788, 50, 6.10914, 7.1538, 5.9231, 5.2222),
+(4252, 'Free Study 2026-10', 'Free Study for October, 2026.', '2026-10-01', '2026-10-31', '2026-11-01', '2026-11-07', 39, 0, 1142, 58, 5.95797, 7.1034, 5.9494, 4.8966),
 (4255, 'Unusual Objects 2.5 (Archival)', 'Photograph one or more unusual objects.', '2026-10-25', '2026-10-25', '2026-10-26', '2026-10-29', 24, 0, 602, 84, 5.87209, 6.6154, 5.8462, 5.12);
 COMMIT;

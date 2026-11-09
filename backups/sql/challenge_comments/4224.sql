@@ -387,5 +387,43 @@ It''s so quirky! It made me smile:)<br/><br/><i>Message edited by author 2026-11
 <br/>
 <br/>as a poet, this means more to me than the score.</td>', 'Originally posted by Art Roflmao: Hey, that''s the name of my new Country album! 😎
 
-as a poet, this means more to me than the score.', '2026-11-02 09:52:58.000000', NULL, 0);
+as a poet, this means more to me than the score.', '2026-11-02 09:52:58.000000', NULL, 0),
+(7843179, 1314473, 68504, '<td valign="top">
+you are quite right. I thought the orange tones, while unifying, were overpowering. I gave this a 4. I rarely score low: I thought to justify it by giving my feeling why, I wasn''t snarking, but I also wasn''t considering.
+<br/>
+<br/></td>', 'you are quite right. I thought the orange tones, while unifying, were overpowering. I gave this a 4. I rarely score low: I thought to justify it by giving my feeling why, I wasn''t snarking, but I also wasn''t considering.', '2026-11-02 12:13:59.000000', NULL, 0),
+(7843180, 1314473, 3306, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by tnun:</b></div><hr/><i> you are quite right. I thought the orange tones, while unifying, were overpowering. I gave this a 4. I rarely score low: I thought to justify it by giving my feeling why, I wasn''t snarking, but I also wasn''t considering. </i></td></tr></table>
+<br/>
+<br/>Thank you for your reply.</td>', 'Originally posted by tnun: you are quite right. I thought the orange tones, while unifying, were overpowering. I gave this a 4. I rarely score low: I thought to justify it by giving my feeling why, I wasn''t snarking, but I also wasn''t considering. 
+
+Thank you for your reply.', '2026-11-02 13:01:54.000000', NULL, 0),
+(7843195, 1314302, 86447, '<td valign="top">
+But... but... but... WHY?!
+<br/>
+<br/>LOL!</td>', 'But... but... but... WHY?!
+
+LOL!', '2026-11-02 15:59:04.000000', NULL, 0),
+(7843219, 1314486, 30214, '<td valign="top">
+Beautiful work Wendy! But it just incomprehensible to me how you consistently manage to get your cat(s) stay (even for a second) in a perfect position where you want them to be. Do you drug them? Bribe them? Glue them to the floor? My black cat would never, NEVER remain in the place where I put her and would leave right away.</td>', 'Beautiful work Wendy! But it just incomprehensible to me how you consistently manage to get your cat(s) stay (even for a second) in a perfect position where you want them to be. Do you drug them? Bribe them? Glue them to the floor? My black cat would never, NEVER remain in the place where I put her and would leave right away.', '2026-11-02 23:19:47.000000', NULL, 0),
+(7843241, 1314486, 138630, '<td valign="top">
+Gorgeous - and what fun that unexpected visitor is!  Perfect, though.  Congratulations on a very well-deserved Blue.</td>', 'Gorgeous - and what fun that unexpected visitor is!  Perfect, though.  Congratulations on a very well-deserved Blue.', '2026-11-03 11:36:53.000000', NULL, 0),
+(7843276, 1314486, 122678, '<td valign="top">
+Congratulations, Over the top stunning and amazing. Perfection with your beautiful kitten.</td>', 'Congratulations, Over the top stunning and amazing. Perfection with your beautiful kitten.', '2026-11-03 20:29:42.000000', NULL, 0),
+(7843277, 1314302, 122678, '<td valign="top">
+Congratulations, very cool.</td>', 'Congratulations, very cool.', '2026-11-03 20:30:18.000000', NULL, 0),
+(7843278, 1314471, 122678, '<td valign="top">
+Congratulations, very nice and the lighting is great!</td>', 'Congratulations, very nice and the lighting is great!', '2026-11-03 20:30:51.000000', NULL, 0),
+(7843279, 1314471, 122678, '<td valign="top">
+Congratulations, very nice and the lighting is great!</td>', 'Congratulations, very nice and the lighting is great!', '2026-11-03 20:30:53.000000', NULL, 0),
+(7843280, 1314542, 122678, '<td valign="top">
+Congratulations, very interesting combination of yellow and rust that work together well.</td>', 'Congratulations, very interesting combination of yellow and rust that work together well.', '2026-11-03 20:32:08.000000', NULL, 0),
+(7843281, 1314537, 122678, '<td valign="top">
+Congrats, a beautifully put together still life.</td>', 'Congrats, a beautifully put together still life.', '2026-11-03 20:33:02.000000', NULL, 0),
+(7843282, 1314491, 122678, '<td valign="top">
+I love this! Quiet and clean, beautiful photography 9.</td>', 'I love this! Quiet and clean, beautiful photography 9.', '2026-11-03 20:34:00.000000', NULL, 0),
+(7843283, 1314492, 122678, '<td valign="top">
+A beautiful collection and the coloration is beautiful</td>', 'A beautiful collection and the coloration is beautiful', '2026-11-03 20:34:57.000000', NULL, 0),
+(7843385, 1314491, 3306, '<td valign="top">
+Don’t forget to take the table! Good luck with the move. Downsizing? I’m sure there are mixed feelings. I like the simplicity of your composition. I’m sure there will be onions where you are moving!</td>', 'Don’t forget to take the table! Good luck with the move. Downsizing? I’m sure there are mixed feelings. I like the simplicity of your composition. I’m sure there will be onions where you are moving!', '2026-11-04 21:25:48.000000', NULL, 0);
 COMMIT;
