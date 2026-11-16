@@ -117,5 +117,9 @@ A wickedly good catch!</td>', 'A wickedly good catch!', '2026-11-09 10:38:26.000
 (7843782, 1314665, 122678, '<td valign="top">
 Simply beautiful</td>', 'Simply beautiful', '2026-11-09 10:39:00.000000', NULL, 0),
 (7843783, 1314738, 122678, '<td valign="top">
-Someone is enjoying the leaves.</td>', 'Someone is enjoying the leaves.', '2026-11-09 10:39:41.000000', NULL, 0);
+Someone is enjoying the leaves.</td>', 'Someone is enjoying the leaves.', '2026-11-09 10:39:41.000000', NULL, 0),
+(7843798, 1314667, 3306, '<td valign="top">
+Beautiful capture of this painted lady. The backround colors and softness really compliment the scene. I was also going to enter a butterfly picture. After seeing yours I’m glad I didn’t!</td>', 'Beautiful capture of this painted lady. The backround colors and softness really compliment the scene. I was also going to enter a butterfly picture. After seeing yours I’m glad I didn’t!', '2026-11-09 13:11:54.000000', NULL, 0),
+(7843822, 1314735, 61234, '<td valign="top">
+Absolutely LOVE this! Spellbinding!</td>', 'Absolutely LOVE this! Spellbinding!', '2026-11-09 17:51:19.000000', NULL, 0);
 COMMIT;

@@ -523,5 +523,7 @@ wonderful. strong and subtle contrasts. great restraint for great drama.</td>', 
 (7843439, 1314584, 68504, '<td valign="top">
 always original, and nearly always sculptural.</td>', 'always original, and nearly always sculptural.', '2026-11-05 19:30:12.000000', NULL, 0),
 (7843440, 1314571, 68504, '<td valign="top">
-sits on the delicate line: staged or candid? and if staged, how splendidly subtle. (glad to read the background).</td>', 'sits on the delicate line: staged or candid? and if staged, how splendidly subtle. (glad to read the background).', '2026-11-05 19:33:13.000000', NULL, 0);
+sits on the delicate line: staged or candid? and if staged, how splendidly subtle. (glad to read the background).</td>', 'sits on the delicate line: staged or candid? and if staged, how splendidly subtle. (glad to read the background).', '2026-11-05 19:33:13.000000', NULL, 0),
+(7843853, 1314571, 38032, '<td valign="top">
+EXcellent! Nice to see your work!</td>', 'EXcellent! Nice to see your work!', '2026-11-10 13:46:31.000000', NULL, 0);
 COMMIT;
