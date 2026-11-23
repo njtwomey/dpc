@@ -88,5 +88,82 @@ Thanks Johnathan.  I was trying to simulate flames/fire with a couple of ICM pho
 <br/>I''ve warned the proper authorities. 👮🏻‍♂️👮🏻‍♀️ 😜 </i></td></tr></table>
 <br/>LOL!  Actually, most of the Scouts turned their noses up at my fine offering of the Hot &amp; Spicy SPAM.  Honestly, I thought they''d be eager to try it - seems I was wrong.  Kudos to them for cooking healthy food for the most part.  In the end I had to badger them to at least cook a slice for me, which they did, and then another adult leader perked up and said, "hey, I want some too".  :-D</td>', 'Originally posted by Art Roflmao: Originally posted by glad2badadj:I do have a campout coming up with the Scout Troop next week and I figured I''ll gift it to the boys and let them have a go at it.
 I''ve warned the proper authorities. 👮🏻‍♂️👮🏻‍♀️ 😜 
-LOL!  Actually, most of the Scouts turned their noses up at my fine offering of the Hot & Spicy SPAM.  Honestly, I thought they''d be eager to try it - seems I was wrong.  Kudos to them for cooking healthy food for the most part.  In the end I had to badger them to at least cook a slice for me, which they did, and then another adult leader perked up and said, "hey, I want some too".  :-D', '2026-11-16 10:30:18.000000', NULL, 0);
+LOL!  Actually, most of the Scouts turned their noses up at my fine offering of the Hot & Spicy SPAM.  Honestly, I thought they''d be eager to try it - seems I was wrong.  Kudos to them for cooking healthy food for the most part.  In the end I had to badger them to at least cook a slice for me, which they did, and then another adult leader perked up and said, "hey, I want some too".  :-D', '2026-11-16 10:30:18.000000', NULL, 0),
+(7844274, 1314836, 163081, '<td valign="top">
+<a class="i" href="https://www.dpchallenge.com/image.php?IMAGE_ID=1315178"><img border="0" src="https://images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1315178.jpg" xalt="'' . substr(''https://images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1315178.jpg'', strrpos(''https://images.dpchallenge.com/images_portfolio/160000-164999/163081/120/Copyrighted_Image_Reuse_Prohibited_1315178.jpg'', ''/'') + 1) . ''"/></a>  and many hours of PS work. I also had to buy original SPAM.
+<br/>I left the choose what you want.... we have spam, spam, spam and spam<br/><br/><i>Message edited by author 2026-11-16 10:48:40.</i></td>', 'and many hours of PS work. I also had to buy original SPAM.
+I left the choose what you want.... we have spam, spam, spam and spam', '2026-11-16 10:47:19.000000', '2026-11-16 10:48:40.000000', 0),
+(7844275, 1314898, 122678, '<td valign="top">
+Congratulations on the blue! Super fun imagery, Wonderful work!</td>', 'Congratulations on the blue! Super fun imagery, Wonderful work!', '2026-11-16 11:01:42.000000', NULL, 0),
+(7844276, 1314990, 122678, '<td valign="top">
+Congratulations, Very creative and a well presented work of art!</td>', 'Congratulations, Very creative and a well presented work of art!', '2026-11-16 11:03:06.000000', NULL, 0),
+(7844277, 1314816, 122678, '<td valign="top">
+Congratulation, very cleverly done! My favorite 10.</td>', 'Congratulation, very cleverly done! My favorite 10.', '2026-11-16 11:03:47.000000', NULL, 0),
+(7844278, 1314671, 122678, '<td valign="top">
+Congratulations! I could have guessed this one could be yours I love it. 9</td>', 'Congratulations! I could have guessed this one could be yours I love it. 9', '2026-11-16 11:04:59.000000', NULL, 0),
+(7844279, 1314836, 122678, '<td valign="top">
+Congrats, OMGoodness a whole machine filled with Spam, Great find,</td>', 'Congrats, OMGoodness a whole machine filled with Spam, Great find,', '2026-11-16 11:06:10.000000', NULL, 0),
+(7844280, 1314993, 122678, '<td valign="top">
+Congrats, I like the Andy Warhol effect.</td>', 'Congrats, I like the Andy Warhol effect.', '2026-11-16 11:07:10.000000', NULL, 0),
+(7844283, 1314836, 122678, '<td valign="top">
+This is amazing work! Really, really well done!</td>', 'This is amazing work! Really, really well done!', '2026-11-16 11:46:36.000000', NULL, 0),
+(7844288, 1314898, 19825, '<td valign="top">
+The Spam bath mat takes this to  another level. Masterful job, Ken.</td>', 'The Spam bath mat takes this to  another level. Masterful job, Ken.', '2026-11-16 12:16:34.000000', NULL, 0),
+(7844289, 1314816, 19825, '<td valign="top">
+Great job, Lydia.</td>', 'Great job, Lydia.', '2026-11-16 12:17:30.000000', NULL, 0),
+(7844294, 1314816, 3306, '<td valign="top">
+Outstanding! Congrats.</td>', 'Outstanding! Congrats.', '2026-11-16 12:41:43.000000', NULL, 0),
+(7844295, 1314990, 3306, '<td valign="top">
+You always find such interesting people shots. Love the humor.</td>', 'You always find such interesting people shots. Love the humor.', '2026-11-16 12:44:23.000000', NULL, 0),
+(7844296, 1314781, 3306, '<td valign="top">
+I wonder how well wine goes with spam? On second thought  I''m not a fan of spam. I wouldn''t waste the wine! Well done goofy idea!!!</td>', 'I wonder how well wine goes with spam? On second thought  I''m not a fan of spam. I wouldn''t waste the wine! Well done goofy idea!!!', '2026-11-16 12:50:29.000000', NULL, 0),
+(7844297, 1314836, 50641, '<td valign="top">
+Wow! Really impressive!! Nice work! 👏👏👏</td>', 'Wow! Really impressive!! Nice work! 👏👏👏', '2026-11-16 13:04:41.000000', NULL, 0),
+(7844303, 1314990, 86447, '<td valign="top">
+This is brilliant, Mark.   My favorite of the challenge.</td>', 'This is brilliant, Mark.   My favorite of the challenge.', '2026-11-16 14:38:54.000000', NULL, 0),
+(7844306, 1314898, 86447, '<td valign="top">
+Fantastic!
+<br/>
+<br/>Did you 3D print the "tub" holder??</td>', 'Fantastic!
+
+Did you 3D print the "tub" holder??', '2026-11-16 14:40:19.000000', NULL, 0),
+(7844320, 1314836, 86447, '<td valign="top">
+Hahahaha!
+<br/></td>', 'Hahahaha!', '2026-11-16 16:05:21.000000', NULL, 0),
+(7844321, 1314671, 86447, '<td valign="top">
+Well done, Larry!
+<br/>
+<br/>Did you have it partially opened, for the smell??
+<br/>
+<br/>Or... how did you tempt him or her?</td>', 'Well done, Larry!
+
+Did you have it partially opened, for the smell??
+
+Or... how did you tempt him or her?', '2026-11-16 16:06:13.000000', NULL, 0),
+(7844325, 1314671, 3306, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by Lydia:</b></div><hr/><i> Well done, Larry!
+<br/>
+<br/>Did you have it partially opened, for the smell??
+<br/>
+<br/>Or... how did you tempt him or her? </i></td></tr></table>
+<br/>
+<br/>I would tell you my secret but I would have to kill you! (I used a peanut to entice him:) )<br/><br/><i>Message edited by author 2026-11-16 20:35:00.</i></td>', 'Originally posted by Lydia: Well done, Larry!
+
+Did you have it partially opened, for the smell??
+
+Or... how did you tempt him or her? 
+
+I would tell you my secret but I would have to kill you! (I used a peanut to entice him:) )', '2026-11-16 19:20:06.000000', '2026-11-16 20:35:00.000000', 0),
+(7844337, 1314671, 12200, '<td valign="top">
+Yes...I knew this was yours right away, and I literally thought, "Now if it was a bird on there I''d know he probably put some seed on the lid. But a squirrel?" Of course, I know those guys will explore anything new once, so I smiled both at the SPAM-in-the-domestic-wild concept AND at the thought of you camping out with your lens and fist-pumping the moment this guy answered the call. :-D</td>', 'Yes...I knew this was yours right away, and I literally thought, "Now if it was a bird on there I''d know he probably put some seed on the lid. But a squirrel?" Of course, I know those guys will explore anything new once, so I smiled both at the SPAM-in-the-domestic-wild concept AND at the thought of you camping out with your lens and fist-pumping the moment this guy answered the call. :-D', '2026-11-17 05:12:42.000000', NULL, 0),
+(7844338, 1314836, 12200, '<td valign="top">
+That is indeed some impressive PS work. Even if you were fully using modern AI-assisted masking and compositing approaches, this would take much longer to accomplish this convincingly than most creatives would take the time to do this convincingly. :-) Congrats!</td>', 'That is indeed some impressive PS work. Even if you were fully using modern AI-assisted masking and compositing approaches, this would take much longer to accomplish this convincingly than most creatives would take the time to do this convincingly. :-) Congrats!', '2026-11-17 05:16:09.000000', NULL, 0),
+(7844339, 1314671, 3306, '<td valign="top">
+<table align="center" width="95%"><tr><td><div class="textsm"><b>Originally posted by kanaj:</b></div><hr/><i> Yes...I knew this was yours right away, and I literally thought, "Now if it was a bird on there I''d know he probably put some seed on the lid. But a squirrel?" Of course, I know those guys will explore anything new once, so I smiled both at the SPAM-in-the-domestic-wild concept AND at the thought of you camping out with your lens and fist-pumping the moment this guy answered the call. :-D </i></td></tr></table>
+<br/>
+<br/>I do have several bird feeders in my back yard. Unfortunately along with that comes a constant battle with the squirrels emptying my “squirrel proof” feeders! It’s not difficult to entice them!</td>', 'Originally posted by kanaj: Yes...I knew this was yours right away, and I literally thought, "Now if it was a bird on there I''d know he probably put some seed on the lid. But a squirrel?" Of course, I know those guys will explore anything new once, so I smiled both at the SPAM-in-the-domestic-wild concept AND at the thought of you camping out with your lens and fist-pumping the moment this guy answered the call. :-D 
+
+I do have several bird feeders in my back yard. Unfortunately along with that comes a constant battle with the squirrels emptying my “squirrel proof” feeders! It’s not difficult to entice them!', '2026-11-17 06:02:55.000000', NULL, 0),
+(7844366, 1314836, 19825, '<td valign="top">
+Very impressive work, Georges. Nicely done.</td>', 'Very impressive work, Georges. Nicely done.', '2026-11-17 15:43:39.000000', NULL, 0);
 COMMIT;
